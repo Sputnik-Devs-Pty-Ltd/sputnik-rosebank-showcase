@@ -17,9 +17,12 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 def get_base64_img(rel_path):
     abs_path = os.path.join(REPO_ROOT, rel_path)
+    mime = "image/png"
+    if rel_path.lower().endswith(".jpeg") or rel_path.lower().endswith(".jpg"):
+        mime = "image/jpeg"
     with open(abs_path, "rb") as f:
         data = base64.b64encode(f.read()).decode("utf-8")
-    return f"data:image/png;base64,{data}"
+    return f"data:{mime};base64,{data}"
 
 def get_svg_path_data(rel_path):
     abs_path = os.path.join(REPO_ROOT, rel_path)
@@ -31,10 +34,12 @@ def get_svg_path_data(rel_path):
     return None
 
 def build_banner_svg():
-    # 1. Load real logo base64 strings
+    # 1. Load real logo and screenshot base64 strings
     sputnik_tech_logo = get_base64_img("assets/Sputnik-Tech-Group-Logo.png")
     sputnik_devs_logo = get_base64_img("assets/Sputnik-Devs-Studio-logo.png")
     tradeybay_primary_logo = get_base64_img("assets/TradeyBay_primary_Logo.png")
+    tradeybay_dark_screenshot = get_base64_img("assets/TradeyBayScreenShopDarkMode.jpeg")
+    tradeybay_light_screenshot = get_base64_img("assets/TradeyBayScreenshopLigtMode.jpeg")
 
     # 2. Extract QR code vector paths
     qr_tb = get_svg_path_data("assets/qr/qr-tradeybay-playstore.svg")
@@ -90,6 +95,11 @@ def build_banner_svg():
       <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0284c7" flood-opacity="0.18"/>
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
     </filter>
+
+    <!-- Phone Screen Clip for Real Production Screenshots -->
+    <clipPath id="phoneScreenClip">
+      <rect x="0" y="0" width="186" height="402" rx="16"/>
+    </clipPath>
 
     <!-- Subtle Hairline Grids -->
     <pattern id="gridLightLeft" width="28" height="28" patternUnits="userSpaceOnUse">
@@ -326,81 +336,63 @@ def build_banner_svg():
       <circle cx="325" cy="31" r="3.5" fill="#16a34a"/>
       <text x="366" y="35" fill="#15803d" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">LIVE v2.0.2+29</text>
 
-      <!-- Smartphone Vector Device Mockup (Floating Dark OLED screen for High Contrast) -->
-      <g transform="translate(55, 80)">
-        <!-- Phone Outer Shell -->
-        <rect x="0" y="0" width="320" height="425" rx="28" fill="#070c18" stroke="#38bdf8" stroke-width="3" filter="url(#phoneShadow)"/>
-        <!-- Notch Island -->
-        <rect x="110" y="8" width="100" height="14" rx="7" fill="#0f172a"/>
-        <circle cx="185" cy="15" r="3" fill="#1e293b"/>
+      <!-- DUAL SMARTPHONE PRODUCTION DEVICE MOCKUPS (Side-by-Side Light & Dark Mode) -->
+      <!-- Left Phone: Light Mode Production App -->
+      <g id="phone-light-mockup">
+        <!-- Phone Outer Chassis -->
+        <rect x="12" y="70" width="196" height="412" rx="22" fill="#0f172a" stroke="#cbd5e1" stroke-width="2" filter="url(#phoneShadow)"/>
+        <!-- Inner Bezel Ring -->
+        <rect x="15" y="73" width="190" height="406" rx="19" fill="none" stroke="#334155" stroke-width="1"/>
         
-        <!-- App Status Bar & Header -->
-        <g transform="translate(18, 30)">
-          <text x="0" y="10" fill="#94a3b8" class="mono" font-size="9">9:41</text>
-          <text x="0" y="28" fill="#ffffff" class="sans" font-size="12" font-weight="800">Tradey Bay • <tspan fill="#38bdf8">Super App Ecosystem</tspan></text>
-          
-          <!-- Search Bar -->
-          <rect x="0" y="36" width="284" height="26" rx="8" fill="#111c30" stroke="#1e293b" stroke-width="1"/>
-          <text x="10" y="53" fill="#94a3b8" class="sans" font-size="10">🔍 Search ads, live auctions, jobs &amp; stores...</text>
-
-          <!-- Category Pills -->
-          <rect x="0" y="68" width="62" height="18" rx="9" fill="#0284c7"/>
-          <text x="31" y="80" fill="#ffffff" class="sans" font-size="8" font-weight="700" text-anchor="middle">Classifieds</text>
-          <rect x="68" y="68" width="62" height="18" rx="9" fill="#1e293b"/>
-          <text x="99" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Auctions</text>
-          <rect x="136" y="68" width="70" height="18" rx="9" fill="#1e293b"/>
-          <text x="171" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Jobs/ATS</text>
-          <rect x="212" y="68" width="72" height="18" rx="9" fill="#1e293b"/>
-          <text x="248" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Stores/Map</text>
-
-          <!-- Feed Item 1: MacBook Air M2 (High-Value Laptop Icon) -->
-          <g transform="translate(0, 94)">
-            <rect width="284" height="66" rx="10" fill="#0e1726" stroke="#1e293b" stroke-width="1"/>
-            <rect x="8" y="8" width="50" height="50" rx="8" fill="#1e293b"/>
-            <!-- Vector Laptop Icon -->
-            <use href="#icon-laptop" x="9" y="10" transform="scale(0.95)"/>
-            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Apple MacBook Air M2 (8/256)</text>
-            <text x="66" y="38" fill="#38bdf8" class="sans" font-size="10" font-weight="700">R 12,500.00 <tspan fill="#94a3b8" font-weight="400">· Rosebank Hub</tspan></text>
-            <rect x="66" y="44" width="112" height="14" rx="7" fill="#065f46"/>
-            <text x="122" y="54" fill="#6ee7b7" class="mono" font-size="7" font-weight="800" text-anchor="middle">✓ MANDATORY KYC VERIFIED</text>
-            <rect x="220" y="22" width="56" height="24" rx="12" fill="#0284c7"/>
-            <text x="248" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Chat 💬</text>
-          </g>
-
-          <!-- Feed Item 2: Live Digital Auction (High-Value Gavel Icon) -->
-          <g transform="translate(0, 168)">
-            <rect width="284" height="66" rx="10" fill="#0e1726" stroke="#1e293b" stroke-width="1"/>
-            <rect x="8" y="8" width="50" height="50" rx="8" fill="#1e293b"/>
-            <!-- Vector Gavel Icon -->
-            <use href="#icon-auction" x="9" y="10" transform="scale(0.95)"/>
-            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">5kW Hybrid Solar Inverter System</text>
-            <text x="66" y="38" fill="#fbbf24" class="sans" font-size="10" font-weight="700">Bid: R 8,900.00 <tspan fill="#a78bfa" font-weight="700">· 03m 42s Left</tspan></text>
-            <rect x="66" y="44" width="110" height="14" rx="7" fill="#78350f"/>
-            <text x="121" y="54" fill="#fde68a" class="mono" font-size="7" font-weight="800" text-anchor="middle">⚡ ANTI-SNIPE AUCTION</text>
-            <rect x="220" y="22" width="56" height="24" rx="12" fill="#d97706"/>
-            <text x="248" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Bid 🔨</text>
-          </g>
-
-          <!-- Feed Item 3: Jobs & ATS Resume Match (High-Value Document Icon) -->
-          <g transform="translate(0, 242)">
-            <rect width="284" height="66" rx="10" fill="#0e1726" stroke="#1e293b" stroke-width="1"/>
-            <rect x="8" y="8" width="50" height="50" rx="8" fill="#1e293b"/>
-            <!-- Vector ATS Resume Icon -->
-            <use href="#icon-ats-resume" x="9" y="10" transform="scale(0.95)"/>
-            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Junior .NET 10 / Flutter Developer</text>
-            <text x="66" y="38" fill="#c084fc" class="sans" font-size="10" font-weight="700">R 25,000 / mo <tspan fill="#94a3b8" font-weight="400">· Sandton, JHB</tspan></text>
-            <rect x="66" y="44" width="98" height="14" rx="7" fill="#4c1d95"/>
-            <text x="115" y="54" fill="#ddd6fe" class="mono" font-size="7" font-weight="800" text-anchor="middle">🎯 96% AI ATS MATCH</text>
-            <rect x="220" y="22" width="56" height="24" rx="12" fill="#7c3aed"/>
-            <text x="248" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Apply 📄</text>
-          </g>
-
-          <!-- Floating Value Proposition Pill -->
-          <g transform="translate(10, 318)">
-            <rect width="264" height="28" rx="14" fill="#0284c7"/>
-            <text x="132" y="19" fill="#ffffff" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">⚡ 8 .NET 10 SERVICES • IN-COUNTRY SA CLOUD</text>
-          </g>
+        <!-- Screen Content (Clipped Real Flutter Production Screenshot) -->
+        <g transform="translate(17, 75)" clip-path="url(#phoneScreenClip)">
+          <image href="{tradeybay_light_screenshot}" x="0" y="0" width="186" height="402" preserveAspectRatio="xMidYMid slice"/>
         </g>
+
+        <!-- Dynamic Island Cutout -->
+        <rect x="85" y="78" width="50" height="8" rx="4" fill="#090d16"/>
+        <circle cx="95" cy="82" r="2" fill="#1e293b"/>
+        <circle cx="120" cy="82" r="1.5" fill="#0369a1"/>
+
+        <!-- Hardware Gloss Reflection -->
+        <path d="M 17 75 L 120 75 L 17 240 Z" fill="#ffffff" opacity="0.04"/>
+
+        <!-- Home Bar -->
+        <rect x="80" y="471" width="60" height="3" rx="1.5" fill="#64748b" opacity="0.6"/>
+
+        <!-- Theme Pill -->
+        <rect x="16" y="488" width="188" height="24" rx="12" fill="#eff6ff" stroke="#0284c7" stroke-width="1.2"/>
+        <circle cx="34" cy="500" r="4" fill="#0284c7"/>
+        <text x="114" y="504" fill="#0369a1" class="mono" font-size="9" font-weight="800" text-anchor="middle">☀ FLUTTER LIGHT UI</text>
+      </g>
+
+      <!-- Right Phone: Dark Mode Production App -->
+      <g id="phone-dark-mockup">
+        <!-- Phone Outer Chassis -->
+        <rect x="222" y="70" width="196" height="412" rx="22" fill="#070c18" stroke="#38bdf8" stroke-width="2" filter="url(#phoneShadow)"/>
+        <!-- Inner Bezel Ring -->
+        <rect x="225" y="73" width="190" height="406" rx="19" fill="none" stroke="#0284c7" stroke-width="1" stroke-opacity="0.4"/>
+        
+        <!-- Screen Content (Clipped Real Flutter Production Screenshot) -->
+        <g transform="translate(227, 75)" clip-path="url(#phoneScreenClip)">
+          <image href="{tradeybay_dark_screenshot}" x="0" y="0" width="186" height="402" preserveAspectRatio="xMidYMid slice"/>
+        </g>
+
+        <!-- Dynamic Island Cutout -->
+        <rect x="295" y="78" width="50" height="8" rx="4" fill="#000000"/>
+        <circle cx="305" cy="82" r="2" fill="#1e293b"/>
+        <circle cx="330" cy="82" r="1.5" fill="#38bdf8"/>
+
+        <!-- Hardware Gloss Reflection -->
+        <path d="M 227 75 L 330 75 L 227 240 Z" fill="#ffffff" opacity="0.05"/>
+
+        <!-- Home Bar -->
+        <rect x="290" y="471" width="60" height="3" rx="1.5" fill="#38bdf8" opacity="0.7"/>
+
+        <!-- Theme Pill -->
+        <rect x="226" y="488" width="188" height="24" rx="12" fill="#090d16" stroke="#38bdf8" stroke-width="1.2"/>
+        <circle cx="244" cy="500" r="4" fill="#38bdf8"/>
+        <text x="324" y="504" fill="#38bdf8" class="mono" font-size="9" font-weight="800" text-anchor="middle">☾ OLED DARK THEME</text>
       </g>
     </g>
 
