@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik Showcase - Table Cloth (3m x 3m)</title>
+  <title>Sputnik Showcase — Exhibition Table Cloth (3m x 3m)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
 
@@ -17,10 +17,10 @@
       padding: 0;
     }
 
-    body {
+    html, body {
       width: 3000mm;
       height: 3000mm;
-      background: #080c14;
+      background: #03060c;
       color: #ffffff;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       position: relative;
@@ -29,249 +29,17 @@
       print-color-adjust: exact;
     }
 
-    /* Ambient background grid */
-    .bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(to right, rgba(51, 65, 85, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(51, 65, 85, 0.2) 1px, transparent 1px);
-      background-size: 50mm 50mm;
-      pointer-events: none;
-    }
-
-    /* Table boundary indicators (1800 x 750 mm centered) */
-    .table-boundary {
-      position: absolute;
-      left: 600mm;
-      top: 1125mm;
-      width: 1800mm;
-      height: 750mm;
-      border: 3mm dashed #475569;
-      pointer-events: none;
-    }
-    .table-label {
-      position: absolute;
-      left: 620mm;
-      top: 1140mm;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 16pt;
-      color: #64748b;
-    }
-
-    /* Tabletop interactive pads */
-    .tabletop-center {
-      position: absolute;
-      left: 1350mm;
-      top: 1375mm;
-      width: 300mm;
-      height: 250mm;
-      background: #0f172a;
-      border: 3mm solid #38bdf8;
-      border-radius: 40mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      box-shadow: 0 10mm 30mm rgba(0,0,0,0.6);
-    }
-
-    .scan-pad-left {
-      position: absolute;
-      left: 750mm;
-      top: 1200mm;
-      width: 480mm;
-      height: 600mm;
-      background: rgba(15, 23, 42, 0.95);
-      border: 3mm solid #6366f1;
-      border-radius: 25mm;
-      padding: 20mm;
-      text-align: center;
-      box-shadow: 0 15mm 35mm rgba(0,0,0,0.5);
-    }
-
-    .scan-pad-right {
-      position: absolute;
-      left: 1770mm;
-      top: 1200mm;
-      width: 480mm;
-      height: 600mm;
-      background: rgba(15, 23, 42, 0.95);
-      border: 3mm solid #f59e0b;
-      border-radius: 25mm;
-      padding: 20mm;
-      text-align: center;
-      box-shadow: 0 15mm 35mm rgba(0,0,0,0.5);
-    }
-
-    .pad-tag {
-      padding: 6mm 15mm;
-      border-radius: 8mm;
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 16pt;
-      letter-spacing: 1mm;
-      margin-bottom: 12mm;
-    }
-    .pad-tag-tradey { background: #4338ca; }
-    .pad-tag-academy { background: #d97706; }
-
-    .qr-container {
-      background: #ffffff;
-      border-radius: 15mm;
-      padding: 10mm;
-      display: inline-block;
-      margin-bottom: 12mm;
-    }
-    .qr-container img, .qr-container svg {
-      width: 200mm;
-      height: 200mm;
+    svg.main-canvas {
+      width: 3000mm;
+      height: 3000mm;
       display: block;
-    }
-
-    .pad-title {
-      font-size: 24pt;
-      font-weight: 900;
-      margin-bottom: 4mm;
-    }
-    .pad-sub {
-      font-size: 15pt;
-      font-weight: 700;
-      margin-bottom: 8mm;
-    }
-    .pad-desc {
-      font-size: 13pt;
-      color: #cbd5e1;
-    }
-
-    /* Front Drop */
-    .front-drop {
-      position: absolute;
-      left: 300mm;
-      top: 1950mm;
-      width: 2400mm;
-      height: 700mm;
-    }
-    .front-bar {
-      width: 100%;
-      height: 6mm;
-      background: linear-gradient(90deg, #38bdf8, #818cf8, #10b981);
-      border-radius: 3mm;
-      margin-bottom: 25mm;
-    }
-    .front-columns {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 25mm;
-    }
-    .front-col {
-      width: 1050mm;
-    }
-    .front-col-title {
-      font-size: 42pt;
-      font-weight: 900;
-      letter-spacing: 1.5mm;
-      margin-bottom: 5mm;
-    }
-    .front-col-sub {
-      font-size: 28pt;
-      font-weight: 800;
-      margin-bottom: 8mm;
-    }
-    .front-col-desc {
-      font-size: 18pt;
-      color: #94a3b8;
-      margin-bottom: 15mm;
-    }
-    .front-mission {
-      text-align: center;
-      padding-top: 15mm;
-      border-top: 2mm solid #1e293b;
-    }
-    .front-mission-text {
-      font-size: 22pt;
-      font-weight: 800;
-      letter-spacing: 2mm;
-      color: #e2e8f0;
-      margin-bottom: 5mm;
-    }
-    .front-mission-web {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 16pt;
-      color: #38bdf8;
-      font-weight: 700;
     }
   </style>
 </head>
 <body>
-  <div class="bg-grid"></div>
-
-  <!-- Boundary indicator for standard 1.8m x 0.75m table -->
-  <div class="table-boundary"></div>
-  <div class="table-label">TABLETOP SURFACE AREA (1800 x 750 MM)</div>
-
-  <!-- Center Tabletop Brand Badge -->
-  <div class="tabletop-center">
-    <div style="font-size:22pt;font-weight:900;letter-spacing:3mm;">SPUTNIK</div>
-    <div style="font-size:14pt;font-weight:800;color:#38bdf8;letter-spacing:2mm;margin:2mm 0;">TECH &amp; DEVS</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11pt;color:#94a3b8;">ROSEBANK 2026</div>
-  </div>
-
-  <!-- Left Interaction Pad: Tradey Bay App -->
-  <div class="scan-pad-left">
-    <div class="pad-tag pad-tag-tradey">📱 GET TRADEY BAY APP</div>
-    <div class="qr-container">
-      <img src="../../assets/qr/qr-tradeybay-playstore.svg" alt="Tradey Bay QR">
-    </div>
-    <div class="pad-title">Tradey<span style="color:#a78bfa;">Bay</span></div>
-    <div class="pad-sub" style="color:#38bdf8;">Campus Classifieds &amp; Marketplace</div>
-    <div class="pad-desc">Scan with camera to install on Android (Google Play)</div>
-  </div>
-
-  <!-- Right Interaction Pad: Sputnik Devs Academy -->
-  <div class="scan-pad-right">
-    <div class="pad-tag pad-tag-academy">🚀 APPLY FOR LEARNERSHIP</div>
-    <div class="qr-container">
-      <img src="../../assets/qr/qr-academy-apply.svg" alt="Academy QR">
-    </div>
-    <div class="pad-title">Sputnik Devs Academy</div>
-    <div class="pad-sub" style="color:#fbbf24;">Work-Integrated Learning (WIL)</div>
-    <div class="pad-desc">Accredited 19-Day &amp; 3-Month Software Placements</div>
-  </div>
-
-  <!-- Front Drop: Facing aisle & walking students -->
-  <div class="front-drop">
-    <div class="front-bar"></div>
-    <div class="front-columns">
-      <!-- Left Column: Sputnik Tech Group -->
-      <div class="front-col">
-        <div class="front-col-title">SPUTNIK TECH GROUP</div>
-        <div class="front-col-sub" style="color:#38bdf8;">TRADEY BAY MOBILE APP</div>
-        <div class="front-col-desc">Smart Classifieds &amp; Peer-to-Peer Trading for Campuses &amp; Communities</div>
-        <div style="display:flex;gap:10mm;">
-          <div style="background:#1e293b;border:1.5mm solid #38bdf8;padding:4mm 12mm;border-radius:6mm;font-family:'JetBrains Mono',monospace;font-size:14pt;color:#38bdf8;font-weight:700;">ANDROID LIVE</div>
-          <div style="background:#1e293b;border:1.5mm solid #6366f1;padding:4mm 12mm;border-radius:6mm;font-family:'JetBrains Mono',monospace;font-size:14pt;color:#a5b4fc;font-weight:700;">IOS COMING SOON</div>
-        </div>
-      </div>
-
-      <!-- Right Column: Sputnik Devs Studio -->
-      <div class="front-col" style="text-align:right;">
-        <div class="front-col-title">SPUTNIK DEVS STUDIO</div>
-        <div class="front-col-sub" style="color:#10b981;">CAMPUS SAAS &amp; ACADEMY</div>
-        <div class="front-col-desc">Student Residence Management • The University Hub • Shopnik E-Commerce</div>
-        <div style="display:flex;gap:10mm;justify-content:flex-end;">
-          <div style="background:#1e293b;border:1.5mm solid #10b981;padding:4mm 12mm;border-radius:6mm;font-family:'JetBrains Mono',monospace;font-size:14pt;color:#10b981;font-weight:700;">STUDENT RES SAAS</div>
-          <div style="background:#1e293b;border:1.5mm solid #f59e0b;padding:4mm 12mm;border-radius:6mm;font-family:'JetBrains Mono',monospace;font-size:14pt;color:#fbbf24;font-weight:700;">WIL LEARNERSHIPS</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="front-mission">
-      <div class="front-mission-text">POWERING AFRICAN COMMERCE, CAMPUS COMMUNITIES &amp; NEXT-GEN SOFTWARE TALENT</div>
-      <div class="front-mission-web">sputniktechgroup.com • sputnikdevs.com • Johannesburg, South Africa</div>
-    </div>
-  </div>
+  <!-- Directly include the full 3000mm x 3000mm vector SVG artwork -->
+  <object data="tablecloth.svg" type="image/svg+xml" class="main-canvas" width="3000mm" height="3000mm">
+    <img src="tablecloth.svg" alt="Sputnik Table Cloth 3m x 3m" style="width: 3000mm; height: 3000mm;" />
+  </object>
 </body>
 </html>

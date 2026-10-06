@@ -39,13 +39,31 @@ document.addEventListener('DOMContentLoaded', () => {
       bannerZoom = Math.min(bannerZoom + 0.2, 2.5);
       bannerImg.style.transform = `scale(${bannerZoom})`;
     });
-    zoomOutBtn.addEventListener('click', () => {
-      bannerZoom = Math.max(bannerZoom - 0.2, 0.5);
-      bannerImg.style.transform = `scale(${bannerZoom})`;
-    });
     zoomResetBtn.addEventListener('click', () => {
       bannerZoom = 1;
       bannerImg.style.transform = `scale(1)`;
+    });
+  }
+
+  // Zoom controls for Tablecloth
+  let tcZoom = 1;
+  const tcImg = document.getElementById('tcPreviewImg');
+  const tcZoomInBtn = document.getElementById('tcZoomIn');
+  const tcZoomOutBtn = document.getElementById('tcZoomOut');
+  const tcZoomResetBtn = document.getElementById('tcZoomReset');
+
+  if (tcZoomInBtn && tcImg) {
+    tcZoomInBtn.addEventListener('click', () => {
+      tcZoom = Math.min(tcZoom + 0.25, 3.5);
+      tcImg.style.transform = `scale(${tcZoom})`;
+    });
+    tcZoomOutBtn.addEventListener('click', () => {
+      tcZoom = Math.max(tcZoom - 0.25, 0.4);
+      tcImg.style.transform = `scale(${tcZoom})`;
+    });
+    tcZoomResetBtn.addEventListener('click', () => {
+      tcZoom = 1;
+      tcImg.style.transform = `scale(1)`;
     });
   }
 });

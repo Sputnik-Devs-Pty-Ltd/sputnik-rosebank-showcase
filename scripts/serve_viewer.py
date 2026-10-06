@@ -48,7 +48,10 @@ def main():
     except OSError as e:
         if "Address already in use" in str(e):
             print(f"Port {port} is currently in use. Trying port {port + 1}...")
-            sys.argv[1] = str(port + 1)
+            if len(sys.argv) > 1:
+                sys.argv[1] = str(port + 1)
+            else:
+                sys.argv.append(str(port + 1))
             main()
         else:
             raise e

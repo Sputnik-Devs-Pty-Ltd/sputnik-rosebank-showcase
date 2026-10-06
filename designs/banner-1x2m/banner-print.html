@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik Showcase - Pull-Up Standing Banner (1m x 2m)</title>
+  <title>Sputnik Showcase — Vertical Split Pull-Up Banner (1m x 2m)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
 
@@ -20,7 +20,7 @@
     body {
       width: 1000mm;
       height: 2000mm;
-      background: radial-gradient(circle at 80% 10%, #1e293b 0%, #090d16 60%, #050811 100%);
+      background: #050811;
       color: #ffffff;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       position: relative;
@@ -41,485 +41,621 @@
     }
 
     /* Ambient Glow Blobs */
-    .glow-1 {
+    .glow-cyan {
       position: absolute;
-      top: 150mm;
-      right: 50mm;
+      top: 250mm;
+      left: 50mm;
       width: 400mm;
       height: 400mm;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
-      filter: blur(40mm);
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.12) 0%, transparent 70%);
+      filter: blur(35mm);
+      pointer-events: none;
     }
-    .glow-2 {
+    .glow-purple {
       position: absolute;
-      top: 800mm;
-      left: -50mm;
-      width: 500mm;
-      height: 500mm;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-      filter: blur(50mm);
-    }
-    .glow-3 {
-      position: absolute;
-      top: 1400mm;
-      right: -30mm;
+      top: 300mm;
+      right: 50mm;
       width: 450mm;
       height: 450mm;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
       filter: blur(40mm);
+      pointer-events: none;
+    }
+    .glow-emerald {
+      position: absolute;
+      bottom: 250mm;
+      right: 60mm;
+      width: 450mm;
+      height: 450mm;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+      filter: blur(35mm);
+      pointer-events: none;
     }
 
-    .container {
+    /* ========================================================= */
+    /* TOP HEADER ZONE                                           */
+    /* ========================================================= */
+    .top-header {
+      width: 1000mm;
+      padding: 35mm 60mm 20mm 60mm;
+      text-align: center;
       position: relative;
-      z-index: 2;
-      width: 880mm;
-      margin: 0 auto;
-      padding-top: 60mm;
+      z-index: 10;
     }
-
-    /* Top Header */
     .event-badge {
       display: inline-flex;
       align-items: center;
       gap: 10mm;
-      padding: 6mm 18mm;
-      background: #1e293b;
-      border: 2mm solid #38bdf8;
+      padding: 5mm 16mm;
+      background: #0f172a;
+      border: 1.5mm solid #38bdf8;
       border-radius: 9999px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 14pt;
+      font-size: 13pt;
       font-weight: 700;
       color: #38bdf8;
       letter-spacing: 2mm;
-      margin-bottom: 12mm;
+      margin-bottom: 8mm;
     }
     .event-badge::before {
       content: '';
-      width: 6mm;
-      height: 6mm;
+      width: 5mm;
+      height: 5mm;
       background: #38bdf8;
       border-radius: 50%;
-      box-shadow: 0 0 10mm #38bdf8;
     }
-
     .master-title {
-      font-size: 42pt;
+      font-size: 38pt;
       font-weight: 900;
-      letter-spacing: 1mm;
-      line-height: 1.1;
-      margin-bottom: 4mm;
-    }
-    .master-subtitle {
-      font-size: 30pt;
-      font-weight: 800;
       letter-spacing: 2mm;
-      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 8mm;
+      text-transform: uppercase;
+      margin-bottom: 5mm;
     }
-    .tagline-line {
-      font-size: 16pt;
+    .master-sub {
+      font-size: 17pt;
       color: #94a3b8;
-      letter-spacing: 0.5mm;
-      padding-bottom: 15mm;
-      border-bottom: 1.5mm dashed #334155;
-      margin-bottom: 25mm;
-    }
-
-    /* Cards */
-    .card {
-      background: linear-gradient(180deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
-      border-radius: 25mm;
-      padding: 25mm 30mm;
-      margin-bottom: 25mm;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      border-width: 2.5mm;
-      border-style: solid;
-      box-shadow: 0 20mm 40mm rgba(0, 0, 0, 0.5);
-    }
-    .card-tradey {
-      border-color: #6366f1;
-    }
-    .card-srms {
-      border-color: #06b6d4;
-    }
-    .card-academy {
-      border-color: #f59e0b;
-    }
-
-    .card-content {
-      width: 530mm;
-    }
-    .card-pill {
-      display: inline-block;
-      padding: 4mm 12mm;
-      border-radius: 6mm;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12pt;
-      font-weight: 700;
-      letter-spacing: 1.5mm;
-      margin-bottom: 8mm;
-    }
-    .pill-tradey {
-      background: rgba(67, 56, 202, 0.4);
-      color: #a5b4fc;
-      border: 1mm solid #818cf8;
-    }
-    .pill-srms {
-      background: rgba(14, 116, 144, 0.4);
-      color: #67e8f9;
-      border: 1mm solid #06b6d4;
-    }
-    .pill-academy {
-      background: rgba(180, 83, 9, 0.4);
-      color: #fde68a;
-      border: 1mm solid #f59e0b;
-    }
-
-    .card-title {
-      font-size: 34pt;
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 4mm;
-    }
-    .card-tag {
-      font-size: 19pt;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 12mm;
     }
+    .split-indicators {
+      display: flex;
+      justify-content: space-between;
+      gap: 30mm;
+    }
+    .split-ind-left {
+      flex: 1;
+      padding: 6mm 10mm;
+      background: #0c192c;
+      border: 1.2mm solid #0284c7;
+      border-radius: 8mm;
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12pt;
+      font-weight: 800;
+      letter-spacing: 2mm;
+    }
+    .split-ind-right {
+      flex: 1;
+      padding: 6mm 10mm;
+      background: #15122b;
+      border: 1.2mm solid #8b5cf6;
+      border-radius: 8mm;
+      color: #a78bfa;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12pt;
+      font-weight: 800;
+      letter-spacing: 2mm;
+    }
 
-    .feature-list {
-      list-style: none;
+    /* ========================================================= */
+    /* DUAL VERTICAL SPLIT CONTAINER                             */
+    /* ========================================================= */
+    .dual-split-wrap {
+      display: flex;
+      width: 1000mm;
+      height: 1650mm;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Laser Divider Spine */
+    .center-divider {
+      position: absolute;
+      left: 500mm;
+      top: 0;
+      bottom: 20mm;
+      width: 3mm;
+      background: linear-gradient(to bottom, #38bdf8, #818cf8 50%, #10b981);
+      box-shadow: 0 0 15mm rgba(129, 140, 248, 0.8);
+      transform: translateX(-50%);
+      z-index: 8;
+    }
+
+    /* Columns */
+    .col-left {
+      width: 500mm;
+      padding: 10mm 35mm 20mm 45mm;
+      background: linear-gradient(135deg, rgba(5, 10, 20, 0.95), rgba(9, 19, 34, 0.95));
+      border-right: 1.5mm solid rgba(56, 189, 248, 0.3);
       display: flex;
       flex-direction: column;
-      gap: 7mm;
-      margin-bottom: 15mm;
+      gap: 16mm;
     }
-    .feature-list li {
-      font-size: 14pt;
-      color: #cbd5e1;
+    .col-right {
+      width: 500mm;
+      padding: 10mm 45mm 20mm 35mm;
+      background: linear-gradient(135deg, rgba(10, 12, 22, 0.95), rgba(18, 14, 36, 0.95));
+      display: flex;
+      flex-direction: column;
+      gap: 16mm;
+    }
+
+    /* Company Brand Lockups */
+    .brand-header {
       display: flex;
       align-items: center;
-      gap: 7mm;
+      gap: 12mm;
+      padding-bottom: 8mm;
+      border-bottom: 1.5mm solid rgba(255, 255, 255, 0.1);
     }
-    .feature-list li b {
-      color: #ffffff;
+    .brand-logo-icon {
+      width: 26mm;
+      height: 26mm;
     }
-    .bullet-dot {
-      width: 7mm;
-      height: 7mm;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .brand-title {
+      font-size: 22pt;
+      font-weight: 900;
+      letter-spacing: 1.5mm;
     }
-
-    /* QR Box */
-    .qr-box {
-      width: 250mm;
-      background: #0b0f19;
-      border-radius: 18mm;
-      padding: 15mm;
-      text-align: center;
-      border: 1.5mm solid;
-    }
-    .qr-box-tradey { border-color: #6366f1; }
-    .qr-box-srms { border-color: #06b6d4; }
-    .qr-box-academy { border-color: #f59e0b; }
-
-    .qr-header-tag {
-      padding: 5mm;
-      border-radius: 6mm;
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 13pt;
-      letter-spacing: 1mm;
-      margin-bottom: 10mm;
-    }
-    .tag-tradey { background: #6366f1; }
-    .tag-srms { background: #0891b2; }
-    .tag-academy { background: #d97706; }
-
-    .qr-img-wrapper {
-      background: #ffffff;
-      border-radius: 12mm;
-      padding: 8mm;
-      display: inline-block;
-      margin-bottom: 8mm;
-      box-shadow: 0 5mm 15mm rgba(0,0,0,0.4);
-    }
-    .qr-img-wrapper img, .qr-img-wrapper svg {
-      width: 190mm;
-      height: 190mm;
-      display: block;
-    }
-
-    .qr-label-bold {
+    .brand-subtitle-left {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 13pt;
+      font-size: 11pt;
       font-weight: 700;
-      margin-bottom: 3mm;
+      color: #38bdf8;
+      letter-spacing: 2mm;
     }
-    .qr-label-sub {
+    .brand-subtitle-right {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #10b981;
+      letter-spacing: 2mm;
+    }
+
+    /* Common Card Styles */
+    .card {
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 16mm;
+      padding: 18mm 20mm;
+      position: relative;
+    }
+    .card-left {
+      border: 2mm solid #0284c7;
+      box-shadow: 0 10mm 30mm rgba(2, 132, 199, 0.2);
+    }
+    .card-right-green {
+      border: 2mm solid #10b981;
+      box-shadow: 0 10mm 30mm rgba(16, 185, 129, 0.15);
+    }
+    .card-right-purple {
+      border: 2mm solid #6366f1;
+      box-shadow: 0 10mm 30mm rgba(99, 102, 241, 0.15);
+    }
+    .card-right-gold {
+      background: rgba(23, 21, 36, 0.95);
+      border: 2.5mm solid #f59e0b;
+      box-shadow: 0 10mm 35mm rgba(245, 158, 11, 0.25);
+    }
+
+    /* Tradey Bay Phone Mockup */
+    .phone-mockup {
+      background: #040711;
+      border: 3mm solid #38bdf8;
+      border-radius: 20mm;
+      padding: 14mm 16mm;
+      margin-top: 10mm;
+      box-shadow: 0 15mm 40mm rgba(56, 189, 248, 0.25);
+    }
+    .phone-bar {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10pt;
       color: #94a3b8;
+      margin-bottom: 8mm;
+    }
+    .phone-search {
+      background: #0f172a;
+      border: 1mm solid #1e293b;
+      border-radius: 8mm;
+      padding: 6mm 12mm;
+      font-size: 11pt;
+      color: #64748b;
+      margin-bottom: 10mm;
+    }
+    .product-feed-item {
+      display: flex;
+      gap: 10mm;
+      background: #0a1220;
+      border: 1mm solid #1e293b;
+      border-radius: 10mm;
+      padding: 8mm 12mm;
+      margin-bottom: 8mm;
+      align-items: center;
+    }
+    .product-img {
+      width: 22mm;
+      height: 22mm;
+      background: #1e293b;
+      border-radius: 6mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16pt;
+    }
+    .product-info {
+      flex: 1;
+    }
+    .product-title {
+      font-size: 13pt;
+      font-weight: 800;
+      margin-bottom: 2mm;
+    }
+    .product-price {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #38bdf8;
     }
 
-    /* Badges Row */
-    .badge-row {
+    /* Pointing Explanatory Rows */
+    .pointing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8mm;
+      margin-top: 6mm;
+    }
+    .point-item {
       display: flex;
       gap: 12mm;
+      background: rgba(10, 19, 36, 0.9);
+      border: 1.5mm solid rgba(2, 132, 199, 0.4);
+      border-radius: 12mm;
+      padding: 10mm 14mm;
       align-items: center;
     }
-    .store-badge {
+    .point-icon {
+      font-size: 22pt;
+      width: 24mm;
+      height: 24mm;
       display: flex;
       align-items: center;
-      gap: 8mm;
-      background: #000000;
-      border: 1.5mm solid #475569;
+      justify-content: center;
+      background: rgba(2, 132, 199, 0.2);
       border-radius: 8mm;
-      padding: 5mm 12mm;
     }
-    .store-badge img, .store-badge svg {
-      height: 24mm;
+    .point-title {
+      font-size: 15pt;
+      font-weight: 800;
+      margin-bottom: 2mm;
+    }
+    .point-desc {
+      font-size: 11pt;
+      color: #94a3b8;
+      line-height: 1.4;
     }
 
-    /* Tech Stack Badges */
-    .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6mm;
+    /* QR Code Showcase Box */
+    .qr-cta-box {
+      background: #061224;
+      border: 2.5mm solid #38bdf8;
+      border-radius: 18mm;
+      padding: 18mm 20mm;
+      text-align: center;
+      box-shadow: 0 0 25mm rgba(56, 189, 248, 0.3);
     }
-    .tech-tag {
-      background: #1e293b;
-      border: 1mm solid #475569;
-      color: #ffffff;
+    .qr-cta-box-gold {
+      background: #141122;
+      border: 2.5mm solid #f59e0b;
+      border-radius: 18mm;
+      padding: 18mm 20mm;
+      text-align: center;
+      box-shadow: 0 0 25mm rgba(245, 158, 11, 0.3);
+    }
+    .qr-canvas-white {
+      background: #ffffff;
+      width: 140mm;
+      height: 140mm;
+      border-radius: 12mm;
+      margin: 10mm auto;
+      padding: 10mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qr-canvas-white img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Badges */
+    .tech-badges-grid {
+      display: flex;
+      gap: 6mm;
+      flex-wrap: wrap;
+      margin: 8mm 0;
+    }
+    .tech-pill {
       padding: 4mm 10mm;
-      border-radius: 5mm;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1mm solid rgba(255, 255, 255, 0.2);
+      border-radius: 6mm;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11pt;
       font-weight: 700;
     }
 
-    /* Footer */
-    .footer {
-      border-top: 1.5mm solid #334155;
-      padding-top: 15mm;
+    /* Bottom Cassette Bar */
+    .bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1000mm;
+      height: 120mm;
+      background: #03050a;
+      border-top: 2mm solid #1e293b;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      padding: 0 60mm;
+      z-index: 10;
     }
-    .footer-team {
-      font-size: 14pt;
-    }
-    .footer-team .name {
-      font-family: 'JetBrains Mono', monospace;
-      color: #38bdf8;
-      font-weight: 800;
-      font-size: 15pt;
-      margin-top: 2mm;
-    }
-    .footer-contacts {
-      text-align: right;
-      font-size: 13pt;
+    .bottom-col {
+      font-size: 12pt;
       color: #94a3b8;
     }
-    .footer-contacts strong {
+    .bottom-col strong {
       color: #ffffff;
-    }
-
-    .cassette-guide {
-      position: absolute;
-      bottom: 20mm;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10pt;
-      color: #475569;
-      border-top: 1mm dashed #1e293b;
-      padding-top: 5mm;
+      font-size: 14pt;
     }
   </style>
 </head>
 <body>
+
   <div class="bg-grid"></div>
-  <div class="glow-1"></div>
-  <div class="glow-2"></div>
-  <div class="glow-3"></div>
+  <div class="glow-cyan"></div>
+  <div class="glow-purple"></div>
+  <div class="glow-emerald"></div>
 
-  <div class="container">
-    <!-- Header -->
-    <div class="event-badge">ROSEBANK TECH SHOWCASE 2026</div>
-    <div class="master-title">SPUTNIK TECH GROUP</div>
-    <div class="master-subtitle">&amp; SPUTNIK DEVS STUDIO</div>
-    <div class="tagline-line">
-      Building Africa's Digital Frontier • Consumer Apps • Campus SaaS • Talent Incubator
+  <!-- TOP UNIFIED HEADER -->
+  <header class="top-header">
+    <div class="event-badge">ROSEBANK TECH SHOWCASE 2026 // JOHANNESBURG</div>
+    <h1 class="master-title">THE SPUTNIK TECH ECOSYSTEM</h1>
+    <p class="master-sub">Connecting Campus Marketplace Commerce with Enterprise Cloud Software</p>
+    
+    <div class="split-indicators">
+      <div class="split-ind-left">◀ CONSUMER &amp; CAMPUS MOBILE LABS</div>
+      <div class="split-ind-right">ENTERPRISE SAAS &amp; ACADEMY ▶</div>
     </div>
+  </header>
 
-    <!-- Section 1: Tradey Bay App -->
-    <div class="card card-tradey">
-      <div class="card-content">
-        <span class="card-pill pill-tradey">★ FLAGSHIP CONSUMER APP</span>
-        <div class="card-title">Tradey<span style="color:#a78bfa;">Bay</span></div>
-        <div class="card-tag" style="color:#38bdf8;">The Smart Classifieds &amp; Campus Marketplace</div>
-        
-        <ul class="feature-list">
-          <li>
-            <span class="bullet-dot" style="background:#38bdf8;"></span>
-            <span><b>Buy, Sell &amp; Trade:</b> Student textbooks, gadgets, tech &amp; res essentials</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#818cf8;"></span>
-            <span><b>Campus Verified:</b> Safe transactions with real-time peer-to-peer in-app chat</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#c084fc;"></span>
-            <span><b>Smart Deals:</b> Geolocation filters and AI search for instant local finds</span>
-          </li>
-        </ul>
+  <!-- DUAL VERTICAL SPLIT CONTAINER -->
+  <div class="dual-split-wrap">
+    
+    <!-- Central Laser Spine -->
+    <div class="center-divider"></div>
 
-        <div class="badge-row">
-          <div class="store-badge">
-            <svg viewBox="0 0 40 40" width="30" height="30">
-              <path d="M5 3.5L24 22.5L5 41.5C4.2 40.8 3.8 39.7 3.8 38.3V6.7C3.8 5.3 4.2 4.2 5 3.5Z" fill="#00E5FF"/>
-              <path d="M30.7 29.2L24 22.5L5 41.5C6.1 42.6 7.8 42.9 9.4 42.1L30.7 29.2Z" fill="#FF0043"/>
-              <path d="M30.7 15.8L9.4 3C7.8 2.2 6.1 2.5 5 3.5L24 22.5L30.7 15.8Z" fill="#00F076"/>
-              <path d="M38.5 20.3L30.7 15.8L24 22.5L30.7 29.2L38.5 24.7C40.5 23.5 40.5 21.5 38.5 20.3Z" fill="#FFD600"/>
-            </svg>
-            <div>
-              <div style="font-size:8pt;color:#94a3b8;letter-spacing:1px;font-weight:600;">AVAILABLE ON</div>
-              <div style="font-size:14pt;font-weight:800;color:#ffffff;">Google Play</div>
+    <!-- ======================================================== -->
+    <!-- LEFT COLUMN: SPUTNIK TECH GROUP (TRADEY BAY)             -->
+    <!-- ======================================================== -->
+    <section class="col-left">
+      
+      <!-- Brand Header -->
+      <div class="brand-header">
+        <img src="../../assets/logos/sputnik-tech-group-logo.svg" alt="Sputnik Tech Group" style="height: 22mm;">
+      </div>
+
+      <!-- Tradey Bay Phone Mockup -->
+      <div class="card card-left">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h2 style="font-size: 20pt; font-weight: 900;">Tradey<span style="color: #a78bfa;">Bay</span> App</h2>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 10pt; color: #38bdf8; font-weight: 700;">THE SMART CAMPUS MARKETPLACE</p>
+          </div>
+          <span style="background: rgba(16, 185, 129, 0.2); border: 1mm solid #10b981; color: #34d399; padding: 4mm 10mm; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 10pt; font-weight: 800;">● LIVE ON PLAY STORE</span>
+        </div>
+
+        <div class="phone-mockup">
+          <div class="phone-bar">
+            <span>9:41</span>
+            <span>Rosebank College Hub</span>
+            <span>100% 🔋</span>
+          </div>
+          <div class="phone-search">🔍 Search textbooks, calculators, laptops, fridges...</div>
+          
+          <div class="product-feed-item">
+            <div class="product-img">📚</div>
+            <div class="product-info">
+              <div class="product-title">Calculus &amp; Linear Algebra 3rd Ed</div>
+              <div class="product-price">R 280.00 <span style="font-size: 10pt; color: #64748b; font-weight: normal;">· Rosebank Campus</span></div>
             </div>
+            <span style="background: #10b981; color: #ffffff; padding: 3mm 8mm; border-radius: 6mm; font-size: 9pt; font-weight: 800;">Chat 💬</span>
           </div>
 
-          <div class="store-badge">
-            <div>
-              <div style="font-size:8pt;color:#38bdf8;letter-spacing:1px;font-weight:700;">COMING SOON ON</div>
-              <div style="font-size:14pt;font-weight:800;color:#ffffff;">Apple App Store</div>
+          <div class="product-feed-item">
+            <div class="product-img">💻</div>
+            <div class="product-info">
+              <div class="product-title">Apple MacBook Air M2 (8/256GB)</div>
+              <div class="product-price" style="color: #a78bfa;">R 12,500.00 <span style="font-size: 10pt; color: #64748b; font-weight: normal;">· Like New</span></div>
             </div>
+            <span style="background: #8b5cf6; color: #ffffff; padding: 3mm 8mm; border-radius: 6mm; font-size: 9pt; font-weight: 800;">Offer 🏷️</span>
+          </div>
+
+          <div class="product-feed-item">
+            <div class="product-img">🧊</div>
+            <div class="product-info">
+              <div class="product-title">Bar Fridge (90L) — Campus Res B</div>
+              <div class="product-price">R 850.00 <span style="font-size: 10pt; color: #64748b; font-weight: normal;">· 200m away</span></div>
+            </div>
+            <span style="background: #0284c7; color: #ffffff; padding: 3mm 8mm; border-radius: 6mm; font-size: 9pt; font-weight: 800;">Buy</span>
           </div>
         </div>
       </div>
 
-      <!-- Tradey Bay QR -->
-      <div class="qr-box qr-box-tradey">
-        <div class="qr-header-tag tag-tradey">SCAN TO DOWNLOAD</div>
-        <div class="qr-img-wrapper">
+      <!-- Pointing Bullets for Onlookers -->
+      <div class="pointing-list">
+        <div class="point-item">
+          <div class="point-icon">💸</div>
+          <div>
+            <div class="point-title">1. Zero Listing &amp; Selling Fees</div>
+            <div class="point-desc">Students keep 100% of their money. Sell textbooks, notes, electronics &amp; campus dorm gear without platform commission.</div>
+          </div>
+        </div>
+
+        <div class="point-item">
+          <div class="point-icon">🛡️</div>
+          <div>
+            <div class="point-title">2. Verified Campus Community</div>
+            <div class="point-desc">Verified student badges prevent scammers. Safely meet campus peers in well-lit student centers or library zones.</div>
+          </div>
+        </div>
+
+        <div class="point-item">
+          <div class="point-icon">💬</div>
+          <div>
+            <div class="point-title">3. Instant In-App Chat &amp; Negotiation</div>
+            <div class="point-desc">Make counter-offers and coordinate handovers in real time without giving out your personal WhatsApp number.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scannable QR Call to Action -->
+      <div class="qr-cta-box">
+        <h3 style="font-family: 'JetBrains Mono', monospace; font-size: 13pt; font-weight: 800; color: #38bdf8; letter-spacing: 2mm;">GET THE TRADEY BAY APP</h3>
+        <p style="font-size: 17pt; font-weight: 800; margin-top: 2mm;">Point Camera to Download on Android</p>
+        
+        <div class="qr-canvas-white">
           <img src="../../assets/qr/qr-tradeybay-playstore.svg" alt="Tradey Bay Play Store QR">
         </div>
-        <div class="qr-label-bold" style="color:#38bdf8;">Direct Android Download</div>
-        <div class="qr-label-sub">Live on Google Play Store</div>
+
+        <div style="display: flex; justify-content: center; gap: 8mm; margin-top: 6mm;">
+          <img src="../../assets/badges/google-play-badge.svg" alt="Google Play" style="height: 16mm;">
+          <img src="../../assets/badges/app-store-badge.svg" alt="App Store Coming Soon" style="height: 16mm; opacity: 0.8;">
+        </div>
+
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 11pt; color: #38bdf8; margin-top: 8mm;">🌐 sputniktechgroup.com</p>
       </div>
-    </div>
 
-    <!-- Section 2: Student Residence Management & University Hub -->
-    <div class="card card-srms">
-      <div class="card-content">
-        <span class="card-pill pill-srms">★ CAMPUS &amp; HOUSING SAAS</span>
-        <div class="card-title">Student Res Management</div>
-        <div class="card-tag" style="color:#10b981;">&amp; The University Hub Platform</div>
+    </section>
 
-        <ul class="feature-list">
-          <li>
-            <span class="bullet-dot" style="background:#10b981;"></span>
-            <span><b>Digital Accommodation:</b> Online check-ins, room allocations &amp; lease contracts</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#06b6d4;"></span>
-            <span><b>Maintenance &amp; Security:</b> QR maintenance logs &amp; automated staff routing</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#3b82f6;"></span>
-            <span><b>The University Hub:</b> Society portals, student marketplace &amp; event discovery</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#a855f7;"></span>
-            <span><b>Shopnik E-Commerce:</b> Multi-tier digital storefront SaaS for modern retail</span>
-          </li>
-        </ul>
 
-        <div style="background:#0f2937;border:1mm solid #0891b2;padding:4mm 10mm;border-radius:6mm;display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12pt;font-weight:700;color:#67e8f9;">
-          🏛 Partnering with Rosebank College &amp; Private Res Operators
+    <!-- ======================================================== -->
+    <!-- RIGHT COLUMN: SPUTNIK DEVS STUDIO (SAAS & ACADEMY)       -->
+    <!-- ======================================================== -->
+    <section class="col-right">
+
+      <!-- Brand Header -->
+      <div class="brand-header">
+        <img src="../../assets/logos/sputnik-devs-studio-logo.svg" alt="Sputnik Devs Studio" style="height: 22mm;">
+      </div>
+
+      <!-- CARD 1: Student Residence Management & University Hub -->
+      <div class="card card-right-green">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6mm;">
+          <div>
+            <h3 style="font-size: 16pt; font-weight: 900;">Student Res Management System</h3>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #34d399; font-weight: 700;">&amp; THE UNIVERSITY HUB CAMPUS PLATFORM</p>
+          </div>
+          <span style="background: rgba(16, 185, 129, 0.2); border: 1mm solid #10b981; color: #34d399; padding: 3mm 8mm; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 9pt; font-weight: 800;">CAMPUS SAAS</span>
+        </div>
+
+        <div style="font-size: 11pt; color: #cbd5e1; line-height: 1.5; margin-bottom: 6mm;">
+          <p>• <strong>Automated Room Allocations:</strong> Replace spreadsheets with 1-click student bed management.</p>
+          <p>• <strong>Digital Leases &amp; Billing:</strong> Automated rent invoices, NSFAS reconciliation &amp; arrears tracking.</p>
+          <p>• <strong>Biometric Access:</strong> Turnstile integration &amp; digital maintenance ticket workflows.</p>
+          <p>• <strong>The University Hub:</strong> Campus societies, academic feeds &amp; campus life announcements.</p>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(4, 47, 46, 0.6); border: 1mm solid #10b981; border-radius: 8mm; padding: 4mm 10mm;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10pt; color: #34d399;">sputnikdevs.com/products/hostel</span>
+          <span style="font-size: 10pt; font-weight: 700; color: #ffffff;">Live Demo ➔</span>
         </div>
       </div>
 
-      <!-- SRMS QR -->
-      <div class="qr-box qr-box-srms">
-        <div class="qr-header-tag tag-srms">SCAN FOR DEMO</div>
-        <div class="qr-img-wrapper">
-          <img src="../../assets/qr/qr-student-housing-srms.svg" alt="SRMS QR">
+      <!-- CARD 2: Shopnik E-Commerce Platform -->
+      <div class="card card-right-purple">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6mm;">
+          <div>
+            <h3 style="font-size: 16pt; font-weight: 900;">Shopnik E-Commerce Platform</h3>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #818cf8; font-weight: 700;">SOUTH AFRICA'S SHOPIFY ALTERNATIVE</p>
+          </div>
+          <span style="background: rgba(99, 102, 241, 0.2); border: 1mm solid #6366f1; color: #818cf8; padding: 3mm 8mm; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 9pt; font-weight: 800;">ENTERPRISE B2B</span>
         </div>
-        <div class="qr-label-bold" style="color:#67e8f9;">Residence Platform</div>
-        <div class="qr-label-sub">Interactive Sandbox Demos</div>
-      </div>
-    </div>
 
-    <!-- Section 3: Sputnik Devs Academy (WIL & Learnerships) -->
-    <div class="card card-academy">
-      <div class="card-content">
-        <span class="card-pill pill-academy">★ ROSEBANK STUDENTS OPPORTUNITY</span>
-        <div class="card-title">Sputnik Devs Academy</div>
-        <div class="card-tag" style="color:#fbbf24;">Learnerships &amp; Academic WIL Placements</div>
+        <div style="font-size: 11pt; color: #cbd5e1; line-height: 1.5; margin-bottom: 6mm;">
+          <p>• <strong>Native SA Gateways:</strong> PayFast, Ozow, Yoco, Paystack &amp; Capitec Pay built-in.</p>
+          <p>• <strong>Zero USD Exchange Penalty:</strong> Transparent monthly Rand billing with zero FX markup.</p>
+          <p>• <strong>Sub-Second Speed:</strong> Built on .NET 10 &amp; Cloud Redis. Handles massive peak traffic.</p>
+        </div>
 
-        <ul class="feature-list">
-          <li>
-            <span class="bullet-dot" style="background:#fbbf24;"></span>
-            <span><b>Official WIL Credit:</b> Fulfills 19-day &amp; 3-month curriculum requirements</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#f59e0b;"></span>
-            <span><b>Real Enterprise Stack:</b> .NET 10, Cloud Docker, PostgreSQL, React &amp; AI</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#d97706;"></span>
-            <span><b>Senior Mentorship:</b> Code reviews by MSc AI &amp; senior software architects</span>
-          </li>
-          <li>
-            <span class="bullet-dot" style="background:#b45309;"></span>
-            <span><b>Hiring Pipeline:</b> Top performers transition to paid junior engineering roles</span>
-          </li>
-        </ul>
-
-        <div class="tech-tags">
-          <div class="tech-tag">.NET 10</div>
-          <div class="tech-tag">POSTGRES</div>
-          <div class="tech-tag">REDIS</div>
-          <div class="tech-tag">DOCKER</div>
-          <div class="tech-tag">REACT</div>
-          <div class="tech-tag">AI / ML</div>
-          <div class="tech-tag">ANGULAR</div>
+        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(30, 27, 75, 0.6); border: 1mm solid #6366f1; border-radius: 8mm; padding: 4mm 10mm;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10pt; color: #a5b4fc;">sputnikdevs.com/products/ecommerce</span>
+          <span style="font-size: 10pt; font-weight: 700; color: #ffffff;">Explore SaaS ➔</span>
         </div>
       </div>
 
-      <!-- Academy QR -->
-      <div class="qr-box qr-box-academy">
-        <div class="qr-header-tag tag-academy">SCAN TO APPLY</div>
-        <div class="qr-img-wrapper">
+      <!-- CARD 3: Sputnik Devs Academy — Learnerships (Gold Highlight) -->
+      <div class="card card-right-gold">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4mm;">
+          <div>
+            <h3 style="font-size: 17pt; font-weight: 900; color: #fbbf24;">Sputnik Devs Academy</h3>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #f59e0b; font-weight: 800;">ACCREDITED TECH LEARNERSHIPS (WIL)</p>
+          </div>
+          <span style="background: #f59e0b; color: #000000; padding: 3mm 10mm; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 9pt; font-weight: 900;">HIRING NOW</span>
+        </div>
+
+        <p style="font-size: 12pt; font-weight: 700; color: #ffffff; margin-bottom: 2mm;">Calling All IT &amp; Computer Science Students!</p>
+        <p style="font-size: 11pt; color: #cbd5e1; line-height: 1.4; margin-bottom: 6mm;">
+          19-day intensive and 3-month accredited Work-Integrated Learning (WIL) tracks. Build real production systems with our core engineering team.
+        </p>
+
+        <div class="tech-badges-grid">
+          <span class="tech-pill" style="border-color: #38bdf8; color: #38bdf8;">.NET 10</span>
+          <span class="tech-pill" style="border-color: #38bdf8; color: #38bdf8;">Flutter</span>
+          <span class="tech-pill" style="border-color: #818cf8; color: #818cf8;">Azure Cloud</span>
+          <span class="tech-pill" style="border-color: #34d399; color: #34d399;">PostgreSQL</span>
+          <span class="tech-pill" style="border-color: #fbbf24; color: #fbbf24;">AI Agents</span>
+        </div>
+
+        <!-- Scannable Academy QR Code Box -->
+        <div class="qr-canvas-white">
           <img src="../../assets/qr/qr-academy-apply.svg" alt="Academy Apply QR">
         </div>
-        <div class="qr-label-bold" style="color:#fbbf24;">Applications Open</div>
-        <div class="qr-label-sub">sputnikdevs.com/academy/apply</div>
-      </div>
-    </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      <div class="footer-team">
-        <div>Connect with our showcase leads at the booth:</div>
-        <div class="name">PRINCE (Head of Tech) &amp; KENNETH (COO)</div>
+        <div style="background: #f59e0b; color: #000000; padding: 4mm 8mm; border-radius: 8mm; font-weight: 900; font-size: 12pt; text-align: center; margin-top: 4mm;">
+          SCAN TO APPLY FOR LEARNERSHIP // BRING YOUR CV
+        </div>
+
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 11pt; color: #fbbf24; margin-top: 6mm; text-align: center;">🌐 sputnikdevs.com/academy/apply</p>
       </div>
-      <div class="footer-contacts">
-        <div>Web: <strong>sputniktechgroup.com</strong> | <strong>sputnikdevs.com</strong></div>
-        <div>Email: <strong style="color:#38bdf8;">info@sputnikdevs.com</strong> • Johannesburg, South Africa</div>
-      </div>
-    </div>
+
+    </section>
+
   </div>
 
-  <div class="cassette-guide">
-    PULL-UP BANNER CASSETTE ROLLER SAFE MARGIN (100MM AT BOTTOM)
-  </div>
+  <!-- BOTTOM CASSETTE BAR -->
+  <footer class="bottom-bar">
+    <div class="bottom-col">
+      <strong>SPUTNIK TECH GROUP (PTY) LTD</strong><br>
+      Consumer &amp; Campus Mobile Innovation • sputniktechgroup.com
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #475569;">
+      [ ROLL-UP CASSETTE BASE CLEARANCE ZONE - 100mm ]
+    </div>
+    <div class="bottom-col" style="text-align: right;">
+      <strong>SPUTNIK DEVS STUDIO (PTY) LTD</strong><br>
+      Enterprise Cloud &amp; Tech Academy • sputnikdevs.com
+    </div>
+  </footer>
+
 </body>
 </html>

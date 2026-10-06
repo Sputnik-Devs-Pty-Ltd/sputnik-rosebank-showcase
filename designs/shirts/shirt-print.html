@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik Showcase - Staff T-Shirt Production Files</title>
+  <title>Sputnik Showcase — Staff T-Shirt DTF Production Sheets</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
+
+    @page {
+      size: A3 landscape;
+      margin: 10mm;
+    }
 
     * {
       box-sizing: border-box;
@@ -13,328 +18,499 @@
     }
 
     body {
-      background: #090d16;
+      background: #060911;
       color: #ffffff;
-      font-family: 'Inter', sans-serif;
-      padding: 40px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 20px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
-    .header {
-      margin-bottom: 40px;
-      border-bottom: 2px solid #1e293b;
-      padding-bottom: 20px;
-    }
-    .badge {
-      display: inline-block;
-      padding: 6px 16px;
-      background: #1e293b;
-      border: 1px solid #38bdf8;
-      border-radius: 20px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: #38bdf8;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .panel {
-      background: #0f172a;
-      border: 2px solid #334155;
+    .sheet-page {
+      background: #090e18;
+      border: 2px solid #1e293b;
       border-radius: 16px;
       padding: 30px;
-      position: relative;
+      margin-bottom: 40px;
+      page-break-after: always;
     }
-    .panel-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 6px;
+
+    .sheet-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 16px;
+      margin-bottom: 25px;
     }
-    .dim-tag {
+
+    .badge-tag {
+      display: inline-block;
+      padding: 5px 14px;
+      background: #0f172a;
+      border: 1.5px solid #38bdf8;
+      border-radius: 20px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      color: #94a3b8;
-      background: #1e293b;
-      padding: 3px 8px;
-      border-radius: 4px;
+      font-weight: 800;
+      color: #38bdf8;
+      letter-spacing: 1.5px;
     }
 
-    .art-box {
-      background: #000000;
-      border: 1px dashed #475569;
-      border-radius: 12px;
-      padding: 30px;
-      margin-top: 15px;
+    .badge-tag-kenneth {
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 30px;
+    }
+
+    .chest-col {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      gap: 25px;
     }
 
-    /* Front Left Chest Emblem */
-    .emblem-wrap {
+    .print-pod {
+      background: #000000;
+      border: 1.5px dashed #475569;
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .pod-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      color: #94a3b8;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Chest Crest Artwork */
+    .crest-art {
       display: flex;
       align-items: center;
       gap: 15px;
+      padding: 10px;
     }
-    .emblem-icon {
-      width: 48px;
-      height: 48px;
+    .crest-orb {
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-      background: #0f172a;
+      background: #0c192c;
       border: 2px solid #38bdf8;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
-    .emblem-dot {
-      width: 18px;
-      height: 18px;
+    .crest-core {
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
-      background: #38bdf8;
+      background: #0284c7;
     }
-    .emblem-text {
-      text-align: left;
-    }
-    .emblem-text .brand {
+    .crest-text .brand {
       font-size: 16px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
-    .emblem-text .sub {
+    .crest-text .sub {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
-      font-weight: 700;
+      font-weight: 800;
       color: #38bdf8;
       letter-spacing: 1px;
     }
 
-    /* Name Badges */
-    .name-badge {
-      background: #0f172a;
-      border: 2px solid #6366f1;
-      border-radius: 8px;
-      padding: 12px 25px;
-      text-align: center;
-      min-width: 220px;
+    /* Tactical ID Badges */
+    .id-badge {
+      background: #0c182a;
+      border: 2px solid #0284c7;
+      border-radius: 10px;
+      padding: 14px 18px;
     }
-    .name-badge-kenneth {
+    .id-badge-kenneth {
+      background: #091a14;
       border-color: #10b981;
     }
-    .badge-name {
+    .badge-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 18px;
+      font-size: 8px;
       font-weight: 800;
-      letter-spacing: 1.5px;
+      color: #38bdf8;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+    .badge-name {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
     .badge-role {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      font-weight: 700;
-      color: #a5b4fc;
-      margin-top: 3px;
+      font-size: 10px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-top: 2px;
+      margin-bottom: 10px;
     }
-    .badge-role-kenneth {
-      color: #6ee7b7;
+    .chips-row {
+      display: flex;
+      gap: 6px;
+    }
+    .chip {
+      background: #1e293b;
+      padding: 3px 7px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      color: #cbd5e1;
     }
 
-    /* Back Art */
-    .back-art {
-      width: 100%;
-      max-width: 380px;
+    /* Back Billboard Artwork (A3 Scale) */
+    .back-billboard {
+      background: #020409;
+      border: 2px solid #334155;
+      border-radius: 16px;
+      padding: 35px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto;
     }
     .back-title {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 900;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       line-height: 1.2;
     }
     .back-sub {
-      font-size: 18px;
+      font-size: 28px;
       font-weight: 900;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      background: linear-gradient(90deg, #c084fc, #6366f1, #38bdf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-top: 4px;
+      margin-bottom: 15px;
     }
-    .back-div {
-      width: 160px;
-      height: 2px;
-      background: #38bdf8;
-      margin: 12px 0 8px 0;
-    }
-    .back-prods {
-      font-size: 10px;
-      color: #94a3b8;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
+    .back-sub-tradey {
+      background: linear-gradient(90deg, #00f2fe, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .qr-card {
-      background: #0f172a;
-      border: 2px solid #f59e0b;
-      border-radius: 12px;
-      padding: 15px;
+    .qr-hud-card {
+      background: #0c0a1a;
+      border: 2.5px solid #f59e0b;
+      border-radius: 16px;
+      padding: 20px 30px;
+      width: 320px;
+      margin: 15px 0;
       text-align: center;
-      margin-bottom: 20px;
-      width: 200px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .qr-hud-card-tradey {
+      background: #07111e;
+      border-color: #0284c7;
     }
     .qr-tag {
       background: #d97706;
       color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 1px;
-      padding: 4px;
-      border-radius: 4px;
-      margin-bottom: 10px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      display: inline-block;
     }
-    .qr-card img {
-      width: 140px;
-      height: 140px;
+    .qr-tag-tradey {
+      background: #0284c7;
+    }
+    .qr-img-box {
       background: #ffffff;
-      padding: 6px;
-      border-radius: 8px;
+      border-radius: 12px;
+      padding: 10px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .qr-img-box img {
+      width: 170px;
+      height: 170px;
       display: block;
-      margin: 0 auto 8px auto;
     }
 
-    .tags-grid {
+    .tech-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       justify-content: center;
-      margin-bottom: 18px;
+      margin-top: 15px;
+      margin-bottom: 12px;
     }
-    .tag-item {
-      background: #1e293b;
-      border: 1px solid #475569;
-      padding: 3px 8px;
-      border-radius: 4px;
+    .tech-pill {
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 4px 10px;
+      border-radius: 5px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
       font-weight: 700;
-    }
-
-    .web-foot {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: #38bdf8;
-      font-weight: 700;
+      color: #e2e8f0;
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="badge">PRINT SHOP DTF / SCREEN PRINT READY</div>
-    <h1 style="font-size: 32px; font-weight: 900;">Showcase T-Shirt Production Sheets</h1>
-    <p style="color: #94a3b8; margin-top: 6px;">
-      Garment: Premium 180–200gsm Combed Cotton Crewneck • Color: Noir Black • Quantity: 2 (1x Prince, 1x Kenneth)
-    </p>
-  </div>
 
-  <div class="grid">
-    <!-- FRONT LEFT CHEST EMBLEM -->
-    <div class="panel">
-      <div class="panel-title">
-        <span>Front Left Chest (Both Shirts)</span>
-        <span class="dim-tag">100 x 60 mm</span>
+  <!-- =================================================================== -->
+  <!-- SHEET 1: PRINCE (LEAD ARCHITECT // TECH OPS)                        -->
+  <!-- =================================================================== -->
+  <div class="sheet-page">
+    <div class="sheet-header">
+      <div>
+        <div class="badge-tag">DTF PRODUCTION GANG SHEET // UNIT 01: PRINCE</div>
+        <h1 style="font-size: 24px; font-weight: 900; margin-top: 6px;">Staff Apparel — Prince (Lead Architect)</h1>
       </div>
-      <div class="art-box">
-        <div class="emblem-wrap">
-          <div class="emblem-icon">
-            <div class="emblem-dot"></div>
+      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #94a3b8;">
+        Garment: Noir Black 200gsm Heavyweight Crewneck (Size L/XL)<br>
+        Print Method: Direct-to-Film (DTF) Heat Press 150°C 15s
+      </div>
+    </div>
+
+    <div class="layout-grid">
+      <!-- Left Column: Front Chest Prints -->
+      <div class="chest-col">
+        <!-- Print 1: Left Chest Co-Brand Crest -->
+        <div class="print-pod">
+          <div class="pod-label">
+            <span>PRINT A: LEFT CHEST CREST</span>
+            <span>100 x 60 mm</span>
           </div>
-          <div class="emblem-text">
-            <div class="brand">SPUTNIK</div>
-            <div class="sub">TECH CREW</div>
+          <div class="crest-art">
+            <div class="crest-orb">
+              <div class="crest-core"></div>
+            </div>
+            <div class="crest-text">
+              <div class="brand">SPUTNIK</div>
+              <div class="sub">TECH &amp; DEVS</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#64748b;">CREW // 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Print 2: Right Chest Tactical ID Badge (Prince) -->
+        <div class="print-pod">
+          <div class="pod-label">
+            <span>PRINT B: RIGHT CHEST TACTICAL ID BADGE</span>
+            <span>110 x 50 mm</span>
+          </div>
+          <div class="id-badge">
+            <div class="badge-header">
+              <span>SECURITY ID // ROOT</span>
+              <span>● ACTIVE</span>
+            </div>
+            <div class="badge-name">PRINCE</div>
+            <div class="badge-role">LEAD ARCHITECT // TECH OPS</div>
+            <div class="chips-row">
+              <span class="chip">.NET 10</span>
+              <span class="chip">AZURE</span>
+              <span class="chip" style="color:#34d399;">SYSTEMS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Print Instructions -->
+        <div style="background:#0c1322;border:1px solid #1e293b;border-radius:10px;padding:15px;font-size:11px;color:#94a3b8;">
+          <div style="color:#38bdf8;font-weight:800;margin-bottom:5px;">DTF PRINTER NOTE:</div>
+          Left crest positioned 180mm below shoulder seam on left chest. ID badge positioned mirrored on right chest. Back print centered 60mm below back collar seam.
+        </div>
+      </div>
+
+      <!-- Right Column: Back A3 Walking Billboard (Prince: Devs Academy Focus) -->
+      <div class="print-pod">
+        <div class="pod-label">
+          <span>PRINT C: FULL BACK WALKING BILLBOARD (A3 SCALE)</span>
+          <span>300 x 420 mm</span>
+        </div>
+
+        <div class="back-billboard">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:#a78bfa;letter-spacing:2px;margin-bottom:6px;">
+            SPUTNIK TECH GROUP  ×  SPUTNIK DEVS STUDIO
+          </div>
+          <div class="back-title">ENGINEERING AFRICA'S</div>
+          <div class="back-sub">DIGITAL FUTURE</div>
+          
+          <div style="font-size:12px;font-weight:700;color:#cbd5e1;letter-spacing:1px;margin-bottom:12px;">
+            CAMPUS TO CLOUD  //  BUILT DIFFERENT
+          </div>
+
+          <!-- Devs Academy Scannable HUD Card -->
+          <div class="qr-hud-card">
+            <div class="qr-tag">🚀 SCAN TO APPLY FOR WIL LEARNERSHIP</div>
+            <div class="qr-img-box">
+              <img src="../../assets/qr/qr-academy-apply.svg" alt="Devs Academy Apply QR">
+            </div>
+            <div style="font-size:14px;font-weight:900;color:#ffffff;">Sputnik Devs Academy</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#fbbf24;margin-top:2px;">
+              WORK-INTEGRATED LEARNING
+            </div>
+            <div style="font-size:10px;color:#94a3b8;margin-top:4px;">
+              Accredited 19-Day &amp; 3-Month Placements
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#fbbf24;margin-top:6px;font-weight:700;">
+              sputnikdevs.com/academy
+            </div>
+          </div>
+
+          <div class="tech-pills">
+            <span class="tech-pill">.NET 10</span>
+            <span class="tech-pill">C# 13</span>
+            <span class="tech-pill">FLUTTER</span>
+            <span class="tech-pill">AZURE CLOUD</span>
+            <span class="tech-pill">POSTGRESQL</span>
+            <span class="tech-pill">AI AGENTS</span>
+          </div>
+
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#64748b;margin-top:8px;">
+            sputniktechgroup.com • sputnikdevs.com • Rosebank 2026
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- FRONT RIGHT: PRINCE -->
-    <div class="panel">
-      <div class="panel-title">
-        <span>Front Right Chest: Prince</span>
-        <span class="dim-tag">100 x 45 mm</span>
+
+  <!-- =================================================================== -->
+  <!-- SHEET 2: KENNETH (CHIEF OPERATING OFFICER // PRODUCT STRATEGY)      -->
+  <!-- =================================================================== -->
+  <div class="sheet-page">
+    <div class="sheet-header">
+      <div>
+        <div class="badge-tag badge-tag-kenneth">DTF PRODUCTION GANG SHEET // UNIT 02: KENNETH</div>
+        <h1 style="font-size: 24px; font-weight: 900; margin-top: 6px;">Staff Apparel — Kenneth (Chief Operating Officer)</h1>
       </div>
-      <div class="art-box">
-        <div class="name-badge">
-          <div class="badge-name">PRINCE</div>
-          <div class="badge-role">TECH OPS &amp; DEV</div>
-        </div>
+      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #94a3b8;">
+        Garment: Noir Black 200gsm Heavyweight Crewneck (Size L/XL)<br>
+        Print Method: Direct-to-Film (DTF) Heat Press 150°C 15s
       </div>
     </div>
 
-    <!-- FRONT RIGHT: KENNETH -->
-    <div class="panel">
-      <div class="panel-title">
-        <span>Front Right Chest: Kenneth</span>
-        <span class="dim-tag">100 x 45 mm</span>
+    <div class="layout-grid">
+      <!-- Left Column: Front Chest Prints -->
+      <div class="chest-col">
+        <!-- Print 1: Left Chest Co-Brand Crest -->
+        <div class="print-pod">
+          <div class="pod-label">
+            <span>PRINT A: LEFT CHEST CREST</span>
+            <span>100 x 60 mm</span>
+          </div>
+          <div class="crest-art">
+            <div class="crest-orb">
+              <div class="crest-core"></div>
+            </div>
+            <div class="crest-text">
+              <div class="brand">SPUTNIK</div>
+              <div class="sub">TECH &amp; DEVS</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#64748b;">CREW // 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Print 2: Right Chest Tactical ID Badge (Kenneth) -->
+        <div class="print-pod">
+          <div class="pod-label">
+            <span>PRINT B: RIGHT CHEST TACTICAL ID BADGE</span>
+            <span>110 x 50 mm</span>
+          </div>
+          <div class="id-badge id-badge-kenneth">
+            <div class="badge-header" style="color:#34d399;">
+              <span>SECURITY ID // ROOT EXEC</span>
+              <span>● ACTIVE</span>
+            </div>
+            <div class="badge-name">KENNETH</div>
+            <div class="badge-role" style="color:#34d399;">COO // PRODUCT STRATEGY</div>
+            <div class="chips-row">
+              <span class="chip">COMMERCE</span>
+              <span class="chip">ECOSYSTEM</span>
+              <span class="chip" style="color:#38bdf8;">SCALE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Print Instructions -->
+        <div style="background:#091a14;border:1px solid #1e293b;border-radius:10px;padding:15px;font-size:11px;color:#94a3b8;">
+          <div style="color:#34d399;font-weight:800;margin-bottom:5px;">DTF PRINTER NOTE:</div>
+          Left crest positioned 180mm below shoulder seam on left chest. ID badge positioned mirrored on right chest. Back print centered 60mm below back collar seam.
+        </div>
       </div>
-      <div class="art-box">
-        <div class="name-badge name-badge-kenneth">
-          <div class="badge-name">KENNETH</div>
-          <div class="badge-role badge-role-kenneth">COO &amp; PRODUCT</div>
+
+      <!-- Right Column: Back A3 Walking Billboard (Kenneth: Tradey Bay Focus) -->
+      <div class="print-pod">
+        <div class="pod-label">
+          <span>PRINT C: FULL BACK WALKING BILLBOARD (A3 SCALE)</span>
+          <span>300 x 420 mm</span>
+        </div>
+
+        <div class="back-billboard">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:#38bdf8;letter-spacing:2px;margin-bottom:6px;">
+            SPUTNIK TECH GROUP  ×  SPUTNIK DEVS STUDIO
+          </div>
+          <div class="back-title">ENGINEERING AFRICA'S</div>
+          <div class="back-sub back-sub-tradey">DIGITAL FUTURE</div>
+          
+          <div style="font-size:12px;font-weight:700;color:#cbd5e1;letter-spacing:1px;margin-bottom:12px;">
+            CAMPUS TO CLOUD  //  BUILT DIFFERENT
+          </div>
+
+          <!-- Tradey Bay Scannable HUD Card -->
+          <div class="qr-hud-card qr-hud-card-tradey">
+            <div class="qr-tag qr-tag-tradey">📱 SCAN TO GET TRADEY BAY APP</div>
+            <div class="qr-img-box">
+              <img src="../../assets/qr/qr-tradeybay-playstore.svg" alt="Tradey Bay Play Store QR">
+            </div>
+            <div style="font-size:15px;font-weight:900;color:#ffffff;">Tradey<span style="color:#a78bfa;">Bay</span></div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#38bdf8;margin-top:2px;">
+              CAMPUS CLASSIFIEDS &amp; MARKETPLACE
+            </div>
+            <div style="font-size:10px;color:#94a3b8;margin-top:4px;">
+              0% Commission • Buy &amp; Sell Textbooks &amp; Tech
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#38bdf8;margin-top:6px;font-weight:700;">
+              Live on Android (Google Play)
+            </div>
+          </div>
+
+          <div class="tech-pills">
+            <span class="tech-pill">TRADEY BAY</span>
+            <span class="tech-pill">STUDENT RES SAAS</span>
+            <span class="tech-pill">SHOPNIK</span>
+            <span class="tech-pill">AZURE</span>
+            <span class="tech-pill">POSTGRES</span>
+            <span class="tech-pill">AI AGENTS</span>
+          </div>
+
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#64748b;margin-top:8px;">
+            sputniktechgroup.com • sputnikdevs.com • Rosebank 2026
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- BACK ARTWORK (A3 SCALE) -->
-  <div class="panel" style="max-width: 700px; margin: 0 auto;">
-    <div class="panel-title">
-      <span>Shirt Back Print (Both Shirts)</span>
-      <span class="dim-tag">A3 Scale: 300 x 420 mm</span>
-    </div>
-    <div class="art-box">
-      <div class="back-art">
-        <div class="back-title">BUILDING AFRICA'S</div>
-        <div class="back-sub">DIGITAL FUTURE</div>
-        <div class="back-div"></div>
-        <div class="back-prods">TRADEY BAY • SHOPNIK • STUDENT RES SAAS</div>
-
-        <div class="qr-card">
-          <div class="qr-tag">SCAN TO JOIN / APPLY</div>
-          <img src="../../assets/qr/qr-academy-apply.svg" alt="Academy QR">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fbbf24;">DEV LEARNERSHIPS</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#94a3b8;">sputnikdevs.com/academy</div>
-        </div>
-
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#64748b;margin-bottom:8px;letter-spacing:1px;">
-          ENTERPRISE TECH STACK
-        </div>
-
-        <div class="tags-grid">
-          <span class="tag-item">.NET 10</span>
-          <span class="tag-item">POSTGRES</span>
-          <span class="tag-item">REDIS</span>
-          <span class="tag-item">DOCKER</span>
-          <span class="tag-item">REACT</span>
-          <span class="tag-item">AI / ML</span>
-        </div>
-
-        <div class="web-foot">sputniktechgroup.com • sputnikdevs.com</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#64748b;margin-top:4px;">
-          Rosebank Tech Showcase 2026 • Johannesburg
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>

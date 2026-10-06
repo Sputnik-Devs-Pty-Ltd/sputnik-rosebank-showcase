@@ -1,306 +1,551 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 2000" width="1000mm" height="2000mm">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090D16"/>
-      <stop offset="40%" stop-color="#0F172A"/>
-      <stop offset="70%" stop-color="#0A1120"/>
-      <stop offset="100%" stop-color="#050811"/>
+    <!-- Background Gradients -->
+    <linearGradient id="bgLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a14"/>
+      <stop offset="50%" stop-color="#091322"/>
+      <stop offset="100%" stop-color="#04070d"/>
     </linearGradient>
 
-    <linearGradient id="heroAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#818CF8"/>
-      <stop offset="100%" stop-color="#C084FC"/>
+    <linearGradient id="bgRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16"/>
+      <stop offset="50%" stop-color="#120e24"/>
+      <stop offset="100%" stop-color="#060810"/>
     </linearGradient>
 
-    <linearGradient id="greenAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981"/>
-      <stop offset="100%" stop-color="#06B6D4"/>
+    <!-- Neon Accents -->
+    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
 
-    <linearGradient id="amberAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#F59E0B"/>
-      <stop offset="100%" stop-color="#EF4444"/>
+    <linearGradient id="purpleEmeraldNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#10b981"/>
     </linearGradient>
 
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    <linearGradient id="dividerBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1"/>
+      <stop offset="15%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.1"/>
     </linearGradient>
 
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="15" result="blur"/>
+    <linearGradient id="cardBgLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f1f38" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#08101e" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="cardBgRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1630" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0b0d1a" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
 
-    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3"/>
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <pattern id="gridLeft" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#0284c7" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+
+    <pattern id="gridRight" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#8b5cf6" stroke-width="0.5" stroke-opacity="0.2"/>
     </pattern>
   </defs>
 
   <style>
-    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
   </style>
 
-  <!-- Background Base -->
-  <rect width="1000" height="2000" fill="url(#bgGrad)"/>
-  <!-- Subtle Grid Texture -->
-  <rect width="1000" height="2000" fill="url(#gridPattern)"/>
+  <!-- =================================================================== -->
+  <!-- DUAL VERTICAL SPLIT BACKGROUNDS                                     -->
+  <!-- =================================================================== -->
+  <!-- Left Side: Sputnik Tech Group -->
+  <rect x="0" y="0" width="500" height="2000" fill="url(#bgLeft)"/>
+  <rect x="0" y="0" width="500" height="2000" fill="url(#gridLeft)"/>
 
-  <!-- Ambient Glow Orbs -->
-  <circle cx="900" cy="200" r="300" fill="#38BDF8" fill-opacity="0.12" filter="url(#glow)"/>
-  <circle cx="100" cy="900" r="350" fill="#6366F1" fill-opacity="0.10" filter="url(#glow)"/>
-  <circle cx="850" cy="1500" r="320" fill="#10B981" fill-opacity="0.10" filter="url(#glow)"/>
+  <!-- Right Side: Sputnik Devs Studio -->
+  <rect x="500" y="0" width="500" height="2000" fill="url(#bgRight)"/>
+  <rect x="500" y="0" width="500" height="2000" fill="url(#gridRight)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="450" r="220" fill="#00f2fe" fill-opacity="0.08" filter="url(#glowCyan)"/>
+  <circle cx="250" cy="1450" r="260" fill="#0284c7" fill-opacity="0.09" filter="url(#glowCyan)"/>
+  <circle cx="800" cy="450" r="240" fill="#8b5cf6" fill-opacity="0.08" filter="url(#glowPurple)"/>
+  <circle cx="780" cy="1400" r="260" fill="#10b981" fill-opacity="0.09" filter="url(#glowPurple)"/>
 
   <!-- =================================================================== -->
-  <!-- 1. TOP HEADER SECTION (0 - 280mm)                                  -->
+  <!-- CENTRAL VERTICAL DIVIDER SPINE                                      -->
   <!-- =================================================================== -->
-  <g transform="translate(60, 60)">
-    <!-- Tech Category Tag -->
-    <rect x="0" y="0" width="310" height="38" rx="19" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
-    <circle cx="20" cy="19" r="6" fill="#38BDF8"/>
-    <text x="36" y="24" fill="#38BDF8" class="font-mono" font-size="14" font-weight="700" letter-spacing="2">ROSEBANK TECH SHOWCASE 2026</text>
+  <line x1="500" y1="210" x2="500" y2="1850" stroke="url(#dividerBeam)" stroke-width="3"/>
+  <line x1="499" y1="210" x2="499" y2="1850" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.7"/>
+
+  <!-- Circuit nodes on the central divider -->
+  <circle cx="500" cy="220" r="5" fill="#38bdf8"/>
+  <circle cx="500" cy="600" r="6" fill="#818cf8"/>
+  <circle cx="500" cy="1050" r="7" fill="#c084fc"/>
+  <circle cx="500" cy="1450" r="6" fill="#34d399"/>
+  <circle cx="500" cy="1840" r="5" fill="#10b981"/>
+
+  <!-- Horizontal circuit branch ticks -->
+  <path d="M 470 600 L 500 600 L 530 600" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M 460 1050 L 500 1050 L 540 1050" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M 470 1450 L 500 1450 L 530 1450" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- =================================================================== -->
+  <!-- TOP UNIFIED HEADER (Y: 30 - 200)                                    -->
+  <!-- =================================================================== -->
+  <g transform="translate(500, 35)">
+    <!-- Event Badge -->
+    <rect x="-190" y="0" width="380" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="-165" cy="17" r="5" fill="#38bdf8"/>
+    <text x="-148" y="22" fill="#38bdf8" class="mono" font-size="12" font-weight="700" letter-spacing="2">ROSEBANK TECH SHOWCASE 2026</text>
 
     <!-- Master Title -->
-    <text x="0" y="95" fill="#FFFFFF" class="font-sans" font-size="44" font-weight="900" letter-spacing="1">SPUTNIK TECH GROUP</text>
-    <text x="0" y="142" fill="url(#heroAccent)" class="font-sans" font-size="34" font-weight="800" letter-spacing="3">&amp; SPUTNIK DEVS STUDIO</text>
-    
-    <!-- Subtitle Line -->
-    <text x="0" y="180" fill="#94A3B8" class="font-sans" font-size="18" font-weight="500" letter-spacing="0.5">
-      Building Africa's Digital Frontier • Consumer Apps • Campus SaaS • Talent Incubator
-    </text>
+    <text x="0" y="72" fill="#ffffff" class="sans" font-size="36" font-weight="900" letter-spacing="1.5" text-anchor="middle">THE SPUTNIK TECH ECOSYSTEM</text>
+    <text x="0" y="102" fill="#94a3b8" class="sans" font-size="15" font-weight="600" letter-spacing="0.5" text-anchor="middle">Connecting Campus Marketplace Commerce with Enterprise Cloud Software</text>
 
-    <line x1="0" y1="210" x2="880" y2="210" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <!-- Subtitle Split Indicator Bar -->
+    <rect x="-440" y="125" width="420" height="28" rx="6" fill="#0c192c" stroke="#0284c7" stroke-width="1"/>
+    <text x="-230" y="144" fill="#38bdf8" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">◀ CONSUMER &amp; CAMPUS MOBILE LABS</text>
+
+    <rect x="20" y="125" width="420" height="28" rx="6" fill="#15122b" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="230" y="144" fill="#a78bfa" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">ENTERPRISE SAAS &amp; ACADEMY ▶</text>
   </g>
 
+
   <!-- =================================================================== -->
-  <!-- 2. SECTION A: TRADEY BAY APP (290 - 780mm)                         -->
+  <!-- LEFT COLUMN: SPUTNIK TECH GROUP & TRADEY BAY APP (X: 30 - 475)       -->
   <!-- =================================================================== -->
-  <g transform="translate(60, 300)">
-    <!-- Outer Card Container -->
-    <rect x="0" y="0" width="880" height="460" rx="28" fill="url(#cardBg)" stroke="#6366F1" stroke-width="2"/>
-    <rect x="0" y="0" width="880" height="8" rx="4" fill="url(#heroAccent)"/>
+  <g transform="translate(40, 215)">
 
-    <!-- Left Content Column -->
-    <g transform="translate(45, 45)">
-      <!-- Badge -->
-      <rect x="0" y="0" width="220" height="32" rx="8" fill="#4338CA" fill-opacity="0.4" stroke="#818CF8" stroke-width="1"/>
-      <text x="14" y="21" fill="#A5B4FC" class="font-mono" font-size="13" font-weight="700" letter-spacing="1.5">★ FLAGSHIP MOBILE APP</text>
-
-      <!-- App Title -->
-      <text x="0" y="78" fill="#FFFFFF" class="font-sans" font-size="42" font-weight="900" letter-spacing="0.5">Tradey<tspan fill="#A78BFA">Bay</tspan></text>
-      <text x="0" y="112" fill="#38BDF8" class="font-sans" font-size="20" font-weight="700">The Smart Classifieds &amp; Campus Marketplace</text>
-
-      <!-- Bullet points -->
-      <g transform="translate(0, 145)" fill="#CBD5E1" class="font-sans" font-size="16" font-weight="500">
-        <circle cx="6" cy="-4" r="4" fill="#38BDF8"/>
-        <text x="22" y="0">Buy, Sell &amp; Trade Safely: Textbooks, Gadgets &amp; Student Essentials</text>
-        
-        <circle cx="6" cy="32" r="4" fill="#818CF8"/>
-        <text x="22" y="36">Campus-Verified Community with Instant Real-Time In-App Chat</text>
-        
-        <circle cx="6" cy="68" r="4" fill="#C084FC"/>
-        <text x="22" y="72">Smart AI Search &amp; Geolocation Deals for Fast Exchanges</text>
-      </g>
-
-      <!-- Store Badges Row -->
-      <g transform="translate(0, 275)">
-        <!-- Google Play -->
-        <rect width="180" height="52" rx="10" fill="#000000" stroke="#475569" stroke-width="1.5"/>
-        <g transform="translate(14, 11)">
-          <path d="M4 2.8L17.5 16.3L4 29.8C3.4 29.3 3 28.5 3 27.4V5.2C3 4.1 3.4 3.3 4 2.8Z" fill="#00E5FF"/>
-          <path d="M22.2 21L17.5 16.3L4 29.8C4.8 30.6 6 30.8 7.2 30.2L22.2 21Z" fill="#FF0043"/>
-          <path d="M22.2 11.5L7.2 2.4C6 1.8 4.8 2 4 2.8L17.5 16.3L22.2 11.5Z" fill="#00F076"/>
-          <path d="M27.7 14.7L22.2 11.5L17.5 16.3L22.2 21L27.7 17.8C29 17 29 15.5 27.7 14.7Z" fill="#FFD600"/>
-        </g>
-        <text x="50" y="21" fill="#94A3B8" class="font-sans" font-size="9" font-weight="600">AVAILABLE ON</text>
-        <text x="50" y="38" fill="#FFFFFF" class="font-sans" font-size="15" font-weight="700">Google Play</text>
-
-        <!-- App store coming soon -->
-        <g transform="translate(200, 0)">
-          <rect width="180" height="52" rx="10" fill="#000000" stroke="#475569" stroke-width="1.5"/>
-          <text x="20" y="21" fill="#38BDF8" class="font-sans" font-size="9" font-weight="700" letter-spacing="1">COMING SOON ON</text>
-          <text x="20" y="38" fill="#FFFFFF" class="font-sans" font-size="15" font-weight="700">Apple App Store</text>
-        </g>
-      </g>
+    <!-- Company Branding Header -->
+    <g transform="translate(0, 0)">
+      <circle cx="22" cy="22" r="22" fill="#0369a1" fill-opacity="0.3"/>
+      <circle cx="22" cy="22" r="14" fill="#0284c7"/>
+      <ellipse cx="22" cy="22" rx="20" ry="8" fill="none" stroke="#38bdf8" stroke-width="1.8" transform="rotate(-30 22 22)"/>
+      <circle cx="36" cy="14" r="3.5" fill="#ffffff"/>
+      <text x="56" y="22" fill="#ffffff" class="sans" font-size="22" font-weight="900" letter-spacing="2">SPUTNIK TECH GROUP</text>
+      <text x="56" y="38" fill="#38bdf8" class="mono" font-size="11" font-weight="700" letter-spacing="3">CONSUMER &amp; MOBILE INNOVATION</text>
     </g>
 
-    <!-- Right Column: High-Impact QR Code Callout -->
-    <g transform="translate(560, 45)">
-      <rect x="0" y="0" width="275" height="370" rx="20" fill="#0B0F19" stroke="#6366F1" stroke-width="1.5"/>
-      <rect x="15" y="15" width="245" height="36" rx="8" fill="#6366F1"/>
-      <text x="137" y="39" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-size="14" font-weight="800" letter-spacing="1">SCAN TO DOWNLOAD</text>
-
-      <!-- White QR container -->
-      <rect x="22" y="65" width="230" height="230" rx="14" fill="#FFFFFF"/>
-      <!-- QR Image Link -->
-      <image href="../../assets/qr/qr-tradeybay-playstore.svg" x="32" y="75" width="210" height="210"/>
-
-      <text x="137" y="325" text-anchor="middle" fill="#38BDF8" class="font-mono" font-size="13" font-weight="700">Direct Android Download</text>
-      <text x="137" y="348" text-anchor="middle" fill="#94A3B8" class="font-sans" font-size="11" font-weight="500">Live on Google Play Store</text>
-    </g>
-  </g>
-
-  <!-- =================================================================== -->
-  <!-- 3. SECTION B: STUDENT RESIDENCE SYSTEM & UNIVERSITY HUB (790-1300mm)-->
-  <!-- =================================================================== -->
-  <g transform="translate(60, 790)">
-    <!-- Container -->
-    <rect x="0" y="0" width="880" height="470" rx="28" fill="url(#cardBg)" stroke="#06B6D4" stroke-width="2"/>
-    <rect x="0" y="0" width="880" height="8" rx="4" fill="url(#greenAccent)"/>
-
-    <!-- Left Content -->
-    <g transform="translate(45, 40)">
-      <rect x="0" y="0" width="270" height="32" rx="8" fill="#0E7490" fill-opacity="0.3" stroke="#06B6D4" stroke-width="1"/>
-      <text x="14" y="21" fill="#67E8F9" class="font-mono" font-size="13" font-weight="700" letter-spacing="1">CAMPUS &amp; HOUSING SAAS</text>
-
-      <text x="0" y="76" fill="#FFFFFF" class="font-sans" font-size="34" font-weight="900">Student Residence System</text>
-      <text x="0" y="108" fill="#10B981" class="font-sans" font-size="22" font-weight="700">&amp; The University Hub Platform</text>
-
-      <text x="0" y="142" fill="#E2E8F0" class="font-sans" font-size="16" font-weight="600">
-        Empowering Rosebank College, Res Landlords &amp; Student Communities:
-      </text>
-
-      <g transform="translate(0, 175)" fill="#CBD5E1" class="font-sans" font-size="15" font-weight="500">
-        <!-- Feature 1 -->
-        <g transform="translate(0, 0)">
-          <rect width="28" height="28" rx="6" fill="#10B981" fill-opacity="0.2"/>
-          <text x="14" y="19" text-anchor="middle" fill="#10B981" font-weight="900" font-size="14">✓</text>
-          <text x="38" y="19"><tspan fill="#FFFFFF" font-weight="700">Digital Residence Management:</tspan> Online check-ins, room allocations &amp; lease contracts</text>
-        </g>
-        <!-- Feature 2 -->
-        <g transform="translate(0, 42)">
-          <rect width="28" height="28" rx="6" fill="#06B6D4" fill-opacity="0.2"/>
-          <text x="14" y="19" text-anchor="middle" fill="#06B6D4" font-weight="900" font-size="14">✓</text>
-          <text x="38" y="19"><tspan fill="#FFFFFF" font-weight="700">Maintenance &amp; Security:</tspan> QR ticket reporting, instant staff routing &amp; inspection logs</text>
-        </g>
-        <!-- Feature 3 -->
-        <g transform="translate(0, 84)">
-          <rect width="28" height="28" rx="6" fill="#3B82F6" fill-opacity="0.2"/>
-          <text x="14" y="19" text-anchor="middle" fill="#3B82F6" font-weight="900" font-size="14">✓</text>
-          <text x="38" y="19"><tspan fill="#FFFFFF" font-weight="700">The University Hub:</tspan> Campus life, society events, academic forums &amp; student portal</text>
-        </g>
-        <!-- Feature 4 -->
-        <g transform="translate(0, 126)">
-          <rect width="28" height="28" rx="6" fill="#A855F7" fill-opacity="0.2"/>
-          <text x="14" y="19" text-anchor="middle" fill="#A855F7" font-weight="900" font-size="14">✓</text>
-          <text x="38" y="19"><tspan fill="#FFFFFF" font-weight="700">Shopnik E-Commerce:</tspan> Complete online store engine for student &amp; campus enterprises</text>
-        </g>
-      </g>
-
-      <!-- Pill callout -->
-      <rect x="0" y="345" width="460" height="42" rx="10" fill="#0F2937" stroke="#0891B2" stroke-width="1"/>
-      <text x="20" y="372" fill="#67E8F9" class="font-mono" font-size="13" font-weight="700">
-        🏛 Ideal for Rosebank Campus, South Point &amp; Res Managers
-      </text>
-    </g>
-
-    <!-- Right QR Code Box -->
-    <g transform="translate(560, 45)">
-      <rect x="0" y="0" width="275" height="380" rx="20" fill="#0B0F19" stroke="#06B6D4" stroke-width="1.5"/>
-      <rect x="15" y="15" width="245" height="36" rx="8" fill="#0891B2"/>
-      <text x="137" y="39" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-size="14" font-weight="800" letter-spacing="1">SCAN FOR DEMO</text>
-
-      <rect x="22" y="65" width="230" height="230" rx="14" fill="#FFFFFF"/>
-      <image href="../../assets/qr/qr-student-housing-srms.svg" x="32" y="75" width="210" height="210"/>
-
-      <text x="137" y="325" text-anchor="middle" fill="#67E8F9" class="font-mono" font-size="13" font-weight="700">Hostel &amp; Res Platform</text>
-      <text x="137" y="350" text-anchor="middle" fill="#94A3B8" class="font-sans" font-size="11" font-weight="500">Live Interactive Sandboxes</text>
-    </g>
-  </g>
-
-  <!-- =================================================================== -->
-  <!-- 4. SECTION C: STUDENT LEARNERSHIPS & TALENT (1300 - 1800mm)         -->
-  <!-- =================================================================== -->
-  <g transform="translate(60, 1290)">
-    <!-- Container with Amber / Emerald border -->
-    <rect x="0" y="0" width="880" height="470" rx="28" fill="url(#cardBg)" stroke="#F59E0B" stroke-width="2"/>
-    <rect x="0" y="0" width="880" height="8" rx="4" fill="url(#amberAccent)"/>
-
-    <!-- Left Content -->
-    <g transform="translate(45, 40)">
-      <rect x="0" y="0" width="290" height="32" rx="8" fill="#B45309" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1"/>
-      <text x="14" y="21" fill="#FDE68A" class="font-mono" font-size="13" font-weight="700" letter-spacing="1">★ ROSEBANK STUDENTS DRIVE</text>
-
-      <text x="0" y="78" fill="#FFFFFF" class="font-sans" font-size="34" font-weight="900">Sputnik Devs Academy</text>
-      <text x="0" y="112" fill="#FBBF24" class="font-sans" font-size="22" font-weight="800">Learnerships &amp; Academic WIL Internships</text>
-
-      <text x="0" y="146" fill="#E2E8F0" class="font-sans" font-size="16" font-weight="600">
-        Launch Your Software Engineering Career with Production Experience:
-      </text>
-
-      <g transform="translate(0, 175)" fill="#CBD5E1" class="font-sans" font-size="15" font-weight="500">
-        <g transform="translate(0, 0)">
-          <text x="0" y="18" fill="#FBBF24" font-weight="900">▸</text>
-          <text x="18" y="18"><tspan fill="#FFFFFF" font-weight="700">Official WIL Credit:</tspan> Meets 19-day &amp; 3-month graduation requirements</text>
-        </g>
-        <g transform="translate(0, 38)">
-          <text x="0" y="18" fill="#FBBF24" font-weight="900">▸</text>
-          <text x="18" y="18"><tspan fill="#FFFFFF" font-weight="700">Enterprise Stack:</tspan> C# .NET 10, Cloud Docker, PostgreSQL, React, AI &amp; APIs</text>
-        </g>
-        <g transform="translate(0, 76)">
-          <text x="0" y="18" fill="#FBBF24" font-weight="900">▸</text>
-          <text x="18" y="18"><tspan fill="#FFFFFF" font-weight="700">Hands-on Mentorship:</tspan> Direct review by MSc AI &amp; senior software architects</text>
-        </g>
-        <g transform="translate(0, 114)">
-          <text x="0" y="18" fill="#FBBF24" font-weight="900">▸</text>
-          <text x="18" y="18"><tspan fill="#FFFFFF" font-weight="700">Junior Hiring Pathway:</tspan> Top performers transition to paid studio engineering roles</text>
-        </g>
-      </g>
-
-      <!-- Tech Stack Badges -->
-      <g transform="translate(0, 335)">
-        <rect width="65" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="32" y="19" text-anchor="middle" fill="#FFFFFF" class="font-mono" font-size="12" font-weight="700">.NET 10</text>
-
-        <rect x="75" width="75" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="112" y="19" text-anchor="middle" fill="#FFFFFF" class="font-mono" font-size="12" font-weight="700">POSTGRES</text>
-
-        <rect x="160" width="60" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="190" y="19" text-anchor="middle" fill="#FFFFFF" class="font-mono" font-size="12" font-weight="700">REDIS</text>
-
-        <rect x="230" width="70" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="265" y="19" text-anchor="middle" fill="#FFFFFF" class="font-mono" font-size="12" font-weight="700">DOCKER</text>
-
-        <rect x="310" width="70" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="345" y="19" text-anchor="middle" fill="#FFFFFF" class="font-mono" font-size="12" font-weight="700">REACT</text>
-
-        <rect x="390" width="80" height="28" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="430" y="19" text-anchor="middle" fill="#FFFFFF" class="font-mono" font-size="12" font-weight="700">AI / ML</text>
-      </g>
-    </g>
-
-    <!-- Right QR Code Box -->
-    <g transform="translate(560, 45)">
-      <rect x="0" y="0" width="275" height="380" rx="20" fill="#0B0F19" stroke="#F59E0B" stroke-width="1.5"/>
-      <rect x="15" y="15" width="245" height="36" rx="8" fill="#D97706"/>
-      <text x="137" y="39" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-size="14" font-weight="800" letter-spacing="1">SCAN TO APPLY</text>
-
-      <rect x="22" y="65" width="230" height="230" rx="14" fill="#FFFFFF"/>
-      <image href="../../assets/qr/qr-academy-apply.svg" x="32" y="75" width="210" height="210"/>
-
-      <text x="137" y="325" text-anchor="middle" fill="#FBBF24" class="font-mono" font-size="13" font-weight="700">Academy Applications Open</text>
-      <text x="137" y="350" text-anchor="middle" fill="#94A3B8" class="font-sans" font-size="11" font-weight="500">sputnikdevs.com/academy/apply</text>
-    </g>
-  </g>
-
-  <!-- =================================================================== -->
-  <!-- 5. FOOTER & CONTACT SECTION (1790 - 1920mm)                         -->
-  <!-- =================================================================== -->
-  <g transform="translate(60, 1800)">
-    <line x1="0" y1="0" x2="880" y2="0" stroke="#334155" stroke-width="1.5"/>
-
-    <g transform="translate(0, 30)">
-      <text x="0" y="18" fill="#FFFFFF" class="font-sans" font-size="16" font-weight="700">Talk to our team at the booth today:</text>
-      <text x="0" y="44" fill="#38BDF8" class="font-mono" font-size="14" font-weight="700">PRINCE (Head of Tech) &amp; KENNETH (COO)</text>
+    <!-- HERO CARD: TRADEY BAY MOBILE APP (Y: 55 to 580) -->
+    <g transform="translate(0, 55)">
+      <!-- Outer Card Frame -->
+      <rect x="0" y="0" width="425" height="520" rx="20" fill="url(#cardBgLeft)" stroke="#0284c7" stroke-width="2"/>
       
-      <text x="500" y="18" fill="#94A3B8" class="font-sans" font-size="14" font-weight="500">Web: <tspan fill="#FFFFFF" font-weight="700">sputniktechgroup.com</tspan> | <tspan fill="#FFFFFF" font-weight="700">sputnikdevs.com</tspan></text>
-      <text x="500" y="44" fill="#94A3B8" class="font-sans" font-size="14" font-weight="500">Email: <tspan fill="#38BDF8" font-weight="600">info@sputnikdevs.com</tspan> • Johannesburg, SA</text>
+      <!-- Card Top Bar -->
+      <rect x="0" y="0" width="425" height="60" rx="20" fill="#0369a1" fill-opacity="0.25"/>
+      <path d="M 0 60 L 425 60" stroke="#0284c7" stroke-width="1"/>
+      
+      <!-- Tradey Bay Logo Lockup -->
+      <g transform="translate(20, 12)">
+        <rect width="36" height="36" rx="10" fill="#8b5cf6"/>
+        <text x="18" y="25" fill="#ffffff" class="sans" font-size="18" font-weight="900" text-anchor="middle">TB</text>
+        <text x="46" y="24" fill="#ffffff" class="sans" font-size="20" font-weight="900">Tradey<tspan fill="#a78bfa">Bay</tspan></text>
+        <text x="46" y="36" fill="#38bdf8" class="mono" font-size="9" font-weight="700" letter-spacing="1">SMART CAMPUS MARKETPLACE</text>
+      </g>
+      <rect x="310" y="16" width="95" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+      <text x="357" y="33" fill="#34d399" class="mono" font-size="10" font-weight="800" text-anchor="middle">● LIVE ON PLAY</text>
+
+      <!-- Smartphone Vector Device Mockup -->
+      <g transform="translate(52, 75)">
+        <!-- Phone Outer Shell -->
+        <rect x="0" y="0" width="320" height="420" rx="28" fill="#040711" stroke="#38bdf8" stroke-width="3"/>
+        <!-- Notch / Camera Island -->
+        <rect x="110" y="8" width="100" height="14" rx="7" fill="#0f172a"/>
+        <circle cx="185" cy="15" r="3" fill="#1e293b"/>
+        
+        <!-- App Status Bar & Header -->
+        <g transform="translate(18, 32)">
+          <text x="0" y="10" fill="#94a3b8" class="mono" font-size="9">9:41</text>
+          <text x="0" y="28" fill="#ffffff" class="sans" font-size="12" font-weight="800">Tradey Bay • <tspan fill="#38bdf8">Rosebank Campus</tspan></text>
+          
+          <!-- Search Bar -->
+          <rect x="0" y="36" width="284" height="26" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+          <text x="10" y="53" fill="#64748b" class="sans" font-size="10">🔍 Search textbooks, calculators, laptops...</text>
+
+          <!-- Category Pills -->
+          <rect x="0" y="68" width="60" height="18" rx="9" fill="#0284c7"/>
+          <text x="30" y="80" fill="#ffffff" class="sans" font-size="8" font-weight="700" text-anchor="middle">Books</text>
+          <rect x="66" y="68" width="70" height="18" rx="9" fill="#1e293b"/>
+          <text x="101" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Tech &amp; PCs</text>
+          <rect x="142" y="68" width="65" height="18" rx="9" fill="#1e293b"/>
+          <text x="174" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Dorm Gear</text>
+          <rect x="213" y="68" width="71" height="18" rx="9" fill="#1e293b"/>
+          <text x="248" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Calculators</text>
+
+          <!-- Feed Item 1: Calculus Textbook -->
+          <g transform="translate(0, 94)">
+            <rect width="284" height="66" rx="10" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
+            <rect x="8" y="8" width="50" height="50" rx="6" fill="#1e293b"/>
+            <text x="33" y="37" fill="#38bdf8" class="sans" font-size="20" text-anchor="middle">📚</text>
+            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Calculus &amp; Linear Alg (3rd Ed)</text>
+            <text x="66" y="38" fill="#38bdf8" class="sans" font-size="10" font-weight="700">R 280.00 <tspan fill="#64748b" font-weight="400">· Rosebank Campus</tspan></text>
+            <rect x="66" y="44" width="95" height="14" rx="7" fill="#10b981" fill-opacity="0.2"/>
+            <text x="113" y="54" fill="#34d399" class="mono" font-size="7" font-weight="700" text-anchor="middle">✓ VERIFIED STUDENT</text>
+            <rect x="220" y="22" width="54" height="24" rx="12" fill="#0284c7"/>
+            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Chat 💬</text>
+          </g>
+
+          <!-- Feed Item 2: MacBook Air M2 -->
+          <g transform="translate(0, 166)">
+            <rect width="284" height="66" rx="10" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
+            <rect x="8" y="8" width="50" height="50" rx="6" fill="#1e293b"/>
+            <text x="33" y="37" fill="#a78bfa" class="sans" font-size="20" text-anchor="middle">💻</text>
+            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Apple MacBook Air M2 (8/256)</text>
+            <text x="66" y="38" fill="#a78bfa" class="sans" font-size="10" font-weight="700">R 12,500.00 <tspan fill="#64748b" font-weight="400">· Like New</tspan></text>
+            <rect x="66" y="44" width="80" height="14" rx="7" fill="#f59e0b" fill-opacity="0.2"/>
+            <text x="106" y="54" fill="#fbbf24" class="mono" font-size="7" font-weight="700" text-anchor="middle">⚡ INSTANT DEAL</text>
+            <rect x="220" y="22" width="54" height="24" rx="12" fill="#8b5cf6"/>
+            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Offer 🏷️</text>
+          </g>
+
+          <!-- Feed Item 3: Dorm Mini Fridge -->
+          <g transform="translate(0, 238)">
+            <rect width="284" height="66" rx="10" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
+            <rect x="8" y="8" width="50" height="50" rx="6" fill="#1e293b"/>
+            <text x="33" y="37" fill="#38bdf8" class="sans" font-size="20" text-anchor="middle">🧊</text>
+            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Bar Fridge (90L) - Great for Res</text>
+            <text x="66" y="38" fill="#38bdf8" class="sans" font-size="10" font-weight="700">R 850.00 <tspan fill="#64748b" font-weight="400">· Campus Res B</tspan></text>
+            <rect x="66" y="44" width="75" height="14" rx="7" fill="#10b981" fill-opacity="0.2"/>
+            <text x="103" y="54" fill="#34d399" class="mono" font-size="7" font-weight="700" text-anchor="middle">📍 200m AWAY</text>
+            <rect x="220" y="22" width="54" height="24" rx="12" fill="#0284c7"/>
+            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Buy Now</text>
+          </g>
+
+          <!-- Floating Value Proposition Pill -->
+          <g transform="translate(20, 312)">
+            <rect width="244" height="28" rx="14" fill="#0284c7" filter="url(#glowCyan)"/>
+            <text x="122" y="19" fill="#ffffff" class="mono" font-size="9" font-weight="800" text-anchor="middle">⚡ 0% COMMISSION FOR STUDENTS</text>
+          </g>
+        </g>
+      </g>
     </g>
+
+    <!-- POINT & EXPLAIN FEATURE BLOCKS (Y: 590 to 1070) -->
+    <g transform="translate(0, 595)">
+      <text x="10" y="16" fill="#38bdf8" class="mono" font-size="11" font-weight="800" letter-spacing="2">KEY ADVANTAGES FOR STUDENTS</text>
+
+      <!-- Point 1: Zero Commission -->
+      <g transform="translate(0, 30)">
+        <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
+        <rect x="14" y="14" width="55" height="55" rx="10" fill="#0284c7" fill-opacity="0.2"/>
+        <text x="41" y="48" fill="#38bdf8" class="sans" font-size="24" text-anchor="middle">💸</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">1. Zero Listing &amp; Selling Fees</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Students keep 100% of every sale. Free to list textbooks,</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">electronics, scientific calculators &amp; campus dorm goods.</text>
+      </g>
+
+      <!-- Point 2: Verified Student Safety -->
+      <g transform="translate(0, 125)">
+        <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
+        <rect x="14" y="14" width="55" height="55" rx="10" fill="#10b981" fill-opacity="0.2"/>
+        <text x="41" y="48" fill="#34d399" class="sans" font-size="24" text-anchor="middle">🛡️</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">2. Safe Campus-Only Trading</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Verified student badges eliminate scam risks. Meet fellow</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">classmates safely on campus grounds or residence halls.</text>
+      </g>
+
+      <!-- Point 3: Instant Chat & Offers -->
+      <g transform="translate(0, 220)">
+        <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
+        <rect x="14" y="14" width="55" height="55" rx="10" fill="#8b5cf6" fill-opacity="0.2"/>
+        <text x="41" y="48" fill="#a78bfa" class="sans" font-size="24" text-anchor="middle">💬</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">3. Built-In In-App Chat &amp; Offers</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Direct instant messaging without sharing your private phone</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">number. Make and counter offers in seconds.</text>
+      </g>
+
+      <!-- Point 4: Hyperlocal Campus Geo-Search -->
+      <g transform="translate(0, 315)">
+        <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
+        <rect x="14" y="14" width="55" height="55" rx="10" fill="#06b6d4" fill-opacity="0.2"/>
+        <text x="41" y="48" fill="#22d3ee" class="sans" font-size="24" text-anchor="middle">📍</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">4. Hyperlocal Campus Filter</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Find items listed within walking distance at Rosebank</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">College, Braamfontein, and neighboring student hubs.</text>
+      </g>
+    </g>
+
+    <!-- SCANNABLE QR CALL-TO-ACTION CARD (Y: 1025 to 1480) -->
+    <g transform="translate(0, 1025)">
+      <rect width="425" height="470" rx="20" fill="#061224" stroke="#38bdf8" stroke-width="2.5" filter="url(#glowCyan)"/>
+
+      <text x="212" y="35" fill="#38bdf8" class="mono" font-size="13" font-weight="800" letter-spacing="2" text-anchor="middle">GET THE TRADEY BAY APP</text>
+      <text x="212" y="56" fill="#ffffff" class="sans" font-size="18" font-weight="800" text-anchor="middle">Point Camera to Download Free</text>
+
+      <!-- High-Contrast QR Code Surface -->
+      <g transform="translate(102, 75)">
+        <rect width="220" height="220" rx="16" fill="#ffffff"/>
+        <!-- Embedded Tradey Bay Play Store QR Code (49.2 x 49.2 scaled to 196) -->
+        <g transform="translate(12, 12) scale(3.98)">
+          <use href="#qr-tradeybay-path" fill="#000000"/>
+          <image href="../../assets/qr/qr-tradeybay-playstore.svg" width="49.2" height="49.2"/>
+        </g>
+      </g>
+
+      <!-- Google Play Badge -->
+      <g transform="translate(65, 310)">
+        <rect width="140" height="42" rx="8" fill="#000000" stroke="#334155" stroke-width="1.5"/>
+        <text x="25" y="27" fill="#34d399" class="sans" font-size="18">▶</text>
+        <text x="48" y="19" fill="#94a3b8" class="mono" font-size="7">GET IT ON</text>
+        <text x="48" y="32" fill="#ffffff" class="sans" font-size="12" font-weight="700">Google Play</text>
+      </g>
+
+      <!-- iOS Coming Soon Badge -->
+      <g transform="translate(220, 310)">
+        <rect width="140" height="42" rx="8" fill="#0a1220" stroke="#334155" stroke-width="1.5"/>
+        <text x="25" y="27" fill="#cbd5e1" class="sans" font-size="18"></text>
+        <text x="48" y="19" fill="#94a3b8" class="mono" font-size="7">APPLE IOS</text>
+        <text x="48" y="32" fill="#38bdf8" class="sans" font-size="11" font-weight="700">Coming Soon</text>
+      </g>
+
+      <!-- Social Proof Rating Pill -->
+      <g transform="translate(42, 368)">
+        <rect width="340" height="36" rx="18" fill="#0c1f38" stroke="#0284c7" stroke-width="1"/>
+        <text x="170" y="23" fill="#fbbf24" class="sans" font-size="12" font-weight="800" text-anchor="middle">★★★★★  <tspan fill="#ffffff">4.8 / 5.0</tspan>  <tspan fill="#94a3b8" font-weight="500">· Fast Campus Trades</tspan></text>
+      </g>
+
+      <!-- Corporate Web link -->
+      <text x="212" y="435" fill="#38bdf8" class="mono" font-size="12" font-weight="700" letter-spacing="1" text-anchor="middle">🌐 sputniktechgroup.com</text>
+    </g>
+
   </g>
 
-  <!-- Bottom Cassette Margin Guide (Print Safe: 80mm from bottom) -->
-  <line x1="0" y1="1920" x2="1000" y2="1920" stroke="#1E293B" stroke-width="1" stroke-dasharray="8 8"/>
-  <text x="500" y="1960" text-anchor="middle" fill="#475569" class="font-mono" font-size="12">PULL-UP CASSETTE ROLLER SAFE MARGIN (100MM)</text>
+
+  <!-- =================================================================== -->
+  <!-- RIGHT COLUMN: SPUTNIK DEVS STUDIO (SAAS & ACADEMY) (X: 525 - 970)   -->
+  <!-- =================================================================== -->
+  <g transform="translate(535, 215)">
+
+    <!-- Company Branding Header -->
+    <g transform="translate(0, 0)">
+      <polygon points="22,2 38,12 38,32 22,42 6,32 6,12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="1.5"/>
+      <circle cx="22" cy="22" r="7" fill="#10b981"/>
+      <text x="56" y="22" fill="#ffffff" class="sans" font-size="22" font-weight="900" letter-spacing="2">SPUTNIK DEVS STUDIO</text>
+      <text x="56" y="38" fill="#10b981" class="mono" font-size="11" font-weight="700" letter-spacing="3">ENTERPRISE SAAS &amp; ACADEMY</text>
+    </g>
+
+    <!-- CARD 1: STUDENT RESIDENCE MANAGEMENT & UNIVERSITY HUB (Y: 55 to 450) -->
+    <g transform="translate(0, 55)">
+      <rect width="425" height="395" rx="18" fill="url(#cardBgRight)" stroke="#10b981" stroke-width="1.8"/>
+      
+      <!-- Card Header -->
+      <rect width="425" height="52" rx="18" fill="#064e3b" fill-opacity="0.3"/>
+      <path d="M 0 52 L 425 52" stroke="#10b981" stroke-width="1"/>
+      
+      <text x="18" y="32" fill="#34d399" class="sans" font-size="20">🏢</text>
+      <text x="48" y="27" fill="#ffffff" class="sans" font-size="16" font-weight="800">Student Res Management System</text>
+      <text x="48" y="42" fill="#34d399" class="mono" font-size="9" font-weight="700" letter-spacing="1">&amp; THE UNIVERSITY HUB PLATFORM</text>
+      
+      <rect x="330" y="14" width="80" height="24" rx="12" fill="#10b981" fill-opacity="0.2"/>
+      <text x="370" y="30" fill="#34d399" class="mono" font-size="9" font-weight="800" text-anchor="middle">CAMPUS B2B</text>
+
+      <!-- Talking Points for Prince & Kenneth to point at -->
+      <g transform="translate(18, 68)">
+        <text x="0" y="16" fill="#6ee7b7" class="mono" font-size="10" font-weight="800" letter-spacing="1">DESIGNED FOR RESIDENCES &amp; LANDLORDS:</text>
+        
+        <g transform="translate(0, 30)">
+          <circle cx="10" cy="8" r="4" fill="#10b981"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Automated Room &amp; Bed Allocations</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Replaces spreadsheets with 1-click room assignment &amp; leases.</text>
+        </g>
+
+        <g transform="translate(0, 75)">
+          <circle cx="10" cy="8" r="4" fill="#10b981"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Digital Lease Signing &amp; Rent Billing</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Automated rent invoices, NSFAS remittances &amp; arrears tracking.</text>
+        </g>
+
+        <g transform="translate(0, 120)">
+          <circle cx="10" cy="8" r="4" fill="#10b981"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Biometric Gate Access &amp; Maintenance</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Turnstile integration, maintenance ticket tracking &amp; live room audits.</text>
+        </g>
+
+        <g transform="translate(0, 165)">
+          <circle cx="10" cy="8" r="4" fill="#38bdf8"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">The University Hub Sister Platform</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Campus life portal: student societies, events &amp; campus notices.</text>
+        </g>
+
+        <!-- QR Mini Block & Link -->
+        <g transform="translate(0, 220)">
+          <rect width="389" height="42" rx="10" fill="#042f2e" stroke="#10b981" stroke-width="1"/>
+          <image href="../../assets/qr/qr-student-housing-srms.svg" x="8" y="5" width="32" height="32"/>
+          <text x="50" y="20" fill="#ffffff" class="sans" font-size="11" font-weight="700">Scan for Hostel SRMS Live Demo</text>
+          <text x="50" y="33" fill="#34d399" class="mono" font-size="10">sputnikdevs.com/products/hostel</text>
+          <text x="355" y="26" fill="#34d399" class="sans" font-size="16">➔</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- CARD 2: SHOPNIK E-COMMERCE SAAS (Y: 465 to 865) -->
+    <g transform="translate(0, 465)">
+      <rect width="425" height="395" rx="18" fill="url(#cardBgRight)" stroke="#6366f1" stroke-width="1.8"/>
+      
+      <!-- Card Header -->
+      <rect width="425" height="52" rx="18" fill="#312e81" fill-opacity="0.3"/>
+      <path d="M 0 52 L 425 52" stroke="#6366f1" stroke-width="1"/>
+      
+      <text x="18" y="32" fill="#818cf8" class="sans" font-size="20">🛍️</text>
+      <text x="48" y="27" fill="#ffffff" class="sans" font-size="16" font-weight="800">Shopnik E-Commerce Platform</text>
+      <text x="48" y="42" fill="#a5b4fc" class="mono" font-size="9" font-weight="700" letter-spacing="1">SOUTH AFRICA'S SHOPIFY ALTERNATIVE</text>
+      
+      <rect x="330" y="14" width="80" height="24" rx="12" fill="#6366f1" fill-opacity="0.2"/>
+      <text x="370" y="30" fill="#818cf8" class="mono" font-size="9" font-weight="800" text-anchor="middle">SAAS SUITE</text>
+
+      <!-- Talking Points for Prince & Kenneth to point at -->
+      <g transform="translate(18, 68)">
+        <text x="0" y="16" fill="#818cf8" class="mono" font-size="10" font-weight="800" letter-spacing="1">WHY MERCHANTS CHOOSE SHOPNIK:</text>
+        
+        <g transform="translate(0, 30)">
+          <circle cx="10" cy="8" r="4" fill="#6366f1"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Native South African Payment Gateways</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Pre-integrated with PayFast, Ozow, Yoco, Paystack &amp; Capitec Pay.</text>
+        </g>
+
+        <g transform="translate(0, 75)">
+          <circle cx="10" cy="8" r="4" fill="#6366f1"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Zero USD Foreign Exchange Penalties</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">No hidden dollar conversion fees. Transparent, local Rand pricing.</text>
+        </g>
+
+        <g transform="translate(0, 120)">
+          <circle cx="10" cy="8" r="4" fill="#6366f1"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Sub-Second Speed &amp; High-Volume Ready</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Engineered on .NET 10 &amp; Cloud Redis. Handles Black Friday traffic.</text>
+        </g>
+
+        <g transform="translate(0, 165)">
+          <circle cx="10" cy="8" r="4" fill="#38bdf8"/>
+          <text x="24" y="12" fill="#ffffff" class="sans" font-size="13" font-weight="700">Multi-Tier Architecture &amp; Custom Themes</text>
+          <text x="24" y="28" fill="#94a3b8" class="sans" font-size="11">Starter, Professional &amp; Enterprise tiers with live split-screen editor.</text>
+        </g>
+
+        <!-- QR Mini Block & Link -->
+        <g transform="translate(0, 220)">
+          <rect width="389" height="42" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+          <image href="../../assets/qr/qr-shopnik-ecommerce.svg" x="8" y="5" width="32" height="32"/>
+          <text x="50" y="20" fill="#ffffff" class="sans" font-size="11" font-weight="700">Scan for Shopnik E-Commerce Store</text>
+          <text x="50" y="33" fill="#a5b4fc" class="mono" font-size="10">sputnikdevs.com/products/ecommerce</text>
+          <text x="355" y="26" fill="#818cf8" class="sans" font-size="16">➔</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- CARD 3: SPUTNIK DEVS ACADEMY — LEARNERSHIPS (GOLD CARD) (Y: 875 to 1495) -->
+    <g transform="translate(0, 875)">
+      <rect width="425" height="620" rx="20" fill="#141122" stroke="#f59e0b" stroke-width="2.5" filter="url(#glowPurple)"/>
+
+      <!-- Gold Banner Header -->
+      <rect width="425" height="60" rx="20" fill="#b45309" fill-opacity="0.35"/>
+      <path d="M 0 60 L 425 60" stroke="#f59e0b" stroke-width="1.5"/>
+
+      <text x="20" y="37" fill="#fbbf24" class="sans" font-size="24">⭐</text>
+      <text x="56" y="28" fill="#ffffff" class="sans" font-size="17" font-weight="900">SPUTNIK DEVS ACADEMY</text>
+      <text x="56" y="46" fill="#fbbf24" class="mono" font-size="10" font-weight="800" letter-spacing="1">ACCREDITED TECH LEARNERSHIPS (WIL)</text>
+      
+      <rect x="315" y="16" width="95" height="26" rx="13" fill="#f59e0b"/>
+      <text x="362" y="33" fill="#000000" class="mono" font-size="10" font-weight="900" text-anchor="middle">WE ARE HIRING</text>
+
+      <!-- Hook for Students -->
+      <g transform="translate(20, 78)">
+        <text x="0" y="16" fill="#ffffff" class="sans" font-size="16" font-weight="900">Calling All IT, CS &amp; Software Students!</text>
+        <text x="0" y="36" fill="#cbd5e1" class="sans" font-size="12">Accelerate your tech career with hands-on Work-Integrated</text>
+        <text x="0" y="52" fill="#cbd5e1" class="sans" font-size="12">Learning (WIL). Build production systems alongside senior engineers.</text>
+
+        <!-- Feature Points -->
+        <g transform="translate(0, 68)">
+          <rect width="385" height="42" rx="8" fill="#1e1832" stroke="#f59e0b" stroke-width="0.8"/>
+          <text x="14" y="26" fill="#fbbf24" class="mono" font-size="11" font-weight="700">19-Day Intensive &amp; 3-Month Accredited Tracks</text>
+        </g>
+
+        <!-- Tech Stack Pills -->
+        <g transform="translate(0, 120)">
+          <text x="0" y="12" fill="#fbbf24" class="mono" font-size="9" font-weight="700" letter-spacing="1">PRODUCTION STACK YOU WILL MASTER:</text>
+          <g transform="translate(0, 20)">
+            <rect x="0" y="0" width="70" height="24" rx="6" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1"/>
+            <text x="35" y="16" fill="#38bdf8" class="mono" font-size="10" font-weight="700" text-anchor="middle">.NET 10</text>
+            
+            <rect x="78" y="0" width="72" height="24" rx="6" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1"/>
+            <text x="114" y="16" fill="#38bdf8" class="mono" font-size="10" font-weight="700" text-anchor="middle">Flutter</text>
+            
+            <rect x="158" y="0" width="65" height="24" rx="6" fill="#6366f1" fill-opacity="0.25" stroke="#818cf8" stroke-width="1"/>
+            <text x="190" y="16" fill="#a5b4fc" class="mono" font-size="10" font-weight="700" text-anchor="middle">Azure</text>
+            
+            <rect x="231" y="0" width="75" height="24" rx="6" fill="#10b981" fill-opacity="0.25" stroke="#34d399" stroke-width="1"/>
+            <text x="268" y="16" fill="#6ee7b7" class="mono" font-size="10" font-weight="700" text-anchor="middle">Postgres</text>
+            
+            <rect x="314" y="0" width="71" height="24" rx="6" fill="#f59e0b" fill-opacity="0.25" stroke="#fbbf24" stroke-width="1"/>
+            <text x="349" y="16" fill="#fbbf24" class="mono" font-size="10" font-weight="700" text-anchor="middle">AI Agents</text>
+          </g>
+        </g>
+
+        <!-- Big Scannable Academy QR Code Box -->
+        <g transform="translate(92, 185)">
+          <rect width="200" height="200" rx="14" fill="#ffffff"/>
+          <image href="../../assets/qr/qr-academy-apply.svg" x="10" y="10" width="180" height="180"/>
+        </g>
+
+        <!-- Callout Banner -->
+        <g transform="translate(12, 400)">
+          <rect width="360" height="38" rx="10" fill="#f59e0b"/>
+          <text x="180" y="24" fill="#000000" class="sans" font-size="12" font-weight="900" text-anchor="middle">SCAN TO SUBMIT YOUR CV &amp; PORTFOLIO</text>
+        </g>
+
+        <text x="192" y="465" fill="#fbbf24" class="mono" font-size="12" font-weight="700" letter-spacing="1" text-anchor="middle">🌐 sputnikdevs.com/academy/apply</text>
+      </g>
+    </g>
+
+  </g>
+
+
+  <!-- =================================================================== -->
+  <!-- BOTTOM BASE & CASSETTE ZONE (Y: 1840 to 2000)                       -->
+  <!-- =================================================================== -->
+  <g transform="translate(0, 1840)">
+    <rect width="1000" height="160" fill="#04060b"/>
+    <line x1="0" y1="0" x2="1000" y2="0" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Left Footer -->
+    <g transform="translate(60, 45)">
+      <text x="0" y="0" fill="#ffffff" class="sans" font-size="15" font-weight="800">SPUTNIK TECH GROUP (PTY) LTD</text>
+      <text x="0" y="20" fill="#94a3b8" class="sans" font-size="12">Consumer &amp; Mobile Innovation • support@sputniktechgroup.com</text>
+      <text x="0" y="38" fill="#38bdf8" class="mono" font-size="11">sputniktechgroup.com</text>
+    </g>
+
+    <!-- Center Badge -->
+    <g transform="translate(500, 50)">
+      <circle cx="0" cy="0" r="18" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="0" y="5" fill="#38bdf8" class="sans" font-size="12" font-weight="900" text-anchor="middle">ST</text>
+    </g>
+
+    <!-- Right Footer -->
+    <g transform="translate(940, 45)">
+      <text x="0" y="0" fill="#ffffff" class="sans" font-size="15" font-weight="800" text-anchor="end">SPUTNIK DEVS STUDIO (PTY) LTD</text>
+      <text x="0" y="20" fill="#94a3b8" class="sans" font-size="12" text-anchor="end">Enterprise Cloud &amp; Tech Academy • info@sputnikdevs.com</text>
+      <text x="0" y="38" fill="#10b981" class="mono" font-size="11" text-anchor="end">sputnikdevs.com</text>
+    </g>
+
+    <!-- Roller Cassette Warning Margin -->
+    <text x="500" y="115" fill="#475569" class="mono" font-size="9" text-anchor="middle">[ ROLL-UP CASSETTE BASE CLEARANCE ZONE - 100mm ]</text>
+  </g>
+
 </svg>
