@@ -48,9 +48,10 @@ All print-ready vector files are located in this repository:
 
 ### For the Two Staff T-Shirts:
 * **Files:**
-  * `designs/shirts/shirt-prince.svg`
-  * `designs/shirts/shirt-kenneth.svg`
-  * `designs/shirts/shirt-print.html` (Flat DTF layout)
+  * `designs/shirts/shirts-dtf.pdf` (Production-ready DTF Gang Sheet PDF)
+  * `designs/shirts/shirt-prince.svg` (Prince Vector Artwork)
+  * `designs/shirts/shirt-kenneth.svg` (Kenneth Vector Artwork)
+  * `designs/shirts/shirt-print.html` (Flat DTF HTML layout)
 * **What to tell the printer:**
   > *"We need 2 black crewneck t-shirts (combed cotton). Direct-to-Film (DTF) full-color print. Front left breast has the Sputnik emblem (80mm wide), front right breast has the personalized name badge (85mm wide), and the back has an A3 full-back print (approx 290mm x 400mm) with the scannable QR code."*
 

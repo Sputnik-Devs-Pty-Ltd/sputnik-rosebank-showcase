@@ -88,6 +88,7 @@ python3 scripts/export_highres_pdf.py
 This generates:
 * `designs/banner-1x2m/banner.pdf`
 * `designs/table-cloth-3x3m/tablecloth.pdf`
+* `designs/shirts/shirts-dtf.pdf`
 
 ---
 
