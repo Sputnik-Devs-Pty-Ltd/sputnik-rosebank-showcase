@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik Showcase — Exhibition Table Cloth (3m x 3m)</title>
+  <title>Sputnik Showcase — Handheld Ecosystem Print Flyer (A5: 148mm x 210mm)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
 
     @page {
-      size: 3000mm 3000mm;
+      size: 148mm 210mm;
       margin: 0;
     }
 
@@ -18,10 +18,10 @@
     }
 
     html, body {
-      width: 3000mm;
-      height: 3000mm;
+      width: 148mm;
+      height: 210mm;
       background: #ffffff;
-      color: #1e1b4b;
+      color: #0f172a;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       position: relative;
       overflow: hidden;
@@ -29,17 +29,17 @@
       print-color-adjust: exact;
     }
 
-    svg.main-canvas {
-      width: 3000mm;
-      height: 3000mm;
+    svg.main-canvas, object.main-canvas {
+      width: 148mm;
+      height: 210mm;
       display: block;
     }
   </style>
 </head>
 <body>
-  <!-- Directly include the full 3000mm x 3000mm vector SVG artwork -->
-  <object data="tablecloth.svg" type="image/svg+xml" class="main-canvas" width="3000mm" height="3000mm">
-    <img src="tablecloth.svg" alt="Sputnik Table Cloth 3m x 3m" style="width: 3000mm; height: 3000mm;" />
+  <!-- Directly embed the full A5 (148mm x 210mm) vector SVG artwork -->
+  <object data="flyer-a5.svg" type="image/svg+xml" class="main-canvas" width="148mm" height="210mm">
+    <img src="flyer-a5.svg" alt="Sputnik Handheld Print Flyer A5" style="width: 148mm; height: 210mm;" />
   </object>
 </body>
 </html>

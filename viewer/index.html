@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sputnik Tech Group & Sputnik Devs Studio — Rosebank Showcase 2026</title>
+  <title>Sputnik Tech Group & Sputnik Devs Studio — South Africa Tech Showcase</title>
   <link rel="stylesheet" href="viewer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
       <img src="../assets/logos/sputnik-devs-logo.png" alt="Sputnik Logo" style="height: 36px; width: 36px;">
       <div>
         <div class="brand-title">SPUTNIK SHOWCASE STUDIO</div>
-        <div class="brand-sub">ROSEBANK TECH EXPO 2026 • JOHANNESBURG</div>
+        <div class="brand-sub">SOUTH AFRICA TECH SHOWCASE • JOHANNESBURG</div>
       </div>
     </div>
 
@@ -30,7 +30,10 @@
         <span>🪑</span> Table Cloth (3x3m)
       </button>
       <button class="tab-btn" data-target="panel-shirts">
-        <span>👕</span> Staff Shirts (Prince &amp; Kenneth)
+        <span>👕</span> Staff Shirts (Front-Only DTF)
+      </button>
+      <button class="tab-btn" data-target="panel-flyer">
+        <span>📄</span> Handheld Flyer (A5)
       </button>
       <button class="tab-btn" data-target="panel-qrhub">
         <span>📱</span> QR Code Hub
@@ -101,18 +104,18 @@
       </div>
     </section>
 
-    <!-- PANEL 3: STAFF SHIRTS (Prince & Kenneth) -->
+    <!-- PANEL 3: STAFF SHIRTS (Kenneth & Prince - FRONT-ONLY DTF) -->
     <section id="panel-shirts" class="view-panel">
       <div class="control-bar">
         <div class="control-info">
-          <h2>Staff Showcase T-Shirts (Direct-to-Film Print)</h2>
-          <p>Noir Black Combed Cotton • Personalized Front Crest • Walking Billboard Back with Scannable QR</p>
+          <h2>Staff Showcase T-Shirts (Front-Only DTF Print)</h2>
+          <p>Noir Black Combed Cotton • Personalized Front Executive Crest • Front Live Scannable QR Code • No Back Print</p>
         </div>
         <div class="control-toggles">
           <label style="font-size: 13px; color: #94a3b8; font-weight: 600;">Select Staff Member:</label>
           <select id="shirtPersonSelect" class="btn btn-outline" style="padding: 6px 12px; cursor: pointer;">
-            <option value="prince">Prince (Head of Tech &amp; Operations)</option>
-            <option value="kenneth">Kenneth (COO &amp; Product)</option>
+            <option value="kenneth" selected>Kenneth Takudzwa Katsande (Director of Operations)</option>
+            <option value="prince">Prince Lwazi Nkiwane (Director of Growth)</option>
           </select>
           <a href="../designs/shirts/shirt-print.html" target="_blank" class="btn btn-primary">
             Open DTF Print Gang Sheet
@@ -121,11 +124,39 @@
       </div>
 
       <div class="stage-container">
-        <img id="shirtPreviewImg" src="../designs/shirts/shirt-prince.svg" alt="Staff Shirt Mockup" class="shirt-frame">
+        <img id="shirtPreviewImg" src="../designs/shirts/shirt-kenneth.svg" alt="Staff Shirt Mockup" class="shirt-frame">
       </div>
     </section>
 
-    <!-- PANEL 4: QR CODE HUB -->
+    <!-- PANEL 4: HANDHELD FLYER (A5: 148mm x 210mm) -->
+    <section id="panel-flyer" class="view-panel">
+      <div class="control-bar">
+        <div class="control-info">
+          <h2>Handheld Ecosystem Flyer (A5: 148mm x 210mm)</h2>
+          <p>Standard ISO A5 Portrait • Replicates Official Locked-Down Banner • Scannable QR Codes • Zaha Hadid Waves</p>
+        </div>
+        <div class="control-toggles">
+          <button id="flyerZoomIn" class="btn btn-outline" style="padding: 4px 10px;">➕ Zoom In</button>
+          <button id="flyerZoomOut" class="btn btn-outline" style="padding: 4px 10px;">➖ Zoom Out</button>
+          <button id="flyerZoomReset" class="btn btn-outline" style="padding: 4px 10px;">Reset</button>
+          <a href="../designs/flyer/flyer-a5.pdf" download="sputnik-flyer-a5.pdf" class="btn btn-primary">
+            ⬇️ Download flyer-a5.pdf
+          </a>
+          <a href="../designs/flyer/flyer-a5.svg" download="sputnik-flyer-a5.svg" class="btn btn-outline">
+            Download SVG
+          </a>
+          <a href="../designs/flyer/flyer-print.html" target="_blank" class="btn btn-outline">
+            Open Print HTML
+          </a>
+        </div>
+      </div>
+
+      <div class="stage-container" style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+        <img id="flyerPreviewImg" src="../designs/flyer/flyer-preview.png" alt="Handheld Flyer A5" style="max-height: 80vh; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.2s ease;">
+      </div>
+    </section>
+
+    <!-- PANEL 5: QR CODE HUB -->
     <section id="panel-qrhub" class="view-panel">
       <div class="control-bar">
         <div class="control-info">
@@ -203,7 +234,7 @@
       </div>
     </section>
 
-    <!-- PANEL 5: PRINT SHOP HANDOVER PACKAGE -->
+    <!-- PANEL 6: PRINT SHOP HANDOVER PACKAGE -->
     <section id="panel-handover" class="view-panel">
       <div class="control-bar">
         <div class="control-info">
@@ -248,14 +279,14 @@
         <div class="checklist-item">
           <div class="check-circle">3</div>
           <div>
-            <strong style="font-size: 16px;">Item 3: Staff T-Shirts (2 Units: Prince &amp; Kenneth)</strong>
+            <strong style="font-size: 16px;">Item 3: Staff T-Shirts (2 Units: Kenneth &amp; Prince — FRONT-ONLY PRINT)</strong>
             <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
-              Garment: Black 180gsm - 200gsm Combed Cotton • Print: Full-color Direct-to-Film (DTF) Heat Transfer • Front left chest crest, right name badge, A3 back print.
+              Garment: Black 180gsm - 200gsm Combed Cotton • Print: Full-color Direct-to-Film (DTF) Heat Transfer on Front Only (No back print) • Kenneth Takudzwa Katsande (Director of Operations) &amp; Prince Lwazi Nkiwane (Director of Growth) with scannable front QRs.
             </p>
             <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
               <a href="../designs/shirts/shirts-dtf.pdf" download="sputnik-staff-shirts-dtf.pdf" class="btn btn-primary" style="font-size: 11px;">⬇️ Download shirts-dtf.pdf</a>
-              <a href="../designs/shirts/shirt-prince.svg" download class="btn btn-outline" style="font-size: 11px;">Download shirt-prince.svg</a>
               <a href="../designs/shirts/shirt-kenneth.svg" download class="btn btn-outline" style="font-size: 11px;">Download shirt-kenneth.svg</a>
+              <a href="../designs/shirts/shirt-prince.svg" download class="btn btn-outline" style="font-size: 11px;">Download shirt-prince.svg</a>
               <a href="../designs/shirts/shirt-spec.md" target="_blank" class="btn btn-outline" style="font-size: 11px;">View shirt-spec.md</a>
             </div>
           </div>
@@ -264,11 +295,26 @@
         <div class="checklist-item">
           <div class="check-circle">4</div>
           <div>
+            <strong style="font-size: 16px;">Item 4: Handheld Ecosystem Flyer (A5: 148mm x 210mm)</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
+              Format: 148mm x 210mm • Substrate: 170gsm - 250gsm Silk/Matt Art Paper • Full Color CMYK • Exact locked-down banner content in handheld form factor.
+            </p>
+            <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="../designs/flyer/flyer-a5.pdf" download="sputnik-flyer-a5.pdf" class="btn btn-primary" style="font-size: 11px;">⬇️ Download flyer-a5.pdf</a>
+              <a href="../designs/flyer/flyer-a5.svg" download="sputnik-flyer-a5.svg" class="btn btn-outline" style="font-size: 11px;">Download flyer-a5.svg</a>
+              <a href="../designs/flyer/flyer-spec.md" target="_blank" class="btn btn-outline" style="font-size: 11px;">View flyer-spec.md</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="check-circle">5</div>
+          <div>
             <strong style="font-size: 16px;">Recommended Johannesburg Quick-Turnaround Printers (Close to Rosebank)</strong>
             <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
-              • <strong>Jetline Rosebank / The Zone:</strong> Pull-up banners &amp; DTF apparel printing within 24 hours.<br>
+              • <strong>Jetline Rosebank / The Zone:</strong> Pull-up banners, A5 flyers &amp; DTF apparel printing within 24 hours.<br>
               • <strong>PostNet Rosebank / Illovo / Braamfontein:</strong> Pull-up banners and same-day promotional printing.<br>
-              • <strong>Minuteman Press (Parktown North / Sandton):</strong> Large-format dye-sublimation table drapes and banners.
+              • <strong>Minuteman Press (Parktown North / Sandton):</strong> Large-format dye-sublimation table drapes, flyers, and banners.
             </p>
           </div>
         </div>

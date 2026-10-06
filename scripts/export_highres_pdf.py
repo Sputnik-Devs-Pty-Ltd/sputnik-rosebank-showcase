@@ -29,6 +29,12 @@ TARGETS = [
         "input_html": os.path.join(REPO_ROOT, "designs", "shirts", "shirt-print.html"),
         "output_pdf": os.path.join(REPO_ROOT, "designs", "shirts", "shirts-dtf.pdf"),
         "dimensions": "DTF Production Sheets"
+    },
+    {
+        "name": "Handheld Print Flyer (A5: 148mm x 210mm)",
+        "input_html": os.path.join(REPO_ROOT, "designs", "flyer", "flyer-print.html"),
+        "output_pdf": os.path.join(REPO_ROOT, "designs", "flyer", "flyer-a5.pdf"),
+        "dimensions": "148mm x 210mm"
     }
 ]
 
@@ -61,6 +67,8 @@ def export_pdf(chrome_bin, target):
         print(f"❌ Input file not found: {input_html}")
         return False
 
+    import tempfile
+    user_data_dir = tempfile.mkdtemp(prefix="chrome_pdf_")
     file_url = f"file://{os.path.abspath(input_html)}"
     
     cmd = [
@@ -69,13 +77,17 @@ def export_pdf(chrome_bin, target):
         "--disable-gpu",
         "--no-sandbox",
         "--disable-dev-shm-usage",
+        "--disable-background-networking",
+        "--disable-extensions",
+        "--no-first-run",
+        f"--user-data-dir={user_data_dir}",
         "--no-pdf-header-footer",
         f"--print-to-pdf={output_pdf}",
         file_url
     ]
 
     try:
-        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=120)
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=300)
         if os.path.isfile(output_pdf) and os.path.getsize(output_pdf) > 0:
             size_mb = os.path.getsize(output_pdf) / (1024 * 1024)
             print(f"✅ Created: {output_pdf} ({size_mb:.2f} MB)")
@@ -84,11 +96,13 @@ def export_pdf(chrome_bin, target):
             print(f"❌ Failed to generate PDF. Chrome output:\n{result.stderr}")
             return False
     except subprocess.TimeoutExpired:
-        print(f"❌ Rendering timed out after 120s.")
+        print(f"❌ Rendering timed out after 300s.")
         return False
     except Exception as e:
         print(f"❌ Error: {e}")
         return False
+    finally:
+        shutil.rmtree(user_data_dir, ignore_errors=True)
 
 def main():
     print("=" * 70)

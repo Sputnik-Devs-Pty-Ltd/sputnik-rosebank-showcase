@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // T-Shirt person toggle (Prince vs Kenneth)
+  // T-Shirt person toggle (Kenneth vs Prince)
   const shirtSelect = document.getElementById('shirtPersonSelect');
   const shirtImg = document.getElementById('shirtPreviewImg');
   if (shirtSelect && shirtImg) {
@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
       bannerZoom = Math.min(bannerZoom + 0.2, 2.5);
       bannerImg.style.transform = `scale(${bannerZoom})`;
     });
+    if (zoomOutBtn) {
+      zoomOutBtn.addEventListener('click', () => {
+        bannerZoom = Math.max(bannerZoom - 0.2, 0.4);
+        bannerImg.style.transform = `scale(${bannerZoom})`;
+      });
+    }
     zoomResetBtn.addEventListener('click', () => {
       bannerZoom = 1;
       bannerImg.style.transform = `scale(1)`;
@@ -64,6 +70,30 @@ document.addEventListener('DOMContentLoaded', () => {
     tcZoomResetBtn.addEventListener('click', () => {
       tcZoom = 1;
       tcImg.style.transform = `scale(1)`;
+    });
+  }
+
+  // Zoom controls for Flyer
+  let flyerZoom = 1;
+  const flyerImg = document.getElementById('flyerPreviewImg');
+  const flyerZoomInBtn = document.getElementById('flyerZoomIn');
+  const flyerZoomOutBtn = document.getElementById('flyerZoomOut');
+  const flyerZoomResetBtn = document.getElementById('flyerZoomReset');
+
+  if (flyerZoomInBtn && flyerImg) {
+    flyerZoomInBtn.addEventListener('click', () => {
+      flyerZoom = Math.min(flyerZoom + 0.2, 2.5);
+      flyerImg.style.transform = `scale(${flyerZoom})`;
+    });
+    if (flyerZoomOutBtn) {
+      flyerZoomOutBtn.addEventListener('click', () => {
+        flyerZoom = Math.max(flyerZoom - 0.2, 0.5);
+        flyerImg.style.transform = `scale(${flyerZoom})`;
+      });
+    }
+    flyerZoomResetBtn.addEventListener('click', () => {
+      flyerZoom = 1;
+      flyerImg.style.transform = `scale(1)`;
     });
   }
 });

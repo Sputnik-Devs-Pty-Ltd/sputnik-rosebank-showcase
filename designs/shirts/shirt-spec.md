@@ -1,45 +1,50 @@
-# Print Specifications — Staff Showcase T-Shirts (Prince & Kenneth)
+# Print Specifications — Staff Showcase T-Shirts (Kenneth & Prince)
 
 ## 1. Garment Details
-* **Garment Type:** Premium Heavyweight Crewneck T-Shirt (Cyber Tech / Esports Jersey Cut)
+* **Garment Type:** Premium Heavyweight Crewneck T-Shirt
 * **Fabric:** 100% Combed Ringspun Cotton, 180gsm – 200gsm (ultra-soft hand feel, pre-shrunk, durable rib collar)
 * **Color:** Noir Solid Black (`#050507`)
-* **Quantity Required:** 2 Units
-  * **Unit 01:** For **Prince** (Size: Men's L or XL)
-  * **Unit 02:** For **Kenneth** (Size: Men's L or XL)
+* **Quantity Required:** 2 Units (Front-Only Print)
+  * **Unit 01 (Kenneth Takudzwa Katsande):** Director of Operations (Size: Men's L or XL)
+  * **Unit 02 (Prince Lwazi Nkiwane):** Director of Growth (Size: Men's L or XL)
 
 ## 2. Print Technique Recommended for Joburg Printers
 * **Primary Recommendation:** Direct-to-Film (DTF) Heat Transfer.
-  * *Why DTF:* Flawless gradient reproduction for neon cyber accents, razor-sharp 0.2mm edge resolution on QR codes, extreme stretch resilience without cracking, zero setup/screen fees for short-run custom units.
+  * *Why DTF:* Flawless gradient reproduction for neon cyber accents, razor-sharp edge resolution on scannable QR codes, extreme stretch resilience without cracking, zero setup/screen fees for short-run custom units.
   * *Heat Press Settings:* 150°C (300°F) for 15 seconds at high pressure (6–8 bar), peel cold, second press for 5 seconds with Teflon finishing sheet.
-* **Alternative:** Screen Printing with discharge underbase plus high-resolution vector DTF transfers for QR codes.
+* **Print Area Constraint:** **FRONT ONLY** (No back print). All critical branding, personal executive identification, and scannable conversion QR codes are positioned on the front chest and torso.
 
-## 3. Placement & Personalization Architecture
-* **Front Left Chest (Both Shirts):**
-  * Artwork: Sputnik Co-Brand Metallic 3D Crest (`SPUTNIK TECH & DEVS // CREW 2026`)
-  * Dimensions: 100 mm width x 60 mm height
+## 3. Front Placement & Personalization Architecture
+* **Piece A — Front Left Chest (Both Shirts):**
+  * Artwork: Sputnik Co-Brand Metallic 3D Crest (`SPUTNIK TECH & DEVS // SHOWCASE CREW`)
+  * Dimensions: 100 mm width x 50 mm height
   * Placement: Centered on left breast (180 mm below shoulder seam).
-* **Front Right Chest (Personalized Tactical Security ID Badges):**
-  * **Unit 01 (Prince):**
-    * Title: `PRINCE` • `LEAD ARCHITECT // TECH OPS`
-    * Clearance Tag: `SECURITY ID // ROOT` • `ACTIVE`
-    * Chips: `.NET 10` • `AZURE` • `SYSTEMS`
-  * **Unit 02 (Kenneth):**
-    * Title: `KENNETH` • `COO // PRODUCT STRATEGY`
-    * Clearance Tag: `SECURITY ID // ROOT EXEC` • `ACTIVE`
-    * Chips: `COMMERCE` • `ECOSYSTEM` • `SCALE`
-  * Dimensions: 110 mm width x 50 mm height
+* **Piece B — Front Right Chest (Personalized Tactical Executive ID Badges):**
+  * **Unit 01 (Kenneth Takudzwa Katsande):**
+    * Name: `KENNETH TAKUDZWA KATSANDE`
+    * Title: `DIRECTOR OF OPERATIONS`
+    * Tag: `EXECUTIVE LEADERSHIP // OPS`
+    * Focus Chips: `OPERATIONS • COMMERCE • SCALE`
+  * **Unit 02 (Prince Lwazi Nkiwane):**
+    * Name: `PRINCE LWAZI NKIWANE`
+    * Title: `DIRECTOR OF GROWTH`
+    * Tag: `EXECUTIVE LEADERSHIP // GROWTH`
+    * Focus Chips: `GROWTH • TALENT • EXPANSION`
+  * Dimensions: 120 mm width x 55 mm height
   * Placement: Mirrored height on right breast.
-* **Back Center (Full A3 Walking Interactive Billboard):**
-  * Dimensions: 300 mm width x 420 mm height (Full A3 Print Area)
-  * Placement: Top edge positioned 60 mm below the back collar seam.
-  * Headline: `ENGINEERING AFRICA'S DIGITAL FUTURE` • `CAMPUS TO CLOUD // BUILT DIFFERENT`
-  * **Personalized Dual-Billboard Concept:**
-    * **Prince's Back:** Features the **Sputnik Devs Academy WIL Learnership HUD Card** with a high-contrast scannable QR code (`qr-academy-apply.svg`). Students and CS graduates can point their phones directly at Prince's back to apply on the spot. Tech stack pills: `.NET 10`, `C# 13`, `Flutter`, `Azure Cloud`, `PostgreSQL`, `AI Agents`.
-    * **Kenneth's Back:** Features the **Tradey Bay Campus Marketplace HUD Card** with a high-contrast scannable QR code (`qr-tradeybay-playstore.svg`) pointing to the Google Play Store. Onlookers and students can scan Kenneth's back to install the mobile app instantly. Platform pills: `Tradey Bay`, `Student Res SaaS`, `Shopnik`, `Azure`, `Postgres`, `AI Agents`.
+* **Piece C — Front Center Torso Showcase Emblem (280 mm x 360 mm):**
+  * Position: Centered on torso below the chest badges.
+  * Headline: `SOUTH AFRICA TECH SHOWCASE` • `THE SPUTNIK ECOSYSTEM`
+  * Subtitle: `Connecting Campus Commerce to Enterprise Cloud`
+  * **Personalized Scannable QR Centerpiece:**
+    * **Kenneth's Front:** Scannable high-contrast QR code for **Tradey Bay Campus Super App** (`qr-tradeybay-playstore.svg`) pointing directly to Google Play Store & Apple App Store. Highlight: `0% Commission • v2.0.4+31 • Student Housing • Classifieds • POPIA Compliant`.
+    * **Prince's Front:** Scannable high-contrast QR code for **Sputnik Devs Academy** (`qr-academy-apply.svg`) pointing to the WIL software learnership application portal. Highlight: `REST/gRPC • Flutter • DevOps CI/CD • Postgres/Redis • AI Agents`.
+  * Platform Strip: `TRADEY BAY • STUDENT RES • UNIHUB • SHOPNIK SAAS • DEVS ACADEMY`
+  * Footer: `sputniktechgroup.com • sputnikdevs.com • 292 Surrey Avenue, Randburg, JHB`
 
 ## 4. Digital Production Files Included
-1. **`shirt-prince.svg`**: Complete front & back vector garment mockup for Prince.
-2. **`shirt-kenneth.svg`**: Complete front & back vector garment mockup for Kenneth.
-3. **`shirt-print.html`**: Dual-page A3 landscape DTF gang sheet print layout.
-4. **`shirts-dtf.pdf`**: Multi-page high-resolution PDF (`1191.12 x 841.92 pts` A3, 0.48 MB) ready for DTF printing.
+1. **`shirt-kenneth.svg`**: Complete front garment mockup and 1:1 DTF production transfer sheet for Kenneth.
+2. **`shirt-prince.svg`**: Complete front garment mockup and 1:1 DTF production transfer sheet for Prince.
+3. **`shirt-print.html`**: Dual-page A3 landscape DTF gang sheet print layout (Page 1: Kenneth, Page 2: Prince).
+4. **`shirts-dtf.pdf`**: Multi-page high-resolution print PDF ready for DTF printing.
+5. **`shirt-kenneth-preview.png` & `shirt-prince-preview.png`**: High-resolution raster preview files.
