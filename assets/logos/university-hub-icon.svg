@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+  </defs>
+  <!-- Graduation Cap & Hub Ring -->
+  <circle cx="40" cy="40" r="36" fill="#18181B" stroke="url(#hubGrad)" stroke-width="2.5"/>
+  <!-- Graduation Mortarboard -->
+  <path d="M40 22 L62 32 L40 42 L18 32 Z" fill="url(#hubGrad)"/>
+  <path d="M26 36 L26 48 C26 53 32 57 40 57 C48 57 54 53 54 48 L54 36" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tassel -->
+  <path d="M57 33 L62 44 L59 44 L64 52" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

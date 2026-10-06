@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
+  <defs>
+    <linearGradient id="tbPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- TB Monogram Icon -->
+  <g transform="translate(15, 12)">
+    <rect width="56" height="56" rx="16" fill="url(#tbPurpleGrad)"/>
+    <!-- 't' and 'b' glyph representation -->
+    <path d="M18 16 V38 C18 42 22 43 26 42" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="12" y1="24" x2="26" y2="24" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- 'b' loop -->
+    <path d="M28 20 V40 C28 42 30 43 34 43 C40 43 44 38 44 31 C44 24 39 20 34 20 C30 20 28 22 28 24" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="86" y="42" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="24" font-weight="800" letter-spacing="1">Tradey<tspan fill="#A78BFA">Bay</tspan></text>
+  <text x="86" y="58" fill="#94A3B8" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="2">SMART CLASSIFIEDS APP</text>
+</svg>

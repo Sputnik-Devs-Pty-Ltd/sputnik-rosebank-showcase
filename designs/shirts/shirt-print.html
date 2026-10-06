@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sputnik Showcase - Staff T-Shirt Production Files</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #090d16;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      padding: 40px;
+    }
+
+    .header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 20px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #1e293b;
+      border: 1px solid #38bdf8;
+      border-radius: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .panel {
+      background: #0f172a;
+      border: 2px solid #334155;
+      border-radius: 16px;
+      padding: 30px;
+      position: relative;
+    }
+    .panel-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dim-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #94a3b8;
+      background: #1e293b;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .art-box {
+      background: #000000;
+      border: 1px dashed #475569;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Front Left Chest Emblem */
+    .emblem-wrap {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .emblem-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #0f172a;
+      border: 2px solid #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .emblem-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #38bdf8;
+    }
+    .emblem-text {
+      text-align: left;
+    }
+    .emblem-text .brand {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    .emblem-text .sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 1px;
+    }
+
+    /* Name Badges */
+    .name-badge {
+      background: #0f172a;
+      border: 2px solid #6366f1;
+      border-radius: 8px;
+      padding: 12px 25px;
+      text-align: center;
+      min-width: 220px;
+    }
+    .name-badge-kenneth {
+      border-color: #10b981;
+    }
+    .badge-name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+    .badge-role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #a5b4fc;
+      margin-top: 3px;
+    }
+    .badge-role-kenneth {
+      color: #6ee7b7;
+    }
+
+    /* Back Art */
+    .back-art {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .back-title {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      line-height: 1.2;
+    }
+    .back-sub {
+      font-size: 18px;
+      font-weight: 900;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 4px;
+    }
+    .back-div {
+      width: 160px;
+      height: 2px;
+      background: #38bdf8;
+      margin: 12px 0 8px 0;
+    }
+    .back-prods {
+      font-size: 10px;
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .qr-card {
+      background: #0f172a;
+      border: 2px solid #f59e0b;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+      width: 200px;
+    }
+    .qr-tag {
+      background: #d97706;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 4px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .qr-card img {
+      width: 140px;
+      height: 140px;
+      background: #ffffff;
+      padding: 6px;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 8px auto;
+    }
+
+    .tags-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .tag-item {
+      background: #1e293b;
+      border: 1px solid #475569;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .web-foot {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #38bdf8;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">PRINT SHOP DTF / SCREEN PRINT READY</div>
+    <h1 style="font-size: 32px; font-weight: 900;">Showcase T-Shirt Production Sheets</h1>
+    <p style="color: #94a3b8; margin-top: 6px;">
+      Garment: Premium 180–200gsm Combed Cotton Crewneck • Color: Noir Black • Quantity: 2 (1x Prince, 1x Kenneth)
+    </p>
+  </div>
+
+  <div class="grid">
+    <!-- FRONT LEFT CHEST EMBLEM -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Front Left Chest (Both Shirts)</span>
+        <span class="dim-tag">100 x 60 mm</span>
+      </div>
+      <div class="art-box">
+        <div class="emblem-wrap">
+          <div class="emblem-icon">
+            <div class="emblem-dot"></div>
+          </div>
+          <div class="emblem-text">
+            <div class="brand">SPUTNIK</div>
+            <div class="sub">TECH CREW</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRONT RIGHT: PRINCE -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Front Right Chest: Prince</span>
+        <span class="dim-tag">100 x 45 mm</span>
+      </div>
+      <div class="art-box">
+        <div class="name-badge">
+          <div class="badge-name">PRINCE</div>
+          <div class="badge-role">TECH OPS &amp; DEV</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRONT RIGHT: KENNETH -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Front Right Chest: Kenneth</span>
+        <span class="dim-tag">100 x 45 mm</span>
+      </div>
+      <div class="art-box">
+        <div class="name-badge name-badge-kenneth">
+          <div class="badge-name">KENNETH</div>
+          <div class="badge-role badge-role-kenneth">COO &amp; PRODUCT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK ARTWORK (A3 SCALE) -->
+  <div class="panel" style="max-width: 700px; margin: 0 auto;">
+    <div class="panel-title">
+      <span>Shirt Back Print (Both Shirts)</span>
+      <span class="dim-tag">A3 Scale: 300 x 420 mm</span>
+    </div>
+    <div class="art-box">
+      <div class="back-art">
+        <div class="back-title">BUILDING AFRICA'S</div>
+        <div class="back-sub">DIGITAL FUTURE</div>
+        <div class="back-div"></div>
+        <div class="back-prods">TRADEY BAY • SHOPNIK • STUDENT RES SAAS</div>
+
+        <div class="qr-card">
+          <div class="qr-tag">SCAN TO JOIN / APPLY</div>
+          <img src="../../assets/qr/qr-academy-apply.svg" alt="Academy QR">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fbbf24;">DEV LEARNERSHIPS</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#94a3b8;">sputnikdevs.com/academy</div>
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#64748b;margin-bottom:8px;letter-spacing:1px;">
+          ENTERPRISE TECH STACK
+        </div>
+
+        <div class="tags-grid">
+          <span class="tag-item">.NET 10</span>
+          <span class="tag-item">POSTGRES</span>
+          <span class="tag-item">REDIS</span>
+          <span class="tag-item">DOCKER</span>
+          <span class="tag-item">REACT</span>
+          <span class="tag-item">AI / ML</span>
+        </div>
+
+        <div class="web-foot">sputniktechgroup.com • sputnikdevs.com</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#64748b;margin-top:4px;">
+          Rosebank Tech Showcase 2026 • Johannesburg
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

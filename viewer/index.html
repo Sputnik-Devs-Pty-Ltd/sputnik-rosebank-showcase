@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sputnik Tech Group & Sputnik Devs Studio — Rosebank Showcase 2026</title>
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <div class="brand-lockup">
+      <img src="../assets/logos/sputnik-devs-logo.png" alt="Sputnik Logo" style="height: 36px; width: 36px;">
+      <div>
+        <div class="brand-title">SPUTNIK SHOWCASE STUDIO</div>
+        <div class="brand-sub">ROSEBANK TECH EXPO 2026 • JOHANNESBURG</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="tab-btn active" data-target="panel-banner">
+        <span>🧍</span> Standing Banner (1x2m)
+      </button>
+      <button class="tab-btn" data-target="panel-tablecloth">
+        <span>🪑</span> Table Cloth (3x3m)
+      </button>
+      <button class="tab-btn" data-target="panel-shirts">
+        <span>👕</span> Staff Shirts (Prince &amp; Kenneth)
+      </button>
+      <button class="tab-btn" data-target="panel-qrhub">
+        <span>📱</span> QR Code Hub
+      </button>
+      <button class="tab-btn" data-target="panel-handover">
+        <span>🖨️</span> Print Shop Package
+      </button>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions-wrap">
+      <a href="../designs/banner-1x2m/banner-print.html" target="_blank" class="btn btn-outline">
+        🖨️ Open Print HTML
+      </a>
+      <a href="https://github.com/Sputnik-Devs-Pty-Ltd/sputnik-rosebank-showcase" target="_blank" class="btn btn-primary">
+        GitHub Repo
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Showcase Content -->
+  <main class="main-content">
+
+    <!-- PANEL 1: STANDING BANNER (1m x 2m) -->
+    <section id="panel-banner" class="view-panel active">
+      <div class="control-bar">
+        <div class="control-info">
+          <h2>Standing Pull-Up Banner (1000mm x 2000mm)</h2>
+          <p>Aluminum Roll-up Cassette • Non-Curl PVC / Poly-Fabric • Eye-Level Scannable QR Codes</p>
+        </div>
+        <div class="control-toggles">
+          <button id="bannerZoomIn" class="btn btn-outline" style="padding: 4px 10px;">➕ Zoom In</button>
+          <button id="bannerZoomOut" class="btn btn-outline" style="padding: 4px 10px;">➖ Zoom Out</button>
+          <button id="bannerZoomReset" class="btn btn-outline" style="padding: 4px 10px;">Reset</button>
+          <a href="../designs/banner-1x2m/banner.svg" download="sputnik-standing-banner-1x2m.svg" class="btn btn-primary">
+            Download Vector SVG
+          </a>
+        </div>
+      </div>
+
+      <div class="stage-container">
+        <img id="bannerPreviewImg" src="../designs/banner-1x2m/banner.svg" alt="Standing Banner 1x2m" class="banner-frame">
+      </div>
+    </section>
+
+    <!-- PANEL 2: TABLE CLOTH (3m x 3m) -->
+    <section id="panel-tablecloth" class="view-panel">
+      <div class="control-bar">
+        <div class="control-info">
+          <h2>Exhibition Table Cloth (3000mm x 3000mm)</h2>
+          <p>Draped over standard 1.8m x 0.75m table • Includes Interactive Tabletop Scan Pads &amp; Front Aisle Drop</p>
+        </div>
+        <div class="control-toggles">
+          <a href="../designs/table-cloth-3x3m/tablecloth.svg" download="sputnik-tablecloth-3x3m.svg" class="btn btn-primary">
+            Download Vector SVG
+          </a>
+          <a href="../designs/table-cloth-3x3m/tablecloth-print.html" target="_blank" class="btn btn-outline">
+            Full-Screen Print View
+          </a>
+        </div>
+      </div>
+
+      <div class="stage-container">
+        <img src="../designs/table-cloth-3x3m/tablecloth.svg" alt="Table Cloth 3x3m" class="tablecloth-frame">
+      </div>
+    </section>
+
+    <!-- PANEL 3: STAFF SHIRTS (Prince & Kenneth) -->
+    <section id="panel-shirts" class="view-panel">
+      <div class="control-bar">
+        <div class="control-info">
+          <h2>Staff Showcase T-Shirts (Direct-to-Film Print)</h2>
+          <p>Noir Black Combed Cotton • Personalized Front Crest • Walking Billboard Back with Scannable QR</p>
+        </div>
+        <div class="control-toggles">
+          <label style="font-size: 13px; color: #94a3b8; font-weight: 600;">Select Staff Member:</label>
+          <select id="shirtPersonSelect" class="btn btn-outline" style="padding: 6px 12px; cursor: pointer;">
+            <option value="prince">Prince (Head of Tech &amp; Operations)</option>
+            <option value="kenneth">Kenneth (COO &amp; Product)</option>
+          </select>
+          <a href="../designs/shirts/shirt-print.html" target="_blank" class="btn btn-primary">
+            Open DTF Print Gang Sheet
+          </a>
+        </div>
+      </div>
+
+      <div class="stage-container">
+        <img id="shirtPreviewImg" src="../designs/shirts/shirt-prince.svg" alt="Staff Shirt Mockup" class="shirt-frame">
+      </div>
+    </section>
+
+    <!-- PANEL 4: QR CODE HUB -->
+    <section id="panel-qrhub" class="view-panel">
+      <div class="control-bar">
+        <div class="control-info">
+          <h2>Live QR Code Hub &amp; Digital Real Estate</h2>
+          <p>Scannable with any mobile phone camera • Direct links to app stores, portals &amp; SaaS platforms</p>
+        </div>
+      </div>
+
+      <div class="qr-grid">
+        <!-- 1. Tradey Bay Play Store -->
+        <div class="qr-card">
+          <div class="qr-badge">SPUTNIK TECH GROUP</div>
+          <div class="qr-title">Tradey Bay App</div>
+          <p class="qr-desc">Smart Classifieds &amp; Campus Marketplace on Android</p>
+          <img src="../assets/qr/qr-tradeybay-playstore.svg" alt="Tradey Bay QR" class="qr-img">
+          <a href="https://play.google.com/store/apps/details?id=com.sputniktech.tradey_bay_mobile" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Test Play Store Link ↗
+          </a>
+        </div>
+
+        <!-- 2. Sputnik Devs Academy -->
+        <div class="qr-card">
+          <div class="qr-badge" style="color: #fbbf24;">TALENT &amp; LEARNERSHIPS</div>
+          <div class="qr-title">Sputnik Devs Academy</div>
+          <p class="qr-desc">Work-Integrated Learning (WIL) &amp; Learnership Portal</p>
+          <img src="../assets/qr/qr-academy-apply.svg" alt="Academy QR" class="qr-img">
+          <a href="https://sputnikdevs.com/academy/apply" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Test Application Link ↗
+          </a>
+        </div>
+
+        <!-- 3. Student Residence Management System -->
+        <div class="qr-card">
+          <div class="qr-badge" style="color: #67e8f9;">CAMPUS SAAS</div>
+          <div class="qr-title">Student Res Management</div>
+          <p class="qr-desc">Accommodation, lease &amp; room management platform</p>
+          <img src="../assets/qr/qr-student-housing-srms.svg" alt="Hostel SRMS QR" class="qr-img">
+          <a href="https://sputnikdevs.com/products/hostel" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Test Res System Link ↗
+          </a>
+        </div>
+
+        <!-- 4. Shopnik E-Commerce SaaS -->
+        <div class="qr-card">
+          <div class="qr-badge" style="color: #38bdf8;">ENTERPRISE SAAS</div>
+          <div class="qr-title">Shopnik E-Commerce</div>
+          <p class="qr-desc">Multi-tier e-commerce SaaS with native SA payments</p>
+          <img src="../assets/qr/qr-shopnik-ecommerce.svg" alt="Shopnik QR" class="qr-img">
+          <a href="https://sputnikdevs.com/products/ecommerce" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Test Shopnik Link ↗
+          </a>
+        </div>
+
+        <!-- 5. Sputnik Tech Group -->
+        <div class="qr-card">
+          <div class="qr-badge">CORPORATE PORTAL</div>
+          <div class="qr-title">Sputnik Tech Group</div>
+          <p class="qr-desc">Parent technology group and innovation umbrella</p>
+          <img src="../assets/qr/qr-sputnik-tech-group.svg" alt="Sputnik Tech Group QR" class="qr-img">
+          <a href="https://sputniktechgroup.com" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Visit Website ↗
+          </a>
+        </div>
+
+        <!-- 6. Sputnik Devs Studio -->
+        <div class="qr-card">
+          <div class="qr-badge" style="color: #10b981;">STUDIO PORTAL</div>
+          <div class="qr-title">Sputnik Devs Studio</div>
+          <p class="qr-desc">Software engineering, cloud architecture &amp; bespoke builds</p>
+          <img src="../assets/qr/qr-sputnik-devs.svg" alt="Sputnik Devs QR" class="qr-img">
+          <a href="https://sputnikdevs.com" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Visit Website ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 5: PRINT SHOP HANDOVER PACKAGE -->
+    <section id="panel-handover" class="view-panel">
+      <div class="control-bar">
+        <div class="control-info">
+          <h2>Print Shop Production Handover Package</h2>
+          <p>Complete instructions for Prince &amp; Kenneth for printers in Braamfontein, Rosebank, or Sandton</p>
+        </div>
+      </div>
+
+      <div class="checklist-card">
+        <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 20px;">Exhibition Print Checklist for Joburg Printers</h3>
+        
+        <div class="checklist-item">
+          <div class="check-circle">1</div>
+          <div>
+            <strong style="font-size: 16px;">Item 1: Standing Pull-Up Banner (1m x 2m)</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
+              Format: 1000mm x 2000mm • Substrate: 440gsm - 510gsm Non-Curl Matte PVC • Includes Aluminum Base Cassette + Carry Bag.
+            </p>
+            <div style="margin-top: 8px;">
+              <a href="../designs/banner-1x2m/banner.svg" download class="btn btn-outline" style="font-size: 11px;">Download banner.svg</a>
+              <a href="../designs/banner-1x2m/banner-spec.md" target="_blank" class="btn btn-outline" style="font-size: 11px;">View banner-spec.md</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="check-circle">2</div>
+          <div>
+            <strong style="font-size: 16px;">Item 2: Branded Table Cloth (3m x 3m)</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
+              Format: 3000mm x 3000mm • Substrate: 210gsm - 240gsm Soft Poly-Drape (Dye Sublimation Full Color) • Hemmed edges.
+            </p>
+            <div style="margin-top: 8px;">
+              <a href="../designs/table-cloth-3x3m/tablecloth.svg" download class="btn btn-outline" style="font-size: 11px;">Download tablecloth.svg</a>
+              <a href="../designs/table-cloth-3x3m/tablecloth-spec.md" target="_blank" class="btn btn-outline" style="font-size: 11px;">View tablecloth-spec.md</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="check-circle">3</div>
+          <div>
+            <strong style="font-size: 16px;">Item 3: Staff T-Shirts (2 Units: Prince &amp; Kenneth)</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
+              Garment: Black 180gsm - 200gsm Combed Cotton • Print: Full-color Direct-to-Film (DTF) Heat Transfer • Front left chest crest, right name badge, A3 back print.
+            </p>
+            <div style="margin-top: 8px;">
+              <a href="../designs/shirts/shirt-prince.svg" download class="btn btn-outline" style="font-size: 11px;">Download shirt-prince.svg</a>
+              <a href="../designs/shirts/shirt-kenneth.svg" download class="btn btn-outline" style="font-size: 11px;">Download shirt-kenneth.svg</a>
+              <a href="../designs/shirts/shirt-spec.md" target="_blank" class="btn btn-outline" style="font-size: 11px;">View shirt-spec.md</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="check-circle">4</div>
+          <div>
+            <strong style="font-size: 16px;">Recommended Johannesburg Quick-Turnaround Printers (Close to Rosebank)</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 4px;">
+              • <strong>Jetline Rosebank / The Zone:</strong> Pull-up banners &amp; DTF apparel printing within 24 hours.<br>
+              • <strong>PostNet Rosebank / Illovo / Braamfontein:</strong> Pull-up banners and same-day promotional printing.<br>
+              • <strong>Minuteman Press (Parktown North / Sandton):</strong> Large-format dye-sublimation table drapes and banners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="viewer.js"></script>
+</body>
+</html>
