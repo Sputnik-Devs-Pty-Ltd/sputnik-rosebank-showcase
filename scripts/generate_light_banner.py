@@ -16,9 +16,14 @@ Key Enhancements in this revision:
    - Utilized all vertical space: added 4th core pillar (Automated Bursary / NSFAS Billing & Incident SOS).
    - Interconnected ecosystem badge strip and dual scannable vector QR codes.
 4. Right Column - Shopnik E-Commerce SaaS:
-   - Utilized all vertical space: added 4th and 5th core pillars (Automated Courier Logistics & Abandoned Cart Recovery / SEO Feeds).
-   - Prominent, expanded vector QR code canvas for instant merchant store launch.
-   - Grounded: Paystack & PayFast, COD, In-Store Collection, Oracle Cloud SA (Joburg). Zero mentions of Shopify.
+   - Grounded in live platform features starting at R349/month:
+     * Day-1 SA Payments & 0% Platform Commission (Paystack, PayFast, COD, In-Store Collection)
+     * Rich Product Catalog & Multi-Variant Matrices (swatches, sizes, tiers from R349/mo)
+     * Store Management Dashboard & Coupons (sales graphs, stock alerts, discounts)
+     * In-Country Oracle Cloud SA Hosting (Joburg, .NET 10, Cloud Redis)
+     * AI Recommendations & Customer Reviews (AI summaries, verified ratings, wishlist)
+   - Expanded vector QR code canvas for instant merchant store launch.
+   - Removed unreleased courier logistics, waybill dispatch, and Google shopping feeds. Zero mentions of Shopify.
 5. Right Column - Sputnik Devs Academy:
    - Replaced drilled-down tech stacks with broad production disciplines:
      * Backend: REST & gRPC Microservices
@@ -688,15 +693,15 @@ def build_banner_svg():
           <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
           <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Rich Product Catalog &amp; Multi-Variant Matrices</text>
           <text x="20" y="24" fill="#475569" class="sans" font-size="10">Color swatches, size tiers, bundle discounts &amp; real-time inventory tracking.</text>
-          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Starter, Professional &amp; Enterprise tiers with live theme customizer.</text>
+          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Starter (R349/mo), Professional (R699/mo) &amp; Enterprise with live customizer.</text>
         </g>
 
-        <!-- Pillar 3: Automated Courier Logistics (Utilizing Space) -->
+        <!-- Pillar 3: Store Management Dashboard & Coupons -->
         <g transform="translate(0, 102)">
           <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Automated Courier Logistics &amp; Waybill Dispatch</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Instant shipping label generation with Courier Guy &amp; Pudo locker integration.</text>
-          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Live parcel tracking webhooks with customer SMS and email status updates.</text>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Store Management Dashboard &amp; Coupons</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Real-time sales graphs, order processing, stock alerts &amp; customer accounts.</text>
+          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Discount coupon engine, automated order emails &amp; role-based admin access.</text>
         </g>
 
         <!-- Pillar 4: Oracle Cloud Hosting SA -->
@@ -707,12 +712,12 @@ def build_banner_svg():
           <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Engineered with .NET 10 &amp; Cloud Redis. Handles high-traffic flash sales.</text>
         </g>
 
-        <!-- Pillar 5: Marketing Engine & Abandoned Cart Recovery (Utilizing Space) -->
+        <!-- Pillar 5: AI Recommendations & Customer Reviews -->
         <g transform="translate(0, 186)">
           <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Conversion Marketing &amp; Google Shopping Feeds</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Automated abandoned cart email recovery, coupon rules &amp; flash sale counters.</text>
-          <text x="20" y="35" fill="#b45309" class="sans" font-size="9.5" font-weight="700">Real-time revenue analytics dashboard &amp; Google Merchant XML export.</text>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">AI Recommendations &amp; Customer Reviews</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Built-in AI product recommendation engine &amp; AI customer review summaries.</text>
+          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Verified buyer star ratings, customer wishlists &amp; marketing email tools.</text>
         </g>
 
         <!-- Expanded Scannable Shopnik QR Block (Utilizing bottom area) -->
@@ -726,11 +731,11 @@ def build_banner_svg():
           </g>
           <g transform="translate(116, 20)">
             <text x="0" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Launch Your Online Store Today</text>
-            <text x="0" y="30" fill="#475569" class="sans" font-size="10.5">Setup in 30 minutes • Zero platform transaction cut</text>
+            <text x="0" y="30" fill="#475569" class="sans" font-size="10.5">Plans start at R349/month • 0% platform sales cut</text>
             <text x="0" y="46" fill="#7c3aed" class="mono" font-size="9.5" font-weight="800">sputnikdevs.com/products/ecommerce</text>
             
             <rect x="0" y="56" width="260" height="24" rx="12" fill="#7c3aed"/>
-            <text x="130" y="72" fill="#ffffff" class="sans" font-size="10" font-weight="800" text-anchor="middle">Scan Camera to Claim Free Starter Tier ➔</text>
+            <text x="130" y="72" fill="#ffffff" class="sans" font-size="10" font-weight="800" text-anchor="middle">Scan Camera to Launch on Shopnik ➔</text>
           </g>
         </g>
       </g>

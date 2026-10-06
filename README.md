@@ -21,7 +21,7 @@ Official high-resolution print assets, interactive exhibition web viewer, scalab
 2. **Sputnik Devs Studio (Enterprise Engineering & B2B SaaS)**
    * **Student Residence Management System (SRMS):** End-to-end digital accommodation, room allocation, maintenance ticketing & student housing administration.
    * **The University Hub:** Sister platform for campus life, university societies, academic forums & student services.
-   * **Shopnik E-Commerce SaaS:** Multi-tier e-commerce engine with native South African payments (PayFast, Ozow, Yoco) and multi-theme customizers.
+   * **Shopnik E-Commerce SaaS:** Multi-tier e-commerce engine starting from R349/month with 0% platform commission, pre-integrated SA payments (Paystack & PayFast, COD, In-Store Collection), admin store dashboard, and built-in AI recommendations.
    * **Sputnik Devs Academy:** Accredited 19-day & 3-month Work-Integrated Learning (WIL) learnerships for tech students (.NET 10, Cloud, AI Agents, Microservices).
    * *Portal:* [sputnikdevs.com](https://sputnikdevs.com) | [Apply for Learnerships](https://sputnikdevs.com/academy/apply)
 
