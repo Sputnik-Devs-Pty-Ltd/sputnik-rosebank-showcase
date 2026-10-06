@@ -274,10 +274,10 @@
   <!-- TOP UNIFIED ARCHITECTURAL HEADER (Y: 30 - 195)                      -->
   <!-- =================================================================== -->
   <g transform="translate(500, 32)">
-    <!-- Event Badge -->
-    <rect x="-195" y="0" width="390" height="34" rx="17" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
-    <circle cx="-168" cy="17" r="5" fill="#7c3aed"/>
-    <text x="-148" y="22" fill="#581c87" class="mono" font-size="12" font-weight="800" letter-spacing="2">ROSEBANK TECH SHOWCASE 2026</text>
+    <!-- Event Badge (Evergreen & Fully Reusable) -->
+    <rect x="-160" y="0" width="320" height="34" rx="17" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+    <circle cx="-126" cy="17" r="4.5" fill="#7c3aed"/>
+    <text x="-109" y="22" fill="#581c87" class="mono" font-size="12" font-weight="800" letter-spacing="2">SOUTH AFRICA TECH SHOWCASE</text>
 
     <!-- Master Title (Deep Slate High Contrast) -->
     <text x="0" y="74" fill="#0f172a" class="sans" font-size="38" font-weight="900" letter-spacing="1" text-anchor="middle">THE SPUTNIK TECH ECOSYSTEM</text>
