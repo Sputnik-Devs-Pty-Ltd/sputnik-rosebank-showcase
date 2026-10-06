@@ -28,8 +28,15 @@ QR_TARGETS = [
     },
     {
         "id": "qr-student-housing-srms",
-        "title": "Student Residence Management & University Hub",
+        "title": "Student Residence Management System",
         "url": "https://sputnikdevs.com/products/hostel",
+        "box_size": 12,
+        "border": 2
+    },
+    {
+        "id": "qr-university-hub",
+        "title": "The University Hub Platform",
+        "url": "https://sputnikdevs.com/products/universityhub",
         "box_size": 12,
         "border": 2
     },

@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate the high-resolution, light-themed, high-value vector Pull-Up Banner (1m x 2m)
+Generate the high-resolution, Zaha Hadid-inspired, light-themed vector Pull-Up Banner (1m x 2m)
 for Sputnik Tech Group and Sputnik Devs Studio at the Rosebank Tech Showcase 2026.
+
 Features:
-- Real corporate PNG logos embedded via Base64 data URIs
-- 100% self-contained inlined vector QR codes (zero external resource dependency, dark navy on pure white)
-- Luminous modern tech light background with subtle precision grids and elevated white cards
-- Precision high-value custom vector icons replacing generic emojis
+- Real corporate PNG logos embedded via Base64 data URIs (including horizontal Shopnik logo)
+- 100% self-contained inlined vector QR codes (zero external resource dependency)
+- Zaha Hadid-inspired architectural background with parametric curves and purple streamlines
+- Dual notchless, uncropped smartphone mockups displaying full light and dark mode screenshots
+- Authentic Google Play & Apple App Store official vector badges
+- Dual scannable QR codes for Student Res Management (SRMS) and The University Hub
+- Grounded features from codebase: Paystack & PayFast, COD & In-Store Collection, Oracle Cloud SA hosting
+- Updated info@sputniktechgroup.com contact email and v2.0.4+31 Tradey Bay release
 """
 
 import os
@@ -40,112 +45,170 @@ def build_banner_svg():
     tradeybay_primary_logo = get_base64_img("assets/TradeyBay_primary_Logo.png")
     tradeybay_dark_screenshot = get_base64_img("assets/TradeyBayScreenShopDarkMode.jpeg")
     tradeybay_light_screenshot = get_base64_img("assets/TradeyBayScreenshopLigtMode.jpeg")
+    shopnik_logo = get_base64_img("assets/logos/shopnik-logo-horizontal-transparent.png")
 
     # 2. Extract QR code vector paths
     qr_tb = get_svg_path_data("assets/qr/qr-tradeybay-playstore.svg")
     qr_acad = get_svg_path_data("assets/qr/qr-academy-apply.svg")
     qr_srms = get_svg_path_data("assets/qr/qr-student-housing-srms.svg")
+    qr_unihub = get_svg_path_data("assets/qr/qr-university-hub.svg")
     qr_shopnik = get_svg_path_data("assets/qr/qr-shopnik-ecommerce.svg")
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 2000" width="1000mm" height="2000mm">
   <defs>
-    <!-- Background Gradients (Luminous Modern Tech Light Theme) -->
-    <linearGradient id="bgLightLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Background Canvas Gradient (Luminous Light Violet/Purple Tone) -->
+    <linearGradient id="bgCanvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="40%" stop-color="#f8faff"/>
-      <stop offset="85%" stop-color="#f0f6ff"/>
-      <stop offset="100%" stop-color="#e9f2ff"/>
+      <stop offset="30%" stop-color="#fdfcff"/>
+      <stop offset="65%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
     </linearGradient>
 
-    <linearGradient id="bgLightRight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="40%" stop-color="#fcfaff"/>
-      <stop offset="85%" stop-color="#f5f3ff"/>
-      <stop offset="100%" stop-color="#eef2ff"/>
+    <!-- Zaha Hadid Parametric Purple Ribbon Gradients -->
+    <linearGradient id="zahaPurple1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <linearGradient id="zahaPurple2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="zahaPurple3" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <linearGradient id="stgCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="45%" stop-color="#2e1065"/>
+      <stop offset="100%" stop-color="#3b0764"/>
     </linearGradient>
 
     <!-- Header Gradient Accent -->
     <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7"/>
-      <stop offset="50%" stop-color="#6750a4"/>
-      <stop offset="100%" stop-color="#059669"/>
+      <stop offset="0%" stop-color="#6b21a8"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#9333ea"/>
     </linearGradient>
 
     <!-- Central Divider Spine -->
     <linearGradient id="dividerSpine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
-      <stop offset="15%" stop-color="#0284c7" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#6750a4" stop-opacity="1"/>
-      <stop offset="85%" stop-color="#059669" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.2"/>
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.3"/>
+      <stop offset="15%" stop-color="#7c3aed" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#6b21a8" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.3"/>
     </linearGradient>
 
     <!-- Card Drop Shadows -->
     <filter id="softCardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.06"/>
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#3b0764" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.03"/>
     </filter>
 
     <filter id="deepCardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.10"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#3b0764" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.05"/>
     </filter>
 
     <filter id="phoneShadow" x="-15%" y="-10%" width="130%" height="125%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0284c7" flood-opacity="0.18"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#581c87" flood-opacity="0.22"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
     </filter>
 
-    <!-- Phone Screen Clip for Real Production Screenshots -->
-    <clipPath id="phoneScreenClip">
-      <rect x="0" y="0" width="186" height="402" rx="16"/>
+    <!-- Notchless Smartphone Screen Clips (Matches Screenshot 540x1133 ratio: 186x394) -->
+    <clipPath id="phoneScreenClipLight">
+      <rect x="0" y="0" width="186" height="394" rx="12"/>
     </clipPath>
 
-    <!-- Subtle Hairline Grids -->
-    <pattern id="gridLightLeft" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#0284c7" stroke-width="0.5" stroke-opacity="0.08"/>
-    </pattern>
+    <clipPath id="phoneScreenClipDark">
+      <rect x="0" y="0" width="186" height="394" rx="12"/>
+    </clipPath>
 
-    <pattern id="gridLightRight" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#7c3aed" stroke-width="0.5" stroke-opacity="0.08"/>
+    <!-- Subtle Hairline Purple Grid -->
+    <pattern id="gridPurpleLight" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#7c3aed" stroke-width="0.5" stroke-opacity="0.06"/>
     </pattern>
 
     <!-- Reusable QR Paths for Razor-Sharp Vector Rendering -->
     <path id="qr-path-tradeybay" d="{qr_tb}"/>
     <path id="qr-path-academy" d="{qr_acad}"/>
     <path id="qr-path-srms" d="{qr_srms}"/>
+    <path id="qr-path-unihub" d="{qr_unihub}"/>
     <path id="qr-path-shopnik" d="{qr_shopnik}"/>
 
     <!-- =============================================================== -->
-    <!-- HIGH-VALUE PRECISION VECTOR ICONS                                -->
+    <!-- OFFICIAL APP STORE & GOOGLE PLAY VECTOR BADGES (200x60 Base)    -->
+    <!-- =============================================================== -->
+    <g id="badge-google-play">
+      <rect width="200" height="60" rx="12" fill="#000000" stroke="#475569" stroke-width="1.5"/>
+      <g transform="translate(16, 12)">
+        <path d="M4.5 3.2L19.8 18.5L4.5 33.8C3.8 33.2 3.4 32.3 3.4 31.1V5.9C3.4 4.7 3.8 3.8 4.5 3.2Z" fill="#00E5FF"/>
+        <path d="M25.2 23.9L19.8 18.5L4.5 33.8C5.4 34.7 6.8 35 8.1 34.3L25.2 23.9Z" fill="#FF0043"/>
+        <path d="M25.2 13.1L8.1 2.7C6.8 2 5.4 2.3 4.5 3.2L19.8 18.5L25.2 13.1Z" fill="#00F076"/>
+        <path d="M31.5 16.7L25.2 13.1L19.8 18.5L25.2 23.9L31.5 20.3C33 19.4 33 17.6 31.5 16.7Z" fill="#FFD600"/>
+      </g>
+      <text x="60" y="24" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="600" letter-spacing="1">GET IT ON</text>
+      <text x="60" y="45" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="18" font-weight="700">Google Play</text>
+    </g>
+
+    <g id="badge-app-store">
+      <rect width="200" height="60" rx="12" fill="#000000" stroke="#475569" stroke-width="1.5"/>
+      <g transform="translate(18, 14)">
+        <path d="M18.8 15.5C18.8 11.8 21.8 9.9 21.9 9.8C20.2 7.3 17.6 7 16.7 6.9C14.5 6.7 12.3 8.2 11.2 8.2C10 8.2 8.3 6.9 6.5 6.9C4.2 6.9 2 8.2 0.9 10.3C-1.5 14.5 0.3 20.8 2.6 24.1C3.7 25.7 5 27.5 6.8 27.4C8.5 27.3 9.2 26.3 11.3 26.3C13.3 26.3 14 27.4 15.8 27.4C17.6 27.4 18.8 25.8 19.9 24.2C21.2 22.3 21.7 20.5 21.8 20.4C21.7 20.3 18.8 19.2 18.8 15.5Z" fill="#FFFFFF"/>
+        <path d="M15.4 4.6C16.4 3.4 17.1 1.7 16.9 0C15.4 0.1 13.6 1 12.6 2.2C11.7 3.3 10.9 5 11.2 6.7C12.8 6.8 14.5 5.8 15.4 4.6Z" fill="#FFFFFF"/>
+      </g>
+      <text x="56" y="22" fill="#c084fc" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="1">COMING SOON ON</text>
+      <text x="56" y="44" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="16" font-weight="700">App Store</text>
+    </g>
+
+    <!-- =============================================================== -->
+    <!-- HIGH-VALUE PRECISION VECTOR ICONS & PRODUCT LOGOS               -->
     <!-- =============================================================== -->
 
     <!-- 1. Laptop / Tech Classifieds Icon -->
     <g id="icon-laptop">
-      <rect x="3" y="27" width="42" height="4" rx="2" fill="#0284c7"/>
-      <path d="M 19 27 L 29 27 L 28 29 L 20 29 Z" fill="#bae6fd"/>
-      <rect x="7" y="6" width="34" height="22" rx="2.5" fill="#0f172a" stroke="#0284c7" stroke-width="1.5"/>
-      <rect x="9" y="8" width="30" height="18" rx="1" fill="#e0f2fe"/>
-      <line x1="12" y1="12" x2="22" y2="12" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round"/>
-      <line x1="12" y1="16" x2="33" y2="16" stroke="#38bdf8" stroke-width="1.4" stroke-linecap="round"/>
-      <line x1="12" y1="20" x2="27" y2="20" stroke="#0284c7" stroke-width="1.4" stroke-linecap="round"/>
+      <rect x="3" y="27" width="42" height="4" rx="2" fill="#7c3aed"/>
+      <path d="M 19 27 L 29 27 L 28 29 L 20 29 Z" fill="#e9d5ff"/>
+      <rect x="7" y="6" width="34" height="22" rx="2.5" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.5"/>
+      <rect x="9" y="8" width="30" height="18" rx="1" fill="#f5f3ff"/>
+      <line x1="12" y1="12" x2="22" y2="12" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="16" x2="33" y2="16" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="12" y1="20" x2="27" y2="20" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
       <circle cx="33" cy="12" r="1.5" fill="#10b981"/>
     </g>
 
-    <!-- 2. Auction Gavel & Spark Icon -->
-    <g id="icon-auction">
-      <rect x="6" y="34" width="26" height="6" rx="2" fill="#d97706"/>
-      <rect x="10" y="32" width="18" height="3" rx="1" fill="#fbbf24"/>
-      <g transform="rotate(-30 26 18)">
-        <rect x="19" y="6" width="14" height="24" rx="3" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
-        <rect x="17" y="4" width="18" height="3" rx="1" fill="#fbbf24"/>
-        <rect x="17" y="29" width="18" height="3" rx="1" fill="#fbbf24"/>
-        <rect x="24" y="18" width="4" height="26" rx="2" fill="#78350f"/>
-      </g>
-      <polygon points="38,6 34,14 38,14 32,24 42,12 37,12" fill="#d97706"/>
+    <!-- 2. Branded Storefront Icon -->
+    <g id="icon-storefront">
+      <path d="M 6 18 L 42 18 L 38 8 L 10 8 Z" fill="#6b21a8"/>
+      <polygon points="10,8 14,8 12,18 7,18" fill="#a855f7"/>
+      <polygon points="20,8 24,8 23,18 18,18" fill="#a855f7"/>
+      <polygon points="30,8 34,8 34,18 29,18" fill="#a855f7"/>
+      <path d="M 6 18 Q 10 21 14 18 Q 18 21 22 18 Q 26 21 30 18 Q 34 21 38 18 Q 42 21 42 18" fill="none" stroke="#6b21a8" stroke-width="2"/>
+      <rect x="8" y="20" width="32" height="22" rx="1" fill="#ffffff" stroke="#6b21a8" stroke-width="1.8"/>
+      <rect x="11" y="23" width="13" height="14" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
+      <rect x="27" y="23" width="10" height="19" fill="#7c3aed" rx="1"/>
+      <circle cx="29" cy="33" r="1" fill="#ffffff"/>
+      <circle cx="37" cy="10" r="5" fill="#10b981"/>
+      <path d="M 35 10 L 36.5 11.5 L 39.5 8.5" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
     </g>
 
-    <!-- 3. AI ATS Resume & Career Match Icon -->
+    <!-- 3. Split-View Maps & Geolocation Radar Icon -->
+    <g id="icon-map-radar">
+      <polygon points="6,12 17,8 31,12 42,8 42,36 31,40 17,36 6,40" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+      <line x1="17" y1="8" x2="17" y2="36" stroke="#c084fc" stroke-width="1.2" stroke-dasharray="2,2"/>
+      <line x1="31" y1="12" x2="31" y2="40" stroke="#c084fc" stroke-width="1.2" stroke-dasharray="2,2"/>
+      <circle cx="24" cy="18" r="8" fill="#a855f7" fill-opacity="0.2"/>
+      <path d="M 24 10 C 20.5 10 18 12.5 18 16 C 18 21 24 28 24 28 C 24 28 30 21 30 16 C 30 12.5 27.5 10 24 10 Z" fill="#6b21a8"/>
+      <circle cx="24" cy="15" r="2.5" fill="#ffffff"/>
+    </g>
+
+    <!-- 4. AI ATS Resume & Career Match Icon -->
     <g id="icon-ats-resume">
       <path d="M 10 6 L 28 6 L 38 16 L 38 42 C 38 43.5 36.5 44 35 44 L 10 44 C 8.5 44 7 43.5 7 42 L 7 8 C 7 6.5 8.5 6 10 6 Z" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
       <path d="M 28 6 L 28 16 L 38 16 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
@@ -154,65 +217,34 @@ def build_banner_svg():
       <line x1="12" y1="22" x2="33" y2="22" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round"/>
       <line x1="12" y1="27" x2="31" y2="27" stroke="#cbd5e1" stroke-width="1.8" stroke-linecap="round"/>
       <line x1="12" y1="32" x2="25" y2="32" stroke="#cbd5e1" stroke-width="1.8" stroke-linecap="round"/>
-      <!-- AI 4-Point Star Sparkle -->
       <path d="M 34 26 Q 34 31 39 31 Q 34 31 34 36 Q 34 31 29 31 Q 34 31 34 26 Z" fill="#d97706"/>
       <circle cx="39" cy="25" r="1.5" fill="#7c3aed"/>
     </g>
 
-    <!-- 4. Branded Storefront & CIPC Merchant Icon -->
-    <g id="icon-storefront">
-      <path d="M 6 18 L 42 18 L 38 8 L 10 8 Z" fill="#6750a4"/>
-      <polygon points="10,8 14,8 12,18 7,18" fill="#8b5cf6"/>
-      <polygon points="20,8 24,8 23,18 18,18" fill="#8b5cf6"/>
-      <polygon points="30,8 34,8 34,18 29,18" fill="#8b5cf6"/>
-      <path d="M 6 18 Q 10 21 14 18 Q 18 21 22 18 Q 26 21 30 18 Q 34 21 38 18 Q 42 21 42 18" fill="none" stroke="#6750a4" stroke-width="2"/>
-      <rect x="8" y="20" width="32" height="22" rx="1" fill="#ffffff" stroke="#6750a4" stroke-width="1.8"/>
-      <rect x="11" y="23" width="13" height="14" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="1"/>
-      <rect x="27" y="23" width="10" height="19" fill="#6750a4" rx="1"/>
-      <circle cx="29" cy="33" r="1" fill="#ffffff"/>
-      <circle cx="37" cy="10" r="5" fill="#10b981"/>
-      <path d="M 35 10 L 36.5 11.5 L 39.5 8.5" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- 5. Real Hostel Icon (From hostel-icon.svg) -->
+    <g id="icon-hostel">
+      <rect x="2" y="8" width="34" height="28" rx="2" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+      <polygon points="1,8 19,0 37,8" fill="#7c3aed"/>
+      <rect x="6" y="12" width="5" height="5" fill="#c084fc"/>
+      <rect x="16" y="12" width="5" height="5" fill="#c084fc"/>
+      <rect x="26" y="12" width="5" height="5" fill="#c084fc"/>
+      <rect x="6" y="20" width="5" height="5" fill="#c084fc"/>
+      <rect x="16" y="20" width="5" height="5" fill="#c084fc"/>
+      <rect x="26" y="20" width="5" height="5" fill="#c084fc"/>
+      <rect x="6" y="28" width="5" height="5" fill="#c084fc"/>
+      <rect x="26" y="28" width="5" height="5" fill="#c084fc"/>
+      <rect x="15" y="28" width="8" height="8" rx="1" fill="#4c1d95"/>
     </g>
 
-    <!-- 5. Split-View Maps & Geolocation Radar Icon -->
-    <g id="icon-map-radar">
-      <polygon points="6,12 17,8 31,12 42,8 42,36 31,40 17,36 6,40" fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
-      <line x1="17" y1="8" x2="17" y2="36" stroke="#34d399" stroke-width="1.2" stroke-dasharray="2,2"/>
-      <line x1="31" y1="12" x2="31" y2="40" stroke="#34d399" stroke-width="1.2" stroke-dasharray="2,2"/>
-      <circle cx="24" cy="18" r="8" fill="#10b981" fill-opacity="0.2"/>
-      <path d="M 24 10 C 20.5 10 18 12.5 18 16 C 18 21 24 28 24 28 C 24 28 30 21 30 16 C 30 12.5 27.5 10 24 10 Z" fill="#059669"/>
-      <circle cx="24" cy="15" r="2.5" fill="#ffffff"/>
+    <!-- 6. Real University Hub Icon (From university-hub-icon.svg) -->
+    <g id="icon-unihub">
+      <circle cx="20" cy="20" r="18" fill="#18181b" stroke="#7c3aed" stroke-width="2"/>
+      <path d="M 20 11 L 31 16 L 20 21 L 9 16 Z" fill="#a855f7"/>
+      <path d="M 13 18 L 13 24 C 13 27 16 29 20 29 C 24 29 27 27 27 24 L 27 18" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 29 17 L 31 22 L 30 22 L 32 26" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
     </g>
 
-    <!-- 6. Student Residence Building (SRMS) Modern Architectural Icon -->
-    <g id="icon-residence">
-      <rect x="12" y="10" width="24" height="32" rx="2" fill="#ffffff" stroke="#059669" stroke-width="2"/>
-      <polygon points="10,12 24,4 38,12" fill="#059669"/>
-      <rect x="16" y="14" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="22" y="14" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="28" y="14" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="16" y="21" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="22" y="21" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="28" y="21" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="16" y="28" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="28" y="28" width="4" height="4" rx="1" fill="#10b981"/>
-      <rect x="21" y="28" width="6" height="14" rx="1" fill="#065f46"/>
-      <line x1="24" y1="28" x2="24" y2="42" stroke="#ffffff" stroke-width="0.8"/>
-      <rect x="36" y="20" width="8" height="22" rx="1" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
-      <rect x="38" y="24" width="4" height="3" rx="0.5" fill="#059669"/>
-      <rect x="38" y="30" width="4" height="3" rx="0.5" fill="#059669"/>
-    </g>
-
-    <!-- 7. Shopnik E-Commerce Platform Icon -->
-    <g id="icon-shopnik">
-      <path d="M 10 16 L 38 16 L 41 42 C 41 43.5 39.5 44 38 44 L 10 44 C 8.5 44 7 43.5 7 42 Z" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
-      <path d="M 17 17 L 17 11 C 17 7 31 7 31 11 L 31 17" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="24" cy="29" r="8" fill="#4f46e5"/>
-      <rect x="21" y="27" width="6" height="4" rx="1" fill="#fbbf24"/>
-      <line x1="16" y1="38" x2="32" y2="38" stroke="#818cf8" stroke-width="1.8" stroke-linecap="round"/>
-    </g>
-
-    <!-- 8. Sputnik Devs Academy Mortarboard & Code Icon -->
+    <!-- 7. Sputnik Devs Academy WIL Icon -->
     <g id="icon-academy">
       <polygon points="24,6 44,15 24,23 4,15" fill="#d97706" stroke="#92400e" stroke-width="1.8"/>
       <path d="M 12 19 L 12 28 C 12 34 36 34 36 28 L 36 19" fill="#fef3c7" stroke="#92400e" stroke-width="1.8"/>
@@ -224,21 +256,6 @@ def build_banner_svg():
         <path d="M 14 2 L 18 6 L 14 10" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
     </g>
-
-    <!-- 9. Cyber Security Shield (POPIA) Icon -->
-    <g id="icon-shield">
-      <path d="M 24 4 L 40 9 C 40 23 32 35 24 42 C 16 35 8 23 8 9 Z" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-      <path d="M 24 9 L 36 13 C 36 22 30 31 24 37 C 18 31 12 22 12 13 Z" fill="#0284c7"/>
-      <path d="M 18 23 L 22 27 L 30 19" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-
-    <!-- 10. Chat Message Vector Icon -->
-    <g id="icon-chat">
-      <path d="M 4 8 C 4 5 6 3 9 3 L 27 3 C 30 3 32 5 32 8 L 32 20 C 32 23 30 25 27 25 L 12 25 L 6 29 L 6 25 L 9 25 C 6 25 4 23 4 20 Z" fill="#0284c7"/>
-      <circle cx="12" cy="14" r="1.5" fill="#ffffff"/>
-      <circle cx="18" cy="14" r="1.5" fill="#ffffff"/>
-      <circle cx="24" cy="14" r="1.5" fill="#ffffff"/>
-    </g>
   </defs>
 
   <style>
@@ -247,406 +264,415 @@ def build_banner_svg():
   </style>
 
   <!-- =================================================================== -->
-  <!-- DUAL VERTICAL SPLIT BACKGROUNDS (LUMINOUS TECH LIGHT THEME)         -->
+  <!-- ZAHA HADID PARAMETRIC PURPLE BACKGROUND ARCHITECTURE                -->
   <!-- =================================================================== -->
-  <!-- Left Side: Sputnik Tech Group -->
-  <rect x="0" y="0" width="500" height="2000" fill="url(#bgLightLeft)"/>
-  <rect x="0" y="0" width="500" height="2000" fill="url(#gridLightLeft)"/>
+  <!-- Base Luminous Light Surface -->
+  <rect x="0" y="0" width="1000" height="2000" fill="url(#bgCanvasGrad)"/>
+  <rect x="0" y="0" width="1000" height="2000" fill="url(#gridPurpleLight)"/>
 
-  <!-- Right Side: Sputnik Devs Studio -->
-  <rect x="500" y="0" width="500" height="2000" fill="url(#bgLightRight)"/>
-  <rect x="500" y="0" width="500" height="2000" fill="url(#gridLightRight)"/>
+  <!-- Ambient Luminous Purple Glow Orbs -->
+  <circle cx="180" cy="380" r="280" fill="#ede9fe" fill-opacity="0.50"/>
+  <circle cx="820" cy="460" r="300" fill="#f3e8ff" fill-opacity="0.55"/>
+  <circle cx="200" cy="1380" r="320" fill="#fae8ff" fill-opacity="0.45"/>
+  <circle cx="800" cy="1350" r="300" fill="#ede9fe" fill-opacity="0.50"/>
 
-  <!-- Soft Ambient Luminous Color Orbs for Depth -->
-  <circle cx="150" cy="400" r="260" fill="#bae6fd" fill-opacity="0.25"/>
-  <circle cx="350" cy="1350" r="280" fill="#e0e7ff" fill-opacity="0.30"/>
-  <circle cx="850" cy="400" r="260" fill="#ede9fe" fill-opacity="0.30"/>
-  <circle cx="650" cy="1350" r="280" fill="#d1fae5" fill-opacity="0.28"/>
+  <!-- Zaha Hadid Sweeping Fluid Ribbons & Spline Waves -->
+  <!-- Upper Parametric Wave (Flowing behind Header & Top Cards) -->
+  <path d="M -50 140 C 200 60 380 260 620 180 C 840 110 940 240 1050 170 L 1050 490 C 850 560 680 400 440 470 C 220 540 80 410 -50 480 Z" fill="url(#zahaPurple1)" opacity="0.08"/>
+
+  <!-- Mid-Section Parametric Wave (Dynamic Cross-Canvas Ribbon) -->
+  <path d="M -50 720 C 180 630 360 810 580 740 C 780 670 890 810 1050 750 L 1050 1050 C 880 1110 720 970 500 1040 C 300 1110 140 980 -50 1060 Z" fill="url(#zahaPurple2)" opacity="0.07"/>
+
+  <!-- Lower Parametric Wave (Swooping behind QR & Academy Cards) -->
+  <path d="M -50 1300 C 220 1210 440 1410 680 1340 C 880 1280 960 1420 1050 1370 L 1050 1690 C 860 1750 680 1610 420 1680 C 200 1740 70 1620 -50 1690 Z" fill="url(#zahaPurple3)" opacity="0.07"/>
+
+  <!-- Parametric Streamlines / Architectural Contour Curves -->
+  <path d="M -20 190 C 240 110 420 310 650 230 C 860 160 960 290 1020 220" fill="none" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.25"/>
+  <path d="M -20 220 C 240 140 420 340 650 260 C 860 190 960 320 1020 250" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-opacity="0.20" stroke-dasharray="6,8"/>
+  <path d="M -20 780 C 200 700 400 870 620 800 C 820 730 920 860 1020 810" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-opacity="0.22"/>
+  <path d="M -20 810 C 200 730 400 900 620 830 C 820 760 920 890 1020 840" fill="none" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.20" stroke-dasharray="8,6"/>
+  <path d="M -20 1360 C 240 1280 460 1480 700 1410 C 900 1350 980 1490 1020 1440" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-opacity="0.22"/>
+  <path d="M -20 1390 C 240 1310 460 1510 700 1440 C 900 1380 980 1520 1020 1470" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.18" stroke-dasharray="6,8"/>
 
   <!-- =================================================================== -->
-  <!-- CENTRAL VERTICAL DIVIDER SPINE                                      -->
+  <!-- CENTRAL VERTICAL ARCHITECTURAL DIVIDER SPINE (X: 500)               -->
   <!-- =================================================================== -->
-  <line x1="500" y1="210" x2="500" y2="1850" stroke="url(#dividerSpine)" stroke-width="3"/>
-  <line x1="499" y1="210" x2="499" y2="1850" stroke="#ffffff" stroke-width="1"/>
+  <line x1="500" y1="210" x2="500" y2="1845" stroke="url(#dividerSpine)" stroke-width="3"/>
+  <line x1="499" y1="210" x2="499" y2="1845" stroke="#ffffff" stroke-width="0.8"/>
 
   <!-- Circuit nodes on the central divider -->
-  <circle cx="500" cy="220" r="6" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
-  <circle cx="500" cy="620" r="7" fill="#6750a4" stroke="#ffffff" stroke-width="2"/>
-  <circle cx="500" cy="1070" r="7" fill="#8b5cf6" stroke="#ffffff" stroke-width="2"/>
-  <circle cx="500" cy="1480" r="7" fill="#059669" stroke="#ffffff" stroke-width="2"/>
-  <circle cx="500" cy="1840" r="6" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="500" cy="220" r="6" fill="#7c3aed" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="500" cy="710" r="7" fill="#6b21a8" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="500" cy="1150" r="7" fill="#8b5cf6" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="500" cy="1835" r="6" fill="#7c3aed" stroke="#ffffff" stroke-width="2"/>
 
   <!-- Horizontal circuit branch ticks -->
-  <path d="M 465 620 L 500 620 L 535 620" stroke="#6750a4" stroke-width="1.8" stroke-opacity="0.5"/>
-  <path d="M 465 1070 L 500 1070 L 535 1070" stroke="#8b5cf6" stroke-width="1.8" stroke-opacity="0.5"/>
-  <path d="M 465 1480 L 500 1480 L 535 1480" stroke="#059669" stroke-width="1.8" stroke-opacity="0.5"/>
+  <path d="M 465 710 L 500 710 L 535 710" stroke="#7c3aed" stroke-width="1.8" stroke-opacity="0.5"/>
+  <path d="M 465 1150 L 500 1150 L 535 1150" stroke="#8b5cf6" stroke-width="1.8" stroke-opacity="0.5"/>
 
   <!-- =================================================================== -->
-  <!-- TOP UNIFIED HEADER (Y: 30 - 200)                                    -->
+  <!-- TOP UNIFIED ARCHITECTURAL HEADER (Y: 30 - 195)                      -->
   <!-- =================================================================== -->
   <g transform="translate(500, 32)">
     <!-- Event Badge -->
-    <rect x="-195" y="0" width="390" height="34" rx="17" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#softCardShadow)"/>
-    <circle cx="-170" cy="17" r="5" fill="#0284c7"/>
-    <text x="-152" y="22" fill="#0369a1" class="mono" font-size="12" font-weight="800" letter-spacing="2">ROSEBANK TECH SHOWCASE 2026</text>
+    <rect x="-195" y="0" width="390" height="34" rx="17" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+    <circle cx="-168" cy="17" r="5" fill="#7c3aed"/>
+    <text x="-148" y="22" fill="#581c87" class="mono" font-size="12" font-weight="800" letter-spacing="2">ROSEBANK TECH SHOWCASE 2026</text>
 
     <!-- Master Title (Deep Slate High Contrast) -->
     <text x="0" y="74" fill="#0f172a" class="sans" font-size="38" font-weight="900" letter-spacing="1" text-anchor="middle">THE SPUTNIK TECH ECOSYSTEM</text>
-    <text x="0" y="104" fill="#475569" class="sans" font-size="15" font-weight="600" letter-spacing="0.3" text-anchor="middle">Connecting Campus Marketplace Commerce with Enterprise Cloud Software</text>
+    <text x="0" y="102" fill="#581c87" class="sans" font-size="15" font-weight="700" letter-spacing="0.3" text-anchor="middle">Connecting Campus Marketplace Commerce with Enterprise Cloud Software</text>
 
     <!-- Subtitle Split Indicator Bar -->
-    <rect x="-445" y="126" width="425" height="30" rx="15" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#softCardShadow)"/>
-    <circle cx="-425" cy="141" r="4" fill="#0284c7"/>
-    <text x="-232" y="146" fill="#0369a1" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">◀ CONSUMER &amp; CAMPUS MOBILE LABS</text>
+    <rect x="-445" y="124" width="425" height="30" rx="15" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
+    <circle cx="-425" cy="139" r="4" fill="#7c3aed"/>
+    <text x="-232" y="144" fill="#581c87" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">◀ CONSUMER &amp; CAMPUS MOBILE LABS</text>
 
-    <rect x="20" y="126" width="425" height="30" rx="15" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
-    <circle cx="425" cy="141" r="4" fill="#7c3aed"/>
-    <text x="232" y="146" fill="#6d28d9" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">ENTERPRISE SAAS &amp; ACADEMY ▶</text>
+    <rect x="20" y="124" width="425" height="30" rx="15" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#softCardShadow)"/>
+    <circle cx="425" cy="139" r="4" fill="#8b5cf6"/>
+    <text x="232" y="144" fill="#581c87" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">ENTERPRISE SAAS &amp; ACADEMY ▶</text>
   </g>
 
 
   <!-- =================================================================== -->
-  <!-- LEFT COLUMN: SPUTNIK TECH GROUP & TRADEY BAY APP (X: 38 - 468)       -->
+  <!-- LEFT COLUMN: SPUTNIK TECH GROUP & TRADEY BAY APP (X: 36 - 468)       -->
   <!-- =================================================================== -->
-  <g transform="translate(38, 215)">
+  <g transform="translate(36, 210)">
 
     <!-- Company Branding Header with Real Sputnik Tech Logo -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="56" height="56" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#softCardShadow)"/>
+      <rect x="0" y="0" width="56" height="56" rx="14" fill="#ffffff" stroke="#d8b4fe" stroke-width="1.2" filter="url(#softCardShadow)"/>
       <image href="{sputnik_tech_logo}" x="4" y="4" width="48" height="48" preserveAspectRatio="xMidYMid meet"/>
       <text x="68" y="24" fill="#0f172a" class="sans" font-size="22" font-weight="900" letter-spacing="1">SPUTNIK TECH GROUP</text>
-      <text x="68" y="42" fill="#0284c7" class="mono" font-size="11" font-weight="800" letter-spacing="2.5">CONSUMER &amp; MOBILE INNOVATION</text>
+      <text x="68" y="42" fill="#7c3aed" class="mono" font-size="11" font-weight="800" letter-spacing="2.5">CONSUMER &amp; MOBILE INNOVATION</text>
     </g>
 
-    <!-- HERO CARD: TRADEY BAY MOBILE APP (Y: 65 to 585) -->
-    <g transform="translate(0, 68)">
-      <!-- Outer Card Frame (Elevated White Surface with Cyan Highlight) -->
-      <rect x="0" y="0" width="430" height="525" rx="22" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#deepCardShadow)"/>
+    <!-- HERO CARD: TRADEY BAY MOBILE APP (Y: 64 to 542) -->
+    <g transform="translate(0, 64)">
+      <!-- Outer Card Frame (Elevated White Surface with Purple Border) -->
+      <rect x="0" y="0" width="432" height="478" rx="22" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" filter="url(#deepCardShadow)"/>
       
       <!-- Card Top Bar -->
-      <rect x="0" y="0" width="430" height="64" rx="22" fill="#f0f9ff"/>
-      <path d="M 0 64 L 430 64" stroke="#bae6fd" stroke-width="1"/>
+      <rect x="0" y="0" width="432" height="54" rx="22" fill="#faf5ff"/>
+      <path d="M 0 54 L 432 54" stroke="#e9d5ff" stroke-width="1"/>
       
       <!-- Real Tradey Bay Primary Logo in Header -->
-      <g transform="translate(14, 12)">
-        <image href="{tradeybay_primary_logo}" x="0" y="0" width="125" height="40" preserveAspectRatio="xMinYMid meet"/>
-        <text x="135" y="25" fill="#6750a4" class="mono" font-size="8.5" font-weight="800" letter-spacing="0.5">FLAGSHIP SUPER APP</text>
+      <g transform="translate(14, 8)">
+        <image href="{tradeybay_primary_logo}" x="0" y="0" width="130" height="36" preserveAspectRatio="xMinYMid meet"/>
+        <text x="140" y="24" fill="#7c3aed" class="mono" font-size="8.5" font-weight="800" letter-spacing="0.5">CAMPUS SUPER APP</text>
       </g>
-      <rect x="312" y="18" width="104" height="26" rx="13" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
-      <circle cx="325" cy="31" r="3.5" fill="#16a34a"/>
-      <text x="366" y="35" fill="#15803d" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">LIVE v2.0.2+29</text>
+      <!-- Live Version Badge: v2.0.4+31 -->
+      <rect x="306" y="14" width="112" height="26" rx="13" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+      <circle cx="320" cy="27" r="3.5" fill="#16a34a"/>
+      <text x="364" y="31" fill="#15803d" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">LIVE v2.0.4+31</text>
 
       <!-- DUAL SMARTPHONE PRODUCTION DEVICE MOCKUPS (Side-by-Side Light & Dark Mode) -->
+      <!-- Notchless, Uncropped, Full UI Visible from Top Search Bar to Bottom Nav -->
       <!-- Left Phone: Light Mode Production App -->
       <g id="phone-light-mockup">
-        <!-- Phone Outer Chassis -->
-        <rect x="12" y="70" width="196" height="412" rx="22" fill="#0f172a" stroke="#cbd5e1" stroke-width="2" filter="url(#phoneShadow)"/>
+        <!-- Phone Outer Chassis (194x402, 4px minimal bezel) -->
+        <rect x="14" y="60" width="194" height="404" rx="16" fill="#0f172a" stroke="#cbd5e1" stroke-width="1.5" filter="url(#phoneShadow)"/>
         <!-- Inner Bezel Ring -->
-        <rect x="15" y="73" width="190" height="406" rx="19" fill="none" stroke="#334155" stroke-width="1"/>
+        <rect x="16" y="62" width="190" height="400" rx="14" fill="none" stroke="#e2e8f0" stroke-width="1"/>
         
-        <!-- Screen Content (Clipped Real Flutter Production Screenshot) -->
-        <g transform="translate(17, 75)" clip-path="url(#phoneScreenClip)">
-          <image href="{tradeybay_light_screenshot}" x="0" y="0" width="186" height="402" preserveAspectRatio="xMidYMid slice"/>
+        <!-- Screen Content (186x394, exactly matching 540x1132 aspect ratio, zero crop) -->
+        <g transform="translate(18, 64)" clip-path="url(#phoneScreenClipLight)">
+          <image href="{tradeybay_light_screenshot}" x="0" y="0" width="186" height="394" preserveAspectRatio="none"/>
         </g>
 
-        <!-- Dynamic Island Cutout -->
-        <rect x="85" y="78" width="50" height="8" rx="4" fill="#090d16"/>
-        <circle cx="95" cy="82" r="2" fill="#1e293b"/>
-        <circle cx="120" cy="82" r="1.5" fill="#0369a1"/>
+        <!-- Hardware Edge Gloss Reflection -->
+        <path d="M 18 64 L 110 64 L 18 220 Z" fill="#ffffff" opacity="0.04"/>
 
-        <!-- Hardware Gloss Reflection -->
-        <path d="M 17 75 L 120 75 L 17 240 Z" fill="#ffffff" opacity="0.04"/>
-
-        <!-- Home Bar -->
-        <rect x="80" y="471" width="60" height="3" rx="1.5" fill="#64748b" opacity="0.6"/>
-
-        <!-- Theme Pill -->
-        <rect x="16" y="488" width="188" height="24" rx="12" fill="#eff6ff" stroke="#0284c7" stroke-width="1.2"/>
-        <circle cx="34" cy="500" r="4" fill="#0284c7"/>
-        <text x="114" y="504" fill="#0369a1" class="mono" font-size="9" font-weight="800" text-anchor="middle">☀ FLUTTER LIGHT UI</text>
+        <!-- Sleek Home Indicator Bar -->
+        <rect x="81" y="452" width="60" height="3" rx="1.5" fill="#94a3b8" opacity="0.7"/>
       </g>
 
       <!-- Right Phone: Dark Mode Production App -->
       <g id="phone-dark-mockup">
-        <!-- Phone Outer Chassis -->
-        <rect x="222" y="70" width="196" height="412" rx="22" fill="#070c18" stroke="#38bdf8" stroke-width="2" filter="url(#phoneShadow)"/>
+        <!-- Phone Outer Chassis (194x402, 4px minimal bezel) -->
+        <rect x="224" y="60" width="194" height="404" rx="16" fill="#090d16" stroke="#8b5cf6" stroke-width="1.5" filter="url(#phoneShadow)"/>
         <!-- Inner Bezel Ring -->
-        <rect x="225" y="73" width="190" height="406" rx="19" fill="none" stroke="#0284c7" stroke-width="1" stroke-opacity="0.4"/>
+        <rect x="226" y="62" width="190" height="400" rx="14" fill="none" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
         
-        <!-- Screen Content (Clipped Real Flutter Production Screenshot) -->
-        <g transform="translate(227, 75)" clip-path="url(#phoneScreenClip)">
-          <image href="{tradeybay_dark_screenshot}" x="0" y="0" width="186" height="402" preserveAspectRatio="xMidYMid slice"/>
+        <!-- Screen Content (186x394, exactly matching 540x1135 aspect ratio, zero crop) -->
+        <g transform="translate(228, 64)" clip-path="url(#phoneScreenClipDark)">
+          <image href="{tradeybay_dark_screenshot}" x="0" y="0" width="186" height="394" preserveAspectRatio="none"/>
         </g>
 
-        <!-- Dynamic Island Cutout -->
-        <rect x="295" y="78" width="50" height="8" rx="4" fill="#000000"/>
-        <circle cx="305" cy="82" r="2" fill="#1e293b"/>
-        <circle cx="330" cy="82" r="1.5" fill="#38bdf8"/>
+        <!-- Hardware Edge Gloss Reflection -->
+        <path d="M 228 64 L 320 64 L 228 220 Z" fill="#ffffff" opacity="0.05"/>
 
-        <!-- Hardware Gloss Reflection -->
-        <path d="M 227 75 L 330 75 L 227 240 Z" fill="#ffffff" opacity="0.05"/>
-
-        <!-- Home Bar -->
-        <rect x="290" y="471" width="60" height="3" rx="1.5" fill="#38bdf8" opacity="0.7"/>
-
-        <!-- Theme Pill -->
-        <rect x="226" y="488" width="188" height="24" rx="12" fill="#090d16" stroke="#38bdf8" stroke-width="1.2"/>
-        <circle cx="244" cy="500" r="4" fill="#38bdf8"/>
-        <text x="324" y="504" fill="#38bdf8" class="mono" font-size="9" font-weight="800" text-anchor="middle">☾ OLED DARK THEME</text>
+        <!-- Sleek Home Indicator Bar -->
+        <rect x="291" y="452" width="60" height="3" rx="1.5" fill="#a855f7" opacity="0.8"/>
       </g>
     </g>
 
-    <!-- POINT & EXPLAIN FEATURE CARDS WITH HIGH-VALUE VECTOR ICONS (Y: 605 to 1080) -->
-    <g transform="translate(0, 608)">
-      <rect x="0" y="0" width="310" height="24" rx="12" fill="#e0f2fe"/>
-      <text x="155" y="16" fill="#0369a1" class="mono" font-size="11" font-weight="800" letter-spacing="1.5" text-anchor="middle">OFFICIAL TRADEY BAY PLATFORM PILLARS</text>
+    <!-- POINT & EXPLAIN FEATURE CARDS WITH HIGH-VALUE VECTOR ICONS (Y: 554 to 940) -->
+    <g transform="translate(0, 554)">
+      <rect x="0" y="0" width="310" height="24" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1"/>
+      <text x="155" y="16" fill="#6b21a8" class="mono" font-size="11" font-weight="800" letter-spacing="1.5" text-anchor="middle">OFFICIAL TRADEY BAY PLATFORM PILLARS</text>
 
       <!-- Point 1: Classifieds & Live Digital Auctions -->
-      <g transform="translate(0, 32)">
-        <rect width="430" height="88" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="14" y="14" width="60" height="60" rx="12" fill="#e0f2fe"/>
-        <!-- High-Value Laptop / Tag Icon -->
-        <use href="#icon-laptop" x="20" y="20"/>
-        <text x="86" y="34" fill="#0f172a" class="sans" font-size="14" font-weight="800">1. Classified Ads &amp; Real-Time Auctions</text>
-        <text x="86" y="52" fill="#475569" class="sans" font-size="11.5">Free listings across Vehicles, Solar, Tech &amp; Dorm gear.</text>
-        <text x="86" y="68" fill="#0284c7" class="sans" font-size="11" font-weight="700">Sub-100ms SignalR live bidding with 60s anti-snipe extension.</text>
+      <g transform="translate(0, 30)">
+        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
+        <use href="#icon-laptop" x="18" y="18"/>
+        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">1. Classified Ads &amp; Real-Time Auctions</text>
+        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Free listings across Vehicles, Solar, Tech &amp; Dorm gear.</text>
+        <text x="82" y="63" fill="#7c3aed" class="sans" font-size="10.5" font-weight="700">Sub-100ms SignalR live bidding with 60s anti-snipe extension.</text>
       </g>
 
       <!-- Point 2: Seller & Business Storefronts -->
-      <g transform="translate(0, 130)">
-        <rect width="430" height="88" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="14" y="14" width="60" height="60" rx="12" fill="#ede9fe"/>
-        <!-- High-Value Storefront Icon -->
-        <use href="#icon-storefront" x="20" y="20"/>
-        <text x="86" y="34" fill="#0f172a" class="sans" font-size="14" font-weight="800">2. Branded Seller &amp; Business Storefronts</text>
-        <text x="86" y="52" fill="#475569" class="sans" font-size="11.5">Dedicated digital showrooms for private sellers and CIPC stores</text>
-        <text x="86" y="68" fill="#6d28d9" class="sans" font-size="11" font-weight="700">with verified vendor badges, product carousels &amp; in-store search.</text>
+      <g transform="translate(0, 120)">
+        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
+        <use href="#icon-storefront" x="18" y="18"/>
+        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">2. Branded Seller &amp; Business Storefronts</text>
+        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Dedicated digital showrooms for private sellers and CIPC stores</text>
+        <text x="82" y="63" fill="#6b21a8" class="sans" font-size="10.5" font-weight="700">with verified vendor badges, product carousels &amp; in-store search.</text>
       </g>
 
       <!-- Point 3: Interactive Maps & Split View -->
-      <g transform="translate(0, 228)">
-        <rect width="430" height="88" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="14" y="14" width="60" height="60" rx="12" fill="#d1fae5"/>
-        <!-- High-Value Map Radar Icon -->
-        <use href="#icon-map-radar" x="20" y="20"/>
-        <text x="86" y="34" fill="#0f172a" class="sans" font-size="14" font-weight="800">3. Interactive Split-View Geospatial Maps</text>
-        <text x="86" y="52" fill="#475569" class="sans" font-size="11.5">Switch between card grid and live Google Map view with</text>
-        <text x="86" y="68" fill="#059669" class="sans" font-size="11" font-weight="700">clustered price pins and bounding box search-as-you-move.</text>
+      <g transform="translate(0, 210)">
+        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
+        <use href="#icon-map-radar" x="18" y="18"/>
+        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">3. Interactive Split-View Geospatial Maps</text>
+        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Switch between card grid and live Google Map view with</text>
+        <text x="82" y="63" fill="#7c3aed" class="sans" font-size="10.5" font-weight="700">clustered price pins and bounding box search-as-you-move.</text>
       </g>
 
       <!-- Point 4: Jobs & Native AI ATS Resume Builder -->
-      <g transform="translate(0, 326)">
-        <rect width="430" height="88" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="14" y="14" width="60" height="60" rx="12" fill="#fef3c7"/>
-        <!-- High-Value ATS Resume Icon -->
-        <use href="#icon-ats-resume" x="20" y="20"/>
-        <text x="86" y="34" fill="#0f172a" class="sans" font-size="14" font-weight="800">4. Jobs Network &amp; Native AI ATS Resume Builder</text>
-        <text x="86" y="52" fill="#475569" class="sans" font-size="11.5">Built-in ATS resume creator with 4 templates &amp; vector PDF export.</text>
-        <text x="86" y="68" fill="#b45309" class="sans" font-size="11" font-weight="700">Algorithmic vacancy matching with 1-tap direct applications.</text>
+      <g transform="translate(0, 300)">
+        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
+        <use href="#icon-ats-resume" x="18" y="18"/>
+        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">4. Jobs Network &amp; Native AI ATS Resume Builder</text>
+        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Built-in ATS resume creator with 4 templates &amp; vector PDF export.</text>
+        <text x="82" y="63" fill="#b45309" class="sans" font-size="10.5" font-weight="700">Algorithmic vacancy matching with 1-tap direct applications.</text>
       </g>
     </g>
 
-    <!-- SCANNABLE QR CALL-TO-ACTION CARD (HIGH CONTRAST, 100% INLINED VECTOR) (Y: 1060 to 1540) -->
-    <g transform="translate(0, 1065)">
+    <!-- SCANNABLE QR CALL-TO-ACTION CARD (HIGH CONTRAST, 100% INLINED VECTOR) (Y: 948 to 1625) -->
+    <g transform="translate(0, 948)">
       <!-- Gradient Container Card -->
-      <rect width="430" height="475" rx="22" fill="#0369a1" filter="url(#deepCardShadow)"/>
-      <rect x="2" y="2" width="426" height="471" rx="20" fill="none" stroke="#38bdf8" stroke-width="2"/>
+      <rect width="432" height="677" rx="22" fill="url(#stgCardGrad)" filter="url(#deepCardShadow)"/>
+      <rect x="2" y="2" width="428" height="673" rx="20" fill="none" stroke="#a855f7" stroke-width="2"/>
 
-      <text x="215" y="38" fill="#bae6fd" class="mono" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">GET TRADEY BAY TODAY (v2.0.2+29)</text>
-      <text x="215" y="62" fill="#ffffff" class="sans" font-size="18" font-weight="900" text-anchor="middle">Scan Camera to Install on Google Play</text>
+      <text x="216" y="38" fill="#e9d5ff" class="mono" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">GET TRADEY BAY TODAY (v2.0.4+31)</text>
+      <text x="216" y="64" fill="#ffffff" class="sans" font-size="18" font-weight="900" text-anchor="middle">Scan Camera to Install on Android &amp; iOS</text>
 
       <!-- PURE WHITE HIGH-CONTRAST QR CODE CANVAS (INLINED VECTOR PATH) -->
-      <g transform="translate(105, 80)">
+      <g transform="translate(106, 82)">
         <rect width="220" height="220" rx="18" fill="#ffffff" stroke="#ffffff" stroke-width="2" filter="url(#softCardShadow)"/>
         <!-- Corner Targeting Guides -->
-        <path d="M 6 18 L 6 6 L 18 6" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M 214 18 L 214 6 L 202 6" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M 6 202 L 6 214 L 18 214" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M 214 202 L 214 214 L 202 214" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 6 18 L 6 6 L 18 6" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 214 18 L 214 6 L 202 6" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 6 202 L 6 214 L 18 214" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 214 202 L 214 214 L 202 214" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
 
-        <!-- Inlined Vector QR Path (49.2 x 49.2 scaled to 196x196, offset 12, 12) -->
-        <g transform="translate(12, 12) scale(3.9837)">
+        <!-- Inlined Vector QR Path (49.2 x 49.2 scaled to 192x192, offset 14, 14) -->
+        <g transform="translate(14, 14) scale(3.9024)">
           <use href="#qr-path-tradeybay" fill="#0f172a"/>
         </g>
       </g>
 
-      <!-- Google Play Badge -->
-      <g transform="translate(68, 318)">
-        <rect width="140" height="42" rx="8" fill="#000000" stroke="#38bdf8" stroke-width="1.2"/>
-        <text x="25" y="27" fill="#34d399" class="sans" font-size="18">▶</text>
-        <text x="48" y="18" fill="#94a3b8" class="mono" font-size="7">GET IT ON</text>
-        <text x="48" y="32" fill="#ffffff" class="sans" font-size="12" font-weight="700">Google Play</text>
+      <!-- REAL OFFICIAL APP STORE & GOOGLE PLAY BADGES -->
+      <g transform="translate(36, 320)">
+        <!-- Google Play Official Vector Badge -->
+        <use href="#badge-google-play" x="0" y="0" transform="scale(0.85)"/>
+        <!-- Apple App Store Official Vector Badge -->
+        <use href="#badge-app-store" x="220" y="0" transform="scale(0.85)"/>
       </g>
 
-      <!-- iOS Coming Soon Badge -->
-      <g transform="translate(222, 318)">
-        <rect width="140" height="42" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
-        <text x="25" y="27" fill="#ffffff" class="sans" font-size="18"></text>
-        <text x="48" y="18" fill="#94a3b8" class="mono" font-size="7">APPLE IOS</text>
-        <text x="48" y="32" fill="#38bdf8" class="sans" font-size="11" font-weight="700">Coming Soon</text>
+      <!-- POPIA COMPLIANT & IN-COUNTRY HOSTED (RATING REMOVED PER USER SPEC) -->
+      <g transform="translate(36, 388)">
+        <rect width="360" height="36" rx="18" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.2"/>
+        <text x="180" y="23" fill="#e9d5ff" class="mono" font-size="11" font-weight="800" text-anchor="middle">🛡️  100% POPIA COMPLIANT &amp; IN-COUNTRY HOSTED</text>
       </g>
 
-      <!-- Social Proof Rating Pill -->
-      <g transform="translate(35, 376)">
-        <rect width="360" height="36" rx="18" fill="#082f49" stroke="#38bdf8" stroke-width="1"/>
-        <text x="180" y="23" fill="#fbbf24" class="sans" font-size="11.5" font-weight="800" text-anchor="middle">★★★★★  <tspan fill="#ffffff">4.8 / 5.0</tspan>  <tspan fill="#38bdf8" font-weight="600">· 100% POPIA Compliant &amp; In-Country</tspan></text>
-      </g>
+      <!-- Live Campus Network Note -->
+      <text x="216" y="456" fill="#c084fc" class="sans" font-size="13" font-weight="700" text-anchor="middle">South Africa's Premier Campus Commerce Super App</text>
+      <text x="216" y="478" fill="#e2e8f0" class="sans" font-size="11.5" text-anchor="middle">Empowering university students, local entrepreneurs &amp; accredited merchants</text>
 
       <!-- Corporate Web link -->
-      <text x="215" y="442" fill="#ffffff" class="mono" font-size="13" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputniktechgroup.com</text>
+      <text x="216" y="520" fill="#ffffff" class="mono" font-size="13" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputniktechgroup.com</text>
     </g>
 
   </g>
 
 
   <!-- =================================================================== -->
-  <!-- RIGHT COLUMN: SPUTNIK DEVS STUDIO (SAAS & ACADEMY) (X: 532 - 962)   -->
+  <!-- RIGHT COLUMN: SPUTNIK DEVS STUDIO (SAAS & ACADEMY) (X: 532 - 964)   -->
   <!-- =================================================================== -->
-  <g transform="translate(532, 215)">
+  <g transform="translate(532, 210)">
 
     <!-- Company Branding Header with Real Sputnik Devs Logo -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="56" height="56" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#softCardShadow)"/>
+      <rect x="0" y="0" width="56" height="56" rx="14" fill="#ffffff" stroke="#d8b4fe" stroke-width="1.2" filter="url(#softCardShadow)"/>
       <image href="{sputnik_devs_logo}" x="4" y="4" width="48" height="48" preserveAspectRatio="xMidYMid meet"/>
       <text x="68" y="24" fill="#0f172a" class="sans" font-size="22" font-weight="900" letter-spacing="1">SPUTNIK DEVS STUDIO</text>
-      <text x="68" y="42" fill="#059669" class="mono" font-size="11" font-weight="800" letter-spacing="2.5">ENTERPRISE SAAS &amp; ACADEMY</text>
+      <text x="68" y="42" fill="#7c3aed" class="mono" font-size="11" font-weight="800" letter-spacing="2.5">ENTERPRISE SAAS &amp; ACADEMY</text>
     </g>
 
-    <!-- CARD 1: STUDENT RESIDENCE MANAGEMENT & UNIVERSITY HUB (Y: 68 to 470) -->
-    <g transform="translate(0, 68)">
-      <rect width="430" height="400" rx="20" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#softCardShadow)"/>
+    <!-- CARD 1: STUDENT RESIDENCE MANAGEMENT & THE UNIVERSITY HUB (Y: 64 to 496) -->
+    <!-- Well Spaced, Real Logos, Grounded Features, Dual QR Codes -->
+    <g transform="translate(0, 64)">
+      <rect width="432" height="432" rx="22" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#softCardShadow)"/>
       
-      <!-- Card Header -->
-      <rect width="430" height="56" rx="20" fill="#f0fdf4"/>
-      <path d="M 0 56 L 430 56" stroke="#bbf7d0" stroke-width="1"/>
+      <!-- Card Header (62px height, generous spacing, NO header collision) -->
+      <rect width="432" height="62" rx="22" fill="#faf5ff"/>
+      <path d="M 0 62 L 432 62" stroke="#e9d5ff" stroke-width="1"/>
       
-      <!-- Vector Residence Icon -->
-      <use href="#icon-residence" x="12" y="6"/>
-      <text x="64" y="27" fill="#0f172a" class="sans" font-size="15" font-weight="800">Student Res Management System</text>
-      <text x="64" y="43" fill="#059669" class="mono" font-size="9" font-weight="700" letter-spacing="0.8">&amp; THE UNIVERSITY HUB PLATFORM</text>
+      <!-- Real Logos: Hostel Building & University Hub Mortarboard -->
+      <g transform="translate(14, 14)">
+        <use href="#icon-hostel" x="0" y="0"/>
+        <use href="#icon-unihub" x="42" y="0"/>
+      </g>
+      <!-- Title & Subtitle cleanly placed with 240px width before badge -->
+      <text x="96" y="27" fill="#0f172a" class="sans" font-size="13.5" font-weight="900">Student Res Management</text>
+      <text x="96" y="44" fill="#7c3aed" class="mono" font-size="8.5" font-weight="800" letter-spacing="0.5">&amp; THE UNIVERSITY HUB PLATFORM</text>
       
-      <rect x="332" y="16" width="84" height="24" rx="12" fill="#dcfce7" stroke="#059669" stroke-width="1"/>
-      <text x="374" y="32" fill="#065f46" class="mono" font-size="9" font-weight="800" text-anchor="middle">CAMPUS B2B</text>
+      <!-- Clean Non-Overlapping Campus B2B Badge -->
+      <rect x="322" y="16" width="96" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="370" y="34" fill="#581c87" class="mono" font-size="9" font-weight="800" text-anchor="middle">CAMPUS B2B</text>
 
       <!-- Talking Points for Prince & Kenneth to point at -->
-      <g transform="translate(18, 72)">
-        <text x="0" y="16" fill="#065f46" class="mono" font-size="10.5" font-weight="800" letter-spacing="1">DESIGNED FOR RESIDENCES &amp; LANDLORDS:</text>
+      <g transform="translate(16, 74)">
+        <text x="0" y="14" fill="#581c87" class="mono" font-size="10" font-weight="800" letter-spacing="1">INTEGRATED HIGHER ED &amp; RESIDENCE ECOSYSTEM:</text>
         
-        <g transform="translate(0, 30)">
-          <circle cx="10" cy="8" r="4" fill="#059669"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Automated Room &amp; Bed Allocations</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Replaces spreadsheets with 1-click room assignment &amp; digital leases.</text>
+        <!-- Feature 1: Hostel SRMS -->
+        <g transform="translate(0, 26)">
+          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Hostel SRMS (Residence Operators &amp; Landlords)</text>
+          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Automated bed allocations, digital lease signing &amp; online rent billing.</text>
+          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">6 Integrated Portals: Student, Owner, Manager, Catering, Admin, Maintenance.</text>
         </g>
 
-        <g transform="translate(0, 75)">
-          <circle cx="10" cy="8" r="4" fill="#059669"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Digital Lease Signing &amp; Rent Billing</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Automated rent invoices, NSFAS remittances &amp; arrears tracking.</text>
+        <!-- Feature 2: University Hub -->
+        <g transform="translate(0, 76)">
+          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">The University Hub (Higher Education Institutions)</text>
+          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">AI smart allocation matching student cohorts to accredited residences.</text>
+          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">Central command centre for check-ins, NSFAS/sBux tracking &amp; compliance.</text>
         </g>
 
-        <g transform="translate(0, 120)">
-          <circle cx="10" cy="8" r="4" fill="#059669"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Biometric Gate Access &amp; Maintenance</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Turnstile integration, maintenance ticket tracking &amp; live room audits.</text>
+        <!-- Feature 3: Biometrics & Interconnected API -->
+        <g transform="translate(0, 126)">
+          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Biometric Gate Access &amp; Interconnected Rest API</text>
+          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Turnstile integration, maintenance SLAs &amp; HMAC-signed webhooks.</text>
+          <text x="20" y="38" fill="#059669" class="sans" font-size="10" font-weight="700">Auto-provisions students into SRMS; live status flows back to University Hub.</text>
         </g>
 
-        <g transform="translate(0, 165)">
-          <circle cx="10" cy="8" r="4" fill="#0284c7"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">The University Hub Sister Platform</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Campus life portal: student societies, events &amp; campus notices.</text>
-        </g>
+        <!-- DUAL QR CODES: Left for Student Res Management, Right for University Hub -->
+        <g transform="translate(0, 180)">
+          <rect width="400" height="98" rx="14" fill="#faf5ff" stroke="#c084fc" stroke-width="1.2"/>
+          <line x1="200" y1="0" x2="200" y2="98" stroke="#e9d5ff" stroke-width="1"/>
 
-        <!-- QR Mini Block & Link (Inlined Vector Path) -->
-        <g transform="translate(0, 222)">
-          <rect width="394" height="46" rx="12" fill="#f0fdf4" stroke="#059669" stroke-width="1.2"/>
-          <g transform="translate(8, 5)">
-            <rect width="36" height="36" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
-            <g transform="translate(2, 2) scale(0.808)">
+          <!-- Left QR: Student Res Management (SRMS) -->
+          <g transform="translate(10, 10)">
+            <rect width="48" height="48" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1"/>
+            <g transform="translate(4, 4) scale(1.01)">
               <use href="#qr-path-srms" fill="#0f172a"/>
             </g>
+            <text x="56" y="18" fill="#0f172a" class="sans" font-size="11" font-weight="800">Hostel SRMS</text>
+            <text x="56" y="32" fill="#7c3aed" class="mono" font-size="8" font-weight="700">sputnikdevs.com</text>
+            <text x="56" y="44" fill="#7c3aed" class="mono" font-size="8" font-weight="700">/products/hostel</text>
+            <text x="0" y="66" fill="#64748b" class="sans" font-size="9" font-weight="600">Scan for Res Manager Demo</text>
           </g>
-          <text x="54" y="21" fill="#0f172a" class="sans" font-size="11.5" font-weight="800">Scan for Hostel SRMS Live Demo</text>
-          <text x="54" y="35" fill="#059669" class="mono" font-size="10" font-weight="700">sputnikdevs.com/products/hostel</text>
-          <text x="360" y="28" fill="#059669" class="sans" font-size="18" font-weight="900">➔</text>
+
+          <!-- Right QR: The University Hub -->
+          <g transform="translate(210, 10)">
+            <rect width="48" height="48" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1"/>
+            <g transform="translate(4, 4) scale(0.90)">
+              <use href="#qr-path-unihub" fill="#0f172a"/>
+            </g>
+            <text x="56" y="18" fill="#0f172a" class="sans" font-size="11" font-weight="800">University Hub</text>
+            <text x="56" y="32" fill="#7c3aed" class="mono" font-size="8" font-weight="700">sputnikdevs.com</text>
+            <text x="56" y="44" fill="#7c3aed" class="mono" font-size="8" font-weight="700">/products/universityhub</text>
+            <text x="0" y="66" fill="#64748b" class="sans" font-size="9" font-weight="600">Scan for Institution Portal</text>
+          </g>
         </g>
       </g>
     </g>
 
-    <!-- CARD 2: SHOPNIK E-COMMERCE SAAS (Y: 480 to 885) -->
-    <g transform="translate(0, 482)">
-      <rect width="430" height="400" rx="20" fill="#ffffff" stroke="#4f46e5" stroke-width="2" filter="url(#softCardShadow)"/>
+    <!-- CARD 2: SHOPNIK E-COMMERCE SAAS (Y: 508 to 940) -->
+    <!-- Real Horizontal Logo, Grounded Gateways (Paystack, PayFast, COD, Collection), Oracle Cloud SA -->
+    <g transform="translate(0, 508)">
+      <rect width="432" height="432" rx="22" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" filter="url(#softCardShadow)"/>
       
-      <!-- Card Header -->
-      <rect width="430" height="56" rx="20" fill="#eef2ff"/>
-      <path d="M 0 56 L 430 56" stroke="#c7d2fe" stroke-width="1"/>
+      <!-- Card Header (62px height, generous spacing, NO header collision) -->
+      <rect width="432" height="62" rx="22" fill="#fbf8ff"/>
+      <path d="M 0 62 L 432 62" stroke="#e9d5ff" stroke-width="1"/>
       
-      <!-- Vector Shopnik Icon -->
-      <use href="#icon-shopnik" x="12" y="6"/>
-      <text x="64" y="27" fill="#0f172a" class="sans" font-size="15" font-weight="800">Shopnik E-Commerce Platform</text>
-      <text x="64" y="43" fill="#4f46e5" class="mono" font-size="9" font-weight="700" letter-spacing="0.8">SOUTH AFRICA'S SHOPIFY ALTERNATIVE</text>
+      <!-- Real Shopnik Horizontal Logo -->
+      <image href="{shopnik_logo}" x="14" y="12" width="135" height="38" preserveAspectRatio="xMinYMid meet"/>
       
-      <rect x="332" y="16" width="84" height="24" rx="12" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1"/>
-      <text x="374" y="32" fill="#3730a3" class="mono" font-size="9" font-weight="800" text-anchor="middle">SAAS SUITE</text>
+      <!-- Clean Non-Overlapping 0% Commission Badge -->
+      <rect x="298" y="16" width="120" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="358" y="34" fill="#581c87" class="mono" font-size="9" font-weight="800" text-anchor="middle">0% COMMISSION</text>
 
-      <!-- Talking Points for Prince & Kenneth to point at -->
-      <g transform="translate(18, 72)">
-        <text x="0" y="16" fill="#3730a3" class="mono" font-size="10.5" font-weight="800" letter-spacing="1">WHY MERCHANTS CHOOSE SHOPNIK:</text>
+      <!-- Talking Points: Fully Grounded in Codebase -->
+      <g transform="translate(16, 74)">
+        <text x="0" y="14" fill="#581c87" class="mono" font-size="10" font-weight="800" letter-spacing="1">WHY MERCHANTS LAUNCH WITH SHOPNIK:</text>
         
-        <g transform="translate(0, 30)">
-          <circle cx="10" cy="8" r="4" fill="#4f46e5"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Native South African Payment Gateways</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Pre-integrated with PayFast, Ozow, Yoco, Paystack &amp; Capitec Pay.</text>
+        <!-- Point 1: Payment Gateways & Cash Options -->
+        <g transform="translate(0, 26)">
+          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Day-1 Payments &amp; 0% Sales Commission</text>
+          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Pre-integrated payment gateways: Paystack &amp; PayFast.</text>
+          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">Merchant-configurable Cash on Delivery (COD) &amp; In-Store Collection.</text>
         </g>
 
-        <g transform="translate(0, 75)">
-          <circle cx="10" cy="8" r="4" fill="#4f46e5"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Zero USD Foreign Exchange Penalties</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">No hidden dollar conversion fees. Transparent, local Rand pricing.</text>
+        <!-- Point 2: Rich Catalog & Themes -->
+        <g transform="translate(0, 76)">
+          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Rich Product Catalog &amp; Multi-Variants</text>
+          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Color swatches, size options, bundle discounts &amp; stock management.</text>
+          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">Starter, Professional &amp; Enterprise tiers with live theme customizer.</text>
         </g>
 
-        <g transform="translate(0, 120)">
-          <circle cx="10" cy="8" r="4" fill="#4f46e5"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Sub-Second Speed &amp; High-Volume Ready</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Engineered on .NET 10 &amp; Cloud Redis. Handles Black Friday traffic.</text>
+        <!-- Point 3: Oracle Cloud Hosting SA -->
+        <g transform="translate(0, 126)">
+          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">In-Country Oracle Cloud SA Hosting (Joburg)</text>
+          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Hosted on Oracle Cloud South Africa servers for sub-second latency.</text>
+          <text x="20" y="38" fill="#059669" class="sans" font-size="10" font-weight="700">Built on .NET 10 &amp; Cloud Redis. Handles high-traffic flash sales.</text>
         </g>
 
-        <g transform="translate(0, 165)">
-          <circle cx="10" cy="8" r="4" fill="#0284c7"/>
-          <text x="24" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="700">Multi-Tier Architecture &amp; Custom Themes</text>
-          <text x="24" y="28" fill="#475569" class="sans" font-size="11">Starter, Professional &amp; Enterprise tiers with live split-screen editor.</text>
-        </g>
-
-        <!-- QR Mini Block & Link (Inlined Vector Path) -->
-        <g transform="translate(0, 222)">
-          <rect width="394" height="46" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
-          <g transform="translate(8, 5)">
-            <rect width="36" height="36" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
-            <g transform="translate(2, 2) scale(0.808)">
+        <!-- Shopnik Scannable QR Block -->
+        <g transform="translate(0, 180)">
+          <rect width="400" height="52" rx="12" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.2"/>
+          <g transform="translate(8, 6)">
+            <rect width="40" height="40" rx="6" fill="#ffffff" stroke="#c084fc" stroke-width="1"/>
+            <g transform="translate(2, 2) scale(0.909)">
               <use href="#qr-path-shopnik" fill="#0f172a"/>
             </g>
           </g>
-          <text x="54" y="21" fill="#0f172a" class="sans" font-size="11.5" font-weight="800">Scan for Shopnik E-Commerce Store</text>
-          <text x="54" y="35" fill="#4f46e5" class="mono" font-size="10" font-weight="700">sputnikdevs.com/products/ecommerce</text>
-          <text x="360" y="28" fill="#4f46e5" class="sans" font-size="18" font-weight="900">➔</text>
+          <text x="58" y="22" fill="#0f172a" class="sans" font-size="11.5" font-weight="800">Scan to Launch Your Shopnik Store • Live in 30 Min</text>
+          <text x="58" y="38" fill="#7c3aed" class="mono" font-size="10" font-weight="700">sputnikdevs.com/products/ecommerce</text>
+          <text x="372" y="30" fill="#7c3aed" class="sans" font-size="18" font-weight="900">➔</text>
         </g>
       </g>
     </g>
 
-    <!-- CARD 3: SPUTNIK DEVS ACADEMY — LEARNERSHIPS (GOLD CARD) (Y: 895 to 1540) -->
-    <g transform="translate(0, 895)">
-      <rect width="430" height="645" rx="22" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="url(#deepCardShadow)"/>
+    <!-- CARD 3: SPUTNIK DEVS ACADEMY — LEARNERSHIPS (GOLD & PURPLE CARD) (Y: 948 to 1625) -->
+    <g transform="translate(0, 948)">
+      <rect width="432" height="677" rx="22" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="url(#deepCardShadow)"/>
 
       <!-- Gold Banner Header -->
-      <rect width="430" height="64" rx="22" fill="#fef3c7"/>
-      <path d="M 0 64 L 430 64" stroke="#fcd34d" stroke-width="1.5"/>
+      <rect width="432" height="64" rx="22" fill="#fef3c7"/>
+      <path d="M 0 64 L 432 64" stroke="#fcd34d" stroke-width="1.5"/>
 
       <!-- Vector Academy Icon -->
       <use href="#icon-academy" x="12" y="8"/>
       <text x="64" y="28" fill="#0f172a" class="sans" font-size="16" font-weight="900">SPUTNIK DEVS ACADEMY</text>
       <text x="64" y="46" fill="#b45309" class="mono" font-size="9.5" font-weight="800" letter-spacing="0.8">ACCREDITED TECH LEARNERSHIPS (WIL)</text>
       
-      <rect x="316" y="18" width="100" height="28" rx="14" fill="#d97706"/>
-      <text x="366" y="36" fill="#ffffff" class="mono" font-size="9.5" font-weight="900" text-anchor="middle">WE ARE HIRING</text>
+      <!-- Clean We Are Hiring Badge -->
+      <rect x="306" y="18" width="112" height="28" rx="14" fill="#d97706"/>
+      <text x="362" y="36" fill="#ffffff" class="mono" font-size="9.5" font-weight="900" text-anchor="middle">WE ARE HIRING</text>
 
       <!-- Hook for Students -->
       <g transform="translate(20, 82)">
@@ -656,33 +682,33 @@ def build_banner_svg():
 
         <!-- Feature Points -->
         <g transform="translate(0, 68)">
-          <rect width="390" height="42" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+          <rect width="392" height="42" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
           <text x="14" y="26" fill="#92400e" class="mono" font-size="11" font-weight="800">19-Day Intensive &amp; 3-Month Accredited Tracks</text>
         </g>
 
-        <!-- Tech Stack Pills -->
+        <!-- Tech Stack Pills (Oracle Cloud replaces Azure) -->
         <g transform="translate(0, 122)">
           <text x="0" y="12" fill="#b45309" class="mono" font-size="9" font-weight="800" letter-spacing="1">PRODUCTION STACK YOU WILL MASTER:</text>
           <g transform="translate(0, 20)">
-            <rect x="0" y="0" width="70" height="24" rx="6" fill="#f0f9ff" stroke="#0284c7" stroke-width="1"/>
-            <text x="35" y="16" fill="#0284c7" class="mono" font-size="10" font-weight="800" text-anchor="middle">.NET 10</text>
+            <rect x="0" y="0" width="66" height="24" rx="6" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
+            <text x="33" y="16" fill="#7c3aed" class="mono" font-size="10" font-weight="800" text-anchor="middle">.NET 10</text>
             
-            <rect x="78" y="0" width="72" height="24" rx="6" fill="#f0f9ff" stroke="#0284c7" stroke-width="1"/>
-            <text x="114" y="16" fill="#0284c7" class="mono" font-size="10" font-weight="800" text-anchor="middle">Flutter</text>
+            <rect x="72" y="0" width="66" height="24" rx="6" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
+            <text x="105" y="16" fill="#7c3aed" class="mono" font-size="10" font-weight="800" text-anchor="middle">Flutter</text>
             
-            <rect x="158" y="0" width="65" height="24" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1"/>
-            <text x="190" y="16" fill="#4f46e5" class="mono" font-size="10" font-weight="800" text-anchor="middle">Azure</text>
+            <rect x="144" y="0" width="102" height="24" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+            <text x="195" y="16" fill="#c2410c" class="mono" font-size="10" font-weight="800" text-anchor="middle">Oracle Cloud</text>
             
-            <rect x="231" y="0" width="75" height="24" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="1"/>
-            <text x="268" y="16" fill="#059669" class="mono" font-size="10" font-weight="800" text-anchor="middle">Postgres</text>
+            <rect x="252" y="0" width="68" height="24" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="1"/>
+            <text x="286" y="16" fill="#059669" class="mono" font-size="10" font-weight="800" text-anchor="middle">Postgres</text>
             
-            <rect x="314" y="0" width="74" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
-            <text x="351" y="16" fill="#b45309" class="mono" font-size="10" font-weight="800" text-anchor="middle">AI Agents</text>
+            <rect x="326" y="0" width="66" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+            <text x="359" y="16" fill="#b45309" class="mono" font-size="10" font-weight="800" text-anchor="middle">AI Agents</text>
           </g>
         </g>
 
         <!-- Big Scannable Academy QR Code Box (100% Inlined Vector Path) -->
-        <g transform="translate(95, 188)">
+        <g transform="translate(96, 188)">
           <rect width="200" height="200" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#softCardShadow)"/>
           <!-- Corner Targeting Guides -->
           <path d="M 6 18 L 6 6 L 18 6" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
@@ -697,12 +723,12 @@ def build_banner_svg():
         </g>
 
         <!-- Callout Banner -->
-        <g transform="translate(15, 408)">
+        <g transform="translate(16, 408)">
           <rect width="360" height="42" rx="12" fill="#d97706" filter="url(#softCardShadow)"/>
           <text x="180" y="26" fill="#ffffff" class="sans" font-size="13" font-weight="900" text-anchor="middle">SCAN TO SUBMIT YOUR CV &amp; PORTFOLIO</text>
         </g>
 
-        <text x="195" y="476" fill="#b45309" class="mono" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputnikdevs.com/academy/apply</text>
+        <text x="196" y="476" fill="#b45309" class="mono" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputnikdevs.com/academy/apply</text>
       </g>
     </g>
 
@@ -710,34 +736,34 @@ def build_banner_svg():
 
 
   <!-- =================================================================== -->
-  <!-- BOTTOM BASE & CASSETTE CLEARANCE ZONE (Y: 1850 to 2000)             -->
+  <!-- BOTTOM BASE & CASSETTE CLEARANCE ZONE (Y: 1845 to 2000)             -->
   <!-- =================================================================== -->
-  <g transform="translate(0, 1850)">
-    <rect width="1000" height="150" fill="#f8fafc"/>
-    <line x1="0" y1="0" x2="1000" y2="0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <g transform="translate(0, 1845)">
+    <rect width="1000" height="155" fill="#fdfcff"/>
+    <line x1="0" y1="0" x2="1000" y2="0" stroke="#d8b4fe" stroke-width="1.5"/>
 
-    <!-- Left Footer -->
+    <!-- Left Footer: Updated STG Email -->
     <g transform="translate(60, 42)">
       <text x="0" y="0" fill="#0f172a" class="sans" font-size="15" font-weight="900">SPUTNIK TECH GROUP (PTY) LTD</text>
-      <text x="0" y="20" fill="#64748b" class="sans" font-size="12">Consumer &amp; Mobile Innovation • support@sputniktechgroup.com</text>
-      <text x="0" y="38" fill="#0284c7" class="mono" font-size="11" font-weight="700">sputniktechgroup.com</text>
+      <text x="0" y="20" fill="#64748b" class="sans" font-size="12">Consumer &amp; Mobile Innovation • info@sputniktechgroup.com</text>
+      <text x="0" y="38" fill="#7c3aed" class="mono" font-size="11" font-weight="700">sputniktechgroup.com</text>
     </g>
 
     <!-- Center Badge -->
     <g transform="translate(500, 48)">
-      <circle cx="0" cy="0" r="20" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#softCardShadow)"/>
-      <text x="0" y="5" fill="#0284c7" class="sans" font-size="12" font-weight="900" text-anchor="middle">ST</text>
+      <circle cx="0" cy="0" r="20" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
+      <text x="0" y="5" fill="#7c3aed" class="sans" font-size="12" font-weight="900" text-anchor="middle">ST</text>
     </g>
 
     <!-- Right Footer -->
     <g transform="translate(940, 42)">
       <text x="0" y="0" fill="#0f172a" class="sans" font-size="15" font-weight="900" text-anchor="end">SPUTNIK DEVS STUDIO (PTY) LTD</text>
       <text x="0" y="20" fill="#64748b" class="sans" font-size="12" text-anchor="end">Enterprise Cloud &amp; Tech Academy • info@sputnikdevs.com</text>
-      <text x="0" y="38" fill="#059669" class="mono" font-size="11" font-weight="700" text-anchor="end">sputnikdevs.com</text>
+      <text x="0" y="38" fill="#7c3aed" class="mono" font-size="11" font-weight="700" text-anchor="end">sputnikdevs.com</text>
     </g>
 
     <!-- Roller Cassette Warning Margin -->
-    <text x="500" y="115" fill="#94a3b8" class="mono" font-size="9" text-anchor="middle">[ ROLL-UP CASSETTE BASE CLEARANCE ZONE - 100mm ]</text>
+    <text x="500" y="118" fill="#94a3b8" class="mono" font-size="9" text-anchor="middle">[ ROLL-UP CASSETTE BASE CLEARANCE ZONE - 100mm ]</text>
   </g>
 
 </svg>
@@ -745,7 +771,7 @@ def build_banner_svg():
     return svg
 
 def main():
-    print("Generating High-Resolution Luminous Light Pull-Up Banner SVG...")
+    print("Generating High-Resolution Zaha Hadid Purple Vector Pull-Up Banner SVG...")
     svg_content = build_banner_svg()
     out_path = os.path.join(REPO_ROOT, "designs", "banner-1x2m", "banner.svg")
     with open(out_path, "w", encoding="utf-8") as f:
