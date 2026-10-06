@@ -70,7 +70,6 @@ def export_pdf(chrome_bin, target):
         "--no-sandbox",
         "--disable-dev-shm-usage",
         "--no-pdf-header-footer",
-        "--virtual-time-budget=5000",
         f"--print-to-pdf={output_pdf}",
         file_url
     ]
