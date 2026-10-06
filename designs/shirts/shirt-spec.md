@@ -42,9 +42,11 @@
   * Platform Strip: `TRADEY BAY • STUDENT RES • UNIHUB • SHOPNIK SAAS • DEVS ACADEMY`
   * Footer: `sputniktechgroup.com • sputnikdevs.com • 292 Surrey Avenue, Randburg, JHB`
 
-## 4. Digital Production Files Included
-1. **`shirt-kenneth.svg`**: Complete front garment mockup and 1:1 DTF production transfer sheet for Kenneth.
-2. **`shirt-prince.svg`**: Complete front garment mockup and 1:1 DTF production transfer sheet for Prince.
-3. **`shirt-print.html`**: Dual-page A3 landscape DTF gang sheet print layout (Page 1: Kenneth, Page 2: Prince).
-4. **`shirts-dtf.pdf`**: Multi-page high-resolution print PDF ready for DTF printing.
-5. **`shirt-kenneth-preview.png` & `shirt-prince-preview.png`**: High-resolution raster preview files.
+## 4. High-Visibility Studio Presentation & Digital Production Files
+To guarantee extreme clarity and contrast during team previews and print vendor inspection, the mockups feature an Apple/Nike-style bright studio backdrop (`#ffffff` to `#f1f5f9` with floor drop-shadows), showcasing the jet-black combed cotton tee at 85% canvas scale with realistic collar ribbing and seam lines:
+
+1. **`shirt-kenneth.svg`**: Dedicated 1000 x 1350 portrait mockup for Kenneth Takudzwa Katsande with glowing emerald role badge (`#10b981`) and Tradey Bay front QR centerpiece.
+2. **`shirt-prince.svg`**: Dedicated 1000 x 1350 portrait mockup for Prince Lwazi Nkiwane with glowing purple role badge (`#a855f7`) and Devs Academy WIL learnership front QR centerpiece.
+3. **`shirt-print.html`**: Production DTF gang sheet print template ready for print shop RIP output.
+4. **`shirts-dtf.pdf`**: Multi-page high-resolution print PDF (0.66 MB) ready for DTF printers.
+5. **`shirt-kenneth-preview.png` & `shirt-prince-preview.png`**: High-resolution raster preview files (1000 x 1350 px).

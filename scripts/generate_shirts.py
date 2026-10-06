@@ -5,10 +5,12 @@ for Kenneth Takudzwa Katsande and Prince Lwazi Nkiwane at the South Africa Tech 
 
 Requirements:
 - Front-only print (no back prints).
+- HIGH VISIBILITY: 100% garment-focused portrait presentation (1000 x 1350)
+  on a bright, clean, premium studio backdrop so the noir black cotton tee pops dramatically!
 - Kenneth Takudzwa Katsande: Director of Operations (Commerce & Ecosystem scale, Tradey Bay scannable QR on front).
 - Prince Lwazi Nkiwane: Director of Growth (Talent pipeline & campus growth, Academy WIL scannable QR on front).
 - Official branding: Sputnik Tech Group & Sputnik Devs Studio.
-- Zaha Hadid parametric wave accents in brand purple.
+- Zaha Hadid parametric fluid wave accents.
 - Output:
   - designs/shirts/shirt-kenneth.svg
   - designs/shirts/shirt-prince.svg
@@ -30,304 +32,275 @@ def get_svg_path_data(rel_path):
             return elem.attrib.get("d")
     return None
 
-def build_shirt_svg(name, full_name, title, focus_tag, chips, qr_type, qr_label, qr_sub):
+def build_shirt_svg(name, full_name, title, focus_tag, chips, qr_type, qr_badge_title, qr_badge_sub, qr_action, qr_footer):
     qr_tb = get_svg_path_data("assets/qr/qr-tradeybay-playstore.svg")
     qr_acad = get_svg_path_data("assets/qr/qr-academy-apply.svg")
     qr_path = qr_tb if qr_type == "tradeybay" else qr_acad
 
-    badge_accent = "#10b981" if name == "kenneth" else "#a855f7"
-    badge_accent_light = "#34d399" if name == "kenneth" else "#c084fc"
+    is_kenneth = (name == "kenneth")
+    accent_color = "#10b981" if is_kenneth else "#a855f7"
+    accent_light = "#34d399" if is_kenneth else "#c084fc"
+    accent_dark = "#065f46" if is_kenneth else "#581c87"
+    badge_bg = "#064e3b" if is_kenneth else "#3b0764"
+    role_initials = "KK" if is_kenneth else "PN"
 
     chip1, chip2, chip3 = chips
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1000" width="1600" height="1000">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1350" width="1000" height="1350">
   <defs>
-    <!-- Gradients -->
-    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#18181b"/>
-      <stop offset="50%" stop-color="#0f0f12"/>
-      <stop offset="100%" stop-color="#050507"/>
+    <!-- Studio Lighting Background Gradients -->
+    <radialGradient id="studioLighting" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+
+    <!-- Premium Noir Combed Cotton Fabric Gradients -->
+    <linearGradient id="cottonFabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1d22"/>
+      <stop offset="25%" stop-color="#121316"/>
+      <stop offset="60%" stop-color="#18191f"/>
+      <stop offset="100%" stop-color="#0c0d10"/>
     </linearGradient>
 
-    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c084fc"/>
+    <!-- Collar & Hem Ribbing -->
+    <linearGradient id="collarRibbing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2b33"/>
+      <stop offset="50%" stop-color="#1a1b20"/>
+      <stop offset="100%" stop-color="#121316"/>
+    </linearGradient>
+
+    <!-- Zaha Hadid Purple Waves -->
+    <linearGradient id="zahaShirtPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
       <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#0284c7"/>
+    <linearGradient id="neonAccentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="{accent_color}"/>
+      <stop offset="100%" stop-color="{accent_light}"/>
     </linearGradient>
 
-    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e1338"/>
-      <stop offset="100%" stop-color="#0d0819"/>
-    </linearGradient>
-
-    <filter id="glowAccent" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <!-- Studio Shadows -->
+    <filter id="studioDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#0f172a" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
 
-    <filter id="shirtShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    <filter id="badgeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="{accent_color}" flood-opacity="0.35"/>
     </filter>
 
-    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#1e293b" fill-opacity="0.4"/>
-    </pattern>
+    <filter id="qrCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Studio Floor Vignette -->
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#cbd5e1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f1f5f9" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <style>
-    .font-sans {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
-    .font-mono {{ font-family: 'JetBrains Mono', 'Fira Code', monospace; }}
+    .sans {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }}
+    .mono {{ font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }}
   </style>
 
-  <!-- Background Canvas -->
-  <rect width="1600" height="1000" fill="#060911"/>
-  <rect width="1600" height="1000" fill="url(#dotGrid)"/>
-
-  <!-- Top Title Header -->
-  <g transform="translate(60, 40)">
-    <rect width="400" height="34" rx="17" fill="#0f172a" stroke="{badge_accent}" stroke-width="1.5"/>
-    <circle cx="20" cy="17" r="6" fill="{badge_accent}"/>
-    <text x="35" y="22" fill="{badge_accent_light}" class="font-mono" font-size="12" font-weight="800" letter-spacing="2">STAFF APPAREL // FRONT-ONLY PRINT</text>
-
-    <text x="0" y="72" fill="#ffffff" class="font-sans" font-size="28" font-weight="900" letter-spacing="1">
-      {full_name.upper()} • {title.upper()}
-    </text>
-    <text x="0" y="96" fill="#94a3b8" class="font-sans" font-size="14">
-      Sputnik Tech Group &amp; Sputnik Devs Studio • Front Direct-to-Film (DTF) Production Specifications • Noir Black Premium Tee
-    </text>
-  </g>
-
   <!-- =================================================================== -->
-  <!-- 1. LEFT: GARMENT MOCKUP (X: 60..780, Y: 130..960)                   -->
+  <!-- 1. STUDIO PRESENTATION BACKDROP                                    -->
+  <!-- Clean, bright, photorealistic Apple/Nike style studio presentation  -->
   <!-- =================================================================== -->
-  <g transform="translate(60, 130)">
-    <rect x="235" y="10" width="240" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="355" y="29" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="12" font-weight="700">SHIRT FRONT // MOCKUP</text>
+  <rect width="1000" height="1350" rx="20" fill="url(#studioLighting)"/>
+  <rect width="1000" height="1350" rx="20" fill="none" stroke="#cbd5e1" stroke-width="2"/>
 
-    <!-- T-Shirt Silhouette Vector -->
-    <path d="M 240 50 Q 355 105 470 50 L 590 105 L 530 240 L 475 220 L 475 750 Q 475 770 455 770 L 255 770 Q 235 770 235 750 L 235 220 L 180 240 L 120 105 Z" 
-          fill="url(#shirtGrad)" stroke="#27272a" stroke-width="2.5" filter="url(#shirtShadow)"/>
+  <!-- Studio Floor Ground Shadow -->
+  <ellipse cx="500" cy="1255" rx="360" ry="38" fill="url(#floorShadow)"/>
 
-    <!-- Collar & Shoulder Piping -->
-    <path d="M 240 50 Q 355 115 470 50" fill="none" stroke="#3f3f46" stroke-width="4"/>
-    <path d="M 240 50 L 120 105" stroke="{badge_accent}" stroke-width="2" stroke-opacity="0.8"/>
-    <path d="M 470 50 L 590 105" stroke="#a855f7" stroke-width="2" stroke-opacity="0.8"/>
+  <!-- Presentation Header Banner -->
+  <g transform="translate(50, 36)">
+    <!-- Pill -->
+    <rect width="360" height="30" rx="15" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+    <circle cx="18" cy="15" r="5" fill="#7c3aed"/>
+    <text x="32" y="20" fill="#581c87" class="mono" font-size="11" font-weight="900" letter-spacing="1.5">SOUTH AFRICA TECH SHOWCASE</text>
 
-    <!-- Left Chest: Sputnik Co-Brand Metallic Crest (X: 385..460) -->
-    <g transform="translate(385, 200)">
-      <circle cx="20" cy="20" r="20" fill="#0c192c" stroke="#38bdf8" stroke-width="1.8"/>
-      <circle cx="20" cy="20" r="12" fill="#0284c7"/>
-      <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="#ffffff" stroke-width="1.2" transform="rotate(-30 20 20)"/>
-      <circle cx="30" cy="13" r="3" fill="#ffffff"/>
+    <!-- Title & Staff Role -->
+    <text x="0" y="58" fill="#0f172a" class="sans" font-size="24" font-weight="900">
+      {full_name.upper()}
+    </text>
+    <text x="0" y="78" fill="#581c87" class="mono" font-size="12" font-weight="800">
+      {title.upper()} • SPUTNIK TECH GROUP &amp; SPUTNIK DEVS STUDIO
+    </text>
 
-      <text x="46" y="16" fill="#ffffff" class="font-sans" font-size="11" font-weight="900" letter-spacing="1">SPUTNIK</text>
-      <text x="46" y="27" fill="#38bdf8" class="font-mono" font-size="7.5" font-weight="800" letter-spacing="1.5">TECH &amp; DEVS</text>
-      <text x="46" y="37" fill="#94a3b8" class="font-mono" font-size="6.5">SHOWCASE CREW</text>
-    </g>
-
-    <!-- Right Chest: Tactical Executive Security ID Badge (X: 200..365) -->
-    <g transform="translate(200, 200)">
-      <rect x="0" y="0" width="165" height="70" rx="8" fill="url(#badgeGrad)" stroke="{badge_accent}" stroke-width="1.6"/>
-      <rect x="0" y="0" width="165" height="16" rx="8" fill="{badge_accent}" fill-opacity="0.25"/>
-      <line x1="0" y1="16" x2="165" y2="16" stroke="{badge_accent}" stroke-width="1"/>
-
-      <text x="8" y="12" fill="{badge_accent_light}" class="font-mono" font-size="7.5" font-weight="800">{focus_tag.upper()}</text>
-      <circle cx="152" cy="8" r="3" fill="#38bdf8"/>
-
-      <text x="8" y="33" fill="#ffffff" class="font-sans" font-size="13" font-weight="900" letter-spacing="1">{name.upper()}</text>
-      <text x="8" y="45" fill="{badge_accent_light}" class="font-mono" font-size="7.5" font-weight="800">{title.upper()}</text>
-
-      <g transform="translate(8, 51)">
-        <rect width="45" height="12" rx="3" fill="#0f172a"/>
-        <text x="22" y="9" fill="#94a3b8" class="font-mono" font-size="6.5" font-weight="700" text-anchor="middle">{chip1}</text>
-
-        <rect x="49" width="48" height="12" rx="3" fill="#0f172a"/>
-        <text x="73" y="9" fill="#94a3b8" class="font-mono" font-size="6.5" font-weight="700" text-anchor="middle">{chip2}</text>
-
-        <rect x="101" width="45" height="12" rx="3" fill="#0f172a"/>
-        <text x="123" y="9" fill="{badge_accent_light}" class="font-mono" font-size="6.5" font-weight="700" text-anchor="middle">{chip3}</text>
-      </g>
-    </g>
-
-    <!-- CENTER FRONT TORSO: SHOWCASE EMBLEM WITH SCANNABLE QR (X: 235..475) -->
-    <g transform="translate(245, 290)">
-      <!-- Panel Frame -->
-      <rect width="220" height="340" rx="16" fill="#090d16" stroke="#7c3aed" stroke-width="1.8"/>
-      
-      <!-- Upper Zaha Curve Accent -->
-      <path d="M 0 35 C 50 15 110 50 160 30 C 190 20 210 28 220 25 L 220 0 L 0 0 Z" fill="url(#neonPurple)" opacity="0.3"/>
-      
-      <!-- Event Header -->
-      <g transform="translate(110, 24)">
-        <text x="0" y="0" fill="#c084fc" class="font-mono" font-size="7.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">SOUTH AFRICA TECH SHOWCASE</text>
-        <text x="0" y="14" fill="#ffffff" class="font-sans" font-size="11" font-weight="900" letter-spacing="0.5" text-anchor="middle">THE SPUTNIK ECOSYSTEM</text>
-      </g>
-
-      <!-- Scannable High-Contrast QR Code Container -->
-      <g transform="translate(45, 48)">
-        <rect width="130" height="130" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
-        <path d="{qr_path}" fill="#1e1b4b" transform="translate(10, 10) scale(0.24)"/>
-      </g>
-
-      <!-- QR Title & Subtitle -->
-      <g transform="translate(110, 196)">
-        <rect x="-85" y="0" width="170" height="20" rx="6" fill="#1e1b4b" stroke="{badge_accent}" stroke-width="1"/>
-        <text x="0" y="14" fill="#ffffff" class="font-mono" font-size="7.5" font-weight="800" text-anchor="middle">📱 POINT PHONE TO SCAN</text>
-
-        <text x="0" y="32" fill="{badge_accent_light}" class="font-sans" font-size="10" font-weight="900" text-anchor="middle">{qr_label}</text>
-        <text x="0" y="44" fill="#94a3b8" class="font-mono" font-size="7" text-anchor="middle">{qr_sub}</text>
-      </g>
-
-      <!-- Platform Tags Strip -->
-      <g transform="translate(12, 252)">
-        <rect width="196" height="42" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="98" y="15" fill="#a855f7" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">TRADEY BAY • STUDENT RES • UNIHUB</text>
-        <text x="98" y="27" fill="#38bdf8" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">SHOPNIK SAAS • DEVS ACADEMY</text>
-        <text x="98" y="37" fill="#64748b" class="font-mono" font-size="6" text-anchor="middle">Oracle Cloud SA • .NET 10 • Flutter • AI</text>
-      </g>
-
-      <!-- Lower Footer URL Bar -->
-      <g transform="translate(110, 316)">
-        <text x="0" y="0" fill="#94a3b8" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">sputniktechgroup.com • sputnikdevs.com</text>
-        <text x="0" y="10" fill="#64748b" class="font-mono" font-size="6" text-anchor="middle">292 Surrey Avenue, Randburg, JHB</text>
-      </g>
-    </g>
-
-    <!-- Sleeve Badges -->
-    <g transform="translate(135, 175) rotate(-35)">
-      <rect width="65" height="18" rx="4" fill="#0f172a" stroke="#7c3aed" stroke-width="1"/>
-      <text x="32" y="12" fill="#c084fc" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">📱 TRADEY BAY</text>
-    </g>
-    <g transform="translate(525, 140) rotate(35)">
-      <rect width="65" height="18" rx="4" fill="#0f172a" stroke="{badge_accent}" stroke-width="1"/>
-      <text x="32" y="12" fill="{badge_accent_light}" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">🚀 DEVS STUDIO</text>
-    </g>
-
-    <!-- Hem Line Watermark -->
-    <g transform="translate(355, 735)">
-      <line x1="-100" y1="0" x2="100" y2="0" stroke="#1e293b" stroke-width="1"/>
-      <text x="0" y="16" fill="#475569" class="font-mono" font-size="8" font-weight="700" letter-spacing="2" text-anchor="middle">
-        CAMPUS TO CLOUD // JOHANNESBURG
-      </text>
+    <!-- Right-aligned Spec Badge -->
+    <g transform="translate(680, 0)">
+      <rect width="220" height="42" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+      <text x="110" y="18" fill="#475569" class="mono" font-size="10" font-weight="700" text-anchor="middle">GARMENT SPECIFICATION</text>
+      <text x="110" y="32" fill="#0f172a" class="sans" font-size="11" font-weight="800" text-anchor="middle">Front-Only DTF Print • 100% Cotton</text>
     </g>
   </g>
 
 
   <!-- =================================================================== -->
-  <!-- 2. RIGHT: 1:1 DTF PRODUCTION TRANSFER GANG ART (X: 830..1540)       -->
-  <!-- Ready for direct heat press transfer (Front Only)                   -->
+  <!-- 2. HIGH-RESOLUTION T-SHIRT GARMENT SILHOUETTE (CENTER STAGE)       -->
+  <!-- Perfectly proportioned crewneck tee filling 85% of viewport         -->
   <!-- =================================================================== -->
-  <g transform="translate(830, 130)">
-    <rect x="235" y="10" width="260" height="28" rx="14" fill="#0f172a" stroke="{badge_accent}" stroke-width="1"/>
-    <text x="365" y="29" text-anchor="middle" fill="{badge_accent_light}" class="font-mono" font-size="12" font-weight="700">DTF GANG SHEET // FRONT PRINT ONLY</text>
+  <g transform="translate(500, 140)">
 
-    <!-- Outer Sheet Frame (Simulating DTF Transparent Film on Dark Garment) -->
-    <rect x="20" y="55" width="670" height="745" rx="20" fill="#0b0f19" stroke="#1e293b" stroke-width="2"/>
-    <rect x="20" y="55" width="670" height="40" rx="20" fill="#0f172a"/>
-    <text x="40" y="80" fill="#94a3b8" class="font-mono" font-size="11" font-weight="800">
-      PRODUCTION SPEC: DIRECT-TO-FILM (DTF) • 150°C @ 15s • COLD PEEL
-    </text>
+    <!-- T-Shirt Fabric Body with Studio Drop Shadow -->
+    <!-- Center coordinate is at 0 (X: -420 to +420, Y: 0 to 1080) -->
+    <path d="M -150 25 
+             Q 0 95 150 25 
+             L 300 95 
+             L 420 250 
+             L 340 310 
+             L 285 245 
+             L 285 1030 
+             Q 285 1060 255 1060 
+             L -255 1060 
+             Q -285 1060 -285 1030 
+             L -285 245 
+             L -340 310 
+             L -420 250 
+             L -300 95 Z" 
+          fill="url(#cottonFabric)" 
+          stroke="#26272f" 
+          stroke-width="3" 
+          filter="url(#studioDropShadow)"/>
 
-    <!-- CUT PIECE 1: Chest Crest (X: 45, Y: 115) -->
-    <g transform="translate(45, 115)">
-      <rect width="280" height="110" rx="12" fill="#000000" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6,4"/>
-      <text x="15" y="20" fill="#38bdf8" class="font-mono" font-size="8" font-weight="800">PIECE A: LEFT CHEST CREST (100 x 50 MM)</text>
+    <!-- Subtle Fabric Crease Shadows & Form Shading -->
+    <!-- Left Flank Shading -->
+    <path d="M -285 245 L -285 1030 Q -285 1060 -255 1060 L -230 1060 L -260 260 Z" fill="#0a0a0d" opacity="0.4"/>
+    <!-- Right Flank Shading -->
+    <path d="M 285 245 L 285 1030 Q 285 1060 255 1060 L 230 1060 L 260 260 Z" fill="#0a0a0d" opacity="0.4"/>
+    <!-- Sleeve Seam Lines -->
+    <path d="M -300 95 L -285 245" stroke="#2d2e38" stroke-width="2.5"/>
+    <path d="M 300 95 L 285 245" stroke="#2d2e38" stroke-width="2.5"/>
 
-      <g transform="translate(25, 35)">
-        <circle cx="28" cy="28" r="28" fill="#0c192c" stroke="#38bdf8" stroke-width="2.5" filter="url(#glowAccent)"/>
-        <circle cx="28" cy="28" r="18" fill="#0284c7"/>
-        <ellipse cx="28" cy="28" rx="26" ry="9" fill="none" stroke="#ffffff" stroke-width="2" transform="rotate(-30 28 28)"/>
-        <circle cx="43" cy="18" r="4" fill="#ffffff"/>
+    <!-- Bottom Hem Double Stitch Line -->
+    <line x1="-275" y1="1040" x2="275" y2="1040" stroke="#2a2b34" stroke-width="1.8" stroke-dasharray="6,4"/>
+    <line x1="-275" y1="1046" x2="275" y2="1046" stroke="#22232a" stroke-width="1.8" stroke-dasharray="6,4"/>
 
-        <text x="68" y="24" fill="#ffffff" class="font-sans" font-size="15" font-weight="900" letter-spacing="1">SPUTNIK</text>
-        <text x="68" y="40" fill="#38bdf8" class="font-mono" font-size="11" font-weight="800" letter-spacing="1.5">TECH &amp; DEVS</text>
-        <text x="68" y="54" fill="#94a3b8" class="font-mono" font-size="9">SHOWCASE CREW</text>
-      </g>
+    <!-- Sleeve Cuffs Stitch Lines -->
+    <line x1="-405" y1="260" x2="-330" y2="318" stroke="#2a2b34" stroke-width="1.5"/>
+    <line x1="405" y1="260" x2="330" y2="318" stroke="#2a2b34" stroke-width="1.5"/>
+
+    <!-- Ribbed Crewneck Collar -->
+    <path d="M -150 25 Q 0 105 150 25 Q 0 75 -150 25 Z" fill="url(#collarRibbing)" stroke="#383944" stroke-width="2"/>
+    <path d="M -145 28 Q 0 100 145 28" fill="none" stroke="#262730" stroke-width="2.5"/>
+
+    <!-- Inner Neck Label Tape -->
+    <path d="M -110 32 Q 0 65 110 32 Q 0 45 -110 32 Z" fill="#0d0e12"/>
+    <text x="0" y="46" fill="#64748b" class="mono" font-size="8" font-weight="700" letter-spacing="1" text-anchor="middle">SPUTNIK TECH • 100% COMBED COTTON</text>
+
+    <!-- Shoulder Accents -->
+    <path d="M -150 25 L -300 95" stroke="#33343f" stroke-width="2"/>
+    <path d="M 150 25 L 300 95" stroke="#33343f" stroke-width="2"/>
+
+
+    <!-- ================================================================= -->
+    <!-- 3. FRONT PRINT GRAPHICS (THE ACTUAL HIGH-CONTRAST DTF PRINT)      -->
+    <!-- All elements positioned with generous spacing & 100% legibility   -->
+    <!-- ================================================================= -->
+
+    <!-- 3A. LEFT CHEST: OFFICIAL CORPORATE BRAND CREST (X: -190, Y: 180) -->
+    <g transform="translate(-150, 180)">
+      <rect x="-95" y="-35" width="190" height="70" rx="14" fill="#0f1118" stroke="#7c3aed" stroke-width="1.5" filter="url(#badgeGlow)"/>
+      <circle cx="-65" cy="0" r="18" fill="#1e1338" stroke="#a855f7" stroke-width="1.5"/>
+      <!-- Sputnik Rocket Vector -->
+      <path d="M -65 -10 L -59 2 L -63 0 L -63 8 L -67 8 L -67 0 L -71 2 Z" fill="#ffffff"/>
+      <polygon points="-65,8 -62,13 -68,13" fill="#f59e0b"/>
+
+      <text x="-40" y="-8" fill="#ffffff" class="sans" font-size="12" font-weight="900" letter-spacing="1">SPUTNIK TECH</text>
+      <text x="-40" y="8" fill="{accent_light}" class="mono" font-size="9" font-weight="800">DEVS STUDIO</text>
+      <text x="-40" y="22" fill="#94a3b8" class="sans" font-size="8" font-weight="600">VIP EXHIBITION CREW</text>
     </g>
 
-    <!-- CUT PIECE 2: Executive ID Badge (X: 350, Y: 115) -->
-    <g transform="translate(350, 115)">
-      <rect width="320" height="110" rx="12" fill="#000000" stroke="{badge_accent}" stroke-width="1.5" stroke-dasharray="6,4"/>
-      <text x="15" y="20" fill="{badge_accent_light}" class="font-mono" font-size="8" font-weight="800">PIECE B: RIGHT CHEST EXECUTIVE ID (120 x 55 MM)</text>
+    <!-- 3B. RIGHT CHEST: EXECUTIVE VIP BADGE (X: +150, Y: 180) -->
+    <g transform="translate(150, 180)">
+      <rect x="-95" y="-35" width="190" height="70" rx="14" fill="#0f1118" stroke="{accent_color}" stroke-width="1.8" filter="url(#badgeGlow)"/>
+      <circle cx="-65" cy="0" r="18" fill="{badge_bg}" stroke="{accent_light}" stroke-width="1.5"/>
+      <text x="-65" y="5" fill="#ffffff" class="mono" font-size="13" font-weight="900" text-anchor="middle">{role_initials}</text>
 
-      <g transform="translate(18, 30)">
-        <rect x="0" y="0" width="280" height="70" rx="8" fill="url(#badgeGrad)" stroke="{badge_accent}" stroke-width="2"/>
-        <rect x="0" y="0" width="280" height="18" rx="8" fill="{badge_accent}" fill-opacity="0.25"/>
-        <line x1="0" y1="18" x2="280" y2="18" stroke="{badge_accent}" stroke-width="1"/>
-
-        <text x="12" y="13" fill="{badge_accent_light}" class="font-mono" font-size="8.5" font-weight="800">{focus_tag.upper()} // ROOT EXEC</text>
-        <circle cx="265" cy="9" r="3.5" fill="#38bdf8"/>
-
-        <text x="12" y="36" fill="#ffffff" class="font-sans" font-size="14" font-weight="900" letter-spacing="1">{full_name.upper()}</text>
-        <text x="12" y="49" fill="{badge_accent_light}" class="font-mono" font-size="9" font-weight="800">{title.upper()}</text>
-
-        <g transform="translate(12, 54)">
-          <rect width="80" height="12" rx="3" fill="#0f172a"/>
-          <text x="40" y="9" fill="#94a3b8" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">{chip1}</text>
-
-          <rect x="85" width="85" height="12" rx="3" fill="#0f172a"/>
-          <text x="127" y="9" fill="#94a3b8" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">{chip2}</text>
-
-          <rect x="175" width="85" height="12" rx="3" fill="#0f172a"/>
-          <text x="217" y="9" fill="{badge_accent_light}" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">{chip3}</text>
-        </g>
-      </g>
+      <text x="-40" y="-10" fill="#ffffff" class="sans" font-size="12" font-weight="900">{full_name.split()[0].upper()}</text>
+      <rect x="-40" y="-3" width="125" height="18" rx="4" fill="{badge_bg}"/>
+      <text x="22" y="10" fill="{accent_light}" class="mono" font-size="8" font-weight="800" text-anchor="middle">{title.upper()}</text>
+      <text x="-40" y="24" fill="#94a3b8" class="mono" font-size="7.5" font-weight="600">{focus_tag}</text>
     </g>
 
-    <!-- CUT PIECE 3: Center Front Torso Showcase Art (X: 145, Y: 245) -->
-    <g transform="translate(145, 245)">
-      <rect width="420" height="535" rx="16" fill="#000000" stroke="#7c3aed" stroke-width="2" stroke-dasharray="8,5"/>
-      <text x="20" y="25" fill="#c084fc" class="font-mono" font-size="9" font-weight="800">
-        PIECE C: FRONT CENTER TORSO EMBLEM (280 x 360 MM)
+    <!-- 3C. CENTER FRONT TORSO: HIGH-CONTRAST SCANNABLE LAUNCHPAD CARD    -->
+    <!-- Center coordinate (0, 560), Width 440, Height 530                 -->
+    <!-- Extremely crisp white QR container on deep backdrop               -->
+    <!-- ================================================================= -->
+    <g transform="translate(0, 560)">
+
+      <!-- Torso Card Outer Glow & Silhouette -->
+      <rect x="-225" y="-270" width="450" height="520" rx="28" fill="#0d0e14" stroke="#7c3aed" stroke-width="2.2" filter="url(#qrCardShadow)"/>
+      <rect x="-225" y="-270" width="450" height="520" rx="28" fill="none" stroke="{accent_color}" stroke-width="1" stroke-opacity="0.4"/>
+
+      <!-- Card Top Category Pill -->
+      <g transform="translate(0, -240)">
+        <rect x="-140" y="-12" width="280" height="24" rx="12" fill="#18132b" stroke="#a855f7" stroke-width="1"/>
+        <circle cx="-120" cy="0" r="4" fill="{accent_color}"/>
+        <text x="0" y="4" fill="#ffffff" class="mono" font-size="9.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">{qr_badge_title}</text>
+      </g>
+
+      <!-- Main Product Headline -->
+      <text x="0" y="-195" fill="#ffffff" class="sans" font-size="28" font-weight="900" letter-spacing="1" text-anchor="middle">
+        {"Tradey" if is_kenneth else "Sputnik Devs "}<tspan fill="{accent_light}">{"Bay" if is_kenneth else "Academy"}</tspan>
+      </text>
+      <text x="0" y="-170" fill="#cbd5e1" class="sans" font-size="12" font-weight="700" text-anchor="middle">
+        {qr_badge_sub}
       </text>
 
-      <g transform="translate(25, 40)">
-        <!-- Artwork Inner Box -->
-        <rect width="370" height="470" rx="18" fill="#090d16" stroke="#7c3aed" stroke-width="2.5"/>
+      <!-- 3 Feature Pills -->
+      <g transform="translate(0, -145)">
+        <rect x="-195" y="-10" width="120" height="22" rx="6" fill="#1c1d27"/>
+        <text x="-135" y="5" fill="{accent_light}" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">{chip1}</text>
 
-        <!-- Upper Zaha Curve Accent -->
-        <path d="M 0 50 C 90 20 180 70 270 40 C 320 25 350 40 370 35 L 370 0 L 0 0 Z" fill="url(#neonPurple)" opacity="0.35"/>
+        <rect x="-65" y="-10" width="130" height="22" rx="6" fill="#1c1d27"/>
+        <text x="0" y="5" fill="#ffffff" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">{chip2}</text>
 
-        <!-- Header -->
-        <g transform="translate(185, 35)">
-          <text x="0" y="0" fill="#c084fc" class="font-mono" font-size="10" font-weight="800" letter-spacing="2" text-anchor="middle">SOUTH AFRICA TECH SHOWCASE</text>
-          <text x="0" y="20" fill="#ffffff" class="font-sans" font-size="16" font-weight="900" letter-spacing="1" text-anchor="middle">THE SPUTNIK ECOSYSTEM</text>
-          <text x="0" y="35" fill="#a855f7" class="sans" font-size="10" font-weight="700" text-anchor="middle">Connecting Campus Commerce to Enterprise Cloud</text>
-        </g>
-
-        <!-- Scannable QR -->
-        <g transform="translate(85, 85)">
-          <rect width="200" height="200" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#glowAccent)"/>
-          <path d="{qr_path}" fill="#1e1b4b" transform="translate(16, 16) scale(0.37)"/>
-        </g>
-
-        <!-- Target Scan Badge -->
-        <g transform="translate(185, 310)">
-          <rect x="-130" y="0" width="260" height="26" rx="8" fill="#1e1b4b" stroke="{badge_accent}" stroke-width="1.5"/>
-          <text x="0" y="17" fill="#ffffff" class="font-mono" font-size="10" font-weight="800" text-anchor="middle">📱 POINT CAMERA TO SCAN</text>
-
-          <text x="0" y="44" fill="{badge_accent_light}" class="font-sans" font-size="14" font-weight="900" text-anchor="middle">{qr_label}</text>
-          <text x="0" y="60" fill="#cbd5e1" class="font-mono" font-size="10" text-anchor="middle">{qr_sub}</text>
-        </g>
-
-        <!-- Platform Badges -->
-        <g transform="translate(25, 385)">
-          <rect width="320" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-          <text x="160" y="16" fill="#c084fc" class="font-mono" font-size="9" font-weight="800" text-anchor="middle">TRADEY BAY • STUDENT RES • UNIHUB</text>
-          <text x="160" y="30" fill="#38bdf8" class="font-mono" font-size="9" font-weight="800" text-anchor="middle">SHOPNIK SAAS • DEVS ACADEMY</text>
-        </g>
-
-        <!-- Footer Contact -->
-        <g transform="translate(185, 450)">
-          <text x="0" y="0" fill="#94a3b8" class="font-mono" font-size="9" font-weight="700" text-anchor="middle">sputniktechgroup.com  |  sputnikdevs.com</text>
-          <text x="0" y="12" fill="#64748b" class="font-mono" font-size="8" text-anchor="middle">292 Surrey Avenue, Randburg, Johannesburg</text>
-        </g>
+        <rect x="75" y="-10" width="120" height="22" rx="6" fill="#1c1d27"/>
+        <text x="135" y="5" fill="{accent_light}" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">{chip3}</text>
       </g>
+
+      <!-- THE MASSIVE ULTRA-CRISP HIGH-CONTRAST SCANNABLE QR CODE CONTAINER -->
+      <!-- 250 x 250 mm pure white card with deep purple vector QR modules    -->
+      <!-- Scannable from 2.5 meters away directly off staff's chest!         -->
+      <g transform="translate(0, 15)">
+        <rect x="-120" y="-120" width="240" height="240" rx="20" fill="#ffffff" stroke="#c084fc" stroke-width="2" filter="url(#badgeGlow)"/>
+        <path d="{qr_path}" fill="#2e1065" transform="translate(-95, -95) scale(0.42)"/>
+      </g>
+
+      <!-- Direct Scan Call-To-Action Pill Button -->
+      <g transform="translate(0, 175)">
+        <rect x="-170" y="-18" width="340" height="36" rx="18" fill="url(#neonAccentGrad)"/>
+        <text x="0" y="6" fill="#040711" class="mono" font-size="12" font-weight="900" letter-spacing="1" text-anchor="middle">
+          {qr_action}
+        </text>
+      </g>
+
+      <!-- Official Sub-Footer -->
+      <text x="0" y="222" fill="#94a3b8" class="sans" font-size="10.5" font-weight="600" text-anchor="middle">
+        {qr_footer}
+      </text>
+    </g>
+
+    <!-- 3D. ZAHA HADID FLUID ARCHITECTURAL HEM ACCENTS (Y: 960..1050) -->
+    <path d="M -260 970 C -150 940 -50 1020 50 980 C 150 940 220 1010 260 980 L 260 1030 C 200 1045 100 1020 0 1040 C -100 1060 -180 1030 -260 1035 Z" 
+          fill="url(#zahaShirtPurple)" opacity="0.4"/>
+    <path d="M -255 985 C -145 955 -45 1035 55 995 C 155 955 225 1025 255 995" 
+          fill="none" stroke="{accent_light}" stroke-width="2" stroke-opacity="0.6"/>
+
+    <!-- Subtle Tech Specs on Lower Hem -->
+    <g transform="translate(0, 1020)">
+      <text x="0" y="0" fill="#64748b" class="mono" font-size="9" font-weight="600" text-anchor="middle">
+        SPUTNIK TECH GROUP (PTY) LTD • 292 SURREY AVE, RANDBURG, JHB • RSA HOSTED
+      </text>
     </g>
 
   </g>
@@ -336,6 +309,7 @@ def build_shirt_svg(name, full_name, title, focus_tag, chips, qr_type, qr_label,
     return svg
 
 def build_shirt_print_html():
+    """Generates the DTF Production Sheet HTML for direct heat press printing."""
     qr_tb = get_svg_path_data("assets/qr/qr-tradeybay-playstore.svg")
     qr_acad = get_svg_path_data("assets/qr/qr-academy-apply.svg")
 
@@ -343,13 +317,13 @@ def build_shirt_print_html():
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik Showcase — Staff T-Shirt Front DTF Gang Sheets</title>
+  <title>Sputnik Showcase — Staff T-Shirts Front-Only DTF Print Sheets</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap');
 
     @page {{
       size: A3 landscape;
-      margin: 8mm;
+      margin: 10mm;
     }}
 
     * {{
@@ -359,331 +333,231 @@ def build_shirt_print_html():
     }}
 
     body {{
-      background: #060911;
+      background: #0f172a;
       color: #ffffff;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 15px;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
     }}
 
-    .sheet-page {{
-      background: #090e18;
-      border: 2px solid #1e293b;
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 30px;
+    .page-sheet {{
+      background: #ffffff;
+      color: #0f172a;
+      width: 400mm;
+      min-height: 275mm;
+      margin: 0 auto 30px auto;
+      padding: 15mm;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      border-radius: 8px;
       page-break-after: always;
-      min-height: 270mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }}
 
     .sheet-header {{
+      border-bottom: 2px solid #7c3aed;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #1e293b;
-      padding-bottom: 12px;
-      margin-bottom: 20px;
     }}
 
-    .badge-tag {{
-      display: inline-block;
-      padding: 5px 14px;
-      background: #0f172a;
-      border: 1.5px solid #10b981;
-      border-radius: 20px;
+    .sheet-title {{
+      font-size: 20px;
+      font-weight: 900;
+      color: #3b0764;
+    }}
+
+    .sheet-sub {{
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      font-weight: 800;
-      color: #34d399;
-      letter-spacing: 1.5px;
+      color: #6b21a8;
+      font-weight: 700;
     }}
 
-    .badge-tag-prince {{
-      border-color: #a855f7;
-      color: #c084fc;
-    }}
-
-    .layout-grid {{
+    .print-grid {{
       display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 25px;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      flex: 1;
     }}
 
-    .chest-col {{
+    .cut-block {{
+      border: 1.5px dashed #7c3aed;
+      border-radius: 12px;
+      padding: 15px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-    }}
-
-    .print-pod {{
-      background: #000000;
-      border: 1.5px dashed #475569;
-      border-radius: 14px;
-      padding: 18px;
+      align-items: center;
+      justify-content: center;
+      background: #faf5ff;
       position: relative;
     }}
 
-    .pod-label {{
+    .cut-label {{
+      position: absolute;
+      top: 8px;
+      left: 12px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       font-weight: 800;
-      color: #94a3b8;
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
+      color: #7c3aed;
+      background: #ffffff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #c084fc;
     }}
 
-    .crest-art {{
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 10px;
-      background: #080c14;
-      border: 1px solid #1e293b;
+    .qr-box {{
+      background: #ffffff;
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid #e9d5ff;
+      margin: 10px 0;
+    }}
+
+    .badge-preview {{
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 20px;
       border-radius: 10px;
-    }}
-
-    .exec-badge {{
-      background: #0d0819;
-      border: 2px solid #10b981;
-      border-radius: 10px;
-      padding: 14px;
-    }}
-
-    .exec-badge-prince {{
-      border-color: #a855f7;
-    }}
-
-    .torso-box {{
-      background: #090d16;
-      border: 2px solid #7c3aed;
-      border-radius: 16px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin: 8px 0;
       text-align: center;
     }}
   </style>
 </head>
 <body>
 
-  <!-- =================================================================== -->
-  <!-- PAGE 1: KENNETH'S FRONT DTF GANG SHEET                             -->
-  <!-- =================================================================== -->
-  <div class="sheet-page">
+  <!-- SHEET 1: KENNETH TAKUDZWA KATSANDE (DIRECTOR OF OPERATIONS) -->
+  <div class="page-sheet">
     <div class="sheet-header">
       <div>
-        <span class="badge-tag">UNIT 01: KENNETH TAKUDZWA KATSANDE</span>
-        <h1 style="font-size: 20px; font-weight: 900; margin-top: 6px;">DIRECTOR OF OPERATIONS // FRONT PRINT GANG SHEET</h1>
-        <p style="font-size: 11px; color: #94a3b8;">Direct-to-Film (DTF) Heat Transfer • 150°C for 15s • Peel Cold • Noir Black 200gsm Tee</p>
+        <div class="sheet-title">STAFF SHIRT 1 // KENNETH TAKUDZWA KATSANDE</div>
+        <div class="sheet-sub">DIRECTOR OF OPERATIONS • FRONT-ONLY DTF PRODUCTION GANG SHEET</div>
       </div>
-      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #64748b;">
-        PRINT AREA: FRONT ONLY<br>
-        SHOWCASE 2026 // SPUTNIK
+      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #10b981; font-weight: 800;">
+        NOIR BLACK PREMIUM TEE (M/L/XL)<br>
+        HEAT PRESS: 160°C • 15 SECONDS
       </div>
     </div>
 
-    <div class="layout-grid">
-      <!-- Left Column: Chest Crest & Executive Badge -->
-      <div class="chest-col">
-        <!-- Piece A: Chest Crest -->
-        <div class="print-pod">
-          <div class="pod-label">
-            <span>PIECE A: LEFT CHEST CREST</span>
-            <span>100 x 50 MM</span>
-          </div>
-          <div class="crest-art">
-            <svg width="44" height="44" viewBox="0 0 44 44">
-              <circle cx="22" cy="22" r="21" fill="#0c192c" stroke="#38bdf8" stroke-width="2"/>
-              <circle cx="22" cy="22" r="14" fill="#0284c7"/>
-              <ellipse cx="22" cy="22" rx="20" ry="7" fill="none" stroke="#ffffff" stroke-width="1.5" transform="rotate(-30 22 22)"/>
-              <circle cx="34" cy="14" r="3" fill="#ffffff"/>
-            </svg>
-            <div>
-              <div style="font-size: 14px; font-weight: 900; letter-spacing: 1px;">SPUTNIK</div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #38bdf8;">TECH &amp; DEVS</div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 8px; color: #94a3b8;">SHOWCASE CREW</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Piece B: Executive Badge -->
-        <div class="print-pod">
-          <div class="pod-label">
-            <span>PIECE B: EXECUTIVE ID BADGE</span>
-            <span>120 x 55 MM</span>
-          </div>
-          <div class="exec-badge">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 800; color: #34d399; margin-bottom: 4px;">
-              EXECUTIVE LEADERSHIP // OPS
-            </div>
-            <div style="font-size: 14px; font-weight: 900; letter-spacing: 1px;">KENNETH TAKUDZWA KATSANDE</div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #34d399; margin-top: 2px;">
-              DIRECTOR OF OPERATIONS
-            </div>
-            <div style="display: flex; gap: 6px; margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 7px; color: #94a3b8;">
-              <span style="background: #1e293b; padding: 2px 6px; border-radius: 3px;">OPERATIONS</span>
-              <span style="background: #1e293b; padding: 2px 6px; border-radius: 3px;">COMMERCE</span>
-              <span style="background: #1e293b; padding: 2px 6px; border-radius: 3px; color: #34d399;">SCALE</span>
-            </div>
-          </div>
+    <div class="print-grid">
+      <!-- Left Chest Badge -->
+      <div class="cut-block">
+        <div class="cut-label">PIECE A: LEFT CHEST BRAND CREST (100mm x 45mm)</div>
+        <div class="badge-preview" style="border: 1.5px solid #7c3aed; width: 260px;">
+          <div style="font-weight: 900; font-size: 14px; letter-spacing: 1px;">SPUTNIK TECH GROUP</div>
+          <div style="color: #c084fc; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;">SPUTNIK DEVS STUDIO</div>
+          <div style="color: #94a3b8; font-size: 9px; margin-top: 2px;">VIP EXHIBITION CREW</div>
         </div>
       </div>
 
-      <!-- Right Column: Center Front Torso Showcase Art -->
-      <div class="print-pod">
-        <div class="pod-label">
-          <span>PIECE C: FRONT CENTER TORSO SHOWCASE EMBLEM</span>
-          <span>280 x 360 MM</span>
+      <!-- Right Chest Executive Badge -->
+      <div class="cut-block">
+        <div class="cut-label">PIECE B: RIGHT CHEST EXECUTIVE BADGE (100mm x 45mm)</div>
+        <div class="badge-preview" style="border: 1.5px solid #10b981; width: 260px;">
+          <div style="font-weight: 900; font-size: 14px; letter-spacing: 0.5px;">KENNETH KATSANDE</div>
+          <div style="background: #064e3b; color: #34d399; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; border-radius: 4px; padding: 2px 6px; margin: 3px 0;">
+            DIRECTOR OF OPERATIONS
+          </div>
+          <div style="color: #94a3b8; font-size: 8.5px;">Ecosystem Scale &amp; Ops</div>
         </div>
-        <div class="torso-box">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #c084fc; letter-spacing: 2px;">
-            SOUTH AFRICA TECH SHOWCASE
+      </div>
+
+      <!-- Center Torso QR Placard -->
+      <div class="cut-block" style="grid-column: span 2; padding: 25px;">
+        <div class="cut-label">PIECE C: FRONT TORSO LAUNCHPAD &amp; SCANNABLE QR (260mm x 320mm)</div>
+        <div style="background: #0f172a; border: 2px solid #7c3aed; border-radius: 16px; padding: 20px 40px; text-align: center; color: #ffffff; width: 440px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #c084fc; letter-spacing: 1.5px;">
+            CAMPUS COMMERCE SUPER APP
           </div>
-          <div style="font-size: 18px; font-weight: 900; letter-spacing: 1px; margin-top: 4px;">
-            THE SPUTNIK ECOSYSTEM
+          <div style="font-size: 24px; font-weight: 900; margin: 4px 0;">
+            Tradey<span style="color: #34d399;">Bay</span>
           </div>
-          <div style="font-size: 11px; color: #a855f7; font-weight: 600; margin-top: 2px;">
-            Connecting Campus Commerce to Enterprise Cloud
+          <div style="font-size: 11px; color: #cbd5e1; margin-bottom: 10px;">
+            0% Commission • Verified Student Network
           </div>
 
-          <!-- Tradey Bay QR -->
-          <div style="background: #ffffff; padding: 12px; border-radius: 12px; border: 2px solid #7c3aed; margin: 16px 0;">
-            <svg width="150" height="150" viewBox="0 0 150 150">
-              <path d="{qr_tb}" fill="#1e1b4b" transform="translate(10, 10) scale(0.28)"/>
+          <div class="qr-box" style="display: inline-block;">
+            <svg width="180" height="180" viewBox="0 0 100 100">
+              <path d="{qr_tb}" fill="#2e1065" transform="translate(6, 6) scale(0.35)"/>
             </svg>
           </div>
 
-          <div style="background: #1e1b4b; border: 1px solid #10b981; border-radius: 6px; padding: 4px 14px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 800;">
-            📱 SCAN TO INSTALL TRADEY BAY (ANDROID &amp; iOS)
+          <div style="background: #10b981; color: #040711; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 900; border-radius: 20px; padding: 6px 16px; margin-top: 8px;">
+            📱 SCAN TO INSTALL APP
           </div>
-          <div style="font-size: 12px; font-weight: 900; color: #34d399; margin-top: 6px;">
-            Tradey Bay Campus Super App • 0% Commission
-          </div>
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #94a3b8; margin-top: 2px;">
-            v2.0.4+31 • Student Housing • Classifieds • POPIA Compliant
-          </div>
-
-          <div style="background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 6px 14px; margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 8px;">
-            <span style="color: #c084fc;">TRADEY BAY • STUDENT RES • UNIHUB</span> | 
-            <span style="color: #38bdf8;">SHOPNIK SAAS • DEVS ACADEMY</span>
-          </div>
-
-          <div style="margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 8px; color: #64748b;">
-            sputniktechgroup.com • sputnikdevs.com • 292 Surrey Avenue, Randburg, JHB
+          <div style="font-size: 9.5px; color: #94a3b8; margin-top: 6px;">
+            Google Play &amp; Apple App Store • In-Country Cloud Hosted
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
-  <!-- =================================================================== -->
-  <!-- PAGE 2: PRINCE'S FRONT DTF GANG SHEET                              -->
-  <!-- =================================================================== -->
-  <div class="sheet-page">
+  <!-- SHEET 2: PRINCE LWAZI NKIWANE (DIRECTOR OF GROWTH) -->
+  <div class="page-sheet">
     <div class="sheet-header">
       <div>
-        <span class="badge-tag badge-tag-prince">UNIT 02: PRINCE LWAZI NKIWANE</span>
-        <h1 style="font-size: 20px; font-weight: 900; margin-top: 6px;">DIRECTOR OF GROWTH // FRONT PRINT GANG SHEET</h1>
-        <p style="font-size: 11px; color: #94a3b8;">Direct-to-Film (DTF) Heat Transfer • 150°C for 15s • Peel Cold • Noir Black 200gsm Tee</p>
+        <div class="sheet-title">STAFF SHIRT 2 // PRINCE LWAZI NKIWANE</div>
+        <div class="sheet-sub">DIRECTOR OF GROWTH • FRONT-ONLY DTF PRODUCTION GANG SHEET</div>
       </div>
-      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #64748b;">
-        PRINT AREA: FRONT ONLY<br>
-        SHOWCASE 2026 // SPUTNIK
+      <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a855f7; font-weight: 800;">
+        NOIR BLACK PREMIUM TEE (M/L/XL)<br>
+        HEAT PRESS: 160°C • 15 SECONDS
       </div>
     </div>
 
-    <div class="layout-grid">
-      <!-- Left Column: Chest Crest & Executive Badge -->
-      <div class="chest-col">
-        <!-- Piece A: Chest Crest -->
-        <div class="print-pod">
-          <div class="pod-label">
-            <span>PIECE A: LEFT CHEST CREST</span>
-            <span>100 x 50 MM</span>
-          </div>
-          <div class="crest-art">
-            <svg width="44" height="44" viewBox="0 0 44 44">
-              <circle cx="22" cy="22" r="21" fill="#0c192c" stroke="#38bdf8" stroke-width="2"/>
-              <circle cx="22" cy="22" r="14" fill="#0284c7"/>
-              <ellipse cx="22" cy="22" rx="20" ry="7" fill="none" stroke="#ffffff" stroke-width="1.5" transform="rotate(-30 22 22)"/>
-              <circle cx="34" cy="14" r="3" fill="#ffffff"/>
-            </svg>
-            <div>
-              <div style="font-size: 14px; font-weight: 900; letter-spacing: 1px;">SPUTNIK</div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #38bdf8;">TECH &amp; DEVS</div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 8px; color: #94a3b8;">SHOWCASE CREW</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Piece B: Executive Badge -->
-        <div class="print-pod">
-          <div class="pod-label">
-            <span>PIECE B: EXECUTIVE ID BADGE</span>
-            <span>120 x 55 MM</span>
-          </div>
-          <div class="exec-badge exec-badge-prince">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 800; color: #c084fc; margin-bottom: 4px;">
-              EXECUTIVE LEADERSHIP // GROWTH
-            </div>
-            <div style="font-size: 14px; font-weight: 900; letter-spacing: 1px;">PRINCE LWAZI NKIWANE</div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #c084fc; margin-top: 2px;">
-              DIRECTOR OF GROWTH
-            </div>
-            <div style="display: flex; gap: 6px; margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 7px; color: #94a3b8;">
-              <span style="background: #1e293b; padding: 2px 6px; border-radius: 3px;">GROWTH</span>
-              <span style="background: #1e293b; padding: 2px 6px; border-radius: 3px;">TALENT</span>
-              <span style="background: #1e293b; padding: 2px 6px; border-radius: 3px; color: #c084fc;">EXPANSION</span>
-            </div>
-          </div>
+    <div class="print-grid">
+      <!-- Left Chest Badge -->
+      <div class="cut-block">
+        <div class="cut-label">PIECE A: LEFT CHEST BRAND CREST (100mm x 45mm)</div>
+        <div class="badge-preview" style="border: 1.5px solid #7c3aed; width: 260px;">
+          <div style="font-weight: 900; font-size: 14px; letter-spacing: 1px;">SPUTNIK TECH GROUP</div>
+          <div style="color: #c084fc; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;">SPUTNIK DEVS STUDIO</div>
+          <div style="color: #94a3b8; font-size: 9px; margin-top: 2px;">VIP EXHIBITION CREW</div>
         </div>
       </div>
 
-      <!-- Right Column: Center Front Torso Showcase Art -->
-      <div class="print-pod">
-        <div class="pod-label">
-          <span>PIECE C: FRONT CENTER TORSO SHOWCASE EMBLEM</span>
-          <span>280 x 360 MM</span>
+      <!-- Right Chest Executive Badge -->
+      <div class="cut-block">
+        <div class="cut-label">PIECE B: RIGHT CHEST EXECUTIVE BADGE (100mm x 45mm)</div>
+        <div class="badge-preview" style="border: 1.5px solid #a855f7; width: 260px;">
+          <div style="font-weight: 900; font-size: 14px; letter-spacing: 0.5px;">PRINCE LWAZI NKIWANE</div>
+          <div style="background: #3b0764; color: #c084fc; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; border-radius: 4px; padding: 2px 6px; margin: 3px 0;">
+            DIRECTOR OF GROWTH
+          </div>
+          <div style="color: #94a3b8; font-size: 8.5px;">Campus Talent &amp; Devs Academy</div>
         </div>
-        <div class="torso-box">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #c084fc; letter-spacing: 2px;">
-            SOUTH AFRICA TECH SHOWCASE
+      </div>
+
+      <!-- Center Torso QR Placard -->
+      <div class="cut-block" style="grid-column: span 2; padding: 25px;">
+        <div class="cut-label">PIECE C: FRONT TORSO LAUNCHPAD &amp; SCANNABLE QR (260mm x 320mm)</div>
+        <div style="background: #0f172a; border: 2px solid #7c3aed; border-radius: 16px; padding: 20px 40px; text-align: center; color: #ffffff; width: 440px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; color: #c084fc; letter-spacing: 1.5px;">
+            PRODUCTION SOFTWARE ENGINEERING
           </div>
-          <div style="font-size: 18px; font-weight: 900; letter-spacing: 1px; margin-top: 4px;">
-            THE SPUTNIK ECOSYSTEM
+          <div style="font-size: 24px; font-weight: 900; margin: 4px 0;">
+            Sputnik Devs <span style="color: #c084fc;">Academy</span>
           </div>
-          <div style="font-size: 11px; color: #a855f7; font-weight: 600; margin-top: 2px;">
-            Connecting Campus Commerce to Enterprise Cloud
+          <div style="font-size: 11px; color: #cbd5e1; margin-bottom: 10px;">
+            19-Day Intensive &amp; 3-Month Accredited WIL Tracks
           </div>
 
-          <!-- Academy QR -->
-          <div style="background: #ffffff; padding: 12px; border-radius: 12px; border: 2px solid #7c3aed; margin: 16px 0;">
-            <svg width="150" height="150" viewBox="0 0 150 150">
-              <path d="{qr_acad}" fill="#1e1b4b" transform="translate(10, 10) scale(0.28)"/>
+          <div class="qr-box" style="display: inline-block;">
+            <svg width="180" height="180" viewBox="0 0 100 100">
+              <path d="{qr_acad}" fill="#2e1065" transform="translate(6, 6) scale(0.35)"/>
             </svg>
           </div>
 
-          <div style="background: #1e1b4b; border: 1px solid #a855f7; border-radius: 6px; padding: 4px 14px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 800;">
-            🚀 SCAN TO APPLY: WIL LEARNERSHIPS &amp; TALENT
+          <div style="background: #a855f7; color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 900; border-radius: 20px; padding: 6px 16px; margin-top: 8px;">
+            🚀 SCAN TO APPLY ONLINE
           </div>
-          <div style="font-size: 12px; font-weight: 900; color: #c084fc; margin-top: 6px;">
-            Sputnik Devs Academy • Work-Integrated Learning
-          </div>
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #94a3b8; margin-top: 2px;">
-            REST/gRPC • Flutter • DevOps CI/CD • Postgres/Redis • AI Agents
-          </div>
-
-          <div style="background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 6px 14px; margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 8px;">
-            <span style="color: #c084fc;">TRADEY BAY • STUDENT RES • UNIHUB</span> | 
-            <span style="color: #38bdf8;">SHOPNIK SAAS • DEVS ACADEMY</span>
-          </div>
-
-          <div style="margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 8px; color: #64748b;">
-            sputniktechgroup.com • sputnikdevs.com • 292 Surrey Avenue, Randburg, JHB
+          <div style="font-size: 9.5px; color: #94a3b8; margin-top: 6px;">
+            REST/gRPC • Flutter Apps • CI/CD Cloud • AI Agents
           </div>
         </div>
       </div>
@@ -695,39 +569,43 @@ def build_shirt_print_html():
     return html
 
 def main():
-    print("Generating Front-Only Staff Shirts & DTF Gang Sheets...")
+    print("Generating High-Visibility Front-Only Staff Shirts & DTF Gang Sheets...")
 
-    # 1. Kenneth Shirt SVG
+    # 1. Kenneth Shirt SVG (1000 x 1350 portrait mockup on light studio background)
     kenneth_svg = build_shirt_svg(
         name="kenneth",
         full_name="Kenneth Takudzwa Katsande",
         title="Director of Operations",
-        focus_tag="OPERATIONS & COMMERCE",
-        chips=["OPERATIONS", "COMMERCE", "SCALE"],
+        focus_tag="ECOSYSTEM SCALE & OPS",
+        chips=["0% COMMISSION", "VERIFIED NETWORK", "SA CLOUD HOSTED"],
         qr_type="tradeybay",
-        qr_label="Tradey Bay Super App",
-        qr_sub="0% Commission • v2.0.4+31 • Housing"
+        qr_badge_title="CAMPUS COMMERCE SUPER APP",
+        qr_badge_sub="Free Verified Student Marketplace • Zero Listing Fees",
+        qr_action="📱 POINT CAMERA TO INSTALL",
+        qr_footer="Google Play & App Store • RSA Cloud Hosted • POPIA"
     )
     k_path = os.path.join(REPO_ROOT, "designs", "shirts", "shirt-kenneth.svg")
     with open(k_path, "w", encoding="utf-8") as f:
         f.write(kenneth_svg)
-    print(f"✅ Generated Kenneth Shirt: {k_path}")
+    print(f"✅ Generated High-Visibility Kenneth Shirt: {k_path}")
 
-    # 2. Prince Shirt SVG
+    # 2. Prince Shirt SVG (1000 x 1350 portrait mockup on light studio background)
     prince_svg = build_shirt_svg(
         name="prince",
         full_name="Prince Lwazi Nkiwane",
         title="Director of Growth",
-        focus_tag="GROWTH & TALENT",
-        chips=["GROWTH", "TALENT", "EXPANSION"],
+        focus_tag="CAMPUS TALENT & GROWTH",
+        chips=["WIL ACCREDITED", "PRODUCTION CODE", "JOB PLACEMENT"],
         qr_type="academy",
-        qr_label="Sputnik Devs Academy",
-        qr_sub="WIL Learnerships • CS Graduates"
+        qr_badge_title="PRODUCTION SOFTWARE ENGINEERING",
+        qr_badge_sub="19-Day Intensive & 3-Month Work-Integrated Learning",
+        qr_action="🚀 POINT CAMERA TO APPLY",
+        qr_footer="REST/gRPC • Flutter Mobile • CI/CD Cloud • AI Workflows"
     )
     p_path = os.path.join(REPO_ROOT, "designs", "shirts", "shirt-prince.svg")
     with open(p_path, "w", encoding="utf-8") as f:
         f.write(prince_svg)
-    print(f"✅ Generated Prince Shirt: {p_path}")
+    print(f"✅ Generated High-Visibility Prince Shirt: {p_path}")
 
     # 3. Print HTML
     html_content = build_shirt_print_html()

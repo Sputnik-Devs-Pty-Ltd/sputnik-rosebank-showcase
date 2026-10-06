@@ -1,291 +1,258 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1000" width="1600" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1350" width="1000" height="1350">
   <defs>
-    <!-- Gradients -->
-    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#18181b"/>
-      <stop offset="50%" stop-color="#0f0f12"/>
-      <stop offset="100%" stop-color="#050507"/>
+    <!-- Studio Lighting Background Gradients -->
+    <radialGradient id="studioLighting" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+
+    <!-- Premium Noir Combed Cotton Fabric Gradients -->
+    <linearGradient id="cottonFabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1d22"/>
+      <stop offset="25%" stop-color="#121316"/>
+      <stop offset="60%" stop-color="#18191f"/>
+      <stop offset="100%" stop-color="#0c0d10"/>
     </linearGradient>
 
-    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c084fc"/>
+    <!-- Collar & Hem Ribbing -->
+    <linearGradient id="collarRibbing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2b33"/>
+      <stop offset="50%" stop-color="#1a1b20"/>
+      <stop offset="100%" stop-color="#121316"/>
+    </linearGradient>
+
+    <!-- Zaha Hadid Purple Waves -->
+    <linearGradient id="zahaShirtPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
       <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#0284c7"/>
+    <linearGradient id="neonAccentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
     </linearGradient>
 
-    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e1338"/>
-      <stop offset="100%" stop-color="#0d0819"/>
-    </linearGradient>
-
-    <filter id="glowAccent" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <!-- Studio Shadows -->
+    <filter id="studioDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#0f172a" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
 
-    <filter id="shirtShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    <filter id="badgeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#10b981" flood-opacity="0.35"/>
     </filter>
 
-    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#1e293b" fill-opacity="0.4"/>
-    </pattern>
+    <filter id="qrCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Studio Floor Vignette -->
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#cbd5e1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f1f5f9" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <style>
-    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
   </style>
 
-  <!-- Background Canvas -->
-  <rect width="1600" height="1000" fill="#060911"/>
-  <rect width="1600" height="1000" fill="url(#dotGrid)"/>
-
-  <!-- Top Title Header -->
-  <g transform="translate(60, 40)">
-    <rect width="400" height="34" rx="17" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
-    <circle cx="20" cy="17" r="6" fill="#10b981"/>
-    <text x="35" y="22" fill="#34d399" class="font-mono" font-size="12" font-weight="800" letter-spacing="2">STAFF APPAREL // FRONT-ONLY PRINT</text>
-
-    <text x="0" y="72" fill="#ffffff" class="font-sans" font-size="28" font-weight="900" letter-spacing="1">
-      KENNETH TAKUDZWA KATSANDE • DIRECTOR OF OPERATIONS
-    </text>
-    <text x="0" y="96" fill="#94a3b8" class="font-sans" font-size="14">
-      Sputnik Tech Group &amp; Sputnik Devs Studio • Front Direct-to-Film (DTF) Production Specifications • Noir Black Premium Tee
-    </text>
-  </g>
-
   <!-- =================================================================== -->
-  <!-- 1. LEFT: GARMENT MOCKUP (X: 60..780, Y: 130..960)                   -->
+  <!-- 1. STUDIO PRESENTATION BACKDROP                                    -->
+  <!-- Clean, bright, photorealistic Apple/Nike style studio presentation  -->
   <!-- =================================================================== -->
-  <g transform="translate(60, 130)">
-    <rect x="235" y="10" width="240" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="355" y="29" text-anchor="middle" fill="#94a3b8" class="font-mono" font-size="12" font-weight="700">SHIRT FRONT // MOCKUP</text>
+  <rect width="1000" height="1350" rx="20" fill="url(#studioLighting)"/>
+  <rect width="1000" height="1350" rx="20" fill="none" stroke="#cbd5e1" stroke-width="2"/>
 
-    <!-- T-Shirt Silhouette Vector -->
-    <path d="M 240 50 Q 355 105 470 50 L 590 105 L 530 240 L 475 220 L 475 750 Q 475 770 455 770 L 255 770 Q 235 770 235 750 L 235 220 L 180 240 L 120 105 Z" 
-          fill="url(#shirtGrad)" stroke="#27272a" stroke-width="2.5" filter="url(#shirtShadow)"/>
+  <!-- Studio Floor Ground Shadow -->
+  <ellipse cx="500" cy="1255" rx="360" ry="38" fill="url(#floorShadow)"/>
 
-    <!-- Collar & Shoulder Piping -->
-    <path d="M 240 50 Q 355 115 470 50" fill="none" stroke="#3f3f46" stroke-width="4"/>
-    <path d="M 240 50 L 120 105" stroke="#10b981" stroke-width="2" stroke-opacity="0.8"/>
-    <path d="M 470 50 L 590 105" stroke="#a855f7" stroke-width="2" stroke-opacity="0.8"/>
+  <!-- Presentation Header Banner -->
+  <g transform="translate(50, 36)">
+    <!-- Pill -->
+    <rect width="360" height="30" rx="15" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+    <circle cx="18" cy="15" r="5" fill="#7c3aed"/>
+    <text x="32" y="20" fill="#581c87" class="mono" font-size="11" font-weight="900" letter-spacing="1.5">SOUTH AFRICA TECH SHOWCASE</text>
 
-    <!-- Left Chest: Sputnik Co-Brand Metallic Crest (X: 385..460) -->
-    <g transform="translate(385, 200)">
-      <circle cx="20" cy="20" r="20" fill="#0c192c" stroke="#38bdf8" stroke-width="1.8"/>
-      <circle cx="20" cy="20" r="12" fill="#0284c7"/>
-      <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="#ffffff" stroke-width="1.2" transform="rotate(-30 20 20)"/>
-      <circle cx="30" cy="13" r="3" fill="#ffffff"/>
+    <!-- Title & Staff Role -->
+    <text x="0" y="58" fill="#0f172a" class="sans" font-size="24" font-weight="900">
+      KENNETH TAKUDZWA KATSANDE
+    </text>
+    <text x="0" y="78" fill="#581c87" class="mono" font-size="12" font-weight="800">
+      DIRECTOR OF OPERATIONS • SPUTNIK TECH GROUP &amp; SPUTNIK DEVS STUDIO
+    </text>
 
-      <text x="46" y="16" fill="#ffffff" class="font-sans" font-size="11" font-weight="900" letter-spacing="1">SPUTNIK</text>
-      <text x="46" y="27" fill="#38bdf8" class="font-mono" font-size="7.5" font-weight="800" letter-spacing="1.5">TECH &amp; DEVS</text>
-      <text x="46" y="37" fill="#94a3b8" class="font-mono" font-size="6.5">SHOWCASE CREW</text>
-    </g>
-
-    <!-- Right Chest: Tactical Executive Security ID Badge (X: 200..365) -->
-    <g transform="translate(200, 200)">
-      <rect x="0" y="0" width="165" height="70" rx="8" fill="url(#badgeGrad)" stroke="#10b981" stroke-width="1.6"/>
-      <rect x="0" y="0" width="165" height="16" rx="8" fill="#10b981" fill-opacity="0.25"/>
-      <line x1="0" y1="16" x2="165" y2="16" stroke="#10b981" stroke-width="1"/>
-
-      <text x="8" y="12" fill="#34d399" class="font-mono" font-size="7.5" font-weight="800">OPERATIONS & COMMERCE</text>
-      <circle cx="152" cy="8" r="3" fill="#38bdf8"/>
-
-      <text x="8" y="33" fill="#ffffff" class="font-sans" font-size="13" font-weight="900" letter-spacing="1">KENNETH</text>
-      <text x="8" y="45" fill="#34d399" class="font-mono" font-size="7.5" font-weight="800">DIRECTOR OF OPERATIONS</text>
-
-      <g transform="translate(8, 51)">
-        <rect width="45" height="12" rx="3" fill="#0f172a"/>
-        <text x="22" y="9" fill="#94a3b8" class="font-mono" font-size="6.5" font-weight="700" text-anchor="middle">OPERATIONS</text>
-
-        <rect x="49" width="48" height="12" rx="3" fill="#0f172a"/>
-        <text x="73" y="9" fill="#94a3b8" class="font-mono" font-size="6.5" font-weight="700" text-anchor="middle">COMMERCE</text>
-
-        <rect x="101" width="45" height="12" rx="3" fill="#0f172a"/>
-        <text x="123" y="9" fill="#34d399" class="font-mono" font-size="6.5" font-weight="700" text-anchor="middle">SCALE</text>
-      </g>
-    </g>
-
-    <!-- CENTER FRONT TORSO: SHOWCASE EMBLEM WITH SCANNABLE QR (X: 235..475) -->
-    <g transform="translate(245, 290)">
-      <!-- Panel Frame -->
-      <rect width="220" height="340" rx="16" fill="#090d16" stroke="#7c3aed" stroke-width="1.8"/>
-      
-      <!-- Upper Zaha Curve Accent -->
-      <path d="M 0 35 C 50 15 110 50 160 30 C 190 20 210 28 220 25 L 220 0 L 0 0 Z" fill="url(#neonPurple)" opacity="0.3"/>
-      
-      <!-- Event Header -->
-      <g transform="translate(110, 24)">
-        <text x="0" y="0" fill="#c084fc" class="font-mono" font-size="7.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">SOUTH AFRICA TECH SHOWCASE</text>
-        <text x="0" y="14" fill="#ffffff" class="font-sans" font-size="11" font-weight="900" letter-spacing="0.5" text-anchor="middle">THE SPUTNIK ECOSYSTEM</text>
-      </g>
-
-      <!-- Scannable High-Contrast QR Code Container -->
-      <g transform="translate(45, 48)">
-        <rect width="130" height="130" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
-        <path d="M2.4,2.4H3.6V3.6H2.4zM3.6,2.4H4.8V3.6H3.6zM4.8,2.4H6V3.6H4.8zM6,2.4H7.2V3.6H6zM7.2,2.4H8.4V3.6H7.2zM8.4,2.4H9.6V3.6H8.4zM9.6,2.4H10.8V3.6H9.6zM12,2.4H13.2V3.6H12zM15.6,2.4H16.8V3.6H15.6zM24,2.4H25.2V3.6H24zM28.8,2.4H30V3.6H28.8zM30,2.4H31.2V3.6H30zM33.6,2.4H34.8V3.6H33.6zM34.8,2.4H36V3.6H34.8zM36,2.4H37.2V3.6H36zM38.4,2.4H39.6V3.6H38.4zM39.6,2.4H40.8V3.6H39.6zM40.8,2.4H42V3.6H40.8zM42,2.4H43.2V3.6H42zM43.2,2.4H44.4V3.6H43.2zM44.4,2.4H45.6V3.6H44.4zM45.6,2.4H46.8V3.6H45.6zM2.4,3.6H3.6V4.8H2.4zM9.6,3.6H10.8V4.8H9.6zM13.2,3.6H14.4V4.8H13.2zM15.6,3.6H16.8V4.8H15.6zM21.6,3.6H22.8V4.8H21.6zM22.8,3.6H24V4.8H22.8zM24,3.6H25.2V4.8H24zM25.2,3.6H26.4V4.8H25.2zM26.4,3.6H27.6V4.8H26.4zM27.6,3.6H28.8V4.8H27.6zM38.4,3.6H39.6V4.8H38.4zM45.6,3.6H46.8V4.8H45.6zM2.4,4.8H3.6V6H2.4zM4.8,4.8H6V6H4.8zM6,4.8H7.2V6H6zM7.2,4.8H8.4V6H7.2zM9.6,4.8H10.8V6H9.6zM13.2,4.8H14.4V6H13.2zM14.4,4.8H15.6V6H14.4zM15.6,4.8H16.8V6H15.6zM16.8,4.8H18V6H16.8zM21.6,4.8H22.8V6H21.6zM22.8,4.8H24V6H22.8zM24,4.8H25.2V6H24zM25.2,4.8H26.4V6H25.2zM27.6,4.8H28.8V6H27.6zM30,4.8H31.2V6H30zM31.2,4.8H32.4V6H31.2zM33.6,4.8H34.8V6H33.6zM34.8,4.8H36V6H34.8zM38.4,4.8H39.6V6H38.4zM40.8,4.8H42V6H40.8zM42,4.8H43.2V6H42zM43.2,4.8H44.4V6H43.2zM45.6,4.8H46.8V6H45.6zM2.4,6H3.6V7.2H2.4zM4.8,6H6V7.2H4.8zM6,6H7.2V7.2H6zM7.2,6H8.4V7.2H7.2zM9.6,6H10.8V7.2H9.6zM12,6H13.2V7.2H12zM13.2,6H14.4V7.2H13.2zM15.6,6H16.8V7.2H15.6zM18,6H19.2V7.2H18zM21.6,6H22.8V7.2H21.6zM26.4,6H27.6V7.2H26.4zM30,6H31.2V7.2H30zM31.2,6H32.4V7.2H31.2zM32.4,6H33.6V7.2H32.4zM33.6,6H34.8V7.2H33.6zM34.8,6H36V7.2H34.8zM36,6H37.2V7.2H36zM38.4,6H39.6V7.2H38.4zM40.8,6H42V7.2H40.8zM42,6H43.2V7.2H42zM43.2,6H44.4V7.2H43.2zM45.6,6H46.8V7.2H45.6zM2.4,7.2H3.6V8.4H2.4zM4.8,7.2H6V8.4H4.8zM6,7.2H7.2V8.4H6zM7.2,7.2H8.4V8.4H7.2zM9.6,7.2H10.8V8.4H9.6zM12,7.2H13.2V8.4H12zM13.2,7.2H14.4V8.4H13.2zM16.8,7.2H18V8.4H16.8zM19.2,7.2H20.4V8.4H19.2zM20.4,7.2H21.6V8.4H20.4zM21.6,7.2H22.8V8.4H21.6zM22.8,7.2H24V8.4H22.8zM24,7.2H25.2V8.4H24zM27.6,7.2H28.8V8.4H27.6zM28.8,7.2H30V8.4H28.8zM30,7.2H31.2V8.4H30zM32.4,7.2H33.6V8.4H32.4zM33.6,7.2H34.8V8.4H33.6zM34.8,7.2H36V8.4H34.8zM36,7.2H37.2V8.4H36zM38.4,7.2H39.6V8.4H38.4zM40.8,7.2H42V8.4H40.8zM42,7.2H43.2V8.4H42zM43.2,7.2H44.4V8.4H43.2zM45.6,7.2H46.8V8.4H45.6zM2.4,8.4H3.6V9.6H2.4zM9.6,8.4H10.8V9.6H9.6zM12,8.4H13.2V9.6H12zM14.4,8.4H15.6V9.6H14.4zM15.6,8.4H16.8V9.6H15.6zM16.8,8.4H18V9.6H16.8zM19.2,8.4H20.4V9.6H19.2zM20.4,8.4H21.6V9.6H20.4zM24,8.4H25.2V9.6H24zM25.2,8.4H26.4V9.6H25.2zM26.4,8.4H27.6V9.6H26.4zM32.4,8.4H33.6V9.6H32.4zM36,8.4H37.2V9.6H36zM38.4,8.4H39.6V9.6H38.4zM45.6,8.4H46.8V9.6H45.6zM2.4,9.6H3.6V10.8H2.4zM3.6,9.6H4.8V10.8H3.6zM4.8,9.6H6V10.8H4.8zM6,9.6H7.2V10.8H6zM7.2,9.6H8.4V10.8H7.2zM8.4,9.6H9.6V10.8H8.4zM9.6,9.6H10.8V10.8H9.6zM12,9.6H13.2V10.8H12zM14.4,9.6H15.6V10.8H14.4zM16.8,9.6H18V10.8H16.8zM19.2,9.6H20.4V10.8H19.2zM21.6,9.6H22.8V10.8H21.6zM24,9.6H25.2V10.8H24zM26.4,9.6H27.6V10.8H26.4zM28.8,9.6H30V10.8H28.8zM31.2,9.6H32.4V10.8H31.2zM33.6,9.6H34.8V10.8H33.6zM36,9.6H37.2V10.8H36zM38.4,9.6H39.6V10.8H38.4zM39.6,9.6H40.8V10.8H39.6zM40.8,9.6H42V10.8H40.8zM42,9.6H43.2V10.8H42zM43.2,9.6H44.4V10.8H43.2zM44.4,9.6H45.6V10.8H44.4zM45.6,9.6H46.8V10.8H45.6zM12,10.8H13.2V12H12zM13.2,10.8H14.4V12H13.2zM19.2,10.8H20.4V12H19.2zM21.6,10.8H22.8V12H21.6zM22.8,10.8H24V12H22.8zM24,10.8H25.2V12H24zM27.6,10.8H28.8V12H27.6zM31.2,10.8H32.4V12H31.2zM33.6,10.8H34.8V12H33.6zM2.4,12H3.6V13.2H2.4zM7.2,12H8.4V13.2H7.2zM9.6,12H10.8V13.2H9.6zM10.8,12H12V13.2H10.8zM12,12H13.2V13.2H12zM13.2,12H14.4V13.2H13.2zM18,12H19.2V13.2H18zM19.2,12H20.4V13.2H19.2zM20.4,12H21.6V13.2H20.4zM22.8,12H24V13.2H22.8zM25.2,12H26.4V13.2H25.2zM26.4,12H27.6V13.2H26.4zM28.8,12H30V13.2H28.8zM30,12H31.2V13.2H30zM31.2,12H32.4V13.2H31.2zM34.8,12H36V13.2H34.8zM36,12H37.2V13.2H36zM37.2,12H38.4V13.2H37.2zM38.4,12H39.6V13.2H38.4zM39.6,12H40.8V13.2H39.6zM40.8,12H42V13.2H40.8zM42,12H43.2V13.2H42zM45.6,12H46.8V13.2H45.6zM3.6,13.2H4.8V14.4H3.6zM4.8,13.2H6V14.4H4.8zM6,13.2H7.2V14.4H6zM7.2,13.2H8.4V14.4H7.2zM12,13.2H13.2V14.4H12zM13.2,13.2H14.4V14.4H13.2zM16.8,13.2H18V14.4H16.8zM19.2,13.2H20.4V14.4H19.2zM21.6,13.2H22.8V14.4H21.6zM22.8,13.2H24V14.4H22.8zM24,13.2H25.2V14.4H24zM28.8,13.2H30V14.4H28.8zM30,13.2H31.2V14.4H30zM32.4,13.2H33.6V14.4H32.4zM33.6,13.2H34.8V14.4H33.6zM34.8,13.2H36V14.4H34.8zM36,13.2H37.2V14.4H36zM37.2,13.2H38.4V14.4H37.2zM40.8,13.2H42V14.4H40.8zM42,13.2H43.2V14.4H42zM44.4,13.2H45.6V14.4H44.4zM4.8,14.4H6V15.6H4.8zM6,14.4H7.2V15.6H6zM8.4,14.4H9.6V15.6H8.4zM9.6,14.4H10.8V15.6H9.6zM10.8,14.4H12V15.6H10.8zM14.4,14.4H15.6V15.6H14.4zM15.6,14.4H16.8V15.6H15.6zM18,14.4H19.2V15.6H18zM19.2,14.4H20.4V15.6H19.2zM21.6,14.4H22.8V15.6H21.6zM24,14.4H25.2V15.6H24zM26.4,14.4H27.6V15.6H26.4zM27.6,14.4H28.8V15.6H27.6zM30,14.4H31.2V15.6H30zM32.4,14.4H33.6V15.6H32.4zM33.6,14.4H34.8V15.6H33.6zM34.8,14.4H36V15.6H34.8zM37.2,14.4H38.4V15.6H37.2zM39.6,14.4H40.8V15.6H39.6zM40.8,14.4H42V15.6H40.8zM42,14.4H43.2V15.6H42zM43.2,14.4H44.4V15.6H43.2zM3.6,15.6H4.8V16.8H3.6zM6,15.6H7.2V16.8H6zM7.2,15.6H8.4V16.8H7.2zM8.4,15.6H9.6V16.8H8.4zM10.8,15.6H12V16.8H10.8zM12,15.6H13.2V16.8H12zM13.2,15.6H14.4V16.8H13.2zM14.4,15.6H15.6V16.8H14.4zM15.6,15.6H16.8V16.8H15.6zM16.8,15.6H18V16.8H16.8zM19.2,15.6H20.4V16.8H19.2zM22.8,15.6H24V16.8H22.8zM24,15.6H25.2V16.8H24zM25.2,15.6H26.4V16.8H25.2zM26.4,15.6H27.6V16.8H26.4zM27.6,15.6H28.8V16.8H27.6zM28.8,15.6H30V16.8H28.8zM30,15.6H31.2V16.8H30zM31.2,15.6H32.4V16.8H31.2zM33.6,15.6H34.8V16.8H33.6zM36,15.6H37.2V16.8H36zM37.2,15.6H38.4V16.8H37.2zM42,15.6H43.2V16.8H42zM43.2,15.6H44.4V16.8H43.2zM44.4,15.6H45.6V16.8H44.4zM4.8,16.8H6V18H4.8zM7.2,16.8H8.4V18H7.2zM9.6,16.8H10.8V18H9.6zM10.8,16.8H12V18H10.8zM16.8,16.8H18V18H16.8zM18,16.8H19.2V18H18zM20.4,16.8H21.6V18H20.4zM21.6,16.8H22.8V18H21.6zM22.8,16.8H24V18H22.8zM27.6,16.8H28.8V18H27.6zM28.8,16.8H30V18H28.8zM31.2,16.8H32.4V18H31.2zM34.8,16.8H36V18H34.8zM37.2,16.8H38.4V18H37.2zM38.4,16.8H39.6V18H38.4zM42,16.8H43.2V18H42zM43.2,16.8H44.4V18H43.2zM44.4,16.8H45.6V18H44.4zM45.6,16.8H46.8V18H45.6zM2.4,18H3.6V19.2H2.4zM3.6,18H4.8V19.2H3.6zM4.8,18H6V19.2H4.8zM6,18H7.2V19.2H6zM7.2,18H8.4V19.2H7.2zM8.4,18H9.6V19.2H8.4zM10.8,18H12V19.2H10.8zM15.6,18H16.8V19.2H15.6zM18,18H19.2V19.2H18zM19.2,18H20.4V19.2H19.2zM20.4,18H21.6V19.2H20.4zM21.6,18H22.8V19.2H21.6zM22.8,18H24V19.2H22.8zM24,18H25.2V19.2H24zM27.6,18H28.8V19.2H27.6zM30,18H31.2V19.2H30zM31.2,18H32.4V19.2H31.2zM32.4,18H33.6V19.2H32.4zM33.6,18H34.8V19.2H33.6zM34.8,18H36V19.2H34.8zM36,18H37.2V19.2H36zM40.8,18H42V19.2H40.8zM42,18H43.2V19.2H42zM2.4,19.2H3.6V20.4H2.4zM3.6,19.2H4.8V20.4H3.6zM6,19.2H7.2V20.4H6zM9.6,19.2H10.8V20.4H9.6zM12,19.2H13.2V20.4H12zM14.4,19.2H15.6V20.4H14.4zM18,19.2H19.2V20.4H18zM20.4,19.2H21.6V20.4H20.4zM21.6,19.2H22.8V20.4H21.6zM22.8,19.2H24V20.4H22.8zM24,19.2H25.2V20.4H24zM30,19.2H31.2V20.4H30zM31.2,19.2H32.4V20.4H31.2zM32.4,19.2H33.6V20.4H32.4zM34.8,19.2H36V20.4H34.8zM37.2,19.2H38.4V20.4H37.2zM39.6,19.2H40.8V20.4H39.6zM40.8,19.2H42V20.4H40.8zM42,19.2H43.2V20.4H42zM43.2,19.2H44.4V20.4H43.2zM2.4,20.4H3.6V21.6H2.4zM4.8,20.4H6V21.6H4.8zM8.4,20.4H9.6V21.6H8.4zM12,20.4H13.2V21.6H12zM14.4,20.4H15.6V21.6H14.4zM15.6,20.4H16.8V21.6H15.6zM16.8,20.4H18V21.6H16.8zM19.2,20.4H20.4V21.6H19.2zM20.4,20.4H21.6V21.6H20.4zM22.8,20.4H24V21.6H22.8zM27.6,20.4H28.8V21.6H27.6zM30,20.4H31.2V21.6H30zM31.2,20.4H32.4V21.6H31.2zM33.6,20.4H34.8V21.6H33.6zM37.2,20.4H38.4V21.6H37.2zM39.6,20.4H40.8V21.6H39.6zM40.8,20.4H42V21.6H40.8zM43.2,20.4H44.4V21.6H43.2zM3.6,21.6H4.8V22.8H3.6zM6,21.6H7.2V22.8H6zM7.2,21.6H8.4V22.8H7.2zM9.6,21.6H10.8V22.8H9.6zM10.8,21.6H12V22.8H10.8zM13.2,21.6H14.4V22.8H13.2zM14.4,21.6H15.6V22.8H14.4zM16.8,21.6H18V22.8H16.8zM18,21.6H19.2V22.8H18zM19.2,21.6H20.4V22.8H19.2zM20.4,21.6H21.6V22.8H20.4zM21.6,21.6H22.8V22.8H21.6zM22.8,21.6H24V22.8H22.8zM25.2,21.6H26.4V22.8H25.2zM26.4,21.6H27.6V22.8H26.4zM27.6,21.6H28.8V22.8H27.6zM28.8,21.6H30V22.8H28.8zM30,21.6H31.2V22.8H30zM31.2,21.6H32.4V22.8H31.2zM37.2,21.6H38.4V22.8H37.2zM38.4,21.6H39.6V22.8H38.4zM42,21.6H43.2V22.8H42zM43.2,21.6H44.4V22.8H43.2zM2.4,22.8H3.6V24H2.4zM7.2,22.8H8.4V24H7.2zM12,22.8H13.2V24H12zM14.4,22.8H15.6V24H14.4zM15.6,22.8H16.8V24H15.6zM16.8,22.8H18V24H16.8zM18,22.8H19.2V24H18zM19.2,22.8H20.4V24H19.2zM24,22.8H25.2V24H24zM27.6,22.8H28.8V24H27.6zM30,22.8H31.2V24H30zM33.6,22.8H34.8V24H33.6zM34.8,22.8H36V24H34.8zM36,22.8H37.2V24H36zM37.2,22.8H38.4V24H37.2zM40.8,22.8H42V24H40.8zM42,22.8H43.2V24H42zM43.2,22.8H44.4V24H43.2zM44.4,22.8H45.6V24H44.4zM4.8,24H6V25.2H4.8zM7.2,24H8.4V25.2H7.2zM8.4,24H9.6V25.2H8.4zM9.6,24H10.8V25.2H9.6zM13.2,24H14.4V25.2H13.2zM19.2,24H20.4V25.2H19.2zM20.4,24H21.6V25.2H20.4zM22.8,24H24V25.2H22.8zM24,24H25.2V25.2H24zM26.4,24H27.6V25.2H26.4zM30,24H31.2V25.2H30zM31.2,24H32.4V25.2H31.2zM33.6,24H34.8V25.2H33.6zM34.8,24H36V25.2H34.8zM38.4,24H39.6V25.2H38.4zM40.8,24H42V25.2H40.8zM43.2,24H44.4V25.2H43.2zM3.6,25.2H4.8V26.4H3.6zM6,25.2H7.2V26.4H6zM7.2,25.2H8.4V26.4H7.2zM8.4,25.2H9.6V26.4H8.4zM10.8,25.2H12V26.4H10.8zM15.6,25.2H16.8V26.4H15.6zM16.8,25.2H18V26.4H16.8zM20.4,25.2H21.6V26.4H20.4zM21.6,25.2H22.8V26.4H21.6zM22.8,25.2H24V26.4H22.8zM26.4,25.2H27.6V26.4H26.4zM27.6,25.2H28.8V26.4H27.6zM30,25.2H31.2V26.4H30zM34.8,25.2H36V26.4H34.8zM36,25.2H37.2V26.4H36zM37.2,25.2H38.4V26.4H37.2zM39.6,25.2H40.8V26.4H39.6zM40.8,25.2H42V26.4H40.8zM43.2,25.2H44.4V26.4H43.2zM44.4,25.2H45.6V26.4H44.4zM3.6,26.4H4.8V27.6H3.6zM4.8,26.4H6V27.6H4.8zM8.4,26.4H9.6V27.6H8.4zM9.6,26.4H10.8V27.6H9.6zM14.4,26.4H15.6V27.6H14.4zM19.2,26.4H20.4V27.6H19.2zM22.8,26.4H24V27.6H22.8zM27.6,26.4H28.8V27.6H27.6zM28.8,26.4H30V27.6H28.8zM31.2,26.4H32.4V27.6H31.2zM34.8,26.4H36V27.6H34.8zM37.2,26.4H38.4V27.6H37.2zM38.4,26.4H39.6V27.6H38.4zM39.6,26.4H40.8V27.6H39.6zM43.2,26.4H44.4V27.6H43.2zM2.4,27.6H3.6V28.8H2.4zM3.6,27.6H4.8V28.8H3.6zM4.8,27.6H6V28.8H4.8zM8.4,27.6H9.6V28.8H8.4zM12,27.6H13.2V28.8H12zM14.4,27.6H15.6V28.8H14.4zM20.4,27.6H21.6V28.8H20.4zM21.6,27.6H22.8V28.8H21.6zM24,27.6H25.2V28.8H24zM28.8,27.6H30V28.8H28.8zM30,27.6H31.2V28.8H30zM33.6,27.6H34.8V28.8H33.6zM34.8,27.6H36V28.8H34.8zM36,27.6H37.2V28.8H36zM39.6,27.6H40.8V28.8H39.6zM40.8,27.6H42V28.8H40.8zM2.4,28.8H3.6V30H2.4zM6,28.8H7.2V30H6zM9.6,28.8H10.8V30H9.6zM12,28.8H13.2V30H12zM15.6,28.8H16.8V30H15.6zM20.4,28.8H21.6V30H20.4zM22.8,28.8H24V30H22.8zM24,28.8H25.2V30H24zM26.4,28.8H27.6V30H26.4zM28.8,28.8H30V30H28.8zM30,28.8H31.2V30H30zM31.2,28.8H32.4V30H31.2zM34.8,28.8H36V30H34.8zM36,28.8H37.2V30H36zM39.6,28.8H40.8V30H39.6zM40.8,28.8H42V30H40.8zM42,28.8H43.2V30H42zM43.2,28.8H44.4V30H43.2zM2.4,30H3.6V31.2H2.4zM6,30H7.2V31.2H6zM7.2,30H8.4V31.2H7.2zM8.4,30H9.6V31.2H8.4zM12,30H13.2V31.2H12zM14.4,30H15.6V31.2H14.4zM16.8,30H18V31.2H16.8zM19.2,30H20.4V31.2H19.2zM20.4,30H21.6V31.2H20.4zM21.6,30H22.8V31.2H21.6zM22.8,30H24V31.2H22.8zM24,30H25.2V31.2H24zM27.6,30H28.8V31.2H27.6zM28.8,30H30V31.2H28.8zM31.2,30H32.4V31.2H31.2zM39.6,30H40.8V31.2H39.6zM40.8,30H42V31.2H40.8zM43.2,30H44.4V31.2H43.2zM45.6,30H46.8V31.2H45.6zM2.4,31.2H3.6V32.4H2.4zM4.8,31.2H6V32.4H4.8zM6,31.2H7.2V32.4H6zM8.4,31.2H9.6V32.4H8.4zM9.6,31.2H10.8V32.4H9.6zM20.4,31.2H21.6V32.4H20.4zM24,31.2H25.2V32.4H24zM25.2,31.2H26.4V32.4H25.2zM26.4,31.2H27.6V32.4H26.4zM27.6,31.2H28.8V32.4H27.6zM28.8,31.2H30V32.4H28.8zM30,31.2H31.2V32.4H30zM31.2,31.2H32.4V32.4H31.2zM33.6,31.2H34.8V32.4H33.6zM34.8,31.2H36V32.4H34.8zM37.2,31.2H38.4V32.4H37.2zM38.4,31.2H39.6V32.4H38.4zM39.6,31.2H40.8V32.4H39.6zM42,31.2H43.2V32.4H42zM43.2,31.2H44.4V32.4H43.2zM44.4,31.2H45.6V32.4H44.4zM2.4,32.4H3.6V33.6H2.4zM3.6,32.4H4.8V33.6H3.6zM6,32.4H7.2V33.6H6zM7.2,32.4H8.4V33.6H7.2zM8.4,32.4H9.6V33.6H8.4zM12,32.4H13.2V33.6H12zM16.8,32.4H18V33.6H16.8zM18,32.4H19.2V33.6H18zM19.2,32.4H20.4V33.6H19.2zM21.6,32.4H22.8V33.6H21.6zM24,32.4H25.2V33.6H24zM30,32.4H31.2V33.6H30zM32.4,32.4H33.6V33.6H32.4zM33.6,32.4H34.8V33.6H33.6zM34.8,32.4H36V33.6H34.8zM36,32.4H37.2V33.6H36zM37.2,32.4H38.4V33.6H37.2zM39.6,32.4H40.8V33.6H39.6zM40.8,32.4H42V33.6H40.8zM6,33.6H7.2V34.8H6zM8.4,33.6H9.6V34.8H8.4zM9.6,33.6H10.8V34.8H9.6zM12,33.6H13.2V34.8H12zM14.4,33.6H15.6V34.8H14.4zM18,33.6H19.2V34.8H18zM19.2,33.6H20.4V34.8H19.2zM21.6,33.6H22.8V34.8H21.6zM22.8,33.6H24V34.8H22.8zM24,33.6H25.2V34.8H24zM26.4,33.6H27.6V34.8H26.4zM28.8,33.6H30V34.8H28.8zM30,33.6H31.2V34.8H30zM33.6,33.6H34.8V34.8H33.6zM34.8,33.6H36V34.8H34.8zM36,33.6H37.2V34.8H36zM37.2,33.6H38.4V34.8H37.2zM39.6,33.6H40.8V34.8H39.6zM4.8,34.8H6V36H4.8zM6,34.8H7.2V36H6zM10.8,34.8H12V36H10.8zM12,34.8H13.2V36H12zM13.2,34.8H14.4V36H13.2zM18,34.8H19.2V36H18zM22.8,34.8H24V36H22.8zM24,34.8H25.2V36H24zM25.2,34.8H26.4V36H25.2zM26.4,34.8H27.6V36H26.4zM27.6,34.8H28.8V36H27.6zM28.8,34.8H30V36H28.8zM33.6,34.8H34.8V36H33.6zM39.6,34.8H40.8V36H39.6zM40.8,34.8H42V36H40.8zM43.2,34.8H44.4V36H43.2zM45.6,34.8H46.8V36H45.6zM2.4,36H3.6V37.2H2.4zM3.6,36H4.8V37.2H3.6zM7.2,36H8.4V37.2H7.2zM9.6,36H10.8V37.2H9.6zM10.8,36H12V37.2H10.8zM16.8,36H18V37.2H16.8zM20.4,36H21.6V37.2H20.4zM22.8,36H24V37.2H22.8zM26.4,36H27.6V37.2H26.4zM27.6,36H28.8V37.2H27.6zM28.8,36H30V37.2H28.8zM31.2,36H32.4V37.2H31.2zM33.6,36H34.8V37.2H33.6zM34.8,36H36V37.2H34.8zM36,36H37.2V37.2H36zM37.2,36H38.4V37.2H37.2zM38.4,36H39.6V37.2H38.4zM39.6,36H40.8V37.2H39.6zM40.8,36H42V37.2H40.8zM43.2,36H44.4V37.2H43.2zM44.4,36H45.6V37.2H44.4zM12,37.2H13.2V38.4H12zM14.4,37.2H15.6V38.4H14.4zM15.6,37.2H16.8V38.4H15.6zM20.4,37.2H21.6V38.4H20.4zM21.6,37.2H22.8V38.4H21.6zM22.8,37.2H24V38.4H22.8zM30,37.2H31.2V38.4H30zM33.6,37.2H34.8V38.4H33.6zM36,37.2H37.2V38.4H36zM40.8,37.2H42V38.4H40.8zM44.4,37.2H45.6V38.4H44.4zM2.4,38.4H3.6V39.6H2.4zM3.6,38.4H4.8V39.6H3.6zM4.8,38.4H6V39.6H4.8zM6,38.4H7.2V39.6H6zM7.2,38.4H8.4V39.6H7.2zM8.4,38.4H9.6V39.6H8.4zM9.6,38.4H10.8V39.6H9.6zM12,38.4H13.2V39.6H12zM13.2,38.4H14.4V39.6H13.2zM14.4,38.4H15.6V39.6H14.4zM15.6,38.4H16.8V39.6H15.6zM16.8,38.4H18V39.6H16.8zM19.2,38.4H20.4V39.6H19.2zM20.4,38.4H21.6V39.6H20.4zM24,38.4H25.2V39.6H24zM26.4,38.4H27.6V39.6H26.4zM27.6,38.4H28.8V39.6H27.6zM28.8,38.4H30V39.6H28.8zM30,38.4H31.2V39.6H30zM31.2,38.4H32.4V39.6H31.2zM32.4,38.4H33.6V39.6H32.4zM33.6,38.4H34.8V39.6H33.6zM36,38.4H37.2V39.6H36zM38.4,38.4H39.6V39.6H38.4zM40.8,38.4H42V39.6H40.8zM44.4,38.4H45.6V39.6H44.4zM2.4,39.6H3.6V40.8H2.4zM9.6,39.6H10.8V40.8H9.6zM13.2,39.6H14.4V40.8H13.2zM14.4,39.6H15.6V40.8H14.4zM15.6,39.6H16.8V40.8H15.6zM16.8,39.6H18V40.8H16.8zM18,39.6H19.2V40.8H18zM19.2,39.6H20.4V40.8H19.2zM20.4,39.6H21.6V40.8H20.4zM21.6,39.6H22.8V40.8H21.6zM25.2,39.6H26.4V40.8H25.2zM26.4,39.6H27.6V40.8H26.4zM27.6,39.6H28.8V40.8H27.6zM34.8,39.6H36V40.8H34.8zM36,39.6H37.2V40.8H36zM40.8,39.6H42V40.8H40.8zM42,39.6H43.2V40.8H42zM43.2,39.6H44.4V40.8H43.2zM45.6,39.6H46.8V40.8H45.6zM2.4,40.8H3.6V42H2.4zM4.8,40.8H6V42H4.8zM6,40.8H7.2V42H6zM7.2,40.8H8.4V42H7.2zM9.6,40.8H10.8V42H9.6zM12,40.8H13.2V42H12zM14.4,40.8H15.6V42H14.4zM18,40.8H19.2V42H18zM19.2,40.8H20.4V42H19.2zM21.6,40.8H22.8V42H21.6zM27.6,40.8H28.8V42H27.6zM28.8,40.8H30V42H28.8zM36,40.8H37.2V42H36zM37.2,40.8H38.4V42H37.2zM38.4,40.8H39.6V42H38.4zM39.6,40.8H40.8V42H39.6zM40.8,40.8H42V42H40.8zM42,40.8H43.2V42H42zM43.2,40.8H44.4V42H43.2zM45.6,40.8H46.8V42H45.6zM2.4,42H3.6V43.2H2.4zM4.8,42H6V43.2H4.8zM6,42H7.2V43.2H6zM7.2,42H8.4V43.2H7.2zM9.6,42H10.8V43.2H9.6zM14.4,42H15.6V43.2H14.4zM15.6,42H16.8V43.2H15.6zM16.8,42H18V43.2H16.8zM18,42H19.2V43.2H18zM24,42H25.2V43.2H24zM25.2,42H26.4V43.2H25.2zM28.8,42H30V43.2H28.8zM30,42H31.2V43.2H30zM34.8,42H36V43.2H34.8zM37.2,42H38.4V43.2H37.2zM38.4,42H39.6V43.2H38.4zM39.6,42H40.8V43.2H39.6zM42,42H43.2V43.2H42zM43.2,42H44.4V43.2H43.2zM45.6,42H46.8V43.2H45.6zM2.4,43.2H3.6V44.4H2.4zM4.8,43.2H6V44.4H4.8zM6,43.2H7.2V44.4H6zM7.2,43.2H8.4V44.4H7.2zM9.6,43.2H10.8V44.4H9.6zM13.2,43.2H14.4V44.4H13.2zM16.8,43.2H18V44.4H16.8zM19.2,43.2H20.4V44.4H19.2zM20.4,43.2H21.6V44.4H20.4zM22.8,43.2H24V44.4H22.8zM24,43.2H25.2V44.4H24zM26.4,43.2H27.6V44.4H26.4zM27.6,43.2H28.8V44.4H27.6zM30,43.2H31.2V44.4H30zM32.4,43.2H33.6V44.4H32.4zM33.6,43.2H34.8V44.4H33.6zM34.8,43.2H36V44.4H34.8zM38.4,43.2H39.6V44.4H38.4zM2.4,44.4H3.6V45.6H2.4zM9.6,44.4H10.8V45.6H9.6zM13.2,44.4H14.4V45.6H13.2zM16.8,44.4H18V45.6H16.8zM19.2,44.4H20.4V45.6H19.2zM20.4,44.4H21.6V45.6H20.4zM21.6,44.4H22.8V45.6H21.6zM22.8,44.4H24V45.6H22.8zM27.6,44.4H28.8V45.6H27.6zM30,44.4H31.2V45.6H30zM31.2,44.4H32.4V45.6H31.2zM34.8,44.4H36V45.6H34.8zM40.8,44.4H42V45.6H40.8zM43.2,44.4H44.4V45.6H43.2zM44.4,44.4H45.6V45.6H44.4zM2.4,45.6H3.6V46.8H2.4zM3.6,45.6H4.8V46.8H3.6zM4.8,45.6H6V46.8H4.8zM6,45.6H7.2V46.8H6zM7.2,45.6H8.4V46.8H7.2zM8.4,45.6H9.6V46.8H8.4zM9.6,45.6H10.8V46.8H9.6zM12,45.6H13.2V46.8H12zM13.2,45.6H14.4V46.8H13.2zM18,45.6H19.2V46.8H18zM22.8,45.6H24V46.8H22.8zM26.4,45.6H27.6V46.8H26.4zM27.6,45.6H28.8V46.8H27.6zM31.2,45.6H32.4V46.8H31.2zM34.8,45.6H36V46.8H34.8zM38.4,45.6H39.6V46.8H38.4zM39.6,45.6H40.8V46.8H39.6zM43.2,45.6H44.4V46.8H43.2zM44.4,45.6H45.6V46.8H44.4zM45.6,45.6H46.8V46.8H45.6z" fill="#1e1b4b" transform="translate(10, 10) scale(0.24)"/>
-      </g>
-
-      <!-- QR Title & Subtitle -->
-      <g transform="translate(110, 196)">
-        <rect x="-85" y="0" width="170" height="20" rx="6" fill="#1e1b4b" stroke="#10b981" stroke-width="1"/>
-        <text x="0" y="14" fill="#ffffff" class="font-mono" font-size="7.5" font-weight="800" text-anchor="middle">📱 POINT PHONE TO SCAN</text>
-
-        <text x="0" y="32" fill="#34d399" class="font-sans" font-size="10" font-weight="900" text-anchor="middle">Tradey Bay Super App</text>
-        <text x="0" y="44" fill="#94a3b8" class="font-mono" font-size="7" text-anchor="middle">0% Commission • v2.0.4+31 • Housing</text>
-      </g>
-
-      <!-- Platform Tags Strip -->
-      <g transform="translate(12, 252)">
-        <rect width="196" height="42" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="98" y="15" fill="#a855f7" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">TRADEY BAY • STUDENT RES • UNIHUB</text>
-        <text x="98" y="27" fill="#38bdf8" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">SHOPNIK SAAS • DEVS ACADEMY</text>
-        <text x="98" y="37" fill="#64748b" class="font-mono" font-size="6" text-anchor="middle">Oracle Cloud SA • .NET 10 • Flutter • AI</text>
-      </g>
-
-      <!-- Lower Footer URL Bar -->
-      <g transform="translate(110, 316)">
-        <text x="0" y="0" fill="#94a3b8" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">sputniktechgroup.com • sputnikdevs.com</text>
-        <text x="0" y="10" fill="#64748b" class="font-mono" font-size="6" text-anchor="middle">292 Surrey Avenue, Randburg, JHB</text>
-      </g>
-    </g>
-
-    <!-- Sleeve Badges -->
-    <g transform="translate(135, 175) rotate(-35)">
-      <rect width="65" height="18" rx="4" fill="#0f172a" stroke="#7c3aed" stroke-width="1"/>
-      <text x="32" y="12" fill="#c084fc" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">📱 TRADEY BAY</text>
-    </g>
-    <g transform="translate(525, 140) rotate(35)">
-      <rect width="65" height="18" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
-      <text x="32" y="12" fill="#34d399" class="font-mono" font-size="7" font-weight="800" text-anchor="middle">🚀 DEVS STUDIO</text>
-    </g>
-
-    <!-- Hem Line Watermark -->
-    <g transform="translate(355, 735)">
-      <line x1="-100" y1="0" x2="100" y2="0" stroke="#1e293b" stroke-width="1"/>
-      <text x="0" y="16" fill="#475569" class="font-mono" font-size="8" font-weight="700" letter-spacing="2" text-anchor="middle">
-        CAMPUS TO CLOUD // JOHANNESBURG
-      </text>
+    <!-- Right-aligned Spec Badge -->
+    <g transform="translate(680, 0)">
+      <rect width="220" height="42" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+      <text x="110" y="18" fill="#475569" class="mono" font-size="10" font-weight="700" text-anchor="middle">GARMENT SPECIFICATION</text>
+      <text x="110" y="32" fill="#0f172a" class="sans" font-size="11" font-weight="800" text-anchor="middle">Front-Only DTF Print • 100% Cotton</text>
     </g>
   </g>
 
 
   <!-- =================================================================== -->
-  <!-- 2. RIGHT: 1:1 DTF PRODUCTION TRANSFER GANG ART (X: 830..1540)       -->
-  <!-- Ready for direct heat press transfer (Front Only)                   -->
+  <!-- 2. HIGH-RESOLUTION T-SHIRT GARMENT SILHOUETTE (CENTER STAGE)       -->
+  <!-- Perfectly proportioned crewneck tee filling 85% of viewport         -->
   <!-- =================================================================== -->
-  <g transform="translate(830, 130)">
-    <rect x="235" y="10" width="260" height="28" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
-    <text x="365" y="29" text-anchor="middle" fill="#34d399" class="font-mono" font-size="12" font-weight="700">DTF GANG SHEET // FRONT PRINT ONLY</text>
+  <g transform="translate(500, 140)">
 
-    <!-- Outer Sheet Frame (Simulating DTF Transparent Film on Dark Garment) -->
-    <rect x="20" y="55" width="670" height="745" rx="20" fill="#0b0f19" stroke="#1e293b" stroke-width="2"/>
-    <rect x="20" y="55" width="670" height="40" rx="20" fill="#0f172a"/>
-    <text x="40" y="80" fill="#94a3b8" class="font-mono" font-size="11" font-weight="800">
-      PRODUCTION SPEC: DIRECT-TO-FILM (DTF) • 150°C @ 15s • COLD PEEL
-    </text>
+    <!-- T-Shirt Fabric Body with Studio Drop Shadow -->
+    <!-- Center coordinate is at 0 (X: -420 to +420, Y: 0 to 1080) -->
+    <path d="M -150 25 
+             Q 0 95 150 25 
+             L 300 95 
+             L 420 250 
+             L 340 310 
+             L 285 245 
+             L 285 1030 
+             Q 285 1060 255 1060 
+             L -255 1060 
+             Q -285 1060 -285 1030 
+             L -285 245 
+             L -340 310 
+             L -420 250 
+             L -300 95 Z" 
+          fill="url(#cottonFabric)" 
+          stroke="#26272f" 
+          stroke-width="3" 
+          filter="url(#studioDropShadow)"/>
 
-    <!-- CUT PIECE 1: Chest Crest (X: 45, Y: 115) -->
-    <g transform="translate(45, 115)">
-      <rect width="280" height="110" rx="12" fill="#000000" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6,4"/>
-      <text x="15" y="20" fill="#38bdf8" class="font-mono" font-size="8" font-weight="800">PIECE A: LEFT CHEST CREST (100 x 50 MM)</text>
+    <!-- Subtle Fabric Crease Shadows & Form Shading -->
+    <!-- Left Flank Shading -->
+    <path d="M -285 245 L -285 1030 Q -285 1060 -255 1060 L -230 1060 L -260 260 Z" fill="#0a0a0d" opacity="0.4"/>
+    <!-- Right Flank Shading -->
+    <path d="M 285 245 L 285 1030 Q 285 1060 255 1060 L 230 1060 L 260 260 Z" fill="#0a0a0d" opacity="0.4"/>
+    <!-- Sleeve Seam Lines -->
+    <path d="M -300 95 L -285 245" stroke="#2d2e38" stroke-width="2.5"/>
+    <path d="M 300 95 L 285 245" stroke="#2d2e38" stroke-width="2.5"/>
 
-      <g transform="translate(25, 35)">
-        <circle cx="28" cy="28" r="28" fill="#0c192c" stroke="#38bdf8" stroke-width="2.5" filter="url(#glowAccent)"/>
-        <circle cx="28" cy="28" r="18" fill="#0284c7"/>
-        <ellipse cx="28" cy="28" rx="26" ry="9" fill="none" stroke="#ffffff" stroke-width="2" transform="rotate(-30 28 28)"/>
-        <circle cx="43" cy="18" r="4" fill="#ffffff"/>
+    <!-- Bottom Hem Double Stitch Line -->
+    <line x1="-275" y1="1040" x2="275" y2="1040" stroke="#2a2b34" stroke-width="1.8" stroke-dasharray="6,4"/>
+    <line x1="-275" y1="1046" x2="275" y2="1046" stroke="#22232a" stroke-width="1.8" stroke-dasharray="6,4"/>
 
-        <text x="68" y="24" fill="#ffffff" class="font-sans" font-size="15" font-weight="900" letter-spacing="1">SPUTNIK</text>
-        <text x="68" y="40" fill="#38bdf8" class="font-mono" font-size="11" font-weight="800" letter-spacing="1.5">TECH &amp; DEVS</text>
-        <text x="68" y="54" fill="#94a3b8" class="font-mono" font-size="9">SHOWCASE CREW</text>
-      </g>
+    <!-- Sleeve Cuffs Stitch Lines -->
+    <line x1="-405" y1="260" x2="-330" y2="318" stroke="#2a2b34" stroke-width="1.5"/>
+    <line x1="405" y1="260" x2="330" y2="318" stroke="#2a2b34" stroke-width="1.5"/>
+
+    <!-- Ribbed Crewneck Collar -->
+    <path d="M -150 25 Q 0 105 150 25 Q 0 75 -150 25 Z" fill="url(#collarRibbing)" stroke="#383944" stroke-width="2"/>
+    <path d="M -145 28 Q 0 100 145 28" fill="none" stroke="#262730" stroke-width="2.5"/>
+
+    <!-- Inner Neck Label Tape -->
+    <path d="M -110 32 Q 0 65 110 32 Q 0 45 -110 32 Z" fill="#0d0e12"/>
+    <text x="0" y="46" fill="#64748b" class="mono" font-size="8" font-weight="700" letter-spacing="1" text-anchor="middle">SPUTNIK TECH • 100% COMBED COTTON</text>
+
+    <!-- Shoulder Accents -->
+    <path d="M -150 25 L -300 95" stroke="#33343f" stroke-width="2"/>
+    <path d="M 150 25 L 300 95" stroke="#33343f" stroke-width="2"/>
+
+
+    <!-- ================================================================= -->
+    <!-- 3. FRONT PRINT GRAPHICS (THE ACTUAL HIGH-CONTRAST DTF PRINT)      -->
+    <!-- All elements positioned with generous spacing & 100% legibility   -->
+    <!-- ================================================================= -->
+
+    <!-- 3A. LEFT CHEST: OFFICIAL CORPORATE BRAND CREST (X: -190, Y: 180) -->
+    <g transform="translate(-150, 180)">
+      <rect x="-95" y="-35" width="190" height="70" rx="14" fill="#0f1118" stroke="#7c3aed" stroke-width="1.5" filter="url(#badgeGlow)"/>
+      <circle cx="-65" cy="0" r="18" fill="#1e1338" stroke="#a855f7" stroke-width="1.5"/>
+      <!-- Sputnik Rocket Vector -->
+      <path d="M -65 -10 L -59 2 L -63 0 L -63 8 L -67 8 L -67 0 L -71 2 Z" fill="#ffffff"/>
+      <polygon points="-65,8 -62,13 -68,13" fill="#f59e0b"/>
+
+      <text x="-40" y="-8" fill="#ffffff" class="sans" font-size="12" font-weight="900" letter-spacing="1">SPUTNIK TECH</text>
+      <text x="-40" y="8" fill="#34d399" class="mono" font-size="9" font-weight="800">DEVS STUDIO</text>
+      <text x="-40" y="22" fill="#94a3b8" class="sans" font-size="8" font-weight="600">VIP EXHIBITION CREW</text>
     </g>
 
-    <!-- CUT PIECE 2: Executive ID Badge (X: 350, Y: 115) -->
-    <g transform="translate(350, 115)">
-      <rect width="320" height="110" rx="12" fill="#000000" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6,4"/>
-      <text x="15" y="20" fill="#34d399" class="font-mono" font-size="8" font-weight="800">PIECE B: RIGHT CHEST EXECUTIVE ID (120 x 55 MM)</text>
+    <!-- 3B. RIGHT CHEST: EXECUTIVE VIP BADGE (X: +150, Y: 180) -->
+    <g transform="translate(150, 180)">
+      <rect x="-95" y="-35" width="190" height="70" rx="14" fill="#0f1118" stroke="#10b981" stroke-width="1.8" filter="url(#badgeGlow)"/>
+      <circle cx="-65" cy="0" r="18" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+      <text x="-65" y="5" fill="#ffffff" class="mono" font-size="13" font-weight="900" text-anchor="middle">KK</text>
 
-      <g transform="translate(18, 30)">
-        <rect x="0" y="0" width="280" height="70" rx="8" fill="url(#badgeGrad)" stroke="#10b981" stroke-width="2"/>
-        <rect x="0" y="0" width="280" height="18" rx="8" fill="#10b981" fill-opacity="0.25"/>
-        <line x1="0" y1="18" x2="280" y2="18" stroke="#10b981" stroke-width="1"/>
-
-        <text x="12" y="13" fill="#34d399" class="font-mono" font-size="8.5" font-weight="800">OPERATIONS & COMMERCE // ROOT EXEC</text>
-        <circle cx="265" cy="9" r="3.5" fill="#38bdf8"/>
-
-        <text x="12" y="36" fill="#ffffff" class="font-sans" font-size="14" font-weight="900" letter-spacing="1">KENNETH TAKUDZWA KATSANDE</text>
-        <text x="12" y="49" fill="#34d399" class="font-mono" font-size="9" font-weight="800">DIRECTOR OF OPERATIONS</text>
-
-        <g transform="translate(12, 54)">
-          <rect width="80" height="12" rx="3" fill="#0f172a"/>
-          <text x="40" y="9" fill="#94a3b8" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">OPERATIONS</text>
-
-          <rect x="85" width="85" height="12" rx="3" fill="#0f172a"/>
-          <text x="127" y="9" fill="#94a3b8" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">COMMERCE</text>
-
-          <rect x="175" width="85" height="12" rx="3" fill="#0f172a"/>
-          <text x="217" y="9" fill="#34d399" class="font-mono" font-size="7" font-weight="700" text-anchor="middle">SCALE</text>
-        </g>
-      </g>
+      <text x="-40" y="-10" fill="#ffffff" class="sans" font-size="12" font-weight="900">KENNETH</text>
+      <rect x="-40" y="-3" width="125" height="18" rx="4" fill="#064e3b"/>
+      <text x="22" y="10" fill="#34d399" class="mono" font-size="8" font-weight="800" text-anchor="middle">DIRECTOR OF OPERATIONS</text>
+      <text x="-40" y="24" fill="#94a3b8" class="mono" font-size="7.5" font-weight="600">ECOSYSTEM SCALE & OPS</text>
     </g>
 
-    <!-- CUT PIECE 3: Center Front Torso Showcase Art (X: 145, Y: 245) -->
-    <g transform="translate(145, 245)">
-      <rect width="420" height="535" rx="16" fill="#000000" stroke="#7c3aed" stroke-width="2" stroke-dasharray="8,5"/>
-      <text x="20" y="25" fill="#c084fc" class="font-mono" font-size="9" font-weight="800">
-        PIECE C: FRONT CENTER TORSO EMBLEM (280 x 360 MM)
+    <!-- 3C. CENTER FRONT TORSO: HIGH-CONTRAST SCANNABLE LAUNCHPAD CARD    -->
+    <!-- Center coordinate (0, 560), Width 440, Height 530                 -->
+    <!-- Extremely crisp white QR container on deep backdrop               -->
+    <!-- ================================================================= -->
+    <g transform="translate(0, 560)">
+
+      <!-- Torso Card Outer Glow & Silhouette -->
+      <rect x="-225" y="-270" width="450" height="520" rx="28" fill="#0d0e14" stroke="#7c3aed" stroke-width="2.2" filter="url(#qrCardShadow)"/>
+      <rect x="-225" y="-270" width="450" height="520" rx="28" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+
+      <!-- Card Top Category Pill -->
+      <g transform="translate(0, -240)">
+        <rect x="-140" y="-12" width="280" height="24" rx="12" fill="#18132b" stroke="#a855f7" stroke-width="1"/>
+        <circle cx="-120" cy="0" r="4" fill="#10b981"/>
+        <text x="0" y="4" fill="#ffffff" class="mono" font-size="9.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">CAMPUS COMMERCE SUPER APP</text>
+      </g>
+
+      <!-- Main Product Headline -->
+      <text x="0" y="-195" fill="#ffffff" class="sans" font-size="28" font-weight="900" letter-spacing="1" text-anchor="middle">
+        Tradey<tspan fill="#34d399">Bay</tspan>
+      </text>
+      <text x="0" y="-170" fill="#cbd5e1" class="sans" font-size="12" font-weight="700" text-anchor="middle">
+        Free Verified Student Marketplace • Zero Listing Fees
       </text>
 
-      <g transform="translate(25, 40)">
-        <!-- Artwork Inner Box -->
-        <rect width="370" height="470" rx="18" fill="#090d16" stroke="#7c3aed" stroke-width="2.5"/>
+      <!-- 3 Feature Pills -->
+      <g transform="translate(0, -145)">
+        <rect x="-195" y="-10" width="120" height="22" rx="6" fill="#1c1d27"/>
+        <text x="-135" y="5" fill="#34d399" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">0% COMMISSION</text>
 
-        <!-- Upper Zaha Curve Accent -->
-        <path d="M 0 50 C 90 20 180 70 270 40 C 320 25 350 40 370 35 L 370 0 L 0 0 Z" fill="url(#neonPurple)" opacity="0.35"/>
+        <rect x="-65" y="-10" width="130" height="22" rx="6" fill="#1c1d27"/>
+        <text x="0" y="5" fill="#ffffff" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">VERIFIED NETWORK</text>
 
-        <!-- Header -->
-        <g transform="translate(185, 35)">
-          <text x="0" y="0" fill="#c084fc" class="font-mono" font-size="10" font-weight="800" letter-spacing="2" text-anchor="middle">SOUTH AFRICA TECH SHOWCASE</text>
-          <text x="0" y="20" fill="#ffffff" class="font-sans" font-size="16" font-weight="900" letter-spacing="1" text-anchor="middle">THE SPUTNIK ECOSYSTEM</text>
-          <text x="0" y="35" fill="#a855f7" class="sans" font-size="10" font-weight="700" text-anchor="middle">Connecting Campus Commerce to Enterprise Cloud</text>
-        </g>
-
-        <!-- Scannable QR -->
-        <g transform="translate(85, 85)">
-          <rect width="200" height="200" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#glowAccent)"/>
-          <path d="M2.4,2.4H3.6V3.6H2.4zM3.6,2.4H4.8V3.6H3.6zM4.8,2.4H6V3.6H4.8zM6,2.4H7.2V3.6H6zM7.2,2.4H8.4V3.6H7.2zM8.4,2.4H9.6V3.6H8.4zM9.6,2.4H10.8V3.6H9.6zM12,2.4H13.2V3.6H12zM15.6,2.4H16.8V3.6H15.6zM24,2.4H25.2V3.6H24zM28.8,2.4H30V3.6H28.8zM30,2.4H31.2V3.6H30zM33.6,2.4H34.8V3.6H33.6zM34.8,2.4H36V3.6H34.8zM36,2.4H37.2V3.6H36zM38.4,2.4H39.6V3.6H38.4zM39.6,2.4H40.8V3.6H39.6zM40.8,2.4H42V3.6H40.8zM42,2.4H43.2V3.6H42zM43.2,2.4H44.4V3.6H43.2zM44.4,2.4H45.6V3.6H44.4zM45.6,2.4H46.8V3.6H45.6zM2.4,3.6H3.6V4.8H2.4zM9.6,3.6H10.8V4.8H9.6zM13.2,3.6H14.4V4.8H13.2zM15.6,3.6H16.8V4.8H15.6zM21.6,3.6H22.8V4.8H21.6zM22.8,3.6H24V4.8H22.8zM24,3.6H25.2V4.8H24zM25.2,3.6H26.4V4.8H25.2zM26.4,3.6H27.6V4.8H26.4zM27.6,3.6H28.8V4.8H27.6zM38.4,3.6H39.6V4.8H38.4zM45.6,3.6H46.8V4.8H45.6zM2.4,4.8H3.6V6H2.4zM4.8,4.8H6V6H4.8zM6,4.8H7.2V6H6zM7.2,4.8H8.4V6H7.2zM9.6,4.8H10.8V6H9.6zM13.2,4.8H14.4V6H13.2zM14.4,4.8H15.6V6H14.4zM15.6,4.8H16.8V6H15.6zM16.8,4.8H18V6H16.8zM21.6,4.8H22.8V6H21.6zM22.8,4.8H24V6H22.8zM24,4.8H25.2V6H24zM25.2,4.8H26.4V6H25.2zM27.6,4.8H28.8V6H27.6zM30,4.8H31.2V6H30zM31.2,4.8H32.4V6H31.2zM33.6,4.8H34.8V6H33.6zM34.8,4.8H36V6H34.8zM38.4,4.8H39.6V6H38.4zM40.8,4.8H42V6H40.8zM42,4.8H43.2V6H42zM43.2,4.8H44.4V6H43.2zM45.6,4.8H46.8V6H45.6zM2.4,6H3.6V7.2H2.4zM4.8,6H6V7.2H4.8zM6,6H7.2V7.2H6zM7.2,6H8.4V7.2H7.2zM9.6,6H10.8V7.2H9.6zM12,6H13.2V7.2H12zM13.2,6H14.4V7.2H13.2zM15.6,6H16.8V7.2H15.6zM18,6H19.2V7.2H18zM21.6,6H22.8V7.2H21.6zM26.4,6H27.6V7.2H26.4zM30,6H31.2V7.2H30zM31.2,6H32.4V7.2H31.2zM32.4,6H33.6V7.2H32.4zM33.6,6H34.8V7.2H33.6zM34.8,6H36V7.2H34.8zM36,6H37.2V7.2H36zM38.4,6H39.6V7.2H38.4zM40.8,6H42V7.2H40.8zM42,6H43.2V7.2H42zM43.2,6H44.4V7.2H43.2zM45.6,6H46.8V7.2H45.6zM2.4,7.2H3.6V8.4H2.4zM4.8,7.2H6V8.4H4.8zM6,7.2H7.2V8.4H6zM7.2,7.2H8.4V8.4H7.2zM9.6,7.2H10.8V8.4H9.6zM12,7.2H13.2V8.4H12zM13.2,7.2H14.4V8.4H13.2zM16.8,7.2H18V8.4H16.8zM19.2,7.2H20.4V8.4H19.2zM20.4,7.2H21.6V8.4H20.4zM21.6,7.2H22.8V8.4H21.6zM22.8,7.2H24V8.4H22.8zM24,7.2H25.2V8.4H24zM27.6,7.2H28.8V8.4H27.6zM28.8,7.2H30V8.4H28.8zM30,7.2H31.2V8.4H30zM32.4,7.2H33.6V8.4H32.4zM33.6,7.2H34.8V8.4H33.6zM34.8,7.2H36V8.4H34.8zM36,7.2H37.2V8.4H36zM38.4,7.2H39.6V8.4H38.4zM40.8,7.2H42V8.4H40.8zM42,7.2H43.2V8.4H42zM43.2,7.2H44.4V8.4H43.2zM45.6,7.2H46.8V8.4H45.6zM2.4,8.4H3.6V9.6H2.4zM9.6,8.4H10.8V9.6H9.6zM12,8.4H13.2V9.6H12zM14.4,8.4H15.6V9.6H14.4zM15.6,8.4H16.8V9.6H15.6zM16.8,8.4H18V9.6H16.8zM19.2,8.4H20.4V9.6H19.2zM20.4,8.4H21.6V9.6H20.4zM24,8.4H25.2V9.6H24zM25.2,8.4H26.4V9.6H25.2zM26.4,8.4H27.6V9.6H26.4zM32.4,8.4H33.6V9.6H32.4zM36,8.4H37.2V9.6H36zM38.4,8.4H39.6V9.6H38.4zM45.6,8.4H46.8V9.6H45.6zM2.4,9.6H3.6V10.8H2.4zM3.6,9.6H4.8V10.8H3.6zM4.8,9.6H6V10.8H4.8zM6,9.6H7.2V10.8H6zM7.2,9.6H8.4V10.8H7.2zM8.4,9.6H9.6V10.8H8.4zM9.6,9.6H10.8V10.8H9.6zM12,9.6H13.2V10.8H12zM14.4,9.6H15.6V10.8H14.4zM16.8,9.6H18V10.8H16.8zM19.2,9.6H20.4V10.8H19.2zM21.6,9.6H22.8V10.8H21.6zM24,9.6H25.2V10.8H24zM26.4,9.6H27.6V10.8H26.4zM28.8,9.6H30V10.8H28.8zM31.2,9.6H32.4V10.8H31.2zM33.6,9.6H34.8V10.8H33.6zM36,9.6H37.2V10.8H36zM38.4,9.6H39.6V10.8H38.4zM39.6,9.6H40.8V10.8H39.6zM40.8,9.6H42V10.8H40.8zM42,9.6H43.2V10.8H42zM43.2,9.6H44.4V10.8H43.2zM44.4,9.6H45.6V10.8H44.4zM45.6,9.6H46.8V10.8H45.6zM12,10.8H13.2V12H12zM13.2,10.8H14.4V12H13.2zM19.2,10.8H20.4V12H19.2zM21.6,10.8H22.8V12H21.6zM22.8,10.8H24V12H22.8zM24,10.8H25.2V12H24zM27.6,10.8H28.8V12H27.6zM31.2,10.8H32.4V12H31.2zM33.6,10.8H34.8V12H33.6zM2.4,12H3.6V13.2H2.4zM7.2,12H8.4V13.2H7.2zM9.6,12H10.8V13.2H9.6zM10.8,12H12V13.2H10.8zM12,12H13.2V13.2H12zM13.2,12H14.4V13.2H13.2zM18,12H19.2V13.2H18zM19.2,12H20.4V13.2H19.2zM20.4,12H21.6V13.2H20.4zM22.8,12H24V13.2H22.8zM25.2,12H26.4V13.2H25.2zM26.4,12H27.6V13.2H26.4zM28.8,12H30V13.2H28.8zM30,12H31.2V13.2H30zM31.2,12H32.4V13.2H31.2zM34.8,12H36V13.2H34.8zM36,12H37.2V13.2H36zM37.2,12H38.4V13.2H37.2zM38.4,12H39.6V13.2H38.4zM39.6,12H40.8V13.2H39.6zM40.8,12H42V13.2H40.8zM42,12H43.2V13.2H42zM45.6,12H46.8V13.2H45.6zM3.6,13.2H4.8V14.4H3.6zM4.8,13.2H6V14.4H4.8zM6,13.2H7.2V14.4H6zM7.2,13.2H8.4V14.4H7.2zM12,13.2H13.2V14.4H12zM13.2,13.2H14.4V14.4H13.2zM16.8,13.2H18V14.4H16.8zM19.2,13.2H20.4V14.4H19.2zM21.6,13.2H22.8V14.4H21.6zM22.8,13.2H24V14.4H22.8zM24,13.2H25.2V14.4H24zM28.8,13.2H30V14.4H28.8zM30,13.2H31.2V14.4H30zM32.4,13.2H33.6V14.4H32.4zM33.6,13.2H34.8V14.4H33.6zM34.8,13.2H36V14.4H34.8zM36,13.2H37.2V14.4H36zM37.2,13.2H38.4V14.4H37.2zM40.8,13.2H42V14.4H40.8zM42,13.2H43.2V14.4H42zM44.4,13.2H45.6V14.4H44.4zM4.8,14.4H6V15.6H4.8zM6,14.4H7.2V15.6H6zM8.4,14.4H9.6V15.6H8.4zM9.6,14.4H10.8V15.6H9.6zM10.8,14.4H12V15.6H10.8zM14.4,14.4H15.6V15.6H14.4zM15.6,14.4H16.8V15.6H15.6zM18,14.4H19.2V15.6H18zM19.2,14.4H20.4V15.6H19.2zM21.6,14.4H22.8V15.6H21.6zM24,14.4H25.2V15.6H24zM26.4,14.4H27.6V15.6H26.4zM27.6,14.4H28.8V15.6H27.6zM30,14.4H31.2V15.6H30zM32.4,14.4H33.6V15.6H32.4zM33.6,14.4H34.8V15.6H33.6zM34.8,14.4H36V15.6H34.8zM37.2,14.4H38.4V15.6H37.2zM39.6,14.4H40.8V15.6H39.6zM40.8,14.4H42V15.6H40.8zM42,14.4H43.2V15.6H42zM43.2,14.4H44.4V15.6H43.2zM3.6,15.6H4.8V16.8H3.6zM6,15.6H7.2V16.8H6zM7.2,15.6H8.4V16.8H7.2zM8.4,15.6H9.6V16.8H8.4zM10.8,15.6H12V16.8H10.8zM12,15.6H13.2V16.8H12zM13.2,15.6H14.4V16.8H13.2zM14.4,15.6H15.6V16.8H14.4zM15.6,15.6H16.8V16.8H15.6zM16.8,15.6H18V16.8H16.8zM19.2,15.6H20.4V16.8H19.2zM22.8,15.6H24V16.8H22.8zM24,15.6H25.2V16.8H24zM25.2,15.6H26.4V16.8H25.2zM26.4,15.6H27.6V16.8H26.4zM27.6,15.6H28.8V16.8H27.6zM28.8,15.6H30V16.8H28.8zM30,15.6H31.2V16.8H30zM31.2,15.6H32.4V16.8H31.2zM33.6,15.6H34.8V16.8H33.6zM36,15.6H37.2V16.8H36zM37.2,15.6H38.4V16.8H37.2zM42,15.6H43.2V16.8H42zM43.2,15.6H44.4V16.8H43.2zM44.4,15.6H45.6V16.8H44.4zM4.8,16.8H6V18H4.8zM7.2,16.8H8.4V18H7.2zM9.6,16.8H10.8V18H9.6zM10.8,16.8H12V18H10.8zM16.8,16.8H18V18H16.8zM18,16.8H19.2V18H18zM20.4,16.8H21.6V18H20.4zM21.6,16.8H22.8V18H21.6zM22.8,16.8H24V18H22.8zM27.6,16.8H28.8V18H27.6zM28.8,16.8H30V18H28.8zM31.2,16.8H32.4V18H31.2zM34.8,16.8H36V18H34.8zM37.2,16.8H38.4V18H37.2zM38.4,16.8H39.6V18H38.4zM42,16.8H43.2V18H42zM43.2,16.8H44.4V18H43.2zM44.4,16.8H45.6V18H44.4zM45.6,16.8H46.8V18H45.6zM2.4,18H3.6V19.2H2.4zM3.6,18H4.8V19.2H3.6zM4.8,18H6V19.2H4.8zM6,18H7.2V19.2H6zM7.2,18H8.4V19.2H7.2zM8.4,18H9.6V19.2H8.4zM10.8,18H12V19.2H10.8zM15.6,18H16.8V19.2H15.6zM18,18H19.2V19.2H18zM19.2,18H20.4V19.2H19.2zM20.4,18H21.6V19.2H20.4zM21.6,18H22.8V19.2H21.6zM22.8,18H24V19.2H22.8zM24,18H25.2V19.2H24zM27.6,18H28.8V19.2H27.6zM30,18H31.2V19.2H30zM31.2,18H32.4V19.2H31.2zM32.4,18H33.6V19.2H32.4zM33.6,18H34.8V19.2H33.6zM34.8,18H36V19.2H34.8zM36,18H37.2V19.2H36zM40.8,18H42V19.2H40.8zM42,18H43.2V19.2H42zM2.4,19.2H3.6V20.4H2.4zM3.6,19.2H4.8V20.4H3.6zM6,19.2H7.2V20.4H6zM9.6,19.2H10.8V20.4H9.6zM12,19.2H13.2V20.4H12zM14.4,19.2H15.6V20.4H14.4zM18,19.2H19.2V20.4H18zM20.4,19.2H21.6V20.4H20.4zM21.6,19.2H22.8V20.4H21.6zM22.8,19.2H24V20.4H22.8zM24,19.2H25.2V20.4H24zM30,19.2H31.2V20.4H30zM31.2,19.2H32.4V20.4H31.2zM32.4,19.2H33.6V20.4H32.4zM34.8,19.2H36V20.4H34.8zM37.2,19.2H38.4V20.4H37.2zM39.6,19.2H40.8V20.4H39.6zM40.8,19.2H42V20.4H40.8zM42,19.2H43.2V20.4H42zM43.2,19.2H44.4V20.4H43.2zM2.4,20.4H3.6V21.6H2.4zM4.8,20.4H6V21.6H4.8zM8.4,20.4H9.6V21.6H8.4zM12,20.4H13.2V21.6H12zM14.4,20.4H15.6V21.6H14.4zM15.6,20.4H16.8V21.6H15.6zM16.8,20.4H18V21.6H16.8zM19.2,20.4H20.4V21.6H19.2zM20.4,20.4H21.6V21.6H20.4zM22.8,20.4H24V21.6H22.8zM27.6,20.4H28.8V21.6H27.6zM30,20.4H31.2V21.6H30zM31.2,20.4H32.4V21.6H31.2zM33.6,20.4H34.8V21.6H33.6zM37.2,20.4H38.4V21.6H37.2zM39.6,20.4H40.8V21.6H39.6zM40.8,20.4H42V21.6H40.8zM43.2,20.4H44.4V21.6H43.2zM3.6,21.6H4.8V22.8H3.6zM6,21.6H7.2V22.8H6zM7.2,21.6H8.4V22.8H7.2zM9.6,21.6H10.8V22.8H9.6zM10.8,21.6H12V22.8H10.8zM13.2,21.6H14.4V22.8H13.2zM14.4,21.6H15.6V22.8H14.4zM16.8,21.6H18V22.8H16.8zM18,21.6H19.2V22.8H18zM19.2,21.6H20.4V22.8H19.2zM20.4,21.6H21.6V22.8H20.4zM21.6,21.6H22.8V22.8H21.6zM22.8,21.6H24V22.8H22.8zM25.2,21.6H26.4V22.8H25.2zM26.4,21.6H27.6V22.8H26.4zM27.6,21.6H28.8V22.8H27.6zM28.8,21.6H30V22.8H28.8zM30,21.6H31.2V22.8H30zM31.2,21.6H32.4V22.8H31.2zM37.2,21.6H38.4V22.8H37.2zM38.4,21.6H39.6V22.8H38.4zM42,21.6H43.2V22.8H42zM43.2,21.6H44.4V22.8H43.2zM2.4,22.8H3.6V24H2.4zM7.2,22.8H8.4V24H7.2zM12,22.8H13.2V24H12zM14.4,22.8H15.6V24H14.4zM15.6,22.8H16.8V24H15.6zM16.8,22.8H18V24H16.8zM18,22.8H19.2V24H18zM19.2,22.8H20.4V24H19.2zM24,22.8H25.2V24H24zM27.6,22.8H28.8V24H27.6zM30,22.8H31.2V24H30zM33.6,22.8H34.8V24H33.6zM34.8,22.8H36V24H34.8zM36,22.8H37.2V24H36zM37.2,22.8H38.4V24H37.2zM40.8,22.8H42V24H40.8zM42,22.8H43.2V24H42zM43.2,22.8H44.4V24H43.2zM44.4,22.8H45.6V24H44.4zM4.8,24H6V25.2H4.8zM7.2,24H8.4V25.2H7.2zM8.4,24H9.6V25.2H8.4zM9.6,24H10.8V25.2H9.6zM13.2,24H14.4V25.2H13.2zM19.2,24H20.4V25.2H19.2zM20.4,24H21.6V25.2H20.4zM22.8,24H24V25.2H22.8zM24,24H25.2V25.2H24zM26.4,24H27.6V25.2H26.4zM30,24H31.2V25.2H30zM31.2,24H32.4V25.2H31.2zM33.6,24H34.8V25.2H33.6zM34.8,24H36V25.2H34.8zM38.4,24H39.6V25.2H38.4zM40.8,24H42V25.2H40.8zM43.2,24H44.4V25.2H43.2zM3.6,25.2H4.8V26.4H3.6zM6,25.2H7.2V26.4H6zM7.2,25.2H8.4V26.4H7.2zM8.4,25.2H9.6V26.4H8.4zM10.8,25.2H12V26.4H10.8zM15.6,25.2H16.8V26.4H15.6zM16.8,25.2H18V26.4H16.8zM20.4,25.2H21.6V26.4H20.4zM21.6,25.2H22.8V26.4H21.6zM22.8,25.2H24V26.4H22.8zM26.4,25.2H27.6V26.4H26.4zM27.6,25.2H28.8V26.4H27.6zM30,25.2H31.2V26.4H30zM34.8,25.2H36V26.4H34.8zM36,25.2H37.2V26.4H36zM37.2,25.2H38.4V26.4H37.2zM39.6,25.2H40.8V26.4H39.6zM40.8,25.2H42V26.4H40.8zM43.2,25.2H44.4V26.4H43.2zM44.4,25.2H45.6V26.4H44.4zM3.6,26.4H4.8V27.6H3.6zM4.8,26.4H6V27.6H4.8zM8.4,26.4H9.6V27.6H8.4zM9.6,26.4H10.8V27.6H9.6zM14.4,26.4H15.6V27.6H14.4zM19.2,26.4H20.4V27.6H19.2zM22.8,26.4H24V27.6H22.8zM27.6,26.4H28.8V27.6H27.6zM28.8,26.4H30V27.6H28.8zM31.2,26.4H32.4V27.6H31.2zM34.8,26.4H36V27.6H34.8zM37.2,26.4H38.4V27.6H37.2zM38.4,26.4H39.6V27.6H38.4zM39.6,26.4H40.8V27.6H39.6zM43.2,26.4H44.4V27.6H43.2zM2.4,27.6H3.6V28.8H2.4zM3.6,27.6H4.8V28.8H3.6zM4.8,27.6H6V28.8H4.8zM8.4,27.6H9.6V28.8H8.4zM12,27.6H13.2V28.8H12zM14.4,27.6H15.6V28.8H14.4zM20.4,27.6H21.6V28.8H20.4zM21.6,27.6H22.8V28.8H21.6zM24,27.6H25.2V28.8H24zM28.8,27.6H30V28.8H28.8zM30,27.6H31.2V28.8H30zM33.6,27.6H34.8V28.8H33.6zM34.8,27.6H36V28.8H34.8zM36,27.6H37.2V28.8H36zM39.6,27.6H40.8V28.8H39.6zM40.8,27.6H42V28.8H40.8zM2.4,28.8H3.6V30H2.4zM6,28.8H7.2V30H6zM9.6,28.8H10.8V30H9.6zM12,28.8H13.2V30H12zM15.6,28.8H16.8V30H15.6zM20.4,28.8H21.6V30H20.4zM22.8,28.8H24V30H22.8zM24,28.8H25.2V30H24zM26.4,28.8H27.6V30H26.4zM28.8,28.8H30V30H28.8zM30,28.8H31.2V30H30zM31.2,28.8H32.4V30H31.2zM34.8,28.8H36V30H34.8zM36,28.8H37.2V30H36zM39.6,28.8H40.8V30H39.6zM40.8,28.8H42V30H40.8zM42,28.8H43.2V30H42zM43.2,28.8H44.4V30H43.2zM2.4,30H3.6V31.2H2.4zM6,30H7.2V31.2H6zM7.2,30H8.4V31.2H7.2zM8.4,30H9.6V31.2H8.4zM12,30H13.2V31.2H12zM14.4,30H15.6V31.2H14.4zM16.8,30H18V31.2H16.8zM19.2,30H20.4V31.2H19.2zM20.4,30H21.6V31.2H20.4zM21.6,30H22.8V31.2H21.6zM22.8,30H24V31.2H22.8zM24,30H25.2V31.2H24zM27.6,30H28.8V31.2H27.6zM28.8,30H30V31.2H28.8zM31.2,30H32.4V31.2H31.2zM39.6,30H40.8V31.2H39.6zM40.8,30H42V31.2H40.8zM43.2,30H44.4V31.2H43.2zM45.6,30H46.8V31.2H45.6zM2.4,31.2H3.6V32.4H2.4zM4.8,31.2H6V32.4H4.8zM6,31.2H7.2V32.4H6zM8.4,31.2H9.6V32.4H8.4zM9.6,31.2H10.8V32.4H9.6zM20.4,31.2H21.6V32.4H20.4zM24,31.2H25.2V32.4H24zM25.2,31.2H26.4V32.4H25.2zM26.4,31.2H27.6V32.4H26.4zM27.6,31.2H28.8V32.4H27.6zM28.8,31.2H30V32.4H28.8zM30,31.2H31.2V32.4H30zM31.2,31.2H32.4V32.4H31.2zM33.6,31.2H34.8V32.4H33.6zM34.8,31.2H36V32.4H34.8zM37.2,31.2H38.4V32.4H37.2zM38.4,31.2H39.6V32.4H38.4zM39.6,31.2H40.8V32.4H39.6zM42,31.2H43.2V32.4H42zM43.2,31.2H44.4V32.4H43.2zM44.4,31.2H45.6V32.4H44.4zM2.4,32.4H3.6V33.6H2.4zM3.6,32.4H4.8V33.6H3.6zM6,32.4H7.2V33.6H6zM7.2,32.4H8.4V33.6H7.2zM8.4,32.4H9.6V33.6H8.4zM12,32.4H13.2V33.6H12zM16.8,32.4H18V33.6H16.8zM18,32.4H19.2V33.6H18zM19.2,32.4H20.4V33.6H19.2zM21.6,32.4H22.8V33.6H21.6zM24,32.4H25.2V33.6H24zM30,32.4H31.2V33.6H30zM32.4,32.4H33.6V33.6H32.4zM33.6,32.4H34.8V33.6H33.6zM34.8,32.4H36V33.6H34.8zM36,32.4H37.2V33.6H36zM37.2,32.4H38.4V33.6H37.2zM39.6,32.4H40.8V33.6H39.6zM40.8,32.4H42V33.6H40.8zM6,33.6H7.2V34.8H6zM8.4,33.6H9.6V34.8H8.4zM9.6,33.6H10.8V34.8H9.6zM12,33.6H13.2V34.8H12zM14.4,33.6H15.6V34.8H14.4zM18,33.6H19.2V34.8H18zM19.2,33.6H20.4V34.8H19.2zM21.6,33.6H22.8V34.8H21.6zM22.8,33.6H24V34.8H22.8zM24,33.6H25.2V34.8H24zM26.4,33.6H27.6V34.8H26.4zM28.8,33.6H30V34.8H28.8zM30,33.6H31.2V34.8H30zM33.6,33.6H34.8V34.8H33.6zM34.8,33.6H36V34.8H34.8zM36,33.6H37.2V34.8H36zM37.2,33.6H38.4V34.8H37.2zM39.6,33.6H40.8V34.8H39.6zM4.8,34.8H6V36H4.8zM6,34.8H7.2V36H6zM10.8,34.8H12V36H10.8zM12,34.8H13.2V36H12zM13.2,34.8H14.4V36H13.2zM18,34.8H19.2V36H18zM22.8,34.8H24V36H22.8zM24,34.8H25.2V36H24zM25.2,34.8H26.4V36H25.2zM26.4,34.8H27.6V36H26.4zM27.6,34.8H28.8V36H27.6zM28.8,34.8H30V36H28.8zM33.6,34.8H34.8V36H33.6zM39.6,34.8H40.8V36H39.6zM40.8,34.8H42V36H40.8zM43.2,34.8H44.4V36H43.2zM45.6,34.8H46.8V36H45.6zM2.4,36H3.6V37.2H2.4zM3.6,36H4.8V37.2H3.6zM7.2,36H8.4V37.2H7.2zM9.6,36H10.8V37.2H9.6zM10.8,36H12V37.2H10.8zM16.8,36H18V37.2H16.8zM20.4,36H21.6V37.2H20.4zM22.8,36H24V37.2H22.8zM26.4,36H27.6V37.2H26.4zM27.6,36H28.8V37.2H27.6zM28.8,36H30V37.2H28.8zM31.2,36H32.4V37.2H31.2zM33.6,36H34.8V37.2H33.6zM34.8,36H36V37.2H34.8zM36,36H37.2V37.2H36zM37.2,36H38.4V37.2H37.2zM38.4,36H39.6V37.2H38.4zM39.6,36H40.8V37.2H39.6zM40.8,36H42V37.2H40.8zM43.2,36H44.4V37.2H43.2zM44.4,36H45.6V37.2H44.4zM12,37.2H13.2V38.4H12zM14.4,37.2H15.6V38.4H14.4zM15.6,37.2H16.8V38.4H15.6zM20.4,37.2H21.6V38.4H20.4zM21.6,37.2H22.8V38.4H21.6zM22.8,37.2H24V38.4H22.8zM30,37.2H31.2V38.4H30zM33.6,37.2H34.8V38.4H33.6zM36,37.2H37.2V38.4H36zM40.8,37.2H42V38.4H40.8zM44.4,37.2H45.6V38.4H44.4zM2.4,38.4H3.6V39.6H2.4zM3.6,38.4H4.8V39.6H3.6zM4.8,38.4H6V39.6H4.8zM6,38.4H7.2V39.6H6zM7.2,38.4H8.4V39.6H7.2zM8.4,38.4H9.6V39.6H8.4zM9.6,38.4H10.8V39.6H9.6zM12,38.4H13.2V39.6H12zM13.2,38.4H14.4V39.6H13.2zM14.4,38.4H15.6V39.6H14.4zM15.6,38.4H16.8V39.6H15.6zM16.8,38.4H18V39.6H16.8zM19.2,38.4H20.4V39.6H19.2zM20.4,38.4H21.6V39.6H20.4zM24,38.4H25.2V39.6H24zM26.4,38.4H27.6V39.6H26.4zM27.6,38.4H28.8V39.6H27.6zM28.8,38.4H30V39.6H28.8zM30,38.4H31.2V39.6H30zM31.2,38.4H32.4V39.6H31.2zM32.4,38.4H33.6V39.6H32.4zM33.6,38.4H34.8V39.6H33.6zM36,38.4H37.2V39.6H36zM38.4,38.4H39.6V39.6H38.4zM40.8,38.4H42V39.6H40.8zM44.4,38.4H45.6V39.6H44.4zM2.4,39.6H3.6V40.8H2.4zM9.6,39.6H10.8V40.8H9.6zM13.2,39.6H14.4V40.8H13.2zM14.4,39.6H15.6V40.8H14.4zM15.6,39.6H16.8V40.8H15.6zM16.8,39.6H18V40.8H16.8zM18,39.6H19.2V40.8H18zM19.2,39.6H20.4V40.8H19.2zM20.4,39.6H21.6V40.8H20.4zM21.6,39.6H22.8V40.8H21.6zM25.2,39.6H26.4V40.8H25.2zM26.4,39.6H27.6V40.8H26.4zM27.6,39.6H28.8V40.8H27.6zM34.8,39.6H36V40.8H34.8zM36,39.6H37.2V40.8H36zM40.8,39.6H42V40.8H40.8zM42,39.6H43.2V40.8H42zM43.2,39.6H44.4V40.8H43.2zM45.6,39.6H46.8V40.8H45.6zM2.4,40.8H3.6V42H2.4zM4.8,40.8H6V42H4.8zM6,40.8H7.2V42H6zM7.2,40.8H8.4V42H7.2zM9.6,40.8H10.8V42H9.6zM12,40.8H13.2V42H12zM14.4,40.8H15.6V42H14.4zM18,40.8H19.2V42H18zM19.2,40.8H20.4V42H19.2zM21.6,40.8H22.8V42H21.6zM27.6,40.8H28.8V42H27.6zM28.8,40.8H30V42H28.8zM36,40.8H37.2V42H36zM37.2,40.8H38.4V42H37.2zM38.4,40.8H39.6V42H38.4zM39.6,40.8H40.8V42H39.6zM40.8,40.8H42V42H40.8zM42,40.8H43.2V42H42zM43.2,40.8H44.4V42H43.2zM45.6,40.8H46.8V42H45.6zM2.4,42H3.6V43.2H2.4zM4.8,42H6V43.2H4.8zM6,42H7.2V43.2H6zM7.2,42H8.4V43.2H7.2zM9.6,42H10.8V43.2H9.6zM14.4,42H15.6V43.2H14.4zM15.6,42H16.8V43.2H15.6zM16.8,42H18V43.2H16.8zM18,42H19.2V43.2H18zM24,42H25.2V43.2H24zM25.2,42H26.4V43.2H25.2zM28.8,42H30V43.2H28.8zM30,42H31.2V43.2H30zM34.8,42H36V43.2H34.8zM37.2,42H38.4V43.2H37.2zM38.4,42H39.6V43.2H38.4zM39.6,42H40.8V43.2H39.6zM42,42H43.2V43.2H42zM43.2,42H44.4V43.2H43.2zM45.6,42H46.8V43.2H45.6zM2.4,43.2H3.6V44.4H2.4zM4.8,43.2H6V44.4H4.8zM6,43.2H7.2V44.4H6zM7.2,43.2H8.4V44.4H7.2zM9.6,43.2H10.8V44.4H9.6zM13.2,43.2H14.4V44.4H13.2zM16.8,43.2H18V44.4H16.8zM19.2,43.2H20.4V44.4H19.2zM20.4,43.2H21.6V44.4H20.4zM22.8,43.2H24V44.4H22.8zM24,43.2H25.2V44.4H24zM26.4,43.2H27.6V44.4H26.4zM27.6,43.2H28.8V44.4H27.6zM30,43.2H31.2V44.4H30zM32.4,43.2H33.6V44.4H32.4zM33.6,43.2H34.8V44.4H33.6zM34.8,43.2H36V44.4H34.8zM38.4,43.2H39.6V44.4H38.4zM2.4,44.4H3.6V45.6H2.4zM9.6,44.4H10.8V45.6H9.6zM13.2,44.4H14.4V45.6H13.2zM16.8,44.4H18V45.6H16.8zM19.2,44.4H20.4V45.6H19.2zM20.4,44.4H21.6V45.6H20.4zM21.6,44.4H22.8V45.6H21.6zM22.8,44.4H24V45.6H22.8zM27.6,44.4H28.8V45.6H27.6zM30,44.4H31.2V45.6H30zM31.2,44.4H32.4V45.6H31.2zM34.8,44.4H36V45.6H34.8zM40.8,44.4H42V45.6H40.8zM43.2,44.4H44.4V45.6H43.2zM44.4,44.4H45.6V45.6H44.4zM2.4,45.6H3.6V46.8H2.4zM3.6,45.6H4.8V46.8H3.6zM4.8,45.6H6V46.8H4.8zM6,45.6H7.2V46.8H6zM7.2,45.6H8.4V46.8H7.2zM8.4,45.6H9.6V46.8H8.4zM9.6,45.6H10.8V46.8H9.6zM12,45.6H13.2V46.8H12zM13.2,45.6H14.4V46.8H13.2zM18,45.6H19.2V46.8H18zM22.8,45.6H24V46.8H22.8zM26.4,45.6H27.6V46.8H26.4zM27.6,45.6H28.8V46.8H27.6zM31.2,45.6H32.4V46.8H31.2zM34.8,45.6H36V46.8H34.8zM38.4,45.6H39.6V46.8H38.4zM39.6,45.6H40.8V46.8H39.6zM43.2,45.6H44.4V46.8H43.2zM44.4,45.6H45.6V46.8H44.4zM45.6,45.6H46.8V46.8H45.6z" fill="#1e1b4b" transform="translate(16, 16) scale(0.37)"/>
-        </g>
-
-        <!-- Target Scan Badge -->
-        <g transform="translate(185, 310)">
-          <rect x="-130" y="0" width="260" height="26" rx="8" fill="#1e1b4b" stroke="#10b981" stroke-width="1.5"/>
-          <text x="0" y="17" fill="#ffffff" class="font-mono" font-size="10" font-weight="800" text-anchor="middle">📱 POINT CAMERA TO SCAN</text>
-
-          <text x="0" y="44" fill="#34d399" class="font-sans" font-size="14" font-weight="900" text-anchor="middle">Tradey Bay Super App</text>
-          <text x="0" y="60" fill="#cbd5e1" class="font-mono" font-size="10" text-anchor="middle">0% Commission • v2.0.4+31 • Housing</text>
-        </g>
-
-        <!-- Platform Badges -->
-        <g transform="translate(25, 385)">
-          <rect width="320" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-          <text x="160" y="16" fill="#c084fc" class="font-mono" font-size="9" font-weight="800" text-anchor="middle">TRADEY BAY • STUDENT RES • UNIHUB</text>
-          <text x="160" y="30" fill="#38bdf8" class="font-mono" font-size="9" font-weight="800" text-anchor="middle">SHOPNIK SAAS • DEVS ACADEMY</text>
-        </g>
-
-        <!-- Footer Contact -->
-        <g transform="translate(185, 450)">
-          <text x="0" y="0" fill="#94a3b8" class="font-mono" font-size="9" font-weight="700" text-anchor="middle">sputniktechgroup.com  |  sputnikdevs.com</text>
-          <text x="0" y="12" fill="#64748b" class="font-mono" font-size="8" text-anchor="middle">292 Surrey Avenue, Randburg, Johannesburg</text>
-        </g>
+        <rect x="75" y="-10" width="120" height="22" rx="6" fill="#1c1d27"/>
+        <text x="135" y="5" fill="#34d399" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">SA CLOUD HOSTED</text>
       </g>
+
+      <!-- THE MASSIVE ULTRA-CRISP HIGH-CONTRAST SCANNABLE QR CODE CONTAINER -->
+      <!-- 250 x 250 mm pure white card with deep purple vector QR modules    -->
+      <!-- Scannable from 2.5 meters away directly off staff's chest!         -->
+      <g transform="translate(0, 15)">
+        <rect x="-120" y="-120" width="240" height="240" rx="20" fill="#ffffff" stroke="#c084fc" stroke-width="2" filter="url(#badgeGlow)"/>
+        <path d="M2.4,2.4H3.6V3.6H2.4zM3.6,2.4H4.8V3.6H3.6zM4.8,2.4H6V3.6H4.8zM6,2.4H7.2V3.6H6zM7.2,2.4H8.4V3.6H7.2zM8.4,2.4H9.6V3.6H8.4zM9.6,2.4H10.8V3.6H9.6zM12,2.4H13.2V3.6H12zM15.6,2.4H16.8V3.6H15.6zM24,2.4H25.2V3.6H24zM28.8,2.4H30V3.6H28.8zM30,2.4H31.2V3.6H30zM33.6,2.4H34.8V3.6H33.6zM34.8,2.4H36V3.6H34.8zM36,2.4H37.2V3.6H36zM38.4,2.4H39.6V3.6H38.4zM39.6,2.4H40.8V3.6H39.6zM40.8,2.4H42V3.6H40.8zM42,2.4H43.2V3.6H42zM43.2,2.4H44.4V3.6H43.2zM44.4,2.4H45.6V3.6H44.4zM45.6,2.4H46.8V3.6H45.6zM2.4,3.6H3.6V4.8H2.4zM9.6,3.6H10.8V4.8H9.6zM13.2,3.6H14.4V4.8H13.2zM15.6,3.6H16.8V4.8H15.6zM21.6,3.6H22.8V4.8H21.6zM22.8,3.6H24V4.8H22.8zM24,3.6H25.2V4.8H24zM25.2,3.6H26.4V4.8H25.2zM26.4,3.6H27.6V4.8H26.4zM27.6,3.6H28.8V4.8H27.6zM38.4,3.6H39.6V4.8H38.4zM45.6,3.6H46.8V4.8H45.6zM2.4,4.8H3.6V6H2.4zM4.8,4.8H6V6H4.8zM6,4.8H7.2V6H6zM7.2,4.8H8.4V6H7.2zM9.6,4.8H10.8V6H9.6zM13.2,4.8H14.4V6H13.2zM14.4,4.8H15.6V6H14.4zM15.6,4.8H16.8V6H15.6zM16.8,4.8H18V6H16.8zM21.6,4.8H22.8V6H21.6zM22.8,4.8H24V6H22.8zM24,4.8H25.2V6H24zM25.2,4.8H26.4V6H25.2zM27.6,4.8H28.8V6H27.6zM30,4.8H31.2V6H30zM31.2,4.8H32.4V6H31.2zM33.6,4.8H34.8V6H33.6zM34.8,4.8H36V6H34.8zM38.4,4.8H39.6V6H38.4zM40.8,4.8H42V6H40.8zM42,4.8H43.2V6H42zM43.2,4.8H44.4V6H43.2zM45.6,4.8H46.8V6H45.6zM2.4,6H3.6V7.2H2.4zM4.8,6H6V7.2H4.8zM6,6H7.2V7.2H6zM7.2,6H8.4V7.2H7.2zM9.6,6H10.8V7.2H9.6zM12,6H13.2V7.2H12zM13.2,6H14.4V7.2H13.2zM15.6,6H16.8V7.2H15.6zM18,6H19.2V7.2H18zM21.6,6H22.8V7.2H21.6zM26.4,6H27.6V7.2H26.4zM30,6H31.2V7.2H30zM31.2,6H32.4V7.2H31.2zM32.4,6H33.6V7.2H32.4zM33.6,6H34.8V7.2H33.6zM34.8,6H36V7.2H34.8zM36,6H37.2V7.2H36zM38.4,6H39.6V7.2H38.4zM40.8,6H42V7.2H40.8zM42,6H43.2V7.2H42zM43.2,6H44.4V7.2H43.2zM45.6,6H46.8V7.2H45.6zM2.4,7.2H3.6V8.4H2.4zM4.8,7.2H6V8.4H4.8zM6,7.2H7.2V8.4H6zM7.2,7.2H8.4V8.4H7.2zM9.6,7.2H10.8V8.4H9.6zM12,7.2H13.2V8.4H12zM13.2,7.2H14.4V8.4H13.2zM16.8,7.2H18V8.4H16.8zM19.2,7.2H20.4V8.4H19.2zM20.4,7.2H21.6V8.4H20.4zM21.6,7.2H22.8V8.4H21.6zM22.8,7.2H24V8.4H22.8zM24,7.2H25.2V8.4H24zM27.6,7.2H28.8V8.4H27.6zM28.8,7.2H30V8.4H28.8zM30,7.2H31.2V8.4H30zM32.4,7.2H33.6V8.4H32.4zM33.6,7.2H34.8V8.4H33.6zM34.8,7.2H36V8.4H34.8zM36,7.2H37.2V8.4H36zM38.4,7.2H39.6V8.4H38.4zM40.8,7.2H42V8.4H40.8zM42,7.2H43.2V8.4H42zM43.2,7.2H44.4V8.4H43.2zM45.6,7.2H46.8V8.4H45.6zM2.4,8.4H3.6V9.6H2.4zM9.6,8.4H10.8V9.6H9.6zM12,8.4H13.2V9.6H12zM14.4,8.4H15.6V9.6H14.4zM15.6,8.4H16.8V9.6H15.6zM16.8,8.4H18V9.6H16.8zM19.2,8.4H20.4V9.6H19.2zM20.4,8.4H21.6V9.6H20.4zM24,8.4H25.2V9.6H24zM25.2,8.4H26.4V9.6H25.2zM26.4,8.4H27.6V9.6H26.4zM32.4,8.4H33.6V9.6H32.4zM36,8.4H37.2V9.6H36zM38.4,8.4H39.6V9.6H38.4zM45.6,8.4H46.8V9.6H45.6zM2.4,9.6H3.6V10.8H2.4zM3.6,9.6H4.8V10.8H3.6zM4.8,9.6H6V10.8H4.8zM6,9.6H7.2V10.8H6zM7.2,9.6H8.4V10.8H7.2zM8.4,9.6H9.6V10.8H8.4zM9.6,9.6H10.8V10.8H9.6zM12,9.6H13.2V10.8H12zM14.4,9.6H15.6V10.8H14.4zM16.8,9.6H18V10.8H16.8zM19.2,9.6H20.4V10.8H19.2zM21.6,9.6H22.8V10.8H21.6zM24,9.6H25.2V10.8H24zM26.4,9.6H27.6V10.8H26.4zM28.8,9.6H30V10.8H28.8zM31.2,9.6H32.4V10.8H31.2zM33.6,9.6H34.8V10.8H33.6zM36,9.6H37.2V10.8H36zM38.4,9.6H39.6V10.8H38.4zM39.6,9.6H40.8V10.8H39.6zM40.8,9.6H42V10.8H40.8zM42,9.6H43.2V10.8H42zM43.2,9.6H44.4V10.8H43.2zM44.4,9.6H45.6V10.8H44.4zM45.6,9.6H46.8V10.8H45.6zM12,10.8H13.2V12H12zM13.2,10.8H14.4V12H13.2zM19.2,10.8H20.4V12H19.2zM21.6,10.8H22.8V12H21.6zM22.8,10.8H24V12H22.8zM24,10.8H25.2V12H24zM27.6,10.8H28.8V12H27.6zM31.2,10.8H32.4V12H31.2zM33.6,10.8H34.8V12H33.6zM2.4,12H3.6V13.2H2.4zM7.2,12H8.4V13.2H7.2zM9.6,12H10.8V13.2H9.6zM10.8,12H12V13.2H10.8zM12,12H13.2V13.2H12zM13.2,12H14.4V13.2H13.2zM18,12H19.2V13.2H18zM19.2,12H20.4V13.2H19.2zM20.4,12H21.6V13.2H20.4zM22.8,12H24V13.2H22.8zM25.2,12H26.4V13.2H25.2zM26.4,12H27.6V13.2H26.4zM28.8,12H30V13.2H28.8zM30,12H31.2V13.2H30zM31.2,12H32.4V13.2H31.2zM34.8,12H36V13.2H34.8zM36,12H37.2V13.2H36zM37.2,12H38.4V13.2H37.2zM38.4,12H39.6V13.2H38.4zM39.6,12H40.8V13.2H39.6zM40.8,12H42V13.2H40.8zM42,12H43.2V13.2H42zM45.6,12H46.8V13.2H45.6zM3.6,13.2H4.8V14.4H3.6zM4.8,13.2H6V14.4H4.8zM6,13.2H7.2V14.4H6zM7.2,13.2H8.4V14.4H7.2zM12,13.2H13.2V14.4H12zM13.2,13.2H14.4V14.4H13.2zM16.8,13.2H18V14.4H16.8zM19.2,13.2H20.4V14.4H19.2zM21.6,13.2H22.8V14.4H21.6zM22.8,13.2H24V14.4H22.8zM24,13.2H25.2V14.4H24zM28.8,13.2H30V14.4H28.8zM30,13.2H31.2V14.4H30zM32.4,13.2H33.6V14.4H32.4zM33.6,13.2H34.8V14.4H33.6zM34.8,13.2H36V14.4H34.8zM36,13.2H37.2V14.4H36zM37.2,13.2H38.4V14.4H37.2zM40.8,13.2H42V14.4H40.8zM42,13.2H43.2V14.4H42zM44.4,13.2H45.6V14.4H44.4zM4.8,14.4H6V15.6H4.8zM6,14.4H7.2V15.6H6zM8.4,14.4H9.6V15.6H8.4zM9.6,14.4H10.8V15.6H9.6zM10.8,14.4H12V15.6H10.8zM14.4,14.4H15.6V15.6H14.4zM15.6,14.4H16.8V15.6H15.6zM18,14.4H19.2V15.6H18zM19.2,14.4H20.4V15.6H19.2zM21.6,14.4H22.8V15.6H21.6zM24,14.4H25.2V15.6H24zM26.4,14.4H27.6V15.6H26.4zM27.6,14.4H28.8V15.6H27.6zM30,14.4H31.2V15.6H30zM32.4,14.4H33.6V15.6H32.4zM33.6,14.4H34.8V15.6H33.6zM34.8,14.4H36V15.6H34.8zM37.2,14.4H38.4V15.6H37.2zM39.6,14.4H40.8V15.6H39.6zM40.8,14.4H42V15.6H40.8zM42,14.4H43.2V15.6H42zM43.2,14.4H44.4V15.6H43.2zM3.6,15.6H4.8V16.8H3.6zM6,15.6H7.2V16.8H6zM7.2,15.6H8.4V16.8H7.2zM8.4,15.6H9.6V16.8H8.4zM10.8,15.6H12V16.8H10.8zM12,15.6H13.2V16.8H12zM13.2,15.6H14.4V16.8H13.2zM14.4,15.6H15.6V16.8H14.4zM15.6,15.6H16.8V16.8H15.6zM16.8,15.6H18V16.8H16.8zM19.2,15.6H20.4V16.8H19.2zM22.8,15.6H24V16.8H22.8zM24,15.6H25.2V16.8H24zM25.2,15.6H26.4V16.8H25.2zM26.4,15.6H27.6V16.8H26.4zM27.6,15.6H28.8V16.8H27.6zM28.8,15.6H30V16.8H28.8zM30,15.6H31.2V16.8H30zM31.2,15.6H32.4V16.8H31.2zM33.6,15.6H34.8V16.8H33.6zM36,15.6H37.2V16.8H36zM37.2,15.6H38.4V16.8H37.2zM42,15.6H43.2V16.8H42zM43.2,15.6H44.4V16.8H43.2zM44.4,15.6H45.6V16.8H44.4zM4.8,16.8H6V18H4.8zM7.2,16.8H8.4V18H7.2zM9.6,16.8H10.8V18H9.6zM10.8,16.8H12V18H10.8zM16.8,16.8H18V18H16.8zM18,16.8H19.2V18H18zM20.4,16.8H21.6V18H20.4zM21.6,16.8H22.8V18H21.6zM22.8,16.8H24V18H22.8zM27.6,16.8H28.8V18H27.6zM28.8,16.8H30V18H28.8zM31.2,16.8H32.4V18H31.2zM34.8,16.8H36V18H34.8zM37.2,16.8H38.4V18H37.2zM38.4,16.8H39.6V18H38.4zM42,16.8H43.2V18H42zM43.2,16.8H44.4V18H43.2zM44.4,16.8H45.6V18H44.4zM45.6,16.8H46.8V18H45.6zM2.4,18H3.6V19.2H2.4zM3.6,18H4.8V19.2H3.6zM4.8,18H6V19.2H4.8zM6,18H7.2V19.2H6zM7.2,18H8.4V19.2H7.2zM8.4,18H9.6V19.2H8.4zM10.8,18H12V19.2H10.8zM15.6,18H16.8V19.2H15.6zM18,18H19.2V19.2H18zM19.2,18H20.4V19.2H19.2zM20.4,18H21.6V19.2H20.4zM21.6,18H22.8V19.2H21.6zM22.8,18H24V19.2H22.8zM24,18H25.2V19.2H24zM27.6,18H28.8V19.2H27.6zM30,18H31.2V19.2H30zM31.2,18H32.4V19.2H31.2zM32.4,18H33.6V19.2H32.4zM33.6,18H34.8V19.2H33.6zM34.8,18H36V19.2H34.8zM36,18H37.2V19.2H36zM40.8,18H42V19.2H40.8zM42,18H43.2V19.2H42zM2.4,19.2H3.6V20.4H2.4zM3.6,19.2H4.8V20.4H3.6zM6,19.2H7.2V20.4H6zM9.6,19.2H10.8V20.4H9.6zM12,19.2H13.2V20.4H12zM14.4,19.2H15.6V20.4H14.4zM18,19.2H19.2V20.4H18zM20.4,19.2H21.6V20.4H20.4zM21.6,19.2H22.8V20.4H21.6zM22.8,19.2H24V20.4H22.8zM24,19.2H25.2V20.4H24zM30,19.2H31.2V20.4H30zM31.2,19.2H32.4V20.4H31.2zM32.4,19.2H33.6V20.4H32.4zM34.8,19.2H36V20.4H34.8zM37.2,19.2H38.4V20.4H37.2zM39.6,19.2H40.8V20.4H39.6zM40.8,19.2H42V20.4H40.8zM42,19.2H43.2V20.4H42zM43.2,19.2H44.4V20.4H43.2zM2.4,20.4H3.6V21.6H2.4zM4.8,20.4H6V21.6H4.8zM8.4,20.4H9.6V21.6H8.4zM12,20.4H13.2V21.6H12zM14.4,20.4H15.6V21.6H14.4zM15.6,20.4H16.8V21.6H15.6zM16.8,20.4H18V21.6H16.8zM19.2,20.4H20.4V21.6H19.2zM20.4,20.4H21.6V21.6H20.4zM22.8,20.4H24V21.6H22.8zM27.6,20.4H28.8V21.6H27.6zM30,20.4H31.2V21.6H30zM31.2,20.4H32.4V21.6H31.2zM33.6,20.4H34.8V21.6H33.6zM37.2,20.4H38.4V21.6H37.2zM39.6,20.4H40.8V21.6H39.6zM40.8,20.4H42V21.6H40.8zM43.2,20.4H44.4V21.6H43.2zM3.6,21.6H4.8V22.8H3.6zM6,21.6H7.2V22.8H6zM7.2,21.6H8.4V22.8H7.2zM9.6,21.6H10.8V22.8H9.6zM10.8,21.6H12V22.8H10.8zM13.2,21.6H14.4V22.8H13.2zM14.4,21.6H15.6V22.8H14.4zM16.8,21.6H18V22.8H16.8zM18,21.6H19.2V22.8H18zM19.2,21.6H20.4V22.8H19.2zM20.4,21.6H21.6V22.8H20.4zM21.6,21.6H22.8V22.8H21.6zM22.8,21.6H24V22.8H22.8zM25.2,21.6H26.4V22.8H25.2zM26.4,21.6H27.6V22.8H26.4zM27.6,21.6H28.8V22.8H27.6zM28.8,21.6H30V22.8H28.8zM30,21.6H31.2V22.8H30zM31.2,21.6H32.4V22.8H31.2zM37.2,21.6H38.4V22.8H37.2zM38.4,21.6H39.6V22.8H38.4zM42,21.6H43.2V22.8H42zM43.2,21.6H44.4V22.8H43.2zM2.4,22.8H3.6V24H2.4zM7.2,22.8H8.4V24H7.2zM12,22.8H13.2V24H12zM14.4,22.8H15.6V24H14.4zM15.6,22.8H16.8V24H15.6zM16.8,22.8H18V24H16.8zM18,22.8H19.2V24H18zM19.2,22.8H20.4V24H19.2zM24,22.8H25.2V24H24zM27.6,22.8H28.8V24H27.6zM30,22.8H31.2V24H30zM33.6,22.8H34.8V24H33.6zM34.8,22.8H36V24H34.8zM36,22.8H37.2V24H36zM37.2,22.8H38.4V24H37.2zM40.8,22.8H42V24H40.8zM42,22.8H43.2V24H42zM43.2,22.8H44.4V24H43.2zM44.4,22.8H45.6V24H44.4zM4.8,24H6V25.2H4.8zM7.2,24H8.4V25.2H7.2zM8.4,24H9.6V25.2H8.4zM9.6,24H10.8V25.2H9.6zM13.2,24H14.4V25.2H13.2zM19.2,24H20.4V25.2H19.2zM20.4,24H21.6V25.2H20.4zM22.8,24H24V25.2H22.8zM24,24H25.2V25.2H24zM26.4,24H27.6V25.2H26.4zM30,24H31.2V25.2H30zM31.2,24H32.4V25.2H31.2zM33.6,24H34.8V25.2H33.6zM34.8,24H36V25.2H34.8zM38.4,24H39.6V25.2H38.4zM40.8,24H42V25.2H40.8zM43.2,24H44.4V25.2H43.2zM3.6,25.2H4.8V26.4H3.6zM6,25.2H7.2V26.4H6zM7.2,25.2H8.4V26.4H7.2zM8.4,25.2H9.6V26.4H8.4zM10.8,25.2H12V26.4H10.8zM15.6,25.2H16.8V26.4H15.6zM16.8,25.2H18V26.4H16.8zM20.4,25.2H21.6V26.4H20.4zM21.6,25.2H22.8V26.4H21.6zM22.8,25.2H24V26.4H22.8zM26.4,25.2H27.6V26.4H26.4zM27.6,25.2H28.8V26.4H27.6zM30,25.2H31.2V26.4H30zM34.8,25.2H36V26.4H34.8zM36,25.2H37.2V26.4H36zM37.2,25.2H38.4V26.4H37.2zM39.6,25.2H40.8V26.4H39.6zM40.8,25.2H42V26.4H40.8zM43.2,25.2H44.4V26.4H43.2zM44.4,25.2H45.6V26.4H44.4zM3.6,26.4H4.8V27.6H3.6zM4.8,26.4H6V27.6H4.8zM8.4,26.4H9.6V27.6H8.4zM9.6,26.4H10.8V27.6H9.6zM14.4,26.4H15.6V27.6H14.4zM19.2,26.4H20.4V27.6H19.2zM22.8,26.4H24V27.6H22.8zM27.6,26.4H28.8V27.6H27.6zM28.8,26.4H30V27.6H28.8zM31.2,26.4H32.4V27.6H31.2zM34.8,26.4H36V27.6H34.8zM37.2,26.4H38.4V27.6H37.2zM38.4,26.4H39.6V27.6H38.4zM39.6,26.4H40.8V27.6H39.6zM43.2,26.4H44.4V27.6H43.2zM2.4,27.6H3.6V28.8H2.4zM3.6,27.6H4.8V28.8H3.6zM4.8,27.6H6V28.8H4.8zM8.4,27.6H9.6V28.8H8.4zM12,27.6H13.2V28.8H12zM14.4,27.6H15.6V28.8H14.4zM20.4,27.6H21.6V28.8H20.4zM21.6,27.6H22.8V28.8H21.6zM24,27.6H25.2V28.8H24zM28.8,27.6H30V28.8H28.8zM30,27.6H31.2V28.8H30zM33.6,27.6H34.8V28.8H33.6zM34.8,27.6H36V28.8H34.8zM36,27.6H37.2V28.8H36zM39.6,27.6H40.8V28.8H39.6zM40.8,27.6H42V28.8H40.8zM2.4,28.8H3.6V30H2.4zM6,28.8H7.2V30H6zM9.6,28.8H10.8V30H9.6zM12,28.8H13.2V30H12zM15.6,28.8H16.8V30H15.6zM20.4,28.8H21.6V30H20.4zM22.8,28.8H24V30H22.8zM24,28.8H25.2V30H24zM26.4,28.8H27.6V30H26.4zM28.8,28.8H30V30H28.8zM30,28.8H31.2V30H30zM31.2,28.8H32.4V30H31.2zM34.8,28.8H36V30H34.8zM36,28.8H37.2V30H36zM39.6,28.8H40.8V30H39.6zM40.8,28.8H42V30H40.8zM42,28.8H43.2V30H42zM43.2,28.8H44.4V30H43.2zM2.4,30H3.6V31.2H2.4zM6,30H7.2V31.2H6zM7.2,30H8.4V31.2H7.2zM8.4,30H9.6V31.2H8.4zM12,30H13.2V31.2H12zM14.4,30H15.6V31.2H14.4zM16.8,30H18V31.2H16.8zM19.2,30H20.4V31.2H19.2zM20.4,30H21.6V31.2H20.4zM21.6,30H22.8V31.2H21.6zM22.8,30H24V31.2H22.8zM24,30H25.2V31.2H24zM27.6,30H28.8V31.2H27.6zM28.8,30H30V31.2H28.8zM31.2,30H32.4V31.2H31.2zM39.6,30H40.8V31.2H39.6zM40.8,30H42V31.2H40.8zM43.2,30H44.4V31.2H43.2zM45.6,30H46.8V31.2H45.6zM2.4,31.2H3.6V32.4H2.4zM4.8,31.2H6V32.4H4.8zM6,31.2H7.2V32.4H6zM8.4,31.2H9.6V32.4H8.4zM9.6,31.2H10.8V32.4H9.6zM20.4,31.2H21.6V32.4H20.4zM24,31.2H25.2V32.4H24zM25.2,31.2H26.4V32.4H25.2zM26.4,31.2H27.6V32.4H26.4zM27.6,31.2H28.8V32.4H27.6zM28.8,31.2H30V32.4H28.8zM30,31.2H31.2V32.4H30zM31.2,31.2H32.4V32.4H31.2zM33.6,31.2H34.8V32.4H33.6zM34.8,31.2H36V32.4H34.8zM37.2,31.2H38.4V32.4H37.2zM38.4,31.2H39.6V32.4H38.4zM39.6,31.2H40.8V32.4H39.6zM42,31.2H43.2V32.4H42zM43.2,31.2H44.4V32.4H43.2zM44.4,31.2H45.6V32.4H44.4zM2.4,32.4H3.6V33.6H2.4zM3.6,32.4H4.8V33.6H3.6zM6,32.4H7.2V33.6H6zM7.2,32.4H8.4V33.6H7.2zM8.4,32.4H9.6V33.6H8.4zM12,32.4H13.2V33.6H12zM16.8,32.4H18V33.6H16.8zM18,32.4H19.2V33.6H18zM19.2,32.4H20.4V33.6H19.2zM21.6,32.4H22.8V33.6H21.6zM24,32.4H25.2V33.6H24zM30,32.4H31.2V33.6H30zM32.4,32.4H33.6V33.6H32.4zM33.6,32.4H34.8V33.6H33.6zM34.8,32.4H36V33.6H34.8zM36,32.4H37.2V33.6H36zM37.2,32.4H38.4V33.6H37.2zM39.6,32.4H40.8V33.6H39.6zM40.8,32.4H42V33.6H40.8zM6,33.6H7.2V34.8H6zM8.4,33.6H9.6V34.8H8.4zM9.6,33.6H10.8V34.8H9.6zM12,33.6H13.2V34.8H12zM14.4,33.6H15.6V34.8H14.4zM18,33.6H19.2V34.8H18zM19.2,33.6H20.4V34.8H19.2zM21.6,33.6H22.8V34.8H21.6zM22.8,33.6H24V34.8H22.8zM24,33.6H25.2V34.8H24zM26.4,33.6H27.6V34.8H26.4zM28.8,33.6H30V34.8H28.8zM30,33.6H31.2V34.8H30zM33.6,33.6H34.8V34.8H33.6zM34.8,33.6H36V34.8H34.8zM36,33.6H37.2V34.8H36zM37.2,33.6H38.4V34.8H37.2zM39.6,33.6H40.8V34.8H39.6zM4.8,34.8H6V36H4.8zM6,34.8H7.2V36H6zM10.8,34.8H12V36H10.8zM12,34.8H13.2V36H12zM13.2,34.8H14.4V36H13.2zM18,34.8H19.2V36H18zM22.8,34.8H24V36H22.8zM24,34.8H25.2V36H24zM25.2,34.8H26.4V36H25.2zM26.4,34.8H27.6V36H26.4zM27.6,34.8H28.8V36H27.6zM28.8,34.8H30V36H28.8zM33.6,34.8H34.8V36H33.6zM39.6,34.8H40.8V36H39.6zM40.8,34.8H42V36H40.8zM43.2,34.8H44.4V36H43.2zM45.6,34.8H46.8V36H45.6zM2.4,36H3.6V37.2H2.4zM3.6,36H4.8V37.2H3.6zM7.2,36H8.4V37.2H7.2zM9.6,36H10.8V37.2H9.6zM10.8,36H12V37.2H10.8zM16.8,36H18V37.2H16.8zM20.4,36H21.6V37.2H20.4zM22.8,36H24V37.2H22.8zM26.4,36H27.6V37.2H26.4zM27.6,36H28.8V37.2H27.6zM28.8,36H30V37.2H28.8zM31.2,36H32.4V37.2H31.2zM33.6,36H34.8V37.2H33.6zM34.8,36H36V37.2H34.8zM36,36H37.2V37.2H36zM37.2,36H38.4V37.2H37.2zM38.4,36H39.6V37.2H38.4zM39.6,36H40.8V37.2H39.6zM40.8,36H42V37.2H40.8zM43.2,36H44.4V37.2H43.2zM44.4,36H45.6V37.2H44.4zM12,37.2H13.2V38.4H12zM14.4,37.2H15.6V38.4H14.4zM15.6,37.2H16.8V38.4H15.6zM20.4,37.2H21.6V38.4H20.4zM21.6,37.2H22.8V38.4H21.6zM22.8,37.2H24V38.4H22.8zM30,37.2H31.2V38.4H30zM33.6,37.2H34.8V38.4H33.6zM36,37.2H37.2V38.4H36zM40.8,37.2H42V38.4H40.8zM44.4,37.2H45.6V38.4H44.4zM2.4,38.4H3.6V39.6H2.4zM3.6,38.4H4.8V39.6H3.6zM4.8,38.4H6V39.6H4.8zM6,38.4H7.2V39.6H6zM7.2,38.4H8.4V39.6H7.2zM8.4,38.4H9.6V39.6H8.4zM9.6,38.4H10.8V39.6H9.6zM12,38.4H13.2V39.6H12zM13.2,38.4H14.4V39.6H13.2zM14.4,38.4H15.6V39.6H14.4zM15.6,38.4H16.8V39.6H15.6zM16.8,38.4H18V39.6H16.8zM19.2,38.4H20.4V39.6H19.2zM20.4,38.4H21.6V39.6H20.4zM24,38.4H25.2V39.6H24zM26.4,38.4H27.6V39.6H26.4zM27.6,38.4H28.8V39.6H27.6zM28.8,38.4H30V39.6H28.8zM30,38.4H31.2V39.6H30zM31.2,38.4H32.4V39.6H31.2zM32.4,38.4H33.6V39.6H32.4zM33.6,38.4H34.8V39.6H33.6zM36,38.4H37.2V39.6H36zM38.4,38.4H39.6V39.6H38.4zM40.8,38.4H42V39.6H40.8zM44.4,38.4H45.6V39.6H44.4zM2.4,39.6H3.6V40.8H2.4zM9.6,39.6H10.8V40.8H9.6zM13.2,39.6H14.4V40.8H13.2zM14.4,39.6H15.6V40.8H14.4zM15.6,39.6H16.8V40.8H15.6zM16.8,39.6H18V40.8H16.8zM18,39.6H19.2V40.8H18zM19.2,39.6H20.4V40.8H19.2zM20.4,39.6H21.6V40.8H20.4zM21.6,39.6H22.8V40.8H21.6zM25.2,39.6H26.4V40.8H25.2zM26.4,39.6H27.6V40.8H26.4zM27.6,39.6H28.8V40.8H27.6zM34.8,39.6H36V40.8H34.8zM36,39.6H37.2V40.8H36zM40.8,39.6H42V40.8H40.8zM42,39.6H43.2V40.8H42zM43.2,39.6H44.4V40.8H43.2zM45.6,39.6H46.8V40.8H45.6zM2.4,40.8H3.6V42H2.4zM4.8,40.8H6V42H4.8zM6,40.8H7.2V42H6zM7.2,40.8H8.4V42H7.2zM9.6,40.8H10.8V42H9.6zM12,40.8H13.2V42H12zM14.4,40.8H15.6V42H14.4zM18,40.8H19.2V42H18zM19.2,40.8H20.4V42H19.2zM21.6,40.8H22.8V42H21.6zM27.6,40.8H28.8V42H27.6zM28.8,40.8H30V42H28.8zM36,40.8H37.2V42H36zM37.2,40.8H38.4V42H37.2zM38.4,40.8H39.6V42H38.4zM39.6,40.8H40.8V42H39.6zM40.8,40.8H42V42H40.8zM42,40.8H43.2V42H42zM43.2,40.8H44.4V42H43.2zM45.6,40.8H46.8V42H45.6zM2.4,42H3.6V43.2H2.4zM4.8,42H6V43.2H4.8zM6,42H7.2V43.2H6zM7.2,42H8.4V43.2H7.2zM9.6,42H10.8V43.2H9.6zM14.4,42H15.6V43.2H14.4zM15.6,42H16.8V43.2H15.6zM16.8,42H18V43.2H16.8zM18,42H19.2V43.2H18zM24,42H25.2V43.2H24zM25.2,42H26.4V43.2H25.2zM28.8,42H30V43.2H28.8zM30,42H31.2V43.2H30zM34.8,42H36V43.2H34.8zM37.2,42H38.4V43.2H37.2zM38.4,42H39.6V43.2H38.4zM39.6,42H40.8V43.2H39.6zM42,42H43.2V43.2H42zM43.2,42H44.4V43.2H43.2zM45.6,42H46.8V43.2H45.6zM2.4,43.2H3.6V44.4H2.4zM4.8,43.2H6V44.4H4.8zM6,43.2H7.2V44.4H6zM7.2,43.2H8.4V44.4H7.2zM9.6,43.2H10.8V44.4H9.6zM13.2,43.2H14.4V44.4H13.2zM16.8,43.2H18V44.4H16.8zM19.2,43.2H20.4V44.4H19.2zM20.4,43.2H21.6V44.4H20.4zM22.8,43.2H24V44.4H22.8zM24,43.2H25.2V44.4H24zM26.4,43.2H27.6V44.4H26.4zM27.6,43.2H28.8V44.4H27.6zM30,43.2H31.2V44.4H30zM32.4,43.2H33.6V44.4H32.4zM33.6,43.2H34.8V44.4H33.6zM34.8,43.2H36V44.4H34.8zM38.4,43.2H39.6V44.4H38.4zM2.4,44.4H3.6V45.6H2.4zM9.6,44.4H10.8V45.6H9.6zM13.2,44.4H14.4V45.6H13.2zM16.8,44.4H18V45.6H16.8zM19.2,44.4H20.4V45.6H19.2zM20.4,44.4H21.6V45.6H20.4zM21.6,44.4H22.8V45.6H21.6zM22.8,44.4H24V45.6H22.8zM27.6,44.4H28.8V45.6H27.6zM30,44.4H31.2V45.6H30zM31.2,44.4H32.4V45.6H31.2zM34.8,44.4H36V45.6H34.8zM40.8,44.4H42V45.6H40.8zM43.2,44.4H44.4V45.6H43.2zM44.4,44.4H45.6V45.6H44.4zM2.4,45.6H3.6V46.8H2.4zM3.6,45.6H4.8V46.8H3.6zM4.8,45.6H6V46.8H4.8zM6,45.6H7.2V46.8H6zM7.2,45.6H8.4V46.8H7.2zM8.4,45.6H9.6V46.8H8.4zM9.6,45.6H10.8V46.8H9.6zM12,45.6H13.2V46.8H12zM13.2,45.6H14.4V46.8H13.2zM18,45.6H19.2V46.8H18zM22.8,45.6H24V46.8H22.8zM26.4,45.6H27.6V46.8H26.4zM27.6,45.6H28.8V46.8H27.6zM31.2,45.6H32.4V46.8H31.2zM34.8,45.6H36V46.8H34.8zM38.4,45.6H39.6V46.8H38.4zM39.6,45.6H40.8V46.8H39.6zM43.2,45.6H44.4V46.8H43.2zM44.4,45.6H45.6V46.8H44.4zM45.6,45.6H46.8V46.8H45.6z" fill="#2e1065" transform="translate(-95, -95) scale(0.42)"/>
+      </g>
+
+      <!-- Direct Scan Call-To-Action Pill Button -->
+      <g transform="translate(0, 175)">
+        <rect x="-170" y="-18" width="340" height="36" rx="18" fill="url(#neonAccentGrad)"/>
+        <text x="0" y="6" fill="#040711" class="mono" font-size="12" font-weight="900" letter-spacing="1" text-anchor="middle">
+          📱 POINT CAMERA TO INSTALL
+        </text>
+      </g>
+
+      <!-- Official Sub-Footer -->
+      <text x="0" y="222" fill="#94a3b8" class="sans" font-size="10.5" font-weight="600" text-anchor="middle">
+        Google Play & App Store • RSA Cloud Hosted • POPIA
+      </text>
+    </g>
+
+    <!-- 3D. ZAHA HADID FLUID ARCHITECTURAL HEM ACCENTS (Y: 960..1050) -->
+    <path d="M -260 970 C -150 940 -50 1020 50 980 C 150 940 220 1010 260 980 L 260 1030 C 200 1045 100 1020 0 1040 C -100 1060 -180 1030 -260 1035 Z" 
+          fill="url(#zahaShirtPurple)" opacity="0.4"/>
+    <path d="M -255 985 C -145 955 -45 1035 55 995 C 155 955 225 1025 255 995" 
+          fill="none" stroke="#34d399" stroke-width="2" stroke-opacity="0.6"/>
+
+    <!-- Subtle Tech Specs on Lower Hem -->
+    <g transform="translate(0, 1020)">
+      <text x="0" y="0" fill="#64748b" class="mono" font-size="9" font-weight="600" text-anchor="middle">
+        SPUTNIK TECH GROUP (PTY) LTD • 292 SURREY AVE, RANDBURG, JHB • RSA HOSTED
+      </text>
     </g>
 
   </g>

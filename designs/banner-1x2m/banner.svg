@@ -368,48 +368,45 @@
     </g>
 
     <!-- POINT & EXPLAIN FEATURE CARDS WITH HIGH-VALUE VECTOR ICONS (Y: 554 to 940) -->
+    <!-- Decluttered: bold, punchy points without small dense paragraph text -->
     <g transform="translate(0, 554)">
       <rect x="0" y="0" width="310" height="24" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1"/>
       <text x="155" y="16" fill="#6b21a8" class="mono" font-size="11" font-weight="800" letter-spacing="1.5" text-anchor="middle">OFFICIAL TRADEY BAY PLATFORM PILLARS</text>
 
       <!-- Point 1: Classifieds & Live Digital Auctions -->
-      <g transform="translate(0, 30)">
-        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
-        <use href="#icon-laptop" x="18" y="18"/>
-        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">1. Classified Ads &amp; Real-Time Auctions</text>
-        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Free listings across Vehicles, Solar, Tech &amp; Dorm gear.</text>
-        <text x="82" y="63" fill="#7c3aed" class="sans" font-size="10.5" font-weight="700">Sub-100ms SignalR live bidding with 60s anti-snipe extension.</text>
+      <g transform="translate(0, 32)">
+        <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
+        <use href="#icon-laptop" x="15" y="15"/>
+        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">1. Classified Ads &amp; Real-Time Auctions</text>
+        <text x="76" y="53" fill="#7c3aed" class="sans" font-size="12" font-weight="700">Vehicles, Solar, Tech &amp; Dorm Gear • Sub-100ms SignalR Live Bidding</text>
       </g>
 
       <!-- Point 2: Seller & Business Storefronts -->
-      <g transform="translate(0, 120)">
-        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
-        <use href="#icon-storefront" x="18" y="18"/>
-        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">2. Branded Seller &amp; Business Storefronts</text>
-        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Dedicated digital showrooms for private sellers and CIPC stores</text>
-        <text x="82" y="63" fill="#6b21a8" class="sans" font-size="10.5" font-weight="700">with verified vendor badges, product carousels &amp; in-store search.</text>
+      <g transform="translate(0, 118)">
+        <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
+        <use href="#icon-storefront" x="15" y="15"/>
+        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">2. Branded Seller &amp; Business Storefronts</text>
+        <text x="76" y="53" fill="#6b21a8" class="sans" font-size="12" font-weight="700">Digital Showrooms for Sellers &amp; CIPC Stores • Verified Badges</text>
       </g>
 
       <!-- Point 3: Interactive Maps & Split View -->
-      <g transform="translate(0, 210)">
-        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
-        <use href="#icon-map-radar" x="18" y="18"/>
-        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">3. Interactive Split-View Geospatial Maps</text>
-        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Switch between card grid and live Google Map view with</text>
-        <text x="82" y="63" fill="#7c3aed" class="sans" font-size="10.5" font-weight="700">clustered price pins and bounding box search-as-you-move.</text>
+      <g transform="translate(0, 204)">
+        <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
+        <use href="#icon-map-radar" x="15" y="15"/>
+        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">3. Interactive Split-View Geospatial Maps</text>
+        <text x="76" y="53" fill="#7c3aed" class="sans" font-size="12" font-weight="700">Search-As-You-Move Across SA Metros • Clustered Map Price Pins</text>
       </g>
 
       <!-- Point 4: Jobs & Native AI ATS Resume Builder -->
-      <g transform="translate(0, 300)">
-        <rect width="432" height="82" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="58" height="58" rx="12" fill="#faf5ff"/>
-        <use href="#icon-ats-resume" x="18" y="18"/>
-        <text x="82" y="30" fill="#0f172a" class="sans" font-size="13.5" font-weight="800">4. Jobs Network &amp; Native AI ATS Resume Builder</text>
-        <text x="82" y="47" fill="#475569" class="sans" font-size="11">Built-in ATS resume creator with 4 templates &amp; vector PDF export.</text>
-        <text x="82" y="63" fill="#b45309" class="sans" font-size="10.5" font-weight="700">Algorithmic vacancy matching with 1-tap direct applications.</text>
+      <g transform="translate(0, 290)">
+        <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
+        <use href="#icon-ats-resume" x="15" y="15"/>
+        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">4. Jobs Network &amp; Native AI ATS Resume Builder</text>
+        <text x="76" y="53" fill="#b45309" class="sans" font-size="12" font-weight="700">Built-In ATS Resume Builder (4 PDF Templates) • 1-Tap Apply</text>
       </g>
     </g>
 
@@ -454,11 +451,10 @@
         <text x="180" y="24" fill="#4c1d95" class="mono" font-size="11" font-weight="800" text-anchor="middle">🛡️  100% POPIA COMPLIANT &amp; IN-COUNTRY HOSTED</text>
       </g>
 
-      <!-- Value Proposition Copy -->
-      <g transform="translate(20, 456)">
-        <text x="196" y="0" fill="#581c87" class="sans" font-size="14" font-weight="900" text-anchor="middle">South Africa's Premier Campus Commerce Super App</text>
-        <text x="196" y="22" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">Empowering university students, local entrepreneurs &amp; accredited merchants</text>
-        <text x="196" y="38" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">with zero listing fees, direct buyer-seller chat and verified student identities.</text>
+      <!-- Value Proposition Copy (Decluttered, punchy) -->
+      <g transform="translate(20, 460)">
+        <text x="196" y="0" fill="#581c87" class="sans" font-size="15" font-weight="900" text-anchor="middle">South Africa's Premier Campus Commerce Super App</text>
+        <text x="196" y="24" fill="#6b21a8" class="mono" font-size="12" font-weight="700" text-anchor="middle">Zero Listing Fees • Direct In-App Chat • Verified Students</text>
       </g>
 
       <!-- Corporate Web link button -->
@@ -509,50 +505,46 @@
       <rect x="322" y="16" width="96" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
       <text x="370" y="34" fill="#581c87" class="mono" font-size="9" font-weight="800" text-anchor="middle">CAMPUS B2B</text>
 
-      <!-- Talking Points for Prince & Kenneth (Space Utilized with 4 Core Pillars) -->
+      <!-- Talking Points for Prince & Kenneth (Space Utilized with 4 Core Pillars - Decluttered) -->
       <g transform="translate(16, 72)">
         <text x="0" y="11" fill="#581c87" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">INTEGRATED HIGHER ED &amp; RESIDENCE ECOSYSTEM:</text>
         
         <!-- Pillar 1: Hostel SRMS -->
         <g transform="translate(0, 20)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Hostel SRMS (Residence Operators &amp; Landlords)</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Automated bed allocations, digital lease signing &amp; room inventory checks.</text>
-          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">6 Portals: Student, Owner, Property Manager, Catering, Admin, Maintenance.</text>
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Hostel SRMS (Residence Operators &amp; Landlords)</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">6 Integrated Portals: Student, Owner, Manager, Catering, Admin &amp; Repairs</text>
         </g>
 
         <!-- Pillar 2: University Hub -->
-        <g transform="translate(0, 64)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">The University Hub (Higher Education Institutions)</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">AI smart allocation matching verified student cohorts to accredited residences.</text>
-          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Central command centre for check-ins, NSFAS/sBux tracking &amp; DHET compliance.</text>
+        <g transform="translate(0, 58)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">The University Hub (Higher Education Institutions)</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">AI Smart Allocation, NSFAS/sBux Tracking &amp; Centralized Check-Ins</text>
         </g>
 
         <!-- Pillar 3: Biometrics & Interconnected API -->
-        <g transform="translate(0, 108)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Biometric Gate Turnstiles &amp; Interconnected Rest API</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Hardware turnstile integrations, live student presence &amp; HMAC-signed webhooks.</text>
-          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Auto-provisions students into SRMS; live status flows back to University Hub.</text>
+        <g transform="translate(0, 96)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Biometric Turnstiles &amp; Interconnected Cloud REST API</text>
+          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Hardware Turnstiles, Live Student Presence &amp; Real-Time Cloud Sync</text>
         </g>
 
-        <!-- Pillar 4: Automated Billing, Bursaries & Incident SOS (Utilizing Space) -->
-        <g transform="translate(0, 152)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Split Bursary Invoicing &amp; Emergency SOS Alerts</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Automated student statements, split bursary funding &amp; deposit reconciliation.</text>
-          <text x="20" y="35" fill="#b45309" class="sans" font-size="9.5" font-weight="700">Real-time emergency broadcast alerts &amp; SLA maintenance escalation.</text>
+        <!-- Pillar 4: Automated Billing, Bursaries & Incident SOS -->
+        <g transform="translate(0, 134)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Split Bursary Invoicing &amp; Emergency SOS Alerts</text>
+          <text x="20" y="27" fill="#b45309" class="sans" font-size="11" font-weight="700">Automated Student Statements, Bursary Funding &amp; SLA Incident Alerts</text>
         </g>
 
         <!-- Connectivity Strip Banner -->
-        <g transform="translate(0, 196)">
+        <g transform="translate(0, 186)">
           <rect width="400" height="24" rx="6" fill="#f5f3ff" stroke="#c084fc" stroke-width="0.8"/>
           <text x="200" y="16" fill="#6b21a8" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">⚡ 100% SYNCHRONIZED CLOUD ARCHITECTURE BETWEEN CAMPUS &amp; RESIDENCES</text>
         </g>
 
         <!-- DUAL QR CODES: Left for Student Res Management, Right for University Hub -->
-        <g transform="translate(0, 228)">
+        <g transform="translate(0, 222)">
           <rect width="400" height="122" rx="14" fill="#faf5ff" stroke="#c084fc" stroke-width="1.2"/>
           <line x1="200" y1="0" x2="200" y2="122" stroke="#e9d5ff" stroke-width="1"/>
 
@@ -586,7 +578,7 @@
     </g>
 
     <!-- CARD 2: SHOPNIK E-COMMERCE SAAS (Y: 508 to 940) -->
-    <!-- Utilized Space with 5 Core Pillars, Real Logo, Expanded Scannable QR Block -->
+    <!-- Decluttered: 5 Core Value Points, Punchy, High Legibility -->
     <g transform="translate(0, 508)">
       <rect width="432" height="432" rx="22" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" filter="url(#softCardShadow)"/>
       
@@ -601,52 +593,47 @@
       <rect x="298" y="16" width="120" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
       <text x="358" y="34" fill="#581c87" class="mono" font-size="9" font-weight="800" text-anchor="middle">0% COMMISSION</text>
 
-      <!-- Talking Points: Fully Grounded in Codebase & Space Fully Utilized -->
+      <!-- Talking Points: Fully Grounded in Codebase & Decluttered -->
       <g transform="translate(16, 72)">
         <text x="0" y="11" fill="#581c87" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">WHY SA MERCHANTS LAUNCH WITH SHOPNIK:</text>
         
         <!-- Pillar 1: Payments & 0% Commission -->
         <g transform="translate(0, 18)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Day-1 SA Payments &amp; 0% Platform Commission</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Pre-integrated payment gateways: Paystack &amp; PayFast with instant activation.</text>
-          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Merchant-configurable Cash on Delivery (COD) &amp; In-Store Collection.</text>
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Day-1 SA Payments &amp; 0% Platform Commission</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Paystack, PayFast, Cash on Delivery (COD) &amp; In-Store Collection</text>
         </g>
 
         <!-- Pillar 2: Omnichannel Catalog & Dynamic Themes -->
-        <g transform="translate(0, 60)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Rich Product Catalog &amp; Multi-Variant Matrices</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Color swatches, size tiers, bundle discounts &amp; real-time inventory tracking.</text>
-          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Starter (R349/mo), Professional (R699/mo) &amp; Enterprise with live customizer.</text>
+        <g transform="translate(0, 54)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Rich Product Catalog &amp; Multi-Variant Matrices</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Color Swatches, Size Tiers, Real-Time Inventory &amp; Live Customizer</text>
         </g>
 
         <!-- Pillar 3: Store Management Dashboard & Coupons -->
-        <g transform="translate(0, 102)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Store Management Dashboard &amp; Coupons</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Real-time sales graphs, order processing, stock alerts &amp; customer accounts.</text>
-          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Discount coupon engine, automated order emails &amp; role-based admin access.</text>
+        <g transform="translate(0, 90)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Store Management Dashboard &amp; Coupons Engine</text>
+          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Live Sales Analytics, Order Processing &amp; Automated Order Emails</text>
         </g>
 
         <!-- Pillar 4: Oracle Cloud Hosting SA -->
-        <g transform="translate(0, 144)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">In-Country Oracle Cloud SA Hosting (Johannesburg)</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Hosted on Oracle Cloud South Africa servers for blazing sub-second response.</text>
-          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Engineered with .NET 10 &amp; Cloud Redis. Handles high-traffic flash sales.</text>
+        <g transform="translate(0, 126)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">In-Country Oracle Cloud SA Hosting (Johannesburg)</text>
+          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Sub-Second Response • Built with .NET 10 &amp; Cloud Redis Cache</text>
         </g>
 
         <!-- Pillar 5: AI Recommendations & Customer Reviews -->
-        <g transform="translate(0, 186)">
-          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">AI Recommendations &amp; Customer Reviews</text>
-          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Built-in AI product recommendation engine &amp; AI customer review summaries.</text>
-          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Verified buyer star ratings, customer wishlists &amp; marketing email tools.</text>
+        <g transform="translate(0, 162)">
+          <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">AI Recommendations &amp; Customer Reviews</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Built-In Smart AI Product Suggestions &amp; Verified Buyer Reviews</text>
         </g>
 
         <!-- Expanded Scannable Shopnik QR Block (Utilizing bottom area) -->
-        <g transform="translate(0, 236)">
+        <g transform="translate(0, 226)">
           <rect width="400" height="114" rx="14" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.2"/>
           <g transform="translate(14, 14)">
             <rect width="86" height="86" rx="10" fill="#ffffff" stroke="#c084fc" stroke-width="1.2"/>
@@ -696,7 +683,7 @@
           <text x="198" y="20" fill="#92400e" class="mono" font-size="10.5" font-weight="800" text-anchor="middle">🎓 19-DAY INTENSIVE &amp; 3-MONTH ACCREDITED WIL TRACKS</text>
         </g>
 
-        <!-- BROAD PRODUCTION ENGINEERING DISCIPLINES (Per User Instruction) -->
+        <!-- BROAD PRODUCTION ENGINEERING DISCIPLINES (Decluttered, single punchy lines) -->
         <g transform="translate(0, 100)">
           <text x="0" y="11" fill="#b45309" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">CORE PRODUCTION DISCIPLINES YOU WILL MASTER:</text>
           
@@ -704,45 +691,40 @@
           <g transform="translate(0, 20)">
             <rect width="396" height="34" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#7c3aed"/>
-            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">1</text>
-            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Backend Systems: REST &amp; gRPC Microservices</text>
-            <text x="36" y="28" fill="#6b21a8" class="sans" font-size="9">High-throughput APIs, gRPC binary streaming, SignalR hubs &amp; auth</text>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">1</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Backend Systems: REST &amp; gRPC Microservices, SignalR</text>
           </g>
 
           <!-- Discipline 2: Mobile App Development -->
           <g transform="translate(0, 58)">
             <rect width="396" height="34" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#7c3aed"/>
-            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">2</text>
-            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Mobile Engineering: Cross-Platform Native Apps</text>
-            <text x="36" y="28" fill="#6b21a8" class="sans" font-size="9">Production iOS &amp; Android, state management, offline sync &amp; biometrics</text>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">2</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Mobile Engineering: Cross-Platform Native Apps &amp; Offline Sync</text>
           </g>
 
           <!-- Discipline 3: DevOps & Cloud Infrastructure -->
           <g transform="translate(0, 96)">
             <rect width="396" height="34" rx="8" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#ea580c"/>
-            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">3</text>
-            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">DevOps &amp; Cloud: Automated CI/CD Pipelines</text>
-            <text x="36" y="28" fill="#c2410c" class="sans" font-size="9">Automated GitHub Actions, container orchestration &amp; Oracle Cloud SA</text>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">3</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">DevOps &amp; Cloud: Automated CI/CD Pipelines &amp; Oracle Cloud</text>
           </g>
 
           <!-- Discipline 4: Enterprise Databases -->
           <g transform="translate(0, 134)">
             <rect width="396" height="34" rx="8" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#059669"/>
-            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">4</text>
-            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Data Architecture: Enterprise Databases &amp; Caching</text>
-            <text x="36" y="28" fill="#047857" class="sans" font-size="9">High-concurrency PostgreSQL, indexing, ACID transactions &amp; Redis cache</text>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">4</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Data Architecture: Enterprise PostgreSQL &amp; Cloud Redis Cache</text>
           </g>
 
           <!-- Discipline 5: Applied AI & Automation -->
           <g transform="translate(0, 172)">
             <rect width="396" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#d97706"/>
-            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">5</text>
-            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Applied AI: Autonomous AI Agents &amp; Automation</text>
-            <text x="36" y="28" fill="#b45309" class="sans" font-size="9">Intelligent LLM tool-calling, agent workflows &amp; ATS ranking algorithms</text>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">5</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Applied AI: Autonomous AI Agents &amp; Intelligent Automation</text>
           </g>
         </g>
 
