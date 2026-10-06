@@ -25,13 +25,11 @@ Following executive feedback, the tablecloth was redesigned to eliminate crowded
      * **The University Hub:** Unified Campus Life & Student Services (`qr-student-housing-srms.svg`)
      * **Shopnik E-Commerce:** Multi-Tenant Retail Engine starting at R349/mo (`qr-shopnik-ecommerce.svg`)
      * **Sputnik Devs Academy:** Work-Integrated Learning (WIL) Learnerships (`qr-academy-apply.svg`)
-   * **Official Executive Leadership Plaque:**
-     * **Takudzwa Mupanesure** — Founder, Chief Executive Officer & Lead Architect
-     * **Sputnik Tech Group (Pty) Ltd** — 292 Surrey Avenue, Randburg, Johannesburg, 2194
-     * Direct: `takudzwam@sputniktechgroup.com` | `+27 66 321 5528` | `+263 787 015 123`
-     * *In Concurrence with:*
-       * **Kenneth Takudzwa Katsande** (Director of Operations)
-       * **Prince Lwazi Nkiwane** (Director of Growth)
+   * **Official Corporate Directory & Showcase Stand:**
+     * **Sputnik Tech Group (Pty) Ltd** & **Sputnik Devs Studio (Pty) Ltd**
+     * Enterprise Software Engineering • Campus Digital Infrastructure • High-Velocity Cloud
+     * `sputniktechgroup.com • sputnikdevs.com • info@sputniktechgroup.com`
+     * Next-Generation African Software Architecture • Johannesburg, South Africa
 
 4. **Flanking Side Skirts (Left X: 0–600, Right X: 2400–3000):**
    * Framed by vertical Zaha Hadid waves and bold co-branding emblems visible to cross-aisle pedestrian traffic.

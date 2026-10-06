@@ -40,7 +40,7 @@
     * **Kenneth's Front:** Scannable high-contrast QR code for **Tradey Bay Campus Super App** (`qr-tradeybay-playstore.svg`) pointing directly to Google Play Store & Apple App Store. Highlight: `0% Commission • v2.0.4+31 • Student Housing • Classifieds • POPIA Compliant`.
     * **Prince's Front:** Scannable high-contrast QR code for **Sputnik Devs Academy** (`qr-academy-apply.svg`) pointing to the WIL software learnership application portal. Highlight: `REST/gRPC • Flutter • DevOps CI/CD • Postgres/Redis • AI Agents`.
   * Platform Strip: `TRADEY BAY • STUDENT RES • UNIHUB • SHOPNIK SAAS • DEVS ACADEMY`
-  * Footer: `sputniktechgroup.com • sputnikdevs.com • 292 Surrey Avenue, Randburg, JHB`
+  * Footer: `sputniktechgroup.com • sputnikdevs.com • RSA Cloud Hosted`
 
 ## 4. High-Visibility Studio Presentation & Digital Production Files
 To guarantee extreme clarity and contrast during team previews and print vendor inspection, the mockups feature an Apple/Nike-style bright studio backdrop (`#ffffff` to `#f1f5f9` with floor drop-shadows), showcasing the jet-black combed cotton tee at 85% canvas scale with realistic collar ribbing and seam lines:

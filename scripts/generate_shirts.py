@@ -43,6 +43,7 @@ def build_shirt_svg(name, full_name, title, focus_tag, chips, qr_type, qr_badge_
     accent_dark = "#065f46" if is_kenneth else "#581c87"
     badge_bg = "#064e3b" if is_kenneth else "#3b0764"
     role_initials = "KK" if is_kenneth else "PN"
+    qr_scale = 3.862 if is_kenneth else 4.798
 
     chip1, chip2, chip3 = chips
 
@@ -269,11 +270,11 @@ def build_shirt_svg(name, full_name, title, focus_tag, chips, qr_type, qr_badge_
       </g>
 
       <!-- THE MASSIVE ULTRA-CRISP HIGH-CONTRAST SCANNABLE QR CODE CONTAINER -->
-      <!-- 250 x 250 mm pure white card with deep purple vector QR modules    -->
+      <!-- 240 x 240 mm pure white card with bold scannable vector QR modules -->
       <!-- Scannable from 2.5 meters away directly off staff's chest!         -->
       <g transform="translate(0, 15)">
         <rect x="-120" y="-120" width="240" height="240" rx="20" fill="#ffffff" stroke="#c084fc" stroke-width="2" filter="url(#badgeGlow)"/>
-        <path d="{qr_path}" fill="#2e1065" transform="translate(-95, -95) scale(0.42)"/>
+        <path d="{qr_path}" fill="#0f172a" transform="translate(-95, -95) scale({qr_scale})"/>
       </g>
 
       <!-- Direct Scan Call-To-Action Pill Button -->
@@ -299,7 +300,7 @@ def build_shirt_svg(name, full_name, title, focus_tag, chips, qr_type, qr_badge_
     <!-- Subtle Tech Specs on Lower Hem -->
     <g transform="translate(0, 1020)">
       <text x="0" y="0" fill="#64748b" class="mono" font-size="9" font-weight="600" text-anchor="middle">
-        SPUTNIK TECH GROUP (PTY) LTD • 292 SURREY AVE, RANDBURG, JHB • RSA HOSTED
+        SPUTNIK TECH GROUP (PTY) LTD • SPUTNIK DEVS STUDIO (PTY) LTD • RSA CLOUD HOSTED
       </text>
     </g>
 
@@ -480,9 +481,9 @@ def build_shirt_print_html():
             0% Commission • Verified Student Network
           </div>
 
-          <div class="qr-box" style="display: inline-block;">
-            <svg width="180" height="180" viewBox="0 0 100 100">
-              <path d="{qr_tb}" fill="#2e1065" transform="translate(6, 6) scale(0.35)"/>
+          <div class="qr-box" style="display: inline-block; background: #ffffff; padding: 10px; border-radius: 12px;">
+            <svg width="190" height="190" viewBox="0 0 49.2 49.2">
+              <path d="{qr_tb}" fill="#0f172a"/>
             </svg>
           </div>
 
@@ -547,9 +548,9 @@ def build_shirt_print_html():
             19-Day Intensive &amp; 3-Month Accredited WIL Tracks
           </div>
 
-          <div class="qr-box" style="display: inline-block;">
-            <svg width="180" height="180" viewBox="0 0 100 100">
-              <path d="{qr_acad}" fill="#2e1065" transform="translate(6, 6) scale(0.35)"/>
+          <div class="qr-box" style="display: inline-block; background: #ffffff; padding: 10px; border-radius: 12px;">
+            <svg width="190" height="190" viewBox="0 0 39.6 39.6">
+              <path d="{qr_acad}" fill="#0f172a"/>
             </svg>
           </div>
 

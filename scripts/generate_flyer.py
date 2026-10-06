@@ -7,11 +7,10 @@ Replicates the exact locked-down banner design and content, fully optimized for 
 1. Vibrant Zaha Hadid Architectural Background in royal brand purples.
 2. Left Column: Sputnik Tech Group, Tradey Bay (v2.0.4+31, notchless phone mockups, 4 platform pillars, scannable QR, POPIA compliant).
 3. Right Column: Sputnik Devs Studio, Student Res Management & University Hub (4 pillars, dual QRs), Shopnik (from R349/mo, 5 pillars, QR), Devs Academy (5 broad production disciplines, WIL, QR).
-4. Executive Leadership & Contact Footer:
-   - Takudzwa Mupanesure: Founder, Chief Executive Officer & Lead Architect
-   - In Concurrence with: Kenneth Takudzwa Katsande (Director of Operations) & Prince Lwazi Nkiwane (Director of Growth)
-   - 292 Surrey Avenue, Randburg, Johannesburg, 2194
-   - Direct: takudzwam@sputniktechgroup.com | info@sputniktechgroup.com | +27 66 321 5528 | +263 787 015 123
+4. Corporate Directory & Official Showcase Footer:
+   - SPUTNIK TECH GROUP (PTY) LTD & SPUTNIK DEVS STUDIO (PTY) LTD
+   - Corporate websites and official inquiry emails: info@sputniktechgroup.com • sputnikdevs.com
+   - In-Country High-Velocity Oracle Cloud Infrastructure • South Africa
 """
 
 import os
@@ -318,38 +317,57 @@ def build_flyer_svg():
       
       <!-- App Header Bar inside Hero Card -->
       <g transform="translate(16, 12)">
-        <image href="{tradeybay_primary_logo}" x="0" y="0" width="34" height="34" preserveAspectRatio="xMidYMid meet"/>
-        <text x="44" y="22" fill="#581c87" class="mono" font-size="11.5" font-weight="800" letter-spacing="1.5">CAMPUS SUPER APP</text>
+        <image href="{tradeybay_primary_logo}" x="0" y="0" width="36" height="36" preserveAspectRatio="xMidYMid meet"/>
+        <text x="46" y="23" fill="#581c87" class="mono" font-size="12" font-weight="800" letter-spacing="1.5">TRADEY BAY SUPER APP</text>
         
-        <rect x="495" y="4" width="138" height="26" rx="13" fill="#ecfdf5" stroke="#10b981" stroke-width="1.2"/>
-        <circle cx="510" cy="17" r="4" fill="#10b981"/>
-        <text x="522" y="21" fill="#065f46" class="mono" font-size="11" font-weight="800">LIVE v2.0.4+31</text>
+        <rect x="360" y="4" width="130" height="26" rx="13" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
+        <text x="425" y="21" fill="#6b21a8" class="mono" font-size="10" font-weight="800" text-anchor="middle">0% PLATFORM CUT</text>
+
+        <rect x="500" y="4" width="138" height="26" rx="13" fill="#ecfdf5" stroke="#10b981" stroke-width="1.2"/>
+        <circle cx="515" cy="17" r="4" fill="#10b981"/>
+        <text x="527" y="21" fill="#065f46" class="mono" font-size="11" font-weight="800">LIVE v2.0.4+31</text>
       </g>
 
-      <!-- DUAL NOTCHLESS FULLSCREEN PHONE MOCKUPS (Side-by-Side) -->
-      <!-- Light Mode Mock Phone (Left) -->
-      <g transform="translate(32, 60)" filter="url(#phoneShadowFlyer)">
-        <rect x="0" y="0" width="285" height="385" rx="24" fill="#1e1b4b" stroke="#7c3aed" stroke-width="2.5"/>
-        <rect x="4" y="4" width="277" height="377" rx="21" fill="#000000"/>
-        <!-- Notchless Screen -->
-        <g transform="translate(4, 4)" clip-path="url(#phoneScreenClipFlyerLight)">
-          <image href="{tradeybay_light_screenshot}" x="0" y="0" width="277" height="372" preserveAspectRatio="xMidYMid slice"/>
-        </g>
-        <!-- Phone Top Speaker Slit & Glare -->
-        <path d="M 4 4 L 100 4 L 4 200 Z" fill="#ffffff" opacity="0.06"/>
-        <rect x="110" y="373" width="65" height="3" rx="1.5" fill="#a855f7" opacity="0.8"/>
-      </g>
+      <!-- Headline & Subtitle -->
+      <g transform="translate(24, 68)">
+        <text x="0" y="14" fill="#0f172a" class="sans" font-size="17" font-weight="900">South Africa's Campus &amp; Local Commerce Super App</text>
+        <text x="0" y="34" fill="#475569" class="sans" font-size="12">Engineered for university students, local traders &amp; CIPC registered businesses.</text>
 
-      <!-- OLED Dark Mode Mock Phone (Right) -->
-      <g transform="translate(348, 60)" filter="url(#phoneShadowFlyer)">
-        <rect x="0" y="0" width="285" height="385" rx="24" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2.5"/>
-        <rect x="4" y="4" width="277" height="377" rx="21" fill="#000000"/>
-        <!-- Notchless Screen -->
-        <g transform="translate(4, 4)" clip-path="url(#phoneScreenClipFlyerDark)">
-          <image href="{tradeybay_dark_screenshot}" x="0" y="0" width="277" height="372" preserveAspectRatio="xMidYMid slice"/>
+        <!-- Feature Highlight 1: Live Auctions -->
+        <g transform="translate(0, 50)">
+          <rect width="617" height="74" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+          <rect x="12" y="11" width="52" height="52" rx="10" fill="#f3e8ff"/>
+          <use href="#icon-laptop-f" x="20" y="19"/>
+          <text x="74" y="28" fill="#0f172a" class="sans" font-size="14" font-weight="900">Sub-100ms SignalR Live Digital Auctions</text>
+          <text x="74" y="46" fill="#475569" class="sans" font-size="11.5">Instant sub-100ms price synchronization, outbid push alerts &amp; 60s anti-snipe timer.</text>
+          <text x="74" y="62" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Fair transparent real-time bidding for electronics, dorm gear &amp; student assets.</text>
         </g>
-        <path d="M 4 4 L 100 4 L 4 200 Z" fill="#ffffff" opacity="0.05"/>
-        <rect x="110" y="373" width="65" height="3" rx="1.5" fill="#a855f7" opacity="0.8"/>
+
+        <!-- Feature Highlight 2: Branded Storefronts -->
+        <g transform="translate(0, 134)">
+          <rect width="617" height="74" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+          <rect x="12" y="11" width="52" height="52" rx="10" fill="#f3e8ff"/>
+          <use href="#icon-storefront-f" x="20" y="19"/>
+          <text x="74" y="28" fill="#0f172a" class="sans" font-size="14" font-weight="900">Branded Digital Showrooms &amp; Verified Badges</text>
+          <text x="74" y="46" fill="#475569" class="sans" font-size="11.5">Free dedicated digital showrooms for private sellers and CIPC registered stores.</text>
+          <text x="74" y="62" fill="#6b21a8" class="sans" font-size="11" font-weight="700">Verified seller badges, catalog carousels &amp; direct in-app customer trust.</text>
+        </g>
+
+        <!-- Feature Highlight 3: Geospatial Campus Maps -->
+        <g transform="translate(0, 218)">
+          <rect width="617" height="74" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+          <rect x="12" y="11" width="52" height="52" rx="10" fill="#f3e8ff"/>
+          <use href="#icon-map-radar-f" x="20" y="19"/>
+          <text x="74" y="28" fill="#0f172a" class="sans" font-size="14" font-weight="900">Interactive Split-View Geospatial Maps</text>
+          <text x="74" y="46" fill="#475569" class="sans" font-size="11.5">Search-as-you-move across university campuses and South African metros.</text>
+          <text x="74" y="62" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Clustered map price pins and fast radius filtering for nearby dorm deals.</text>
+        </g>
+
+        <!-- Technology & Trust Badge Strip -->
+        <g transform="translate(0, 302)">
+          <rect width="617" height="30" rx="8" fill="#f5f3ff" stroke="#c084fc" stroke-width="1"/>
+          <text x="308" y="20" fill="#6b21a8" class="mono" font-size="10" font-weight="800" text-anchor="middle">⚡ FLUTTER CROSS-PLATFORM • GOOGLE PLAY &amp; APP STORE • 100% POPIA SECURE</text>
+        </g>
       </g>
     </g>
 
@@ -754,34 +772,34 @@ def build_flyer_svg():
 
 
   <!-- =================================================================== -->
-  <!-- BOTTOM BASE & EXECUTIVE LEADERSHIP ZONE (Y: 1945 to 2085)           -->
+  <!-- BOTTOM BASE & CORPORATE DIRECTORY ZONE (Y: 1945 to 2085)            -->
   <!-- =================================================================== -->
   <g transform="translate(0, 1945)">
     <rect width="1480" height="140" fill="#fdfcff"/>
     <line x1="0" y1="0" x2="1480" y2="0" stroke="#d8b4fe" stroke-width="1.5"/>
 
-    <!-- Left Footer: Sputnik Tech Group & CEO -->
-    <g transform="translate(40, 28)">
+    <!-- Left Footer: Sputnik Tech Group -->
+    <g transform="translate(40, 32)">
       <text x="0" y="0" fill="#0f172a" class="sans" font-size="16" font-weight="900">SPUTNIK TECH GROUP (PTY) LTD</text>
-      <text x="0" y="20" fill="#581c87" class="sans" font-size="13" font-weight="800">Takudzwa Mupanesure <tspan fill="#64748b" font-weight="500">— Founder, Chief Executive Officer &amp; Lead Architect</tspan></text>
-      <text x="0" y="40" fill="#475569" class="sans" font-size="12">292 Surrey Avenue, Randburg, Johannesburg, 2194 • Direct: takudzwam@sputniktechgroup.com</text>
-      <text x="0" y="58" fill="#7c3aed" class="mono" font-size="11.5" font-weight="700">Tel: +27 66 321 5528 | +263 787 015 123 • sputniktechgroup.com</text>
+      <text x="0" y="22" fill="#581c87" class="sans" font-size="13" font-weight="700">Consumer &amp; Mobile Software Innovation</text>
+      <text x="0" y="44" fill="#64748b" class="sans" font-size="12">Johannesburg, South Africa • info@sputniktechgroup.com</text>
+      <text x="0" y="64" fill="#7c3aed" class="mono" font-size="12" font-weight="700">sputniktechgroup.com</text>
     </g>
 
-    <!-- Center Badge & Leadership Concurrence -->
-    <g transform="translate(740, 28)">
-      <text x="0" y="0" fill="#7c3aed" class="mono" font-size="11" font-weight="800" letter-spacing="1" text-anchor="middle">IN CONCURRENCE WITH EXECUTIVE LEADERSHIP:</text>
-      <text x="0" y="22" fill="#0f172a" class="sans" font-size="13" font-weight="800" text-anchor="middle">Kenneth Takudzwa Katsande <tspan fill="#64748b" font-weight="500">(Director of Operations)</tspan></text>
-      <text x="0" y="42" fill="#0f172a" class="sans" font-size="13" font-weight="800" text-anchor="middle">Prince Lwazi Nkiwane <tspan fill="#64748b" font-weight="500">(Director of Growth)</tspan></text>
-      <text x="0" y="60" fill="#6b21a8" class="mono" font-size="11" font-weight="700" text-anchor="middle">info@sputniktechgroup.com • info@sputnikdevs.com</text>
+    <!-- Center Badge & Official Showcase Seal -->
+    <g transform="translate(740, 42)">
+      <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadowFlyer)"/>
+      <text x="0" y="6" fill="#7c3aed" class="sans" font-size="13" font-weight="900" text-anchor="middle">ST</text>
+      <text x="0" y="38" fill="#6b21a8" class="mono" font-size="11" font-weight="800" letter-spacing="1.2" text-anchor="middle">SOUTH AFRICA TECH SHOWCASE</text>
+      <text x="0" y="56" fill="#64748b" class="mono" font-size="11" text-anchor="middle">info@sputniktechgroup.com • info@sputnikdevs.com</text>
     </g>
 
     <!-- Right Footer: Sputnik Devs Studio -->
-    <g transform="translate(1440, 28)">
+    <g transform="translate(1440, 32)">
       <text x="0" y="0" fill="#0f172a" class="sans" font-size="16" font-weight="900" text-anchor="end">SPUTNIK DEVS STUDIO (PTY) LTD</text>
-      <text x="0" y="20" fill="#64748b" class="sans" font-size="13" text-anchor="end">Enterprise Cloud, Higher Ed SaaS &amp; Tech Academy</text>
-      <text x="0" y="40" fill="#7c3aed" class="mono" font-size="12" font-weight="700" text-anchor="end">sputnikdevs.com • info@sputnikdevs.com</text>
-      <text x="0" y="58" fill="#94a3b8" class="mono" font-size="10.5" text-anchor="end">[ A5 HANDHELD FLYER • SOUTH AFRICA TECH SHOWCASE ]</text>
+      <text x="0" y="22" fill="#581c87" class="sans" font-size="13" font-weight="700" text-anchor="end">Enterprise Cloud, Higher Ed SaaS &amp; Tech Academy</text>
+      <text x="0" y="44" fill="#64748b" class="sans" font-size="12" text-anchor="end">Johannesburg, South Africa • info@sputnikdevs.com</text>
+      <text x="0" y="64" fill="#7c3aed" class="mono" font-size="12" font-weight="700" text-anchor="end">sputnikdevs.com</text>
     </g>
   </g>
 

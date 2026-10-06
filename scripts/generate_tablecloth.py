@@ -10,11 +10,9 @@ Clean & Decluttered Design (Per User Request):
 - Prominent Product Logos & Names: Tradey Bay, Hostel SRMS, The University Hub, Shopnik E-Commerce, Sputnik Devs Academy.
 - Large, scannable QR codes for each product.
 - Clean Tabletop console with dedicated device demo pads and generous open breathing room for laptops/tablets.
-- Official Executive Leadership Plaque:
-  Takudzwa Mupanesure (Founder, Chief Executive Officer & Lead Architect)
-  Sputnik Tech Group (Pty) Ltd | 292 Surrey Avenue, Randburg, Johannesburg, 2194
-  Direct: takudzwam@sputniktechgroup.com | +27 66 321 5528 | +263 787 015 123
-  In Concurrence with: Kenneth Takudzwa Katsande (Director of Operations) & Prince Lwazi Nkiwane (Director of Growth)
+- Official Showcase Operations & Architecture Panel:
+  Sputnik Tech Group (Pty) Ltd & Sputnik Devs Studio (Pty) Ltd
+  Official corporate channels: sputniktechgroup.com • sputnikdevs.com • info@sputniktechgroup.com
 """
 
 import os
@@ -258,7 +256,8 @@ def build_tablecloth_svg():
       <g transform="translate(145, 240)">
         <rect width="230" height="230" rx="20" fill="#faf5ff" stroke="#7c3aed" stroke-width="2" filter="url(#softCardShadow)"/>
         <rect x="15" y="15" width="200" height="200" rx="14" fill="#ffffff"/>
-        <path d="{qr_tb}" fill="#2e1065" transform="translate(26, 26) scale(0.42)"/>
+        <!-- Inlined Vector QR Path (49.2 x 49.2 scaled to 170x170, offset 30, 30) -->
+        <path d="{qr_tb}" fill="#2e1065" transform="translate(30, 30) scale(3.455)"/>
       </g>
 
       <g transform="translate(260, 505)">
@@ -293,7 +292,8 @@ def build_tablecloth_svg():
       <g transform="translate(145, 240)">
         <rect width="230" height="230" rx="20" fill="#faf5ff" stroke="#7c3aed" stroke-width="2" filter="url(#softCardShadow)"/>
         <rect x="15" y="15" width="200" height="200" rx="14" fill="#ffffff"/>
-        <path d="{qr_acad}" fill="#2e1065" transform="translate(26, 26) scale(0.42)"/>
+        <!-- Inlined Vector QR Path (39.6 x 39.6 scaled to 170x170, offset 30, 30) -->
+        <path d="{qr_acad}" fill="#2e1065" transform="translate(30, 30) scale(4.293)"/>
       </g>
 
       <g transform="translate(260, 505)">
@@ -361,11 +361,12 @@ def build_tablecloth_svg():
         <text x="0" y="64" fill="#6b21a8" class="mono" font-size="11" font-weight="700" text-anchor="middle">0% Listing Fees • Student Network</text>
       </g>
 
-      <!-- Scannable QR -->
-      <g transform="translate(155, 215)">
-        <rect width="180" height="180" rx="16" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="156" height="156" rx="10" fill="#ffffff"/>
-        <path d="{qr_tb}" fill="#2e1065" transform="translate(21, 21) scale(0.33)"/>
+      <!-- Scannable QR (160x160mm bold path) -->
+      <g transform="translate(145, 205)">
+        <rect width="200" height="200" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="176" height="176" rx="12" fill="#ffffff"/>
+        <!-- 49.2 scaled by 3.252 = 160mm -->
+        <path d="{qr_tb}" fill="#2e1065" transform="translate(20, 20) scale(3.252)"/>
       </g>
 
       <!-- Button / Link -->
@@ -391,11 +392,12 @@ def build_tablecloth_svg():
         <text x="0" y="64" fill="#7c3aed" class="mono" font-size="11" font-weight="700" text-anchor="middle">6 Portals • Leases &amp; NSFAS Billing</text>
       </g>
 
-      <!-- Scannable QR -->
-      <g transform="translate(155, 215)">
-        <rect width="180" height="180" rx="16" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="156" height="156" rx="10" fill="#ffffff"/>
-        <path d="{qr_srms}" fill="#2e1065" transform="translate(21, 21) scale(0.33)"/>
+      <!-- Scannable QR (160x160mm bold path) -->
+      <g transform="translate(145, 205)">
+        <rect width="200" height="200" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="176" height="176" rx="12" fill="#ffffff"/>
+        <!-- 39.6 scaled by 4.040 = 160mm -->
+        <path d="{qr_srms}" fill="#2e1065" transform="translate(20, 20) scale(4.040)"/>
       </g>
 
       <!-- Button / Link -->
@@ -421,11 +423,12 @@ def build_tablecloth_svg():
         <text x="0" y="64" fill="#9333ea" class="mono" font-size="11" font-weight="700" text-anchor="middle">Accredited Student Residence Network</text>
       </g>
 
-      <!-- Scannable QR -->
-      <g transform="translate(155, 215)">
-        <rect width="180" height="180" rx="16" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="156" height="156" rx="10" fill="#ffffff"/>
-        <path d="{qr_unihub}" fill="#2e1065" transform="translate(21, 21) scale(0.33)"/>
+      <!-- Scannable QR (160x160mm bold path) -->
+      <g transform="translate(145, 205)">
+        <rect width="200" height="200" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="176" height="176" rx="12" fill="#ffffff"/>
+        <!-- 44.4 scaled by 3.604 = 160mm -->
+        <path d="{qr_unihub}" fill="#2e1065" transform="translate(20, 20) scale(3.604)"/>
       </g>
 
       <!-- Button / Link -->
@@ -451,11 +454,12 @@ def build_tablecloth_svg():
         <text x="0" y="64" fill="#059669" class="mono" font-size="11" font-weight="800" text-anchor="middle">Starts R349/Mo • Oracle Cloud SA (JHB)</text>
       </g>
 
-      <!-- Scannable QR -->
-      <g transform="translate(155, 215)">
-        <rect width="180" height="180" rx="16" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="156" height="156" rx="10" fill="#ffffff"/>
-        <path d="{qr_shopnik}" fill="#2e1065" transform="translate(21, 21) scale(0.33)"/>
+      <!-- Scannable QR (160x160mm bold path) -->
+      <g transform="translate(145, 205)">
+        <rect width="200" height="200" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="176" height="176" rx="12" fill="#ffffff"/>
+        <!-- 39.6 scaled by 4.040 = 160mm -->
+        <path d="{qr_shopnik}" fill="#2e1065" transform="translate(20, 20) scale(4.040)"/>
       </g>
 
       <!-- Button / Link -->
@@ -481,11 +485,12 @@ def build_tablecloth_svg():
         <text x="0" y="64" fill="#ea580c" class="mono" font-size="11" font-weight="800" text-anchor="middle">19-Day Intensive &amp; 3-Month WIL Tracks</text>
       </g>
 
-      <!-- Scannable QR -->
-      <g transform="translate(155, 215)">
-        <rect width="180" height="180" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" filter="url(#softCardShadow)"/>
-        <rect x="12" y="12" width="156" height="156" rx="10" fill="#ffffff"/>
-        <path d="{qr_acad}" fill="#2e1065" transform="translate(21, 21) scale(0.33)"/>
+      <!-- Scannable QR (160x160mm bold path) -->
+      <g transform="translate(145, 205)">
+        <rect width="200" height="200" rx="18" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+        <rect x="12" y="12" width="176" height="176" rx="12" fill="#ffffff"/>
+        <!-- 39.6 scaled by 4.040 = 160mm -->
+        <path d="{qr_acad}" fill="#2e1065" transform="translate(20, 20) scale(4.040)"/>
       </g>
 
       <!-- Button / Link -->
@@ -496,7 +501,8 @@ def build_tablecloth_svg():
       </g>
     </g>
 
-    <!-- 2C. EXECUTIVE LEADERSHIP & CORPORATE CONTACT FOOTER (Y: 715..940) -->
+    <!-- 2C. CORPORATE DIRECTORY & OFFICIAL SHOWCASE FOOTER (Y: 715..940) -->
+    <!-- Decluttered, Prestigious, Zero Personal Contact Info -->
     <g transform="translate(45, 715)">
       <rect width="2610" height="230" rx="24" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#softCardShadow)"/>
       <rect width="2610" height="42" rx="24" fill="url(#zahaPurple1)" opacity="0.10"/>
@@ -504,74 +510,40 @@ def build_tablecloth_svg():
 
       <!-- Header Pill -->
       <g transform="translate(1305, 12)">
-        <rect x="-190" y="0" width="380" height="24" rx="12" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
-        <circle cx="-165" cy="12" r="4" fill="#7c3aed"/>
-        <text x="0" y="16" fill="#581c87" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">CORPORATE HEADQUARTERS &amp; LEADERSHIP</text>
+        <rect x="-210" y="0" width="420" height="24" rx="12" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
+        <circle cx="-185" cy="12" r="4" fill="#7c3aed"/>
+        <text x="0" y="16" fill="#581c87" class="mono" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">OFFICIAL EXHIBITION SHOWCASE STAND</text>
       </g>
 
-      <!-- 3 Executive Columns -->
-      <!-- Column 1: Founder & CEO (X: 50) -->
+      <!-- 3 Corporate Columns (Clean, Prestigious, Safe) -->
+      <!-- Column 1: Sputnik Tech Group (X: 60) -->
       <g transform="translate(60, 68)">
-        <rect x="-10" y="-10" width="760" height="150" rx="16" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
-        <circle cx="20" cy="20" r="14" fill="#7c3aed"/>
-        <text x="20" y="25" fill="#ffffff" class="mono" font-size="14" font-weight="900" text-anchor="middle">TM</text>
-        
-        <text x="48" y="18" fill="#1e1b4b" class="sans" font-size="17" font-weight="900">Takudzwa Mupanesure</text>
-        <text x="48" y="38" fill="#6b21a8" class="sans" font-size="13" font-weight="700">Founder, Chief Executive Officer &amp; Lead Architect</text>
-        <text x="48" y="62" fill="#0f172a" class="sans" font-size="13" font-weight="800">Sputnik Tech Group (Pty) Ltd</text>
-        <text x="48" y="82" fill="#475569" class="mono" font-size="12">📍 292 Surrey Avenue, Randburg, Johannesburg, 2194</text>
-        <text x="48" y="104" fill="#581c87" class="mono" font-size="12" font-weight="700">Direct: takudzwam@sputniktechgroup.com</text>
-        <text x="48" y="124" fill="#475569" class="mono" font-size="12">RSA: +27 66 321 5528  |  Intl: +263 787 015 123</text>
+        <rect x="-10" y="-10" width="780" height="150" rx="16" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
+        <image href="{sputnik_tech_logo}" x="20" y="12" width="220" height="60" preserveAspectRatio="xMidYMid meet"/>
+        <text x="20" y="96" fill="#1e1b4b" class="sans" font-size="17" font-weight="900">SPUTNIK TECH GROUP (PTY) LTD</text>
+        <text x="20" y="116" fill="#6b21a8" class="sans" font-size="12.5" font-weight="700">Consumer &amp; Mobile Software Innovation</text>
+        <text x="20" y="136" fill="#475569" class="mono" font-size="11.5">sputniktechgroup.com • info@sputniktechgroup.com</text>
       </g>
 
-      <!-- Column 2: In Concurrence With (X: 860) -->
-      <g transform="translate(860, 68)">
-        <rect x="-10" y="-10" width="860" height="150" rx="16" fill="#ffffff" stroke="#c084fc" stroke-width="1.2" filter="url(#softCardShadow)"/>
-        
-        <text x="10" y="16" fill="#7c3aed" class="sans" font-size="12" font-weight="800" letter-spacing="1">IN CONCURRENCE WITH EXECUTIVE DIRECTORS:</text>
-        
-        <!-- Kenneth Katsande -->
-        <g transform="translate(10, 36)">
-          <circle cx="16" cy="16" r="14" fill="#10b981"/>
-          <text x="16" y="21" fill="#ffffff" class="mono" font-size="13" font-weight="900" text-anchor="middle">KK</text>
-          <text x="42" y="14" fill="#0f172a" class="sans" font-size="15" font-weight="900">Kenneth Takudzwa Katsande</text>
-          <text x="42" y="32" fill="#059669" class="sans" font-size="12.5" font-weight="800">Director of Operations</text>
-          <text x="42" y="48" fill="#64748b" class="sans" font-size="11">Marketplace Operations, Scale &amp; Commercial Partnerships</text>
-        </g>
-
-        <!-- Prince Nkiwane -->
-        <g transform="translate(10, 96)">
-          <circle cx="16" cy="16" r="14" fill="#a855f7"/>
-          <text x="16" y="21" fill="#ffffff" class="mono" font-size="13" font-weight="900" text-anchor="middle">PN</text>
-          <text x="42" y="14" fill="#0f172a" class="sans" font-size="15" font-weight="900">Prince Lwazi Nkiwane</text>
-          <text x="42" y="32" fill="#7c3aed" class="sans" font-size="12.5" font-weight="800">Director of Growth</text>
-          <text x="42" y="48" fill="#64748b" class="sans" font-size="11">Campus Talent Pipeline, Academy WIL &amp; User Acquisition</text>
-        </g>
+      <!-- Column 2: Next-Gen Architecture Center (X: 880) -->
+      <g transform="translate(880, 68)">
+        <rect x="-10" y="-10" width="840" height="150" rx="16" fill="#ffffff" stroke="#c084fc" stroke-width="1.2" filter="url(#softCardShadow)"/>
+        <circle cx="420" cy="24" r="18" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+        <text x="420" y="29" fill="#7c3aed" class="sans" font-size="11" font-weight="900" text-anchor="middle">ST</text>
+        <text x="420" y="64" fill="#1e1b4b" class="sans" font-size="16" font-weight="900" text-anchor="middle">NEXT-GENERATION AFRICAN SOFTWARE ARCHITECTURE</text>
+        <text x="420" y="86" fill="#475569" class="sans" font-size="13" text-anchor="middle">Powering Higher Education, Campus Commerce &amp; Enterprise Cloud</text>
+        <rect x="220" y="102" width="400" height="28" rx="14" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+        <text x="420" y="121" fill="#6b21a8" class="mono" font-size="11" font-weight="800" text-anchor="middle">Johannesburg, South Africa • In-Country Oracle Cloud</text>
       </g>
 
-      <!-- Column 3: Digital Portals & Inquiries (X: 1760) -->
+      <!-- Column 3: Sputnik Devs Studio (X: 1760) -->
       <g transform="translate(1760, 68)">
-        <rect x="-10" y="-10" width="800" height="150" rx="16" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
-        <text x="10" y="16" fill="#3b0764" class="sans" font-size="14" font-weight="900" letter-spacing="1">OFFICIAL DIGITAL PORTALS &amp; SUPPORT</text>
-        
-        <g transform="translate(10, 36)">
-          <rect width="365" height="42" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
-          <text x="20" y="18" fill="#581c87" class="mono" font-size="11" font-weight="800">🌐 Corporate Portal:</text>
-          <text x="20" y="32" fill="#0f172a" class="mono" font-size="11">sputniktechgroup.com</text>
-        </g>
-
-        <g transform="translate(400, 36)">
-          <rect width="370" height="42" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
-          <text x="20" y="18" fill="#581c87" class="mono" font-size="11" font-weight="800">💻 Studio &amp; Academy:</text>
-          <text x="20" y="32" fill="#0f172a" class="mono" font-size="11">sputnikdevs.com</text>
-        </g>
-
-        <g transform="translate(10, 90)">
-          <rect width="760" height="38" rx="8" fill="#f5f3ff" stroke="#c084fc" stroke-width="1"/>
-          <text x="380" y="24" fill="#4c1d95" class="mono" font-size="11.5" font-weight="800" text-anchor="middle">📧 Direct Showcase Inquiries: info@sputniktechgroup.com</text>
-        </g>
+        <rect x="-10" y="-10" width="780" height="150" rx="16" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
+        <image href="{sputnik_devs_logo}" x="20" y="12" width="220" height="60" preserveAspectRatio="xMidYMid meet"/>
+        <text x="20" y="96" fill="#1e1b4b" class="sans" font-size="17" font-weight="900">SPUTNIK DEVS STUDIO (PTY) LTD</text>
+        <text x="20" y="116" fill="#6b21a8" class="sans" font-size="12.5" font-weight="700">Enterprise Cloud, Higher Ed SaaS &amp; Tech Academy</text>
+        <text x="20" y="136" fill="#475569" class="mono" font-size="11.5">sputnikdevs.com • info@sputnikdevs.com</text>
       </g>
-
     </g>
 
   </g>
@@ -600,7 +572,7 @@ def build_tablecloth_svg():
         <rect width="220" height="220" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
         <g transform="translate(20, 20)">
           <rect width="180" height="180" rx="12" fill="#ffffff"/>
-          <path d="{qr_tb}" fill="#2e1065" transform="translate(13, 13) scale(0.38)"/>
+          <path d="{qr_tb}" fill="#2e1065" transform="translate(10, 10) scale(3.252)"/>
         </g>
       </g>
 
@@ -650,7 +622,7 @@ def build_tablecloth_svg():
         <rect width="220" height="220" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
         <g transform="translate(20, 20)">
           <rect width="180" height="180" rx="12" fill="#ffffff"/>
-          <path d="{qr_acad}" fill="#2e1065" transform="translate(13, 13) scale(0.38)"/>
+          <path d="{qr_acad}" fill="#2e1065" transform="translate(10, 10) scale(4.040)"/>
         </g>
       </g>
 
@@ -692,7 +664,7 @@ def build_tablecloth_svg():
       <text x="0" y="6" fill="#581c87" class="mono" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">SOUTH AFRICA TECH SHOWCASE</text>
 
       <text x="0" y="55" fill="#1e1b4b" class="sans" font-size="30" font-weight="900" letter-spacing="1" text-anchor="middle">SPUTNIK TECH GROUP &amp; SPUTNIK DEVS STUDIO</text>
-      <text x="0" y="85" fill="#6b21a8" class="sans" font-size="15" font-weight="700" text-anchor="middle">292 Surrey Avenue, Randburg, Johannesburg, 2194 • South Africa</text>
+      <text x="0" y="85" fill="#6b21a8" class="sans" font-size="15" font-weight="700" text-anchor="middle">Enterprise Software Engineering &amp; High-Velocity Cloud Platforms</text>
     </g>
 
     <!-- Side-by-Side Corporate Logos -->
@@ -703,12 +675,12 @@ def build_tablecloth_svg():
       <image href="{sputnik_devs_logo}" x="0" y="0" width="320" height="100" preserveAspectRatio="xMidYMid meet"/>
     </g>
 
-    <!-- Executive Leadership Credit -->
+    <!-- Corporate Showcase & Operations Panel -->
     <g transform="translate(0, 160)">
       <rect x="-600" y="-35" width="1200" height="110" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2" filter="url(#softCardShadow)"/>
-      <text x="0" y="-2" fill="#3b0764" class="sans" font-size="16" font-weight="900" text-anchor="middle">Takudzwa Mupanesure — Founder, Chief Executive Officer &amp; Lead Architect</text>
-      <text x="0" y="24" fill="#6b21a8" class="sans" font-size="13" font-weight="700" text-anchor="middle">In Concurrence with: Kenneth Takudzwa Katsande (Director of Operations) &amp; Prince Lwazi Nkiwane (Director of Growth)</text>
-      <text x="0" y="50" fill="#475569" class="mono" font-size="11.5" text-anchor="middle">Direct: takudzwam@sputniktechgroup.com | +27 66 321 5528 | +263 787 015 123</text>
+      <text x="0" y="-2" fill="#3b0764" class="sans" font-size="17" font-weight="900" text-anchor="middle">OFFICIAL EXHIBITION OPERATIONS &amp; ARCHITECTURE TEAM</text>
+      <text x="0" y="24" fill="#6b21a8" class="sans" font-size="13.5" font-weight="700" text-anchor="middle">Sputnik Tech Group (Pty) Ltd &amp; Sputnik Devs Studio (Pty) Ltd</text>
+      <text x="0" y="50" fill="#475569" class="mono" font-size="12" text-anchor="middle">sputniktechgroup.com • sputnikdevs.com • info@sputniktechgroup.com</text>
     </g>
   </g>
 

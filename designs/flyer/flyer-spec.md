@@ -74,18 +74,15 @@ The A5 canvas is structured into two mirrored, balanced ecosystem pillars spanni
 * Dashed vertical divider along X: 740 with purple alignment node accents at Y: 525 and Y: 1060.
 * Cards on both columns share identical heights (Card 1: 465px, Card 2: 520px, Card 3: 660px) and end at exactly Y: 1735 (`195 + 1735 = 1930`), giving 15px clearance before the footer.
 
-### E. Bottom Executive Leadership Footer (Y: 1945–2085, Height: 140px)
+### E. Bottom Corporate Directory & Showcase Stand (Y: 1945–2085, Height: 140px)
 * **Left Section:**
   * `SPUTNIK TECH GROUP (PTY) LTD`
-  * `Takudzwa Mupanesure — Founder, Chief Executive Officer & Lead Architect`
-  * `292 Surrey Avenue, Randburg, Johannesburg, 2194`
-  * `Direct: takudzwam@sputniktechgroup.com`
-  * `Tel: +27 66 321 5528 | +263 787 015 123 • sputniktechgroup.com`
+  * `Consumer & Campus Mobile Software Innovation`
+  * `sputniktechgroup.com • info@sputniktechgroup.com`
 * **Center Section:**
-  * `IN CONCURRENCE WITH EXECUTIVE LEADERSHIP:`
-  * `Kenneth Takudzwa Katsande (Director of Operations)`
-  * `Prince Lwazi Nkiwane (Director of Growth)`
-  * `info@sputniktechgroup.com • info@sputnikdevs.com`
+  * `NEXT-GEN ARCHITECTURE & CLOUD INFRASTRUCTURE`
+  * `Oracle Cloud Johannesburg Infrastructure • High-Velocity APIs`
+  * `Official Exhibition Showcase Stand • POPIA Compliant`
 * **Right Section:**
   * `SPUTNIK DEVS STUDIO (PTY) LTD`
   * `Enterprise Cloud, Higher Ed SaaS & Tech Academy`

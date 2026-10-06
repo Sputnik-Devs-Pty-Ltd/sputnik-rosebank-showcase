@@ -378,8 +378,8 @@
         <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
         <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
         <use href="#icon-laptop" x="15" y="15"/>
-        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">1. Classified Ads &amp; Real-Time Auctions</text>
-        <text x="76" y="53" fill="#7c3aed" class="sans" font-size="12" font-weight="700">Vehicles, Solar, Tech &amp; Dorm Gear • Sub-100ms SignalR Live Bidding</text>
+        <text x="76" y="32" fill="#0f172a" class="sans" font-size="14" font-weight="900">1. Classified Ads &amp; Real-Time Auctions</text>
+        <text x="76" y="52" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Vehicles, Solar, Tech &amp; Sub-100ms SignalR Live Bidding</text>
       </g>
 
       <!-- Point 2: Seller & Business Storefronts -->
@@ -387,8 +387,8 @@
         <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
         <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
         <use href="#icon-storefront" x="15" y="15"/>
-        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">2. Branded Seller &amp; Business Storefronts</text>
-        <text x="76" y="53" fill="#6b21a8" class="sans" font-size="12" font-weight="700">Digital Showrooms for Sellers &amp; CIPC Stores • Verified Badges</text>
+        <text x="76" y="32" fill="#0f172a" class="sans" font-size="14" font-weight="900">2. Branded Seller &amp; Business Storefronts</text>
+        <text x="76" y="52" fill="#6b21a8" class="sans" font-size="11" font-weight="700">Digital Showrooms for Private Sellers &amp; CIPC Stores</text>
       </g>
 
       <!-- Point 3: Interactive Maps & Split View -->
@@ -396,8 +396,8 @@
         <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
         <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
         <use href="#icon-map-radar" x="15" y="15"/>
-        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">3. Interactive Split-View Geospatial Maps</text>
-        <text x="76" y="53" fill="#7c3aed" class="sans" font-size="12" font-weight="700">Search-As-You-Move Across SA Metros • Clustered Map Price Pins</text>
+        <text x="76" y="32" fill="#0f172a" class="sans" font-size="14" font-weight="900">3. Interactive Split-View Geospatial Maps</text>
+        <text x="76" y="52" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Search-As-You-Move Across Metros &amp; Campuses</text>
       </g>
 
       <!-- Point 4: Jobs & Native AI ATS Resume Builder -->
@@ -405,8 +405,8 @@
         <rect width="432" height="74" rx="16" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2" filter="url(#softCardShadow)"/>
         <rect x="12" y="11" width="52" height="52" rx="12" fill="#faf5ff"/>
         <use href="#icon-ats-resume" x="15" y="15"/>
-        <text x="76" y="33" fill="#0f172a" class="sans" font-size="15" font-weight="900">4. Jobs Network &amp; Native AI ATS Resume Builder</text>
-        <text x="76" y="53" fill="#b45309" class="sans" font-size="12" font-weight="700">Built-In ATS Resume Builder (4 PDF Templates) • 1-Tap Apply</text>
+        <text x="76" y="32" fill="#0f172a" class="sans" font-size="13.5" font-weight="900">4. Jobs Portal &amp; AI ATS Resume Builder</text>
+        <text x="76" y="52" fill="#b45309" class="sans" font-size="11" font-weight="700">Built-In ATS Resume Builder • 1-Tap Quick Apply</text>
       </g>
     </g>
 
@@ -512,29 +512,29 @@
         <!-- Pillar 1: Hostel SRMS -->
         <g transform="translate(0, 20)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Hostel SRMS (Residence Operators &amp; Landlords)</text>
-          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">6 Integrated Portals: Student, Owner, Manager, Catering, Admin &amp; Repairs</text>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Hostel SRMS (Student Residences &amp; Landlords)</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">6 Unified Portals: Student, Owner, Manager &amp; Maintenance</text>
         </g>
 
         <!-- Pillar 2: University Hub -->
         <g transform="translate(0, 58)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">The University Hub (Higher Education Institutions)</text>
-          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">AI Smart Allocation, NSFAS/sBux Tracking &amp; Centralized Check-Ins</text>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">The University Hub (Tertiary Institutions)</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">AI Student Allocation, NSFAS Tracking &amp; Central Check-Ins</text>
         </g>
 
         <!-- Pillar 3: Biometrics & Interconnected API -->
         <g transform="translate(0, 96)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Biometric Turnstiles &amp; Interconnected Cloud REST API</text>
-          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Hardware Turnstiles, Live Student Presence &amp; Real-Time Cloud Sync</text>
+          <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Biometric Hardware &amp; Interconnected Cloud API</text>
+          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Turnstile Integration &amp; Live Real-Time Student Presence</text>
         </g>
 
         <!-- Pillar 4: Automated Billing, Bursaries & Incident SOS -->
         <g transform="translate(0, 134)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
           <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Split Bursary Invoicing &amp; Emergency SOS Alerts</text>
-          <text x="20" y="27" fill="#b45309" class="sans" font-size="11" font-weight="700">Automated Student Statements, Bursary Funding &amp; SLA Incident Alerts</text>
+          <text x="20" y="27" fill="#b45309" class="sans" font-size="11" font-weight="700">Automated Student Invoicing &amp; Fast Emergency SOS Alerts</text>
         </g>
 
         <!-- Connectivity Strip Banner -->
@@ -601,35 +601,35 @@
         <g transform="translate(0, 18)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
           <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Day-1 SA Payments &amp; 0% Platform Commission</text>
-          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Paystack, PayFast, Cash on Delivery (COD) &amp; In-Store Collection</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Paystack, PayFast, Cash on Delivery &amp; In-Store Pickup</text>
         </g>
 
         <!-- Pillar 2: Omnichannel Catalog & Dynamic Themes -->
         <g transform="translate(0, 54)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
           <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Rich Product Catalog &amp; Multi-Variant Matrices</text>
-          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Color Swatches, Size Tiers, Real-Time Inventory &amp; Live Customizer</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Color Swatches, Size Tiers &amp; Real-Time Inventory Tracking</text>
         </g>
 
         <!-- Pillar 3: Store Management Dashboard & Coupons -->
         <g transform="translate(0, 90)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
           <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Store Management Dashboard &amp; Coupons Engine</text>
-          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Live Sales Analytics, Order Processing &amp; Automated Order Emails</text>
+          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Live Sales Analytics, Order Processing &amp; Instant Receipts</text>
         </g>
 
         <!-- Pillar 4: Oracle Cloud Hosting SA -->
         <g transform="translate(0, 126)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
           <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">In-Country Oracle Cloud SA Hosting (Johannesburg)</text>
-          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Sub-Second Response • Built with .NET 10 &amp; Cloud Redis Cache</text>
+          <text x="20" y="27" fill="#059669" class="sans" font-size="11" font-weight="700">Sub-Second Speeds • High-Speed Redis Cache &amp; .NET 10</text>
         </g>
 
         <!-- Pillar 5: AI Recommendations & Customer Reviews -->
         <g transform="translate(0, 162)">
           <circle cx="8" cy="8" r="4" fill="#7c3aed"/>
           <text x="20" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">AI Recommendations &amp; Customer Reviews</text>
-          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Built-In Smart AI Product Suggestions &amp; Verified Buyer Reviews</text>
+          <text x="20" y="27" fill="#7c3aed" class="sans" font-size="11" font-weight="700">Smart AI Product Suggestions &amp; Verified Buyer Reviews</text>
         </g>
 
         <!-- Expanded Scannable Shopnik QR Block (Utilizing bottom area) -->
@@ -674,13 +674,13 @@
       <!-- Hook for Students & WIL Framework -->
       <g transform="translate(18, 76)">
         <text x="0" y="14" fill="#0f172a" class="sans" font-size="15" font-weight="900">Calling All IT, CS &amp; Software Students!</text>
-        <text x="0" y="32" fill="#334155" class="sans" font-size="11.5">Accelerate your career through hands-on Work-Integrated Learning (WIL).</text>
-        <text x="0" y="47" fill="#334155" class="sans" font-size="11.5">Work on real production microservices &amp; apps alongside senior architects.</text>
+        <text x="0" y="32" fill="#334155" class="sans" font-size="11">Accelerate your career via hands-on Work-Integrated Learning (WIL).</text>
+        <text x="0" y="47" fill="#334155" class="sans" font-size="11">Build live production microservices alongside senior architects.</text>
 
         <!-- Accredited Track Pill -->
         <g transform="translate(0, 58)">
           <rect width="396" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-          <text x="198" y="20" fill="#92400e" class="mono" font-size="10.5" font-weight="800" text-anchor="middle">🎓 19-DAY INTENSIVE &amp; 3-MONTH ACCREDITED WIL TRACKS</text>
+          <text x="198" y="20" fill="#92400e" class="mono" font-size="10" font-weight="800" text-anchor="middle">🎓 19-DAY INTENSIVE &amp; 3-MONTH ACCREDITED WIL TRACKS</text>
         </g>
 
         <!-- BROAD PRODUCTION ENGINEERING DISCIPLINES (Decluttered, single punchy lines) -->
@@ -692,7 +692,7 @@
             <rect width="396" height="34" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#7c3aed"/>
             <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">1</text>
-            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Backend Systems: REST &amp; gRPC Microservices, SignalR</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="11" font-weight="800">Backend: REST &amp; gRPC Microservices, SignalR</text>
           </g>
 
           <!-- Discipline 2: Mobile App Development -->
@@ -700,7 +700,7 @@
             <rect width="396" height="34" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#7c3aed"/>
             <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">2</text>
-            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Mobile Engineering: Cross-Platform Native Apps &amp; Offline Sync</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="11" font-weight="800">Mobile: Cross-Platform Native Apps &amp; Offline Sync</text>
           </g>
 
           <!-- Discipline 3: DevOps & Cloud Infrastructure -->
@@ -708,7 +708,7 @@
             <rect width="396" height="34" rx="8" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#ea580c"/>
             <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">3</text>
-            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">DevOps &amp; Cloud: Automated CI/CD Pipelines &amp; Oracle Cloud</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="11" font-weight="800">DevOps &amp; Cloud: CI/CD Pipelines &amp; Cloud Infra</text>
           </g>
 
           <!-- Discipline 4: Enterprise Databases -->
@@ -716,7 +716,7 @@
             <rect width="396" height="34" rx="8" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#059669"/>
             <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">4</text>
-            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Data Architecture: Enterprise PostgreSQL &amp; Cloud Redis Cache</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="11" font-weight="800">Data: Enterprise PostgreSQL &amp; Cloud Redis Cache</text>
           </g>
 
           <!-- Discipline 5: Applied AI & Automation -->
@@ -724,7 +724,7 @@
             <rect width="396" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
             <rect x="6" y="6" width="22" height="22" rx="4" fill="#d97706"/>
             <text x="17" y="21" fill="#ffffff" class="mono" font-size="11" font-weight="900" text-anchor="middle">5</text>
-            <text x="38" y="22" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Applied AI: Autonomous AI Agents &amp; Intelligent Automation</text>
+            <text x="38" y="22" fill="#0f172a" class="sans" font-size="11" font-weight="800">Applied AI: Autonomous AI Agents &amp; Smart Workflows</text>
           </g>
         </g>
 
