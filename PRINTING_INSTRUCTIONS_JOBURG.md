@@ -75,7 +75,7 @@ Before leaving the print shop:
 * **Wear the Shirts with Pride:** You are the face of Sputnik Tech Group and Sputnik Devs Studio.
 * **Turn People into App Users:** 
   * When a student stops by, point them to the Tradey Bay QR code on the tabletop or banner:
-    > *"Tradey Bay is built for everyday students and young professionals across South Africa. 0% commission classifieds for electronics, dorm gear, and textbooks; live SignalR anti-snipe auctions; a built-in AI ATS Resume Builder to land internships; and safe delivery via Sputnik Delivery Network with OTP escrow payout protection. Scan the code to get the Android app right now!"*
+    > *"Tradey Bay is built for everyday students and young professionals across South Africa. 0% commission classifieds for electronics, dorm gear, and textbooks; live SignalR anti-snipe auctions; a built-in AI ATS Resume Builder to land internships; and real-time in-app chat with verified student profiles. Scan the code to get the Android app right now!"*
 * **Target Residences & Landlords:**
   * When campus coordinators, residence managers, or private student accommodation landlords visit:
     > *"We built the Student Residence Management System and The University Hub specifically for student housing, room allocation, maintenance workflows, and campus portals. It replaces manual paper and WhatsApp chaos with an automated enterprise SaaS."*

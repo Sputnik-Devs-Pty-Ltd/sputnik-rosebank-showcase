@@ -528,7 +528,7 @@ def build_banner_svg():
       <g transform="translate(20, 456)">
         <text x="196" y="0" fill="#581c87" class="sans" font-size="14" font-weight="900" text-anchor="middle">South Africa's Premier Campus Commerce Super App</text>
         <text x="196" y="22" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">Empowering university students, local entrepreneurs &amp; accredited merchants</text>
-        <text x="196" y="38" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">with zero listing fees, secure escrow payments and verified student identities.</text>
+        <text x="196" y="38" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">with zero listing fees, direct buyer-seller chat and verified student identities.</text>
       </g>
 
       <!-- Corporate Web link button -->
