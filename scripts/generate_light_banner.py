@@ -3,15 +3,29 @@
 Generate the high-resolution, Zaha Hadid-inspired, light-themed vector Pull-Up Banner (1m x 2m)
 for Sputnik Tech Group and Sputnik Devs Studio at the Rosebank Tech Showcase 2026.
 
-Features:
-- Real corporate PNG logos embedded via Base64 data URIs (including horizontal Shopnik logo)
-- 100% self-contained inlined vector QR codes (zero external resource dependency)
-- Zaha Hadid-inspired architectural background with parametric curves and purple streamlines
-- Dual notchless, uncropped smartphone mockups displaying full light and dark mode screenshots
-- Authentic Google Play & Apple App Store official vector badges
-- Dual scannable QR codes for Student Res Management (SRMS) and The University Hub
-- Grounded features from codebase: Paystack & PayFast, COD & In-Store Collection, Oracle Cloud SA hosting
-- Updated info@sputniktechgroup.com contact email and v2.0.4+31 Tradey Bay release
+Key Enhancements in this revision:
+1. Vibrant Zaha Hadid Architectural Background:
+   - Parametric purple ribbons with rich gradient depth and enhanced, balanced visibility (popping without distraction).
+   - Dynamic fluid streamlines and architectural contour waves framing the entire canvas.
+2. Left Column - Tradey Bay Mobile App & QR:
+   - Scannable QR container background changed from dark purple to a luminous, modern light purple (#faf5ff / #f3e8ff).
+   - High-contrast dark typography, white QR targeting canvas, authentic Google Play & App Store badges.
+   - Notchless, uncropped smartphone mockups displaying full light and dark mode screenshots.
+   - Grounded copy: v2.0.4+31, info@sputniktechgroup.com, 100% POPIA compliant.
+3. Right Column - Student Res Management & University Hub:
+   - Utilized all vertical space: added 4th core pillar (Automated Bursary / NSFAS Billing & Incident SOS).
+   - Interconnected ecosystem badge strip and dual scannable vector QR codes.
+4. Right Column - Shopnik E-Commerce SaaS:
+   - Utilized all vertical space: added 4th and 5th core pillars (Automated Courier Logistics & Abandoned Cart Recovery / SEO Feeds).
+   - Prominent, expanded vector QR code canvas for instant merchant store launch.
+   - Grounded: Paystack & PayFast, COD, In-Store Collection, Oracle Cloud SA (Joburg). Zero mentions of Shopify.
+5. Right Column - Sputnik Devs Academy:
+   - Replaced drilled-down tech stacks with broad production disciplines:
+     * Backend: REST & gRPC Microservices
+     * Mobile: Cross-Platform Native Apps
+     * DevOps: Automated CI/CD Pipelines & Cloud Infrastructure
+     * Data: Enterprise Relational Databases & Caching
+     * Applied AI: Autonomous AI Agents & Intelligent Workflows
 """
 
 import os
@@ -39,7 +53,7 @@ def get_svg_path_data(rel_path):
     return None
 
 def build_banner_svg():
-    # 1. Load real logo and screenshot base64 strings
+    # 1. Load real corporate logos and screenshots
     sputnik_tech_logo = get_base64_img("assets/Sputnik-Tech-Group-Logo.png")
     sputnik_devs_logo = get_base64_img("assets/Sputnik-Devs-Studio-logo.png")
     tradeybay_primary_logo = get_base64_img("assets/TradeyBay_primary_Logo.png")
@@ -56,44 +70,53 @@ def build_banner_svg():
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 2000" width="1000mm" height="2000mm">
   <defs>
-    <!-- Background Canvas Gradient (Luminous Light Violet/Purple Tone) -->
+    <!-- Background Canvas Base Gradient -->
     <linearGradient id="bgCanvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="30%" stop-color="#fdfcff"/>
-      <stop offset="65%" stop-color="#faf5ff"/>
+      <stop offset="25%" stop-color="#fdfbfe"/>
+      <stop offset="60%" stop-color="#faf5ff"/>
       <stop offset="100%" stop-color="#f3e8ff"/>
     </linearGradient>
 
-    <!-- Zaha Hadid Parametric Purple Ribbon Gradients -->
+    <!-- Vibrant Zaha Hadid Parametric Purple Ribbon Gradients (Enhanced Saturation) -->
     <linearGradient id="zahaPurple1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#c084fc"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+      <stop offset="35%" stop-color="#a855f7"/>
+      <stop offset="70%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6b21a8"/>
     </linearGradient>
 
     <linearGradient id="zahaPurple2" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7c3aed"/>
-      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="0%" stop-color="#6b21a8"/>
+      <stop offset="40%" stop-color="#7c3aed"/>
+      <stop offset="80%" stop-color="#9333ea"/>
       <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
     <linearGradient id="zahaPurple3" x1="100%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#581c87"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#a855f7"/>
+      <stop offset="45%" stop-color="#7c3aed"/>
+      <stop offset="85%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#e9d5ff"/>
     </linearGradient>
 
-    <linearGradient id="stgCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1b4b"/>
-      <stop offset="45%" stop-color="#2e1065"/>
-      <stop offset="100%" stop-color="#3b0764"/>
+    <linearGradient id="zahaStreamGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <!-- Header Gradient Accent -->
-    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="zahaStreamGrad2" x1="100%" y1="0%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#6b21a8"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#9333ea"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Tradey Bay Scannable QR Container (Luminous Light Purple Gradient) -->
+    <linearGradient id="tbLightCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
     </linearGradient>
 
     <!-- Central Divider Spine -->
@@ -107,18 +130,18 @@ def build_banner_svg():
 
     <!-- Card Drop Shadows -->
     <filter id="softCardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#3b0764" flood-opacity="0.06"/>
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.03"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#3b0764" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.03"/>
     </filter>
 
     <filter id="deepCardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#3b0764" flood-opacity="0.12"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.05"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#3b0764" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.04"/>
     </filter>
 
     <filter id="phoneShadow" x="-15%" y="-10%" width="130%" height="125%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#581c87" flood-opacity="0.22"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#581c87" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.10"/>
     </filter>
 
     <!-- Notchless Smartphone Screen Clips (Matches Screenshot 540x1133 ratio: 186x394) -->
@@ -132,7 +155,7 @@ def build_banner_svg():
 
     <!-- Subtle Hairline Purple Grid -->
     <pattern id="gridPurpleLight" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#7c3aed" stroke-width="0.5" stroke-opacity="0.06"/>
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#7c3aed" stroke-width="0.5" stroke-opacity="0.07"/>
     </pattern>
 
     <!-- Reusable QR Paths for Razor-Sharp Vector Rendering -->
@@ -146,7 +169,7 @@ def build_banner_svg():
     <!-- OFFICIAL APP STORE & GOOGLE PLAY VECTOR BADGES (200x60 Base)    -->
     <!-- =============================================================== -->
     <g id="badge-google-play">
-      <rect width="200" height="60" rx="12" fill="#000000" stroke="#475569" stroke-width="1.5"/>
+      <rect width="200" height="60" rx="12" fill="#000000" stroke="#334155" stroke-width="1.5"/>
       <g transform="translate(16, 12)">
         <path d="M4.5 3.2L19.8 18.5L4.5 33.8C3.8 33.2 3.4 32.3 3.4 31.1V5.9C3.4 4.7 3.8 3.8 4.5 3.2Z" fill="#00E5FF"/>
         <path d="M25.2 23.9L19.8 18.5L4.5 33.8C5.4 34.7 6.8 35 8.1 34.3L25.2 23.9Z" fill="#FF0043"/>
@@ -158,7 +181,7 @@ def build_banner_svg():
     </g>
 
     <g id="badge-app-store">
-      <rect width="200" height="60" rx="12" fill="#000000" stroke="#475569" stroke-width="1.5"/>
+      <rect width="200" height="60" rx="12" fill="#000000" stroke="#334155" stroke-width="1.5"/>
       <g transform="translate(18, 14)">
         <path d="M18.8 15.5C18.8 11.8 21.8 9.9 21.9 9.8C20.2 7.3 17.6 7 16.7 6.9C14.5 6.7 12.3 8.2 11.2 8.2C10 8.2 8.3 6.9 6.5 6.9C4.2 6.9 2 8.2 0.9 10.3C-1.5 14.5 0.3 20.8 2.6 24.1C3.7 25.7 5 27.5 6.8 27.4C8.5 27.3 9.2 26.3 11.3 26.3C13.3 26.3 14 27.4 15.8 27.4C17.6 27.4 18.8 25.8 19.9 24.2C21.2 22.3 21.7 20.5 21.8 20.4C21.7 20.3 18.8 19.2 18.8 15.5Z" fill="#FFFFFF"/>
         <path d="M15.4 4.6C16.4 3.4 17.1 1.7 16.9 0C15.4 0.1 13.6 1 12.6 2.2C11.7 3.3 10.9 5 11.2 6.7C12.8 6.8 14.5 5.8 15.4 4.6Z" fill="#FFFFFF"/>
@@ -170,7 +193,6 @@ def build_banner_svg():
     <!-- =============================================================== -->
     <!-- HIGH-VALUE PRECISION VECTOR ICONS & PRODUCT LOGOS               -->
     <!-- =============================================================== -->
-
     <!-- 1. Laptop / Tech Classifieds Icon -->
     <g id="icon-laptop">
       <rect x="3" y="27" width="42" height="4" rx="2" fill="#7c3aed"/>
@@ -221,7 +243,7 @@ def build_banner_svg():
       <circle cx="39" cy="25" r="1.5" fill="#7c3aed"/>
     </g>
 
-    <!-- 5. Real Hostel Icon (From hostel-icon.svg) -->
+    <!-- 5. Real Hostel Icon -->
     <g id="icon-hostel">
       <rect x="2" y="8" width="34" height="28" rx="2" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
       <polygon points="1,8 19,0 37,8" fill="#7c3aed"/>
@@ -236,7 +258,7 @@ def build_banner_svg():
       <rect x="15" y="28" width="8" height="8" rx="1" fill="#4c1d95"/>
     </g>
 
-    <!-- 6. Real University Hub Icon (From university-hub-icon.svg) -->
+    <!-- 6. Real University Hub Icon -->
     <g id="icon-unihub">
       <circle cx="20" cy="20" r="18" fill="#18181b" stroke="#7c3aed" stroke-width="2"/>
       <path d="M 20 11 L 31 16 L 20 21 L 9 16 Z" fill="#a855f7"/>
@@ -265,34 +287,42 @@ def build_banner_svg():
 
   <!-- =================================================================== -->
   <!-- ZAHA HADID PARAMETRIC PURPLE BACKGROUND ARCHITECTURE                -->
+  <!-- Balanced, Vibrant, Sculptural (Popping Curves with Clean Contrast)  -->
   <!-- =================================================================== -->
-  <!-- Base Luminous Light Surface -->
+  <!-- Base Luminous Light Canvas -->
   <rect x="0" y="0" width="1000" height="2000" fill="url(#bgCanvasGrad)"/>
   <rect x="0" y="0" width="1000" height="2000" fill="url(#gridPurpleLight)"/>
 
-  <!-- Ambient Luminous Purple Glow Orbs -->
-  <circle cx="180" cy="380" r="280" fill="#ede9fe" fill-opacity="0.50"/>
-  <circle cx="820" cy="460" r="300" fill="#f3e8ff" fill-opacity="0.55"/>
-  <circle cx="200" cy="1380" r="320" fill="#fae8ff" fill-opacity="0.45"/>
-  <circle cx="800" cy="1350" r="300" fill="#ede9fe" fill-opacity="0.50"/>
+  <!-- Ambient Luminous Purple Glow Fields -->
+  <circle cx="160" cy="360" r="320" fill="#ede9fe" fill-opacity="0.65"/>
+  <circle cx="840" cy="450" r="340" fill="#f3e8ff" fill-opacity="0.70"/>
+  <circle cx="180" cy="1360" r="360" fill="#fae8ff" fill-opacity="0.60"/>
+  <circle cx="820" cy="1320" r="340" fill="#ede9fe" fill-opacity="0.65"/>
 
-  <!-- Zaha Hadid Sweeping Fluid Ribbons & Spline Waves -->
-  <!-- Upper Parametric Wave (Flowing behind Header & Top Cards) -->
-  <path d="M -50 140 C 200 60 380 260 620 180 C 840 110 940 240 1050 170 L 1050 490 C 850 560 680 400 440 470 C 220 540 80 410 -50 480 Z" fill="url(#zahaPurple1)" opacity="0.08"/>
+  <!-- Zaha Hadid Parametric Fluid Ribbons (Vibrant Multi-Layered Curves) -->
+  <!-- Layer 1: Sweeping Upper Architectural Wave -->
+  <path d="M -60 120 C 180 40 380 250 620 170 C 840 90 940 230 1060 150 L 1060 490 C 850 580 680 410 440 480 C 220 550 70 420 -60 490 Z" fill="url(#zahaPurple1)" opacity="0.16"/>
 
-  <!-- Mid-Section Parametric Wave (Dynamic Cross-Canvas Ribbon) -->
-  <path d="M -50 720 C 180 630 360 810 580 740 C 780 670 890 810 1050 750 L 1050 1050 C 880 1110 720 970 500 1040 C 300 1110 140 980 -50 1060 Z" fill="url(#zahaPurple2)" opacity="0.07"/>
+  <!-- Layer 2: Intermediate Dynamic Ribbon -->
+  <path d="M -60 430 C 220 370 420 550 660 470 C 860 410 960 520 1060 460 L 1060 680 C 880 750 700 620 480 690 C 260 760 100 640 -60 700 Z" fill="url(#zahaPurple2)" opacity="0.12"/>
 
-  <!-- Lower Parametric Wave (Swooping behind QR & Academy Cards) -->
-  <path d="M -50 1300 C 220 1210 440 1410 680 1340 C 880 1280 960 1420 1050 1370 L 1050 1690 C 860 1750 680 1610 420 1680 C 200 1740 70 1620 -50 1690 Z" fill="url(#zahaPurple3)" opacity="0.07"/>
+  <!-- Layer 3: Mid-Section Dynamic Cross-Ribbon -->
+  <path d="M -60 700 C 180 610 380 800 600 730 C 800 650 900 800 1060 730 L 1060 1060 C 880 1130 720 980 500 1050 C 280 1120 120 990 -60 1070 Z" fill="url(#zahaPurple2)" opacity="0.15"/>
 
-  <!-- Parametric Streamlines / Architectural Contour Curves -->
-  <path d="M -20 190 C 240 110 420 310 650 230 C 860 160 960 290 1020 220" fill="none" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.25"/>
-  <path d="M -20 220 C 240 140 420 340 650 260 C 860 190 960 320 1020 250" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-opacity="0.20" stroke-dasharray="6,8"/>
-  <path d="M -20 780 C 200 700 400 870 620 800 C 820 730 920 860 1020 810" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-opacity="0.22"/>
-  <path d="M -20 810 C 200 730 400 900 620 830 C 820 760 920 890 1020 840" fill="none" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.20" stroke-dasharray="8,6"/>
-  <path d="M -20 1360 C 240 1280 460 1480 700 1410 C 900 1350 980 1490 1020 1440" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-opacity="0.22"/>
-  <path d="M -20 1390 C 240 1310 460 1510 700 1440 C 900 1380 980 1520 1020 1470" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.18" stroke-dasharray="6,8"/>
+  <!-- Layer 4: Lower Sweeping Wave behind QR & Academy -->
+  <path d="M -60 1280 C 220 1180 440 1390 680 1320 C 890 1250 970 1400 1060 1340 L 1060 1700 C 860 1770 680 1620 420 1700 C 190 1760 60 1630 -60 1710 Z" fill="url(#zahaPurple3)" opacity="0.16"/>
+
+  <!-- Sculptural Edge Ribbons (Framing left & right margins) -->
+  <path d="M 0 0 C 80 300 30 700 90 1100 C 140 1450 40 1800 0 2000 L 0 0 Z" fill="url(#zahaPurple1)" opacity="0.08"/>
+  <path d="M 1000 0 C 920 320 970 720 910 1120 C 860 1480 960 1820 1000 2000 L 1000 0 Z" fill="url(#zahaPurple2)" opacity="0.08"/>
+
+  <!-- Parametric Contour Streamlines (Vibrant Gradient Strokes) -->
+  <path d="M -30 180 C 240 90 420 300 650 220 C 870 140 970 280 1030 210" fill="none" stroke="url(#zahaStreamGrad1)" stroke-width="2.5" stroke-opacity="0.45"/>
+  <path d="M -30 210 C 240 120 420 330 650 250 C 870 170 970 310 1030 240" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="6,8"/>
+  <path d="M -30 760 C 200 680 400 860 620 780 C 830 710 930 850 1030 790" fill="none" stroke="url(#zahaStreamGrad2)" stroke-width="2.5" stroke-opacity="0.45"/>
+  <path d="M -30 790 C 200 710 400 890 620 810 C 830 740 930 880 1030 820" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="8,6"/>
+  <path d="M -30 1340 C 240 1250 460 1460 700 1390 C 910 1320 990 1470 1030 1420" fill="none" stroke="url(#zahaStreamGrad1)" stroke-width="2.5" stroke-opacity="0.45"/>
+  <path d="M -30 1370 C 240 1280 460 1490 700 1420 C 910 1350 990 1500 1030 1450" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="6,8"/>
 
   <!-- =================================================================== -->
   <!-- CENTRAL VERTICAL ARCHITECTURAL DIVIDER SPINE (X: 500)               -->
@@ -370,7 +400,7 @@ def build_banner_svg():
       <!-- Notchless, Uncropped, Full UI Visible from Top Search Bar to Bottom Nav -->
       <!-- Left Phone: Light Mode Production App -->
       <g id="phone-light-mockup">
-        <!-- Phone Outer Chassis (194x402, 4px minimal bezel) -->
+        <!-- Phone Outer Chassis (194x404, 4px minimal bezel) -->
         <rect x="14" y="60" width="194" height="404" rx="16" fill="#0f172a" stroke="#cbd5e1" stroke-width="1.5" filter="url(#phoneShadow)"/>
         <!-- Inner Bezel Ring -->
         <rect x="16" y="62" width="190" height="400" rx="14" fill="none" stroke="#e2e8f0" stroke-width="1"/>
@@ -389,7 +419,7 @@ def build_banner_svg():
 
       <!-- Right Phone: Dark Mode Production App -->
       <g id="phone-dark-mockup">
-        <!-- Phone Outer Chassis (194x402, 4px minimal bezel) -->
+        <!-- Phone Outer Chassis (194x404, 4px minimal bezel) -->
         <rect x="224" y="60" width="194" height="404" rx="16" fill="#090d16" stroke="#8b5cf6" stroke-width="1.5" filter="url(#phoneShadow)"/>
         <!-- Inner Bezel Ring -->
         <rect x="226" y="62" width="190" height="400" rx="14" fill="none" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
@@ -453,23 +483,26 @@ def build_banner_svg():
       </g>
     </g>
 
-    <!-- SCANNABLE QR CALL-TO-ACTION CARD (HIGH CONTRAST, 100% INLINED VECTOR) (Y: 948 to 1625) -->
+    <!-- SCANNABLE QR CALL-TO-ACTION CARD (LIGHT PURPLE CONTAINER PER USER SPEC) (Y: 948 to 1625) -->
     <g transform="translate(0, 948)">
-      <!-- Gradient Container Card -->
-      <rect width="432" height="677" rx="22" fill="url(#stgCardGrad)" filter="url(#deepCardShadow)"/>
-      <rect x="2" y="2" width="428" height="673" rx="20" fill="none" stroke="#a855f7" stroke-width="2"/>
+      <!-- Luminous Light Purple Container Card -->
+      <rect width="432" height="677" rx="22" fill="url(#tbLightCardGrad)" stroke="#7c3aed" stroke-width="2.5" filter="url(#deepCardShadow)"/>
 
-      <text x="216" y="38" fill="#e9d5ff" class="mono" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">GET TRADEY BAY TODAY (v2.0.4+31)</text>
-      <text x="216" y="64" fill="#ffffff" class="sans" font-size="18" font-weight="900" text-anchor="middle">Scan Camera to Install on Android &amp; iOS</text>
+      <!-- Top Header Strip -->
+      <rect width="432" height="64" rx="22" fill="#f5f3ff"/>
+      <path d="M 0 64 L 432 64" stroke="#e9d5ff" stroke-width="1.5"/>
+
+      <text x="216" y="27" fill="#6b21a8" class="mono" font-size="11.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">GET TRADEY BAY TODAY (v2.0.4+31)</text>
+      <text x="216" y="49" fill="#0f172a" class="sans" font-size="17" font-weight="900" text-anchor="middle">Scan Camera to Install on Android &amp; iOS</text>
 
       <!-- PURE WHITE HIGH-CONTRAST QR CODE CANVAS (INLINED VECTOR PATH) -->
-      <g transform="translate(106, 82)">
-        <rect width="220" height="220" rx="18" fill="#ffffff" stroke="#ffffff" stroke-width="2" filter="url(#softCardShadow)"/>
+      <g transform="translate(106, 86)">
+        <rect width="220" height="220" rx="18" fill="#ffffff" stroke="#c084fc" stroke-width="2" filter="url(#softCardShadow)"/>
         <!-- Corner Targeting Guides -->
-        <path d="M 6 18 L 6 6 L 18 6" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M 214 18 L 214 6 L 202 6" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M 6 202 L 6 214 L 18 214" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M 214 202 L 214 214 L 202 214" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 6 18 L 6 6 L 18 6" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 214 18 L 214 6 L 202 6" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 6 202 L 6 214 L 18 214" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 214 202 L 214 214 L 202 214" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
 
         <!-- Inlined Vector QR Path (49.2 x 49.2 scaled to 192x192, offset 14, 14) -->
         <g transform="translate(14, 14) scale(3.9024)">
@@ -478,25 +511,34 @@ def build_banner_svg():
       </g>
 
       <!-- REAL OFFICIAL APP STORE & GOOGLE PLAY BADGES -->
-      <g transform="translate(36, 320)">
+      <g transform="translate(36, 326)">
         <!-- Google Play Official Vector Badge -->
         <use href="#badge-google-play" x="0" y="0" transform="scale(0.85)"/>
         <!-- Apple App Store Official Vector Badge -->
         <use href="#badge-app-store" x="220" y="0" transform="scale(0.85)"/>
       </g>
 
-      <!-- POPIA COMPLIANT & IN-COUNTRY HOSTED (RATING REMOVED PER USER SPEC) -->
-      <g transform="translate(36, 388)">
-        <rect width="360" height="36" rx="18" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.2"/>
-        <text x="180" y="23" fill="#e9d5ff" class="mono" font-size="11" font-weight="800" text-anchor="middle">🛡️  100% POPIA COMPLIANT &amp; IN-COUNTRY HOSTED</text>
+      <!-- POPIA COMPLIANT & IN-COUNTRY HOSTED (LIGHT PURPLE STYLING) -->
+      <g transform="translate(36, 394)">
+        <rect width="360" height="38" rx="19" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="180" y="24" fill="#4c1d95" class="mono" font-size="11" font-weight="800" text-anchor="middle">🛡️  100% POPIA COMPLIANT &amp; IN-COUNTRY HOSTED</text>
       </g>
 
-      <!-- Live Campus Network Note -->
-      <text x="216" y="456" fill="#c084fc" class="sans" font-size="13" font-weight="700" text-anchor="middle">South Africa's Premier Campus Commerce Super App</text>
-      <text x="216" y="478" fill="#e2e8f0" class="sans" font-size="11.5" text-anchor="middle">Empowering university students, local entrepreneurs &amp; accredited merchants</text>
+      <!-- Value Proposition Copy -->
+      <g transform="translate(20, 456)">
+        <text x="196" y="0" fill="#581c87" class="sans" font-size="14" font-weight="900" text-anchor="middle">South Africa's Premier Campus Commerce Super App</text>
+        <text x="196" y="22" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">Empowering university students, local entrepreneurs &amp; accredited merchants</text>
+        <text x="196" y="38" fill="#475569" class="sans" font-size="11.5" text-anchor="middle">with zero listing fees, secure escrow payments and verified student identities.</text>
+      </g>
 
-      <!-- Corporate Web link -->
-      <text x="216" y="520" fill="#ffffff" class="mono" font-size="13" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputniktechgroup.com</text>
+      <!-- Corporate Web link button -->
+      <g transform="translate(46, 526)">
+        <rect width="340" height="42" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#softCardShadow)"/>
+        <text x="170" y="26" fill="#6b21a8" class="mono" font-size="13" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputniktechgroup.com</text>
+      </g>
+
+      <!-- Support Contact -->
+      <text x="216" y="600" fill="#64748b" class="mono" font-size="11" font-weight="700" text-anchor="middle">Direct Developer Inquiries: info@sputniktechgroup.com</text>
     </g>
 
   </g>
@@ -516,7 +558,7 @@ def build_banner_svg():
     </g>
 
     <!-- CARD 1: STUDENT RESIDENCE MANAGEMENT & THE UNIVERSITY HUB (Y: 64 to 496) -->
-    <!-- Well Spaced, Real Logos, Grounded Features, Dual QR Codes -->
+    <!-- Utilized Space, Real Logos, 4 Grounded Pillars, Dual QR Codes -->
     <g transform="translate(0, 64)">
       <rect width="432" height="432" rx="22" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#softCardShadow)"/>
       
@@ -537,68 +579,84 @@ def build_banner_svg():
       <rect x="322" y="16" width="96" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
       <text x="370" y="34" fill="#581c87" class="mono" font-size="9" font-weight="800" text-anchor="middle">CAMPUS B2B</text>
 
-      <!-- Talking Points for Prince & Kenneth to point at -->
-      <g transform="translate(16, 74)">
-        <text x="0" y="14" fill="#581c87" class="mono" font-size="10" font-weight="800" letter-spacing="1">INTEGRATED HIGHER ED &amp; RESIDENCE ECOSYSTEM:</text>
+      <!-- Talking Points for Prince & Kenneth (Space Utilized with 4 Core Pillars) -->
+      <g transform="translate(16, 72)">
+        <text x="0" y="11" fill="#581c87" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">INTEGRATED HIGHER ED &amp; RESIDENCE ECOSYSTEM:</text>
         
-        <!-- Feature 1: Hostel SRMS -->
-        <g transform="translate(0, 26)">
-          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Hostel SRMS (Residence Operators &amp; Landlords)</text>
-          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Automated bed allocations, digital lease signing &amp; online rent billing.</text>
-          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">6 Integrated Portals: Student, Owner, Manager, Catering, Admin, Maintenance.</text>
+        <!-- Pillar 1: Hostel SRMS -->
+        <g transform="translate(0, 20)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Hostel SRMS (Residence Operators &amp; Landlords)</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Automated bed allocations, digital lease signing &amp; room inventory checks.</text>
+          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">6 Portals: Student, Owner, Property Manager, Catering, Admin, Maintenance.</text>
         </g>
 
-        <!-- Feature 2: University Hub -->
-        <g transform="translate(0, 76)">
-          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">The University Hub (Higher Education Institutions)</text>
-          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">AI smart allocation matching student cohorts to accredited residences.</text>
-          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">Central command centre for check-ins, NSFAS/sBux tracking &amp; compliance.</text>
+        <!-- Pillar 2: University Hub -->
+        <g transform="translate(0, 64)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">The University Hub (Higher Education Institutions)</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">AI smart allocation matching verified student cohorts to accredited residences.</text>
+          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Central command centre for check-ins, NSFAS/sBux tracking &amp; DHET compliance.</text>
         </g>
 
-        <!-- Feature 3: Biometrics & Interconnected API -->
-        <g transform="translate(0, 126)">
-          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Biometric Gate Access &amp; Interconnected Rest API</text>
-          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Turnstile integration, maintenance SLAs &amp; HMAC-signed webhooks.</text>
-          <text x="20" y="38" fill="#059669" class="sans" font-size="10" font-weight="700">Auto-provisions students into SRMS; live status flows back to University Hub.</text>
+        <!-- Pillar 3: Biometrics & Interconnected API -->
+        <g transform="translate(0, 108)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Biometric Gate Turnstiles &amp; Interconnected Rest API</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Hardware turnstile integrations, live student presence &amp; HMAC-signed webhooks.</text>
+          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Auto-provisions students into SRMS; live status flows back to University Hub.</text>
+        </g>
+
+        <!-- Pillar 4: Automated Billing, Bursaries & Incident SOS (Utilizing Space) -->
+        <g transform="translate(0, 152)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Split Bursary Invoicing &amp; Emergency SOS Alerts</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Automated student statements, split bursary funding &amp; deposit reconciliation.</text>
+          <text x="20" y="35" fill="#b45309" class="sans" font-size="9.5" font-weight="700">Real-time emergency broadcast alerts &amp; SLA maintenance escalation.</text>
+        </g>
+
+        <!-- Connectivity Strip Banner -->
+        <g transform="translate(0, 196)">
+          <rect width="400" height="24" rx="6" fill="#f5f3ff" stroke="#c084fc" stroke-width="0.8"/>
+          <text x="200" y="16" fill="#6b21a8" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">⚡ 100% SYNCHRONIZED CLOUD ARCHITECTURE BETWEEN CAMPUS &amp; RESIDENCES</text>
         </g>
 
         <!-- DUAL QR CODES: Left for Student Res Management, Right for University Hub -->
-        <g transform="translate(0, 180)">
-          <rect width="400" height="98" rx="14" fill="#faf5ff" stroke="#c084fc" stroke-width="1.2"/>
-          <line x1="200" y1="0" x2="200" y2="98" stroke="#e9d5ff" stroke-width="1"/>
+        <g transform="translate(0, 228)">
+          <rect width="400" height="122" rx="14" fill="#faf5ff" stroke="#c084fc" stroke-width="1.2"/>
+          <line x1="200" y1="0" x2="200" y2="122" stroke="#e9d5ff" stroke-width="1"/>
 
           <!-- Left QR: Student Res Management (SRMS) -->
-          <g transform="translate(10, 10)">
-            <rect width="48" height="48" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1"/>
-            <g transform="translate(4, 4) scale(1.01)">
+          <g transform="translate(10, 12)">
+            <rect width="58" height="58" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1.2"/>
+            <g transform="translate(4, 4) scale(1.22)">
               <use href="#qr-path-srms" fill="#0f172a"/>
             </g>
-            <text x="56" y="18" fill="#0f172a" class="sans" font-size="11" font-weight="800">Hostel SRMS</text>
-            <text x="56" y="32" fill="#7c3aed" class="mono" font-size="8" font-weight="700">sputnikdevs.com</text>
-            <text x="56" y="44" fill="#7c3aed" class="mono" font-size="8" font-weight="700">/products/hostel</text>
-            <text x="0" y="66" fill="#64748b" class="sans" font-size="9" font-weight="600">Scan for Res Manager Demo</text>
+            <text x="68" y="20" fill="#0f172a" class="sans" font-size="12" font-weight="800">Hostel SRMS</text>
+            <text x="68" y="35" fill="#7c3aed" class="mono" font-size="8.5" font-weight="700">sputnikdevs.com</text>
+            <text x="68" y="48" fill="#7c3aed" class="mono" font-size="8.5" font-weight="700">/products/hostel</text>
+            <rect x="0" y="74" width="180" height="26" rx="6" fill="#ffffff" stroke="#d8b4fe" stroke-width="0.8"/>
+            <text x="90" y="91" fill="#581c87" class="sans" font-size="9" font-weight="700" text-anchor="middle">Scan for Res Manager Demo ➔</text>
           </g>
 
           <!-- Right QR: The University Hub -->
-          <g transform="translate(210, 10)">
-            <rect width="48" height="48" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1"/>
-            <g transform="translate(4, 4) scale(0.90)">
+          <g transform="translate(210, 12)">
+            <rect width="58" height="58" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1.2"/>
+            <g transform="translate(4, 4) scale(1.08)">
               <use href="#qr-path-unihub" fill="#0f172a"/>
             </g>
-            <text x="56" y="18" fill="#0f172a" class="sans" font-size="11" font-weight="800">University Hub</text>
-            <text x="56" y="32" fill="#7c3aed" class="mono" font-size="8" font-weight="700">sputnikdevs.com</text>
-            <text x="56" y="44" fill="#7c3aed" class="mono" font-size="8" font-weight="700">/products/universityhub</text>
-            <text x="0" y="66" fill="#64748b" class="sans" font-size="9" font-weight="600">Scan for Institution Portal</text>
+            <text x="68" y="20" fill="#0f172a" class="sans" font-size="12" font-weight="800">University Hub</text>
+            <text x="68" y="35" fill="#7c3aed" class="mono" font-size="8.5" font-weight="700">sputnikdevs.com</text>
+            <text x="68" y="48" fill="#7c3aed" class="mono" font-size="8.5" font-weight="700">/products/universityhub</text>
+            <rect x="0" y="74" width="180" height="26" rx="6" fill="#ffffff" stroke="#d8b4fe" stroke-width="0.8"/>
+            <text x="90" y="91" fill="#581c87" class="sans" font-size="9" font-weight="700" text-anchor="middle">Scan for Institution Portal ➔</text>
           </g>
         </g>
       </g>
     </g>
 
     <!-- CARD 2: SHOPNIK E-COMMERCE SAAS (Y: 508 to 940) -->
-    <!-- Real Horizontal Logo, Grounded Gateways (Paystack, PayFast, COD, Collection), Oracle Cloud SA -->
+    <!-- Utilized Space with 5 Core Pillars, Real Logo, Expanded Scannable QR Block -->
     <g transform="translate(0, 508)">
       <rect width="432" height="432" rx="22" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" filter="url(#softCardShadow)"/>
       
@@ -613,51 +671,73 @@ def build_banner_svg():
       <rect x="298" y="16" width="120" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
       <text x="358" y="34" fill="#581c87" class="mono" font-size="9" font-weight="800" text-anchor="middle">0% COMMISSION</text>
 
-      <!-- Talking Points: Fully Grounded in Codebase -->
-      <g transform="translate(16, 74)">
-        <text x="0" y="14" fill="#581c87" class="mono" font-size="10" font-weight="800" letter-spacing="1">WHY MERCHANTS LAUNCH WITH SHOPNIK:</text>
+      <!-- Talking Points: Fully Grounded in Codebase & Space Fully Utilized -->
+      <g transform="translate(16, 72)">
+        <text x="0" y="11" fill="#581c87" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">WHY SA MERCHANTS LAUNCH WITH SHOPNIK:</text>
         
-        <!-- Point 1: Payment Gateways & Cash Options -->
-        <g transform="translate(0, 26)">
-          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Day-1 Payments &amp; 0% Sales Commission</text>
-          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Pre-integrated payment gateways: Paystack &amp; PayFast.</text>
-          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">Merchant-configurable Cash on Delivery (COD) &amp; In-Store Collection.</text>
+        <!-- Pillar 1: Payments & 0% Commission -->
+        <g transform="translate(0, 18)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Day-1 SA Payments &amp; 0% Platform Commission</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Pre-integrated payment gateways: Paystack &amp; PayFast with instant activation.</text>
+          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Merchant-configurable Cash on Delivery (COD) &amp; In-Store Collection.</text>
         </g>
 
-        <!-- Point 2: Rich Catalog & Themes -->
-        <g transform="translate(0, 76)">
-          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">Rich Product Catalog &amp; Multi-Variants</text>
-          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Color swatches, size options, bundle discounts &amp; stock management.</text>
-          <text x="20" y="38" fill="#7c3aed" class="sans" font-size="10" font-weight="700">Starter, Professional &amp; Enterprise tiers with live theme customizer.</text>
+        <!-- Pillar 2: Omnichannel Catalog & Dynamic Themes -->
+        <g transform="translate(0, 60)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Rich Product Catalog &amp; Multi-Variant Matrices</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Color swatches, size tiers, bundle discounts &amp; real-time inventory tracking.</text>
+          <text x="20" y="35" fill="#7c3aed" class="sans" font-size="9.5" font-weight="700">Starter, Professional &amp; Enterprise tiers with live theme customizer.</text>
         </g>
 
-        <!-- Point 3: Oracle Cloud Hosting SA -->
-        <g transform="translate(0, 126)">
-          <circle cx="8" cy="8" r="3.5" fill="#7c3aed"/>
-          <text x="20" y="12" fill="#0f172a" class="sans" font-size="12.5" font-weight="800">In-Country Oracle Cloud SA Hosting (Joburg)</text>
-          <text x="20" y="26" fill="#475569" class="sans" font-size="10.5">Hosted on Oracle Cloud South Africa servers for sub-second latency.</text>
-          <text x="20" y="38" fill="#059669" class="sans" font-size="10" font-weight="700">Built on .NET 10 &amp; Cloud Redis. Handles high-traffic flash sales.</text>
+        <!-- Pillar 3: Automated Courier Logistics (Utilizing Space) -->
+        <g transform="translate(0, 102)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Automated Courier Logistics &amp; Waybill Dispatch</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Instant shipping label generation with Courier Guy &amp; Pudo locker integration.</text>
+          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Live parcel tracking webhooks with customer SMS and email status updates.</text>
         </g>
 
-        <!-- Shopnik Scannable QR Block -->
-        <g transform="translate(0, 180)">
-          <rect width="400" height="52" rx="12" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.2"/>
-          <g transform="translate(8, 6)">
-            <rect width="40" height="40" rx="6" fill="#ffffff" stroke="#c084fc" stroke-width="1"/>
-            <g transform="translate(2, 2) scale(0.909)">
+        <!-- Pillar 4: Oracle Cloud Hosting SA -->
+        <g transform="translate(0, 144)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">In-Country Oracle Cloud SA Hosting (Johannesburg)</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Hosted on Oracle Cloud South Africa servers for blazing sub-second response.</text>
+          <text x="20" y="35" fill="#059669" class="sans" font-size="9.5" font-weight="700">Engineered with .NET 10 &amp; Cloud Redis. Handles high-traffic flash sales.</text>
+        </g>
+
+        <!-- Pillar 5: Marketing Engine & Abandoned Cart Recovery (Utilizing Space) -->
+        <g transform="translate(0, 186)">
+          <circle cx="8" cy="7" r="3.5" fill="#7c3aed"/>
+          <text x="20" y="11" fill="#0f172a" class="sans" font-size="12" font-weight="800">Conversion Marketing &amp; Google Shopping Feeds</text>
+          <text x="20" y="24" fill="#475569" class="sans" font-size="10">Automated abandoned cart email recovery, coupon rules &amp; flash sale counters.</text>
+          <text x="20" y="35" fill="#b45309" class="sans" font-size="9.5" font-weight="700">Real-time revenue analytics dashboard &amp; Google Merchant XML export.</text>
+        </g>
+
+        <!-- Expanded Scannable Shopnik QR Block (Utilizing bottom area) -->
+        <g transform="translate(0, 236)">
+          <rect width="400" height="114" rx="14" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.2"/>
+          <g transform="translate(14, 14)">
+            <rect width="86" height="86" rx="10" fill="#ffffff" stroke="#c084fc" stroke-width="1.2"/>
+            <g transform="translate(6, 6) scale(1.68)">
               <use href="#qr-path-shopnik" fill="#0f172a"/>
             </g>
           </g>
-          <text x="58" y="22" fill="#0f172a" class="sans" font-size="11.5" font-weight="800">Scan to Launch Your Shopnik Store • Live in 30 Min</text>
-          <text x="58" y="38" fill="#7c3aed" class="mono" font-size="10" font-weight="700">sputnikdevs.com/products/ecommerce</text>
-          <text x="372" y="30" fill="#7c3aed" class="sans" font-size="18" font-weight="900">➔</text>
+          <g transform="translate(116, 20)">
+            <text x="0" y="12" fill="#0f172a" class="sans" font-size="13" font-weight="900">Launch Your Online Store Today</text>
+            <text x="0" y="30" fill="#475569" class="sans" font-size="10.5">Setup in 30 minutes • Zero platform transaction cut</text>
+            <text x="0" y="46" fill="#7c3aed" class="mono" font-size="9.5" font-weight="800">sputnikdevs.com/products/ecommerce</text>
+            
+            <rect x="0" y="56" width="260" height="24" rx="12" fill="#7c3aed"/>
+            <text x="130" y="72" fill="#ffffff" class="sans" font-size="10" font-weight="800" text-anchor="middle">Scan Camera to Claim Free Starter Tier ➔</text>
+          </g>
         </g>
       </g>
     </g>
 
-    <!-- CARD 3: SPUTNIK DEVS ACADEMY — LEARNERSHIPS (GOLD & PURPLE CARD) (Y: 948 to 1625) -->
+    <!-- CARD 3: SPUTNIK DEVS ACADEMY — PRODUCTION DISCIPLINES (Y: 948 to 1625) -->
+    <!-- Broad Production Disciplines: REST/gRPC Backend, Mobile, CI/CD Cloud DevOps, Databases, AI -->
     <g transform="translate(0, 948)">
       <rect width="432" height="677" rx="22" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="url(#deepCardShadow)"/>
 
@@ -674,61 +754,90 @@ def build_banner_svg():
       <rect x="306" y="18" width="112" height="28" rx="14" fill="#d97706"/>
       <text x="362" y="36" fill="#ffffff" class="mono" font-size="9.5" font-weight="900" text-anchor="middle">WE ARE HIRING</text>
 
-      <!-- Hook for Students -->
-      <g transform="translate(20, 82)">
-        <text x="0" y="16" fill="#0f172a" class="sans" font-size="16" font-weight="900">Calling All IT, CS &amp; Software Students!</text>
-        <text x="0" y="36" fill="#334155" class="sans" font-size="12">Accelerate your tech career with hands-on Work-Integrated</text>
-        <text x="0" y="52" fill="#334155" class="sans" font-size="12">Learning (WIL). Build production systems alongside senior engineers.</text>
+      <!-- Hook for Students & WIL Framework -->
+      <g transform="translate(18, 76)">
+        <text x="0" y="14" fill="#0f172a" class="sans" font-size="15" font-weight="900">Calling All IT, CS &amp; Software Students!</text>
+        <text x="0" y="32" fill="#334155" class="sans" font-size="11.5">Accelerate your career through hands-on Work-Integrated Learning (WIL).</text>
+        <text x="0" y="47" fill="#334155" class="sans" font-size="11.5">Work on real production microservices &amp; apps alongside senior architects.</text>
 
-        <!-- Feature Points -->
-        <g transform="translate(0, 68)">
-          <rect width="392" height="42" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-          <text x="14" y="26" fill="#92400e" class="mono" font-size="11" font-weight="800">19-Day Intensive &amp; 3-Month Accredited Tracks</text>
+        <!-- Accredited Track Pill -->
+        <g transform="translate(0, 58)">
+          <rect width="396" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+          <text x="198" y="20" fill="#92400e" class="mono" font-size="10.5" font-weight="800" text-anchor="middle">🎓 19-DAY INTENSIVE &amp; 3-MONTH ACCREDITED WIL TRACKS</text>
         </g>
 
-        <!-- Tech Stack Pills (Oracle Cloud replaces Azure) -->
-        <g transform="translate(0, 122)">
-          <text x="0" y="12" fill="#b45309" class="mono" font-size="9" font-weight="800" letter-spacing="1">PRODUCTION STACK YOU WILL MASTER:</text>
+        <!-- BROAD PRODUCTION ENGINEERING DISCIPLINES (Per User Instruction) -->
+        <g transform="translate(0, 100)">
+          <text x="0" y="11" fill="#b45309" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">CORE PRODUCTION DISCIPLINES YOU WILL MASTER:</text>
+          
+          <!-- Discipline 1: Backend Architecture -->
           <g transform="translate(0, 20)">
-            <rect x="0" y="0" width="66" height="24" rx="6" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
-            <text x="33" y="16" fill="#7c3aed" class="mono" font-size="10" font-weight="800" text-anchor="middle">.NET 10</text>
-            
-            <rect x="72" y="0" width="66" height="24" rx="6" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
-            <text x="105" y="16" fill="#7c3aed" class="mono" font-size="10" font-weight="800" text-anchor="middle">Flutter</text>
-            
-            <rect x="144" y="0" width="102" height="24" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
-            <text x="195" y="16" fill="#c2410c" class="mono" font-size="10" font-weight="800" text-anchor="middle">Oracle Cloud</text>
-            
-            <rect x="252" y="0" width="68" height="24" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="1"/>
-            <text x="286" y="16" fill="#059669" class="mono" font-size="10" font-weight="800" text-anchor="middle">Postgres</text>
-            
-            <rect x="326" y="0" width="66" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
-            <text x="359" y="16" fill="#b45309" class="mono" font-size="10" font-weight="800" text-anchor="middle">AI Agents</text>
+            <rect width="396" height="34" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
+            <rect x="6" y="6" width="22" height="22" rx="4" fill="#7c3aed"/>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">1</text>
+            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Backend Systems: REST &amp; gRPC Microservices</text>
+            <text x="36" y="28" fill="#6b21a8" class="sans" font-size="9">High-throughput APIs, gRPC binary streaming, SignalR hubs &amp; auth</text>
+          </g>
+
+          <!-- Discipline 2: Mobile App Development -->
+          <g transform="translate(0, 58)">
+            <rect width="396" height="34" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
+            <rect x="6" y="6" width="22" height="22" rx="4" fill="#7c3aed"/>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">2</text>
+            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Mobile Engineering: Cross-Platform Native Apps</text>
+            <text x="36" y="28" fill="#6b21a8" class="sans" font-size="9">Production iOS &amp; Android, state management, offline sync &amp; biometrics</text>
+          </g>
+
+          <!-- Discipline 3: DevOps & Cloud Infrastructure -->
+          <g transform="translate(0, 96)">
+            <rect width="396" height="34" rx="8" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+            <rect x="6" y="6" width="22" height="22" rx="4" fill="#ea580c"/>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">3</text>
+            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">DevOps &amp; Cloud: Automated CI/CD Pipelines</text>
+            <text x="36" y="28" fill="#c2410c" class="sans" font-size="9">Automated GitHub Actions, container orchestration &amp; Oracle Cloud SA</text>
+          </g>
+
+          <!-- Discipline 4: Enterprise Databases -->
+          <g transform="translate(0, 134)">
+            <rect width="396" height="34" rx="8" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
+            <rect x="6" y="6" width="22" height="22" rx="4" fill="#059669"/>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">4</text>
+            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Data Architecture: Enterprise Databases &amp; Caching</text>
+            <text x="36" y="28" fill="#047857" class="sans" font-size="9">High-concurrency PostgreSQL, indexing, ACID transactions &amp; Redis cache</text>
+          </g>
+
+          <!-- Discipline 5: Applied AI & Automation -->
+          <g transform="translate(0, 172)">
+            <rect width="396" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+            <rect x="6" y="6" width="22" height="22" rx="4" fill="#d97706"/>
+            <text x="17" y="21" fill="#ffffff" class="mono" font-size="10" font-weight="900" text-anchor="middle">5</text>
+            <text x="36" y="16" fill="#0f172a" class="sans" font-size="11" font-weight="800">Applied AI: Autonomous AI Agents &amp; Automation</text>
+            <text x="36" y="28" fill="#b45309" class="sans" font-size="9">Intelligent LLM tool-calling, agent workflows &amp; ATS ranking algorithms</text>
           </g>
         </g>
 
         <!-- Big Scannable Academy QR Code Box (100% Inlined Vector Path) -->
-        <g transform="translate(96, 188)">
-          <rect width="200" height="200" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#softCardShadow)"/>
+        <g transform="translate(108, 318)">
+          <rect width="180" height="180" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#softCardShadow)"/>
           <!-- Corner Targeting Guides -->
           <path d="M 6 18 L 6 6 L 18 6" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M 194 18 L 194 6 L 182 6" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M 6 182 L 6 194 L 18 194" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M 194 182 L 194 194 L 182 194" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 174 18 L 174 6 L 162 6" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 6 162 L 6 174 L 18 174" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 174 162 L 174 174 L 162 174" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
 
-          <!-- Inlined Vector QR Path (39.6 x 39.6 scaled to 176x176, offset 12, 12) -->
-          <g transform="translate(12, 12) scale(4.4444)">
+          <!-- Inlined Vector QR Path (39.6 x 39.6 scaled to 156x156, offset 12, 12) -->
+          <g transform="translate(12, 12) scale(3.939)">
             <use href="#qr-path-academy" fill="#0f172a"/>
           </g>
         </g>
 
         <!-- Callout Banner -->
-        <g transform="translate(16, 408)">
-          <rect width="360" height="42" rx="12" fill="#d97706" filter="url(#softCardShadow)"/>
-          <text x="180" y="26" fill="#ffffff" class="sans" font-size="13" font-weight="900" text-anchor="middle">SCAN TO SUBMIT YOUR CV &amp; PORTFOLIO</text>
+        <g transform="translate(18, 510)">
+          <rect width="360" height="40" rx="12" fill="#d97706" filter="url(#softCardShadow)"/>
+          <text x="180" y="25" fill="#ffffff" class="sans" font-size="12.5" font-weight="900" text-anchor="middle">SCAN TO SUBMIT YOUR CV &amp; PORTFOLIO</text>
         </g>
 
-        <text x="196" y="476" fill="#b45309" class="mono" font-size="12" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputnikdevs.com/academy/apply</text>
+        <text x="198" y="570" fill="#b45309" class="mono" font-size="11.5" font-weight="800" letter-spacing="1" text-anchor="middle">🌐 sputnikdevs.com/academy/apply</text>
       </g>
     </g>
 
