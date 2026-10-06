@@ -123,9 +123,9 @@
       <!-- Header Label -->
       <g transform="translate(20, 14)">
         <circle cx="12" cy="12" r="8" fill="#00f2fe"/>
-        <text x="28" y="17" fill="#ffffff" class="font-sans" font-size="16" font-weight="900" letter-spacing="1">TRADEY BAY // CAMPUS LAUNCHPAD</text>
-        <rect x="385" y="0" width="115" height="24" rx="12" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
-        <text x="442" y="16" fill="#34d399" class="font-mono" font-size="11" font-weight="800" text-anchor="middle">LIVE ON PLAY</text>
+        <text x="28" y="17" fill="#ffffff" class="font-sans" font-size="15" font-weight="900" letter-spacing="1">TRADEY BAY // FIRST-BORN OF SPUTNIK TECH</text>
+        <rect x="400" y="0" width="120" height="24" rx="12" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+        <text x="460" y="16" fill="#34d399" class="font-mono" font-size="10" font-weight="800" text-anchor="middle">LIVE v2.0.2+29</text>
       </g>
 
       <!-- Target Phone Placement Reticle -->
@@ -137,21 +137,21 @@
 
       <!-- Reticle Side Callout -->
       <g transform="translate(265, 80)">
-        <rect x="0" y="0" width="230" height="34" rx="8" fill="#0c2340" stroke="#38bdf8" stroke-width="1"/>
-        <text x="115" y="22" fill="#38bdf8" class="font-mono" font-size="11" font-weight="800" text-anchor="middle">📱 DROP PHONE HERE</text>
+        <rect x="0" y="0" width="250" height="34" rx="8" fill="#0c2340" stroke="#38bdf8" stroke-width="1"/>
+        <text x="125" y="22" fill="#38bdf8" class="font-mono" font-size="11" font-weight="800" text-anchor="middle">📱 POINT CAMERA TO INSTALL</text>
 
         <text x="0" y="60" fill="#ffffff" class="font-sans" font-size="22" font-weight="900">Tradey<tspan fill="#a78bfa">Bay</tspan></text>
-        <text x="0" y="78" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">CAMPUS CLASSIFIEDS APP</text>
+        <text x="0" y="78" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">MULTI-VERTICAL SUPER APP</text>
         
-        <text x="0" y="104" fill="#cbd5e1" class="font-sans" font-size="12" font-weight="500">Scan with phone camera to install instantly on Android</text>
+        <text x="0" y="102" fill="#cbd5e1" class="font-sans" font-size="11" font-weight="500">Classifieds • Live Auctions • Jobs/ATS • Stores</text>
 
-        <g transform="translate(0, 125)">
-          <rect width="180" height="36" rx="8" fill="#000000" stroke="#475569" stroke-width="1"/>
-          <text x="90" y="23" fill="#ffffff" class="font-sans" font-size="11" font-weight="700" text-anchor="middle">▶ Google Play Store</text>
+        <g transform="translate(0, 122)">
+          <rect width="220" height="34" rx="8" fill="#000000" stroke="#475569" stroke-width="1"/>
+          <text x="110" y="22" fill="#ffffff" class="font-sans" font-size="11" font-weight="700" text-anchor="middle">▶ Google Play Store (Live)</text>
         </g>
-        <g transform="translate(0, 168)">
-          <rect width="180" height="26" rx="6" fill="#1e293b"/>
-          <text x="90" y="17" fill="#a5b4fc" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">🍏 iOS TestFlight Coming</text>
+        <g transform="translate(0, 164)">
+          <rect width="220" height="26" rx="6" fill="#1e293b"/>
+          <text x="110" y="17" fill="#a5b4fc" class="font-mono" font-size="9.5" font-weight="700" text-anchor="middle">🍏 iOS TestFlight Coming Soon</text>
         </g>
       </g>
 
@@ -159,50 +159,54 @@
       <g transform="translate(20, 295)">
         <rect x="0" y="0" width="500" height="395" rx="14" fill="#07101d" stroke="#1e293b" stroke-width="1"/>
         
-        <text x="15" y="28" fill="#38bdf8" class="font-mono" font-size="12" font-weight="800" letter-spacing="1.5">WHY STUDENTS LOVE TRADEY BAY:</text>
+        <text x="15" y="26" fill="#38bdf8" class="font-mono" font-size="12" font-weight="800" letter-spacing="1.5">OFFICIAL PLATFORM PILLARS:</text>
 
-        <!-- Bullet 1 -->
-        <g transform="translate(15, 42)">
-          <rect width="470" height="70" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
-          <circle cx="28" cy="35" r="16" fill="#0284c7" fill-opacity="0.3"/>
-          <text x="28" y="41" fill="#38bdf8" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">01</text>
-          <text x="56" y="28" fill="#ffffff" class="font-sans" font-size="13" font-weight="800">100% Free Campus Marketplace</text>
-          <text x="56" y="46" fill="#94a3b8" class="font-sans" font-size="11">0% commission or selling fees. Students keep all profits.</text>
-          <rect x="365" y="16" width="90" height="20" rx="4" fill="#10b981" fill-opacity="0.2"/>
-          <text x="410" y="30" fill="#34d399" class="font-mono" font-size="9" font-weight="700" text-anchor="middle">ZERO FEES</text>
+        <!-- Bullet 1: Multi-Vertical Classifieds -->
+        <g transform="translate(15, 38)">
+          <rect width="470" height="72" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
+          <circle cx="28" cy="36" r="16" fill="#0284c7" fill-opacity="0.3"/>
+          <text x="28" y="42" fill="#38bdf8" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">01</text>
+          <text x="56" y="26" fill="#ffffff" class="font-sans" font-size="12.5" font-weight="800">Multi-Vertical Classifieds (0% Fees)</text>
+          <text x="56" y="44" fill="#94a3b8" class="font-sans" font-size="10.5">Vehicles, Solar, Tech &amp; Dorm Gear. 10 photos, radius search.</text>
+          <text x="56" y="60" fill="#64748b" class="font-mono" font-size="9">Offer/counter-offer engine • Verified seller badges</text>
+          <rect x="360" y="14" width="98" height="20" rx="4" fill="#10b981" fill-opacity="0.2"/>
+          <text x="409" y="28" fill="#34d399" class="font-mono" font-size="8.5" font-weight="700" text-anchor="middle">ZERO FEES</text>
         </g>
 
-        <!-- Bullet 2 -->
-        <g transform="translate(15, 122)">
-          <rect width="470" height="70" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
-          <circle cx="28" cy="35" r="16" fill="#0284c7" fill-opacity="0.3"/>
-          <text x="28" y="41" fill="#38bdf8" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">02</text>
-          <text x="56" y="28" fill="#ffffff" class="font-sans" font-size="13" font-weight="800">Buy &amp; Sell Textbooks &amp; Dorm Gear</text>
-          <text x="56" y="46" fill="#94a3b8" class="font-sans" font-size="11">Calculus books, scientific calculators, dorm fridges, laptops.</text>
-          <rect x="365" y="16" width="90" height="20" rx="4" fill="#0284c7" fill-opacity="0.2"/>
-          <text x="410" y="30" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700" text-anchor="middle">CAMPUS P2P</text>
+        <!-- Bullet 2: Live Digital Auctions -->
+        <g transform="translate(15, 118)">
+          <rect width="470" height="72" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
+          <circle cx="28" cy="36" r="16" fill="#f59e0b" fill-opacity="0.3"/>
+          <text x="28" y="42" fill="#fbbf24" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">02</text>
+          <text x="56" y="26" fill="#ffffff" class="font-sans" font-size="12.5" font-weight="800">SignalR Live Digital Auctions</text>
+          <text x="56" y="44" fill="#94a3b8" class="font-sans" font-size="10.5">Sub-100ms real-time bidding, proxy auto-bid &amp; reserve prices.</text>
+          <text x="56" y="60" fill="#64748b" class="font-mono" font-size="9">Automated anti-snipe clock extension • Buy It Now</text>
+          <rect x="360" y="14" width="98" height="20" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+          <text x="409" y="28" fill="#fbbf24" class="font-mono" font-size="8.5" font-weight="700" text-anchor="middle">ANTI-SNIPE</text>
         </g>
 
-        <!-- Bullet 3 -->
-        <g transform="translate(15, 202)">
-          <rect width="470" height="70" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
-          <circle cx="28" cy="35" r="16" fill="#0284c7" fill-opacity="0.3"/>
-          <text x="28" y="41" fill="#38bdf8" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">03</text>
-          <text x="56" y="28" fill="#ffffff" class="font-sans" font-size="13" font-weight="800">Verified Student Trust Badges</text>
-          <text x="56" y="46" fill="#94a3b8" class="font-sans" font-size="11">Meet inside Rosebank campus gates safely. No external scammers.</text>
-          <rect x="365" y="16" width="90" height="20" rx="4" fill="#6366f1" fill-opacity="0.2"/>
-          <text x="410" y="30" fill="#a5b4fc" class="font-mono" font-size="9" font-weight="700" text-anchor="middle">SAFE TRADING</text>
+        <!-- Bullet 3: Branded Storefronts & Maps -->
+        <g transform="translate(15, 198)">
+          <rect width="470" height="72" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
+          <circle cx="28" cy="36" r="16" fill="#8b5cf6" fill-opacity="0.3"/>
+          <text x="28" y="42" fill="#a78bfa" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">03</text>
+          <text x="56" y="26" fill="#ffffff" class="font-sans" font-size="12.5" font-weight="800">Branded Storefronts &amp; Split Maps</text>
+          <text x="56" y="44" fill="#94a3b8" class="font-sans" font-size="10.5">Digital showrooms for private &amp; CIPC stores with custom banners.</text>
+          <text x="56" y="60" fill="#64748b" class="font-mono" font-size="9">Live Google Maps split-view • Clustered price pins</text>
+          <rect x="360" y="14" width="98" height="20" rx="4" fill="#8b5cf6" fill-opacity="0.2"/>
+          <text x="409" y="28" fill="#c084fc" class="font-mono" font-size="8.5" font-weight="700" text-anchor="middle">STOREFRONTS</text>
         </g>
 
-        <!-- Bullet 4 -->
-        <g transform="translate(15, 282)">
-          <rect width="470" height="70" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
-          <circle cx="28" cy="35" r="16" fill="#0284c7" fill-opacity="0.3"/>
-          <text x="28" y="41" fill="#38bdf8" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">04</text>
-          <text x="56" y="28" fill="#ffffff" class="font-sans" font-size="13" font-weight="800">Direct In-App Chat &amp; Offers</text>
-          <text x="56" y="46" fill="#94a3b8" class="font-sans" font-size="11">Negotiate prices in real-time, agree on pickup, deal done!</text>
-          <rect x="365" y="16" width="90" height="20" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
-          <text x="410" y="30" fill="#fbbf24" class="font-mono" font-size="9" font-weight="700" text-anchor="middle">INSTANT CHAT</text>
+        <!-- Bullet 4: Jobs & Native AI ATS Resume -->
+        <g transform="translate(15, 278)">
+          <rect width="470" height="72" rx="10" fill="#0b172a" stroke="#0284c7" stroke-width="1"/>
+          <circle cx="28" cy="36" r="16" fill="#06b6d4" fill-opacity="0.3"/>
+          <text x="28" y="42" fill="#22d3ee" class="font-sans" font-size="16" font-weight="900" text-anchor="middle">04</text>
+          <text x="56" y="26" fill="#ffffff" class="font-sans" font-size="12.5" font-weight="800">Jobs &amp; Native AI ATS Resume Builder</text>
+          <text x="56" y="44" fill="#94a3b8" class="font-sans" font-size="10.5">Built-in ATS resume creator with 4 templates &amp; vector PDF export.</text>
+          <text x="56" y="60" fill="#64748b" class="font-mono" font-size="9">Smart match score • 1-tap direct employer applications</text>
+          <rect x="360" y="14" width="98" height="20" rx="4" fill="#06b6d4" fill-opacity="0.2"/>
+          <text x="409" y="28" fill="#22d3ee" class="font-mono" font-size="8.5" font-weight="700" text-anchor="middle">AI ATS JOBS</text>
         </g>
 
         <!-- Footer Tag -->
@@ -254,32 +258,32 @@
 
         <!-- Left Pillar: Sputnik Tech Group -->
         <g transform="translate(0, 95)">
-          <rect width="260" height="85" rx="12" fill="#0c1d38" stroke="#0284c7" stroke-width="1.5"/>
-          <text x="15" y="24" fill="#38bdf8" class="font-mono" font-size="10" font-weight="800">SPUTNIK TECH GROUP</text>
-          <text x="15" y="44" fill="#ffffff" class="font-sans" font-size="13" font-weight="900">Tradey Bay Mobile App</text>
-          <text x="15" y="62" fill="#94a3b8" class="font-sans" font-size="10">Flutter • Dart • Cloud Messaging</text>
-          <rect x="15" y="67" width="110" height="14" rx="4" fill="#10b981" fill-opacity="0.2"/>
-          <text x="70" y="77" fill="#34d399" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">P2P MARKETPLACE</text>
+          <rect width="260" height="90" rx="12" fill="#0c1d38" stroke="#0284c7" stroke-width="1.5"/>
+          <text x="15" y="22" fill="#38bdf8" class="font-mono" font-size="10" font-weight="800">SPUTNIK TECH GROUP</text>
+          <text x="15" y="40" fill="#ffffff" class="font-sans" font-size="13" font-weight="900">Tradey Bay Super App</text>
+          <text x="15" y="56" fill="#94a3b8" class="font-sans" font-size="9.5">Classifieds • Auctions • Jobs • Stores</text>
+          <rect x="15" y="65" width="135" height="16" rx="4" fill="#10b981" fill-opacity="0.2"/>
+          <text x="82" y="77" fill="#34d399" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">SDN ESCROW DELIVERIES</text>
         </g>
 
         <!-- Right Pillar: Sputnik Devs Studio -->
         <g transform="translate(310, 95)">
-          <rect width="260" height="85" rx="12" fill="#1b1235" stroke="#8b5cf6" stroke-width="1.5"/>
-          <text x="15" y="24" fill="#a78bfa" class="font-mono" font-size="10" font-weight="800">SPUTNIK DEVS STUDIO</text>
-          <text x="15" y="44" fill="#ffffff" class="font-sans" font-size="13" font-weight="900">Student Res SAAS &amp; Shopnik</text>
-          <text x="15" y="62" fill="#94a3b8" class="font-sans" font-size="10">.NET 10 • Azure • Microservices</text>
-          <rect x="15" y="67" width="115" height="14" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
-          <text x="72" y="77" fill="#fbbf24" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">CAMPUS SOFTWARE</text>
+          <rect width="260" height="90" rx="12" fill="#1b1235" stroke="#8b5cf6" stroke-width="1.5"/>
+          <text x="15" y="22" fill="#a78bfa" class="font-mono" font-size="10" font-weight="800">SPUTNIK DEVS STUDIO</text>
+          <text x="15" y="40" fill="#ffffff" class="font-sans" font-size="13" font-weight="900">Student Res SAAS &amp; Shopnik</text>
+          <text x="15" y="56" fill="#94a3b8" class="font-sans" font-size="9.5">University Hub • 8 .NET Microservices</text>
+          <rect x="15" y="65" width="125" height="16" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+          <text x="77" y="77" fill="#fbbf24" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">CAMPUS &amp; B2B SAAS</text>
         </g>
 
         <!-- Connecting Lines to Core Engine -->
-        <path d="M 130 180 L 130 205 L 285 205 L 285 220" stroke="#0284c7" stroke-width="2" fill="none"/>
-        <path d="M 440 180 L 440 205 L 285 205 L 285 220" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+        <path d="M 130 185 L 130 205 L 285 205 L 285 220" stroke="#0284c7" stroke-width="2" fill="none"/>
+        <path d="M 440 185 L 440 205 L 285 205 L 285 220" stroke="#8b5cf6" stroke-width="2" fill="none"/>
 
         <!-- Core Engine Box -->
         <g transform="translate(90, 220)">
           <rect width="390" height="105" rx="14" fill="#0a1220" stroke="#10b981" stroke-width="2"/>
-          <text x="195" y="24" fill="#34d399" class="font-mono" font-size="11" font-weight="800" text-anchor="middle">⚡ SPUTNIK UNIFIED ENTERPRISE BACKBONE</text>
+          <text x="195" y="24" fill="#34d399" class="font-mono" font-size="11" font-weight="800" text-anchor="middle">⚡ 8 .NET 10 SERVICES • SA CLOUD &amp; ESCROW</text>
           
           <g transform="translate(15, 36)">
             <!-- Tech badges grid -->
@@ -287,15 +291,15 @@
             <text x="37" y="16" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">.NET 10</text>
 
             <rect x="85" y="0" width="85" height="24" rx="6" fill="#1e293b"/>
-            <text x="127" y="16" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">AZURE CLOUD</text>
+            <text x="127" y="16" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">FLUTTER</text>
 
             <rect x="180" y="0" width="85" height="24" rx="6" fill="#1e293b"/>
-            <text x="222" y="16" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">POSTGRESQL</text>
+            <text x="222" y="16" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">SIGNALR WS</text>
 
             <rect x="275" y="0" width="85" height="24" rx="6" fill="#1e293b"/>
-            <text x="317" y="16" fill="#34d399" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">AI AGENTS</text>
+            <text x="317" y="16" fill="#34d399" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">AI ATS AGENT</text>
 
-            <text x="180" y="52" fill="#cbd5e1" class="font-sans" font-size="11" font-weight="600" text-anchor="middle">High Concurrency • Enterprise Auth • Zero Trust Security</text>
+            <text x="180" y="52" fill="#cbd5e1" class="font-sans" font-size="11" font-weight="600" text-anchor="middle">Zero-Scam KYC Gate • POPIA Compliant • SDN Fleet Escrow</text>
           </g>
         </g>
 
@@ -446,49 +450,49 @@
       </g>
 
       <!-- Sub-headline & Tagline -->
-      <text x="0" y="125" fill="#ffffff" class="font-sans" font-size="30" font-weight="900">Tradey<tspan fill="#a78bfa">Bay</tspan> — The Campus Marketplace</text>
-      <text x="0" y="158" fill="#cbd5e1" class="font-sans" font-size="18" font-weight="500">
-        Empowering students to buy and sell textbooks, electronics, and dorm essentials with zero commission.
+      <text x="0" y="125" fill="#ffffff" class="font-sans" font-size="30" font-weight="900">Tradey<tspan fill="#a78bfa">Bay</tspan> — The Multi-Vertical Super App</text>
+      <text x="0" y="158" fill="#cbd5e1" class="font-sans" font-size="17" font-weight="500">
+        0% Commission Classifieds • SignalR Live Auctions • AI ATS Career Network • Storefronts &amp; Split Maps.
       </text>
 
       <!-- App Feature HUD Row -->
       <g transform="translate(0, 190)">
-        <!-- Card 1 -->
+        <!-- Card 1: Classifieds -->
         <rect width="270" height="130" rx="14" fill="#0b162a" stroke="#0284c7" stroke-width="1.5"/>
-        <text x="20" y="35" fill="#38bdf8" class="font-sans" font-size="28">📚</text>
-        <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">Textbooks &amp; Gear</text>
-        <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Find course textbooks at 70% off retail from senior students.</text>
-        <rect x="20" y="90" width="120" height="22" rx="6" fill="#0284c7" fill-opacity="0.25"/>
-        <text x="80" y="105" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">ROSEBANK CAMPUS</text>
+        <text x="20" y="35" fill="#38bdf8" class="font-sans" font-size="28">🏷️</text>
+        <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">Classifieds (0%)</text>
+        <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Free listings across Vehicles, Solar, Tech &amp; Dorm gear. 10 photos.</text>
+        <rect x="20" y="90" width="120" height="22" rx="6" fill="#10b981" fill-opacity="0.25"/>
+        <text x="80" y="105" fill="#34d399" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">ZERO FEES</text>
 
-        <!-- Card 2 -->
+        <!-- Card 2: Live Digital Auctions -->
         <g transform="translate(290, 0)">
           <rect width="270" height="130" rx="14" fill="#0b162a" stroke="#0284c7" stroke-width="1.5"/>
-          <text x="20" y="35" fill="#34d399" class="font-sans" font-size="28">🛡️</text>
-          <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">Verified Safety</text>
-          <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Verified student ID profiles with safe campus pickup points.</text>
-          <rect x="20" y="90" width="130" height="22" rx="6" fill="#10b981" fill-opacity="0.25"/>
-          <text x="85" y="105" fill="#34d399" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">VERIFIED COMMUNITY</text>
+          <text x="20" y="35" fill="#fbbf24" class="font-sans" font-size="28">⚡</text>
+          <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">Live Auctions</text>
+          <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Sub-100ms SignalR live bidding with anti-snipe clock extension.</text>
+          <rect x="20" y="90" width="130" height="22" rx="6" fill="#f59e0b" fill-opacity="0.25"/>
+          <text x="85" y="105" fill="#fbbf24" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">ANTI-SNIPE WS</text>
         </g>
 
-        <!-- Card 3 -->
+        <!-- Card 3: AI ATS Jobs Network -->
         <g transform="translate(580, 0)">
           <rect width="270" height="130" rx="14" fill="#0b162a" stroke="#0284c7" stroke-width="1.5"/>
-          <text x="20" y="35" fill="#fbbf24" class="font-sans" font-size="28">⚡</text>
-          <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">0% Commission</text>
-          <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">No hidden fees or middleman cuts. Keep all cash you make.</text>
-          <rect x="20" y="90" width="110" height="22" rx="6" fill="#f59e0b" fill-opacity="0.25"/>
-          <text x="75" y="105" fill="#fbbf24" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">100% PROFIT</text>
+          <text x="20" y="35" fill="#22d3ee" class="font-sans" font-size="28">💼</text>
+          <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">AI ATS Jobs</text>
+          <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Built-in ATS resume creator, 4 templates, ATS scoring &amp; 1-tap apply.</text>
+          <rect x="20" y="90" width="120" height="22" rx="6" fill="#06b6d4" fill-opacity="0.25"/>
+          <text x="80" y="105" fill="#22d3ee" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">AI RESUME</text>
         </g>
 
-        <!-- Card 4 -->
+        <!-- Card 4: Storefronts & Split Maps -->
         <g transform="translate(870, 0)">
           <rect width="310" height="130" rx="14" fill="#0b162a" stroke="#0284c7" stroke-width="1.5"/>
-          <text x="20" y="35" fill="#a78bfa" class="font-sans" font-size="28">💬</text>
-          <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">In-App Chat &amp; Deals</text>
-          <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Instant notifications, counter-offers, and campus location tags.</text>
-          <rect x="20" y="90" width="120" height="22" rx="6" fill="#8b5cf6" fill-opacity="0.25"/>
-          <text x="80" y="105" fill="#c084fc" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">REAL-TIME SPEED</text>
+          <text x="20" y="35" fill="#a78bfa" class="font-sans" font-size="28">🏪</text>
+          <text x="65" y="35" fill="#ffffff" class="font-sans" font-size="15" font-weight="800">Stores &amp; Maps</text>
+          <text x="20" y="65" fill="#94a3b8" class="font-sans" font-size="12">Branded digital showrooms &amp; live Google Maps with price pins.</text>
+          <rect x="20" y="90" width="130" height="22" rx="6" fill="#8b5cf6" fill-opacity="0.25"/>
+          <text x="85" y="105" fill="#c084fc" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">SPLIT-VIEW MAPS</text>
         </g>
       </g>
 
@@ -500,8 +504,8 @@
           <image href="../../assets/qr/qr-tradeybay-playstore.svg" x="5" y="5" width="65" height="65"/>
         </g>
         <g transform="translate(120, 32)">
-          <text x="0" y="0" fill="#ffffff" class="font-sans" font-size="20" font-weight="900">SCAN TO DOWNLOAD TRADEY BAY ON GOOGLE PLAY</text>
-          <text x="0" y="24" fill="#38bdf8" class="font-mono" font-size="13" font-weight="700">Package: com.sputniktech.tradey_bay_mobile • Live Android Build</text>
+          <text x="0" y="0" fill="#ffffff" class="font-sans" font-size="20" font-weight="900">SCAN TO DOWNLOAD TRADEY BAY ON GOOGLE PLAY (v2.0.2+29)</text>
+          <text x="0" y="24" fill="#38bdf8" class="font-mono" font-size="13" font-weight="700">Free Listings • Anti-Snipe Auctions • AI ATS Resumes • SDN Escrow Deliveries</text>
         </g>
         <g transform="translate(930, 32)">
           <rect width="210" height="46" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="1.5"/>
@@ -622,8 +626,8 @@
     <rect x="-350" y="-220" width="700" height="440" rx="20" fill="#050d1a" stroke="#0284c7" stroke-width="2"/>
     <rect x="-350" y="-220" width="700" height="45" rx="20" fill="#0284c7" fill-opacity="0.3"/>
     
-    <text x="0" y="-190" fill="#ffffff" class="font-sans" font-size="22" font-weight="900" letter-spacing="2" text-anchor="middle">
-      SPUTNIK TECH GROUP  •  TRADEY BAY
+    <text x="0" y="-190" fill="#ffffff" class="font-sans" font-size="20" font-weight="900" letter-spacing="2" text-anchor="middle">
+      SPUTNIK TECH GROUP  •  TRADEY BAY (v2.0.2+29)
     </text>
 
     <!-- Center Left QR & Callout -->
@@ -633,17 +637,18 @@
     </g>
 
     <g transform="translate(-70, -120)">
-      <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="14" font-weight="800">📱 INSTALL TRADEY BAY APP</text>
-      <text x="0" y="30" fill="#ffffff" class="font-sans" font-size="24" font-weight="900">Campus Classifieds</text>
-      <text x="0" y="55" fill="#cbd5e1" class="font-sans" font-size="14">Buy &amp; Sell Textbooks, PCs &amp; Dorm Gear</text>
+      <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="13" font-weight="800">📱 INSTALL TRADEY BAY SUPER APP</text>
+      <text x="0" y="28" fill="#ffffff" class="font-sans" font-size="22" font-weight="900">Multi-Vertical Ecosystem</text>
+      <text x="0" y="50" fill="#cbd5e1" class="font-sans" font-size="13">Classifieds • Auctions • AI ATS Jobs • Storefronts</text>
       
-      <g transform="translate(0, 75)">
-        <text x="0" y="0" fill="#34d399" class="font-mono" font-size="12" font-weight="700">✓ 0% Commission for Students</text>
-        <text x="0" y="20" fill="#34d399" class="font-mono" font-size="12" font-weight="700">✓ Verified Student Campus Profiles</text>
-        <text x="0" y="40" fill="#34d399" class="font-mono" font-size="12" font-weight="700">✓ In-App Direct Instant Chat</text>
+      <g transform="translate(0, 68)">
+        <text x="0" y="0" fill="#34d399" class="font-mono" font-size="11" font-weight="700">✓ 0% Fees &amp; 10-Photo Classifieds</text>
+        <text x="0" y="18" fill="#fbbf24" class="font-mono" font-size="11" font-weight="700">✓ SignalR Anti-Snipe Live Auctions</text>
+        <text x="0" y="36" fill="#22d3ee" class="font-mono" font-size="11" font-weight="700">✓ Native AI ATS Resume Builder &amp; Jobs</text>
+        <text x="0" y="54" fill="#c084fc" class="font-mono" font-size="11" font-weight="700">✓ Branded Storefronts &amp; Split Maps</text>
       </g>
 
-      <g transform="translate(0, 130)">
+      <g transform="translate(0, 135)">
         <rect width="180" height="34" rx="8" fill="#000000" stroke="#38bdf8" stroke-width="1"/>
         <text x="90" y="22" fill="#ffffff" class="font-sans" font-size="12" font-weight="700" text-anchor="middle">▶ Google Play Store</text>
       </g>
@@ -727,28 +732,33 @@
         <text x="20" y="24" fill="#38bdf8" class="font-mono" font-size="13" font-weight="800">01 // STUDENT PITCH (30 SECONDS)</text>
 
         <g transform="translate(20, 55)">
-          <text x="0" y="0" fill="#ffffff" class="font-sans" font-size="14" font-weight="800">HOOK 1: "Are you selling textbooks or dorm tech?"</text>
-          <text x="0" y="22" fill="#94a3b8" class="font-sans" font-size="12">
-            "Tradey Bay is built right here for campus. 0% seller commission—keep all your money. Verified student profiles mean safe handoffs right at campus gates."
+          <text x="0" y="0" fill="#ffffff" class="font-sans" font-size="14" font-weight="800">HOOK 1: "Buying, selling, or running auctions?"</text>
+          <text x="0" y="20" fill="#94a3b8" class="font-sans" font-size="11.5">
+            "Tradey Bay is 0% fees. Free classifieds, live digital auctions with anti-snipe clock, and verified KYC profiles so you never get scammed."
           </text>
 
-          <text x="0" y="80" fill="#ffffff" class="font-sans" font-size="14" font-weight="800">HOOK 2: "Studying IT, Software Dev, or Design?"</text>
-          <text x="0" y="102" fill="#94a3b8" class="font-sans" font-size="12">
-            "We have accredited 19-Day and 3-Month Work-Integrated Learning (WIL) learnerships. You build production software on .NET 10, Flutter, and Azure."
+          <text x="0" y="68" fill="#ffffff" class="font-sans" font-size="14" font-weight="800">HOOK 2: "Looking for a job or building your resume?"</text>
+          <text x="0" y="88" fill="#94a3b8" class="font-sans" font-size="11.5">
+            "Tradey Bay has a built-in AI ATS Resume Builder with 4 templates and vector PDF export. Get instant ATS match scores and apply in 1 tap."
           </text>
 
-          <text x="0" y="160" fill="#ffffff" class="font-sans" font-size="14" font-weight="800">ACTION TO TAKE:</text>
-          <text x="0" y="182" fill="#38bdf8" class="font-sans" font-size="12" font-weight="700">
-            👉 Point to the Left Table Pad for Tradey Bay app download.
-          </text>
-          <text x="0" y="202" fill="#fbbf24" class="font-sans" font-size="12" font-weight="700">
-            👉 Point to the Right Table Pad for Devs Academy application.
+          <text x="0" y="136" fill="#ffffff" class="font-sans" font-size="14" font-weight="800">HOOK 3: "Studying IT/CS? Fulfill your WIL requirement!"</text>
+          <text x="0" y="156" fill="#94a3b8" class="font-sans" font-size="11.5">
+            "Sputnik Devs Academy offers accredited 19-Day &amp; 3-Month WIL placements building real .NET 10, Flutter, and Azure systems."
           </text>
 
-          <rect x="0" y="235" width="460" height="85" rx="8" fill="#0e1f38"/>
-          <text x="15" y="24" fill="#38bdf8" class="font-mono" font-size="11" font-weight="700">KEY STUDENT STATS TO MENTION:</text>
-          <text x="15" y="44" fill="#cbd5e1" class="font-sans" font-size="11">• Tradey Bay is 100% free with in-app chat.</text>
-          <text x="15" y="62" fill="#cbd5e1" class="font-sans" font-size="11">• Academy intakes for 2026 graduation WIL requirements.</text>
+          <text x="0" y="202" fill="#ffffff" class="font-sans" font-size="13" font-weight="800">ACTION TO TAKE:</text>
+          <text x="0" y="220" fill="#38bdf8" class="font-sans" font-size="11.5" font-weight="700">
+            👉 Left Pad: Tradey Bay App (Classifieds, Auctions, AI ATS Jobs)
+          </text>
+          <text x="0" y="238" fill="#fbbf24" class="font-sans" font-size="11.5" font-weight="700">
+            👉 Right Pad: Devs Academy WIL &amp; Res Management SaaS Demo
+          </text>
+
+          <rect x="0" y="260" width="460" height="75" rx="8" fill="#0e1f38"/>
+          <text x="15" y="22" fill="#38bdf8" class="font-mono" font-size="10.5" font-weight="700">KEY STUDENT STATS TO MENTION:</text>
+          <text x="15" y="40" fill="#cbd5e1" class="font-sans" font-size="10.5">• Tradey Bay: 0% fees, anti-snipe auctions, AI ATS resumes.</text>
+          <text x="15" y="56" fill="#cbd5e1" class="font-sans" font-size="10.5">• Devs Academy: Accredited WIL placements for 2026 graduation.</text>
         </g>
       </g>
 

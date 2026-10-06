@@ -158,10 +158,10 @@
         <rect width="36" height="36" rx="10" fill="#8b5cf6"/>
         <text x="18" y="25" fill="#ffffff" class="sans" font-size="18" font-weight="900" text-anchor="middle">TB</text>
         <text x="46" y="24" fill="#ffffff" class="sans" font-size="20" font-weight="900">Tradey<tspan fill="#a78bfa">Bay</tspan></text>
-        <text x="46" y="36" fill="#38bdf8" class="mono" font-size="9" font-weight="700" letter-spacing="1">SMART CAMPUS MARKETPLACE</text>
+        <text x="46" y="36" fill="#38bdf8" class="mono" font-size="8.5" font-weight="700" letter-spacing="1">FIRST-BORN OF SPUTNIK TECH</text>
       </g>
-      <rect x="310" y="16" width="95" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
-      <text x="357" y="33" fill="#34d399" class="mono" font-size="10" font-weight="800" text-anchor="middle">● LIVE ON PLAY</text>
+      <rect x="290" y="16" width="118" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+      <text x="349" y="33" fill="#34d399" class="mono" font-size="9" font-weight="800" text-anchor="middle">● LIVE v2.0.2+29</text>
 
       <!-- Smartphone Vector Device Mockup -->
       <g transform="translate(52, 75)">
@@ -174,65 +174,65 @@
         <!-- App Status Bar & Header -->
         <g transform="translate(18, 32)">
           <text x="0" y="10" fill="#94a3b8" class="mono" font-size="9">9:41</text>
-          <text x="0" y="28" fill="#ffffff" class="sans" font-size="12" font-weight="800">Tradey Bay • <tspan fill="#38bdf8">Rosebank Campus</tspan></text>
+          <text x="0" y="28" fill="#ffffff" class="sans" font-size="12" font-weight="800">Tradey Bay • <tspan fill="#38bdf8">Super App Ecosystem</tspan></text>
           
           <!-- Search Bar -->
           <rect x="0" y="36" width="284" height="26" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
-          <text x="10" y="53" fill="#64748b" class="sans" font-size="10">🔍 Search textbooks, calculators, laptops...</text>
+          <text x="10" y="53" fill="#64748b" class="sans" font-size="10">🔍 Search ads, live auctions, jobs &amp; stores...</text>
 
           <!-- Category Pills -->
-          <rect x="0" y="68" width="60" height="18" rx="9" fill="#0284c7"/>
-          <text x="30" y="80" fill="#ffffff" class="sans" font-size="8" font-weight="700" text-anchor="middle">Books</text>
-          <rect x="66" y="68" width="70" height="18" rx="9" fill="#1e293b"/>
-          <text x="101" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Tech &amp; PCs</text>
-          <rect x="142" y="68" width="65" height="18" rx="9" fill="#1e293b"/>
-          <text x="174" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Dorm Gear</text>
-          <rect x="213" y="68" width="71" height="18" rx="9" fill="#1e293b"/>
-          <text x="248" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">Calculators</text>
+          <rect x="0" y="68" width="62" height="18" rx="9" fill="#0284c7"/>
+          <text x="31" y="80" fill="#ffffff" class="sans" font-size="8" font-weight="700" text-anchor="middle">Classifieds</text>
+          <rect x="68" y="68" width="62" height="18" rx="9" fill="#1e293b"/>
+          <text x="99" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">⚡ Auctions</text>
+          <rect x="136" y="68" width="70" height="18" rx="9" fill="#1e293b"/>
+          <text x="171" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">💼 Jobs/ATS</text>
+          <rect x="212" y="68" width="72" height="18" rx="9" fill="#1e293b"/>
+          <text x="248" y="80" fill="#cbd5e1" class="sans" font-size="8" font-weight="600" text-anchor="middle">🏪 Stores/Map</text>
 
-          <!-- Feed Item 1: Calculus Textbook -->
+          <!-- Feed Item 1: MacBook Air M2 -->
           <g transform="translate(0, 94)">
             <rect width="284" height="66" rx="10" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
             <rect x="8" y="8" width="50" height="50" rx="6" fill="#1e293b"/>
-            <text x="33" y="37" fill="#38bdf8" class="sans" font-size="20" text-anchor="middle">📚</text>
-            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Calculus &amp; Linear Alg (3rd Ed)</text>
-            <text x="66" y="38" fill="#38bdf8" class="sans" font-size="10" font-weight="700">R 280.00 <tspan fill="#64748b" font-weight="400">· Rosebank Campus</tspan></text>
-            <rect x="66" y="44" width="95" height="14" rx="7" fill="#10b981" fill-opacity="0.2"/>
-            <text x="113" y="54" fill="#34d399" class="mono" font-size="7" font-weight="700" text-anchor="middle">✓ VERIFIED STUDENT</text>
+            <text x="33" y="37" fill="#38bdf8" class="sans" font-size="20" text-anchor="middle">💻</text>
+            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Apple MacBook Air M2 (8/256)</text>
+            <text x="66" y="38" fill="#38bdf8" class="sans" font-size="10" font-weight="700">R 12,500.00 <tspan fill="#64748b" font-weight="400">· Rosebank Hub</tspan></text>
+            <rect x="66" y="44" width="105" height="14" rx="7" fill="#10b981" fill-opacity="0.2"/>
+            <text x="118" y="54" fill="#34d399" class="mono" font-size="7" font-weight="700" text-anchor="middle">✓ MANDATORY KYC VERIFIED</text>
             <rect x="220" y="22" width="54" height="24" rx="12" fill="#0284c7"/>
             <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Chat 💬</text>
           </g>
 
-          <!-- Feed Item 2: MacBook Air M2 -->
+          <!-- Feed Item 2: Live Digital Auction -->
           <g transform="translate(0, 166)">
             <rect width="284" height="66" rx="10" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
             <rect x="8" y="8" width="50" height="50" rx="6" fill="#1e293b"/>
-            <text x="33" y="37" fill="#a78bfa" class="sans" font-size="20" text-anchor="middle">💻</text>
-            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Apple MacBook Air M2 (8/256)</text>
-            <text x="66" y="38" fill="#a78bfa" class="sans" font-size="10" font-weight="700">R 12,500.00 <tspan fill="#64748b" font-weight="400">· Like New</tspan></text>
-            <rect x="66" y="44" width="80" height="14" rx="7" fill="#f59e0b" fill-opacity="0.2"/>
-            <text x="106" y="54" fill="#fbbf24" class="mono" font-size="7" font-weight="700" text-anchor="middle">⚡ INSTANT DEAL</text>
-            <rect x="220" y="22" width="54" height="24" rx="12" fill="#8b5cf6"/>
-            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Offer 🏷️</text>
+            <text x="33" y="37" fill="#fbbf24" class="sans" font-size="20" text-anchor="middle">⚡</text>
+            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">5kW Hybrid Solar Inverter System</text>
+            <text x="66" y="38" fill="#fbbf24" class="sans" font-size="10" font-weight="700">Bid: R 8,900.00 <tspan fill="#a78bfa" font-weight="700">· 03m 42s Left</tspan></text>
+            <rect x="66" y="44" width="100" height="14" rx="7" fill="#f59e0b" fill-opacity="0.2"/>
+            <text x="116" y="54" fill="#fbbf24" class="mono" font-size="7" font-weight="700" text-anchor="middle">⚡ ANTI-SNIPE AUCTION</text>
+            <rect x="220" y="22" width="54" height="24" rx="12" fill="#d97706"/>
+            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Bid 🔨</text>
           </g>
 
-          <!-- Feed Item 3: Dorm Mini Fridge -->
+          <!-- Feed Item 3: Jobs & ATS Resume Match -->
           <g transform="translate(0, 238)">
             <rect width="284" height="66" rx="10" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
             <rect x="8" y="8" width="50" height="50" rx="6" fill="#1e293b"/>
-            <text x="33" y="37" fill="#38bdf8" class="sans" font-size="20" text-anchor="middle">🧊</text>
-            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Bar Fridge (90L) - Great for Res</text>
-            <text x="66" y="38" fill="#38bdf8" class="sans" font-size="10" font-weight="700">R 850.00 <tspan fill="#64748b" font-weight="400">· Campus Res B</tspan></text>
-            <rect x="66" y="44" width="75" height="14" rx="7" fill="#10b981" fill-opacity="0.2"/>
-            <text x="103" y="54" fill="#34d399" class="mono" font-size="7" font-weight="700" text-anchor="middle">📍 200m AWAY</text>
-            <rect x="220" y="22" width="54" height="24" rx="12" fill="#0284c7"/>
-            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Buy Now</text>
+            <text x="33" y="37" fill="#a78bfa" class="sans" font-size="20" text-anchor="middle">💼</text>
+            <text x="66" y="24" fill="#ffffff" class="sans" font-size="11" font-weight="800">Junior .NET 10 / Flutter Developer</text>
+            <text x="66" y="38" fill="#a78bfa" class="sans" font-size="10" font-weight="700">R 25,000 / mo <tspan fill="#64748b" font-weight="400">· Sandton, JHB</tspan></text>
+            <rect x="66" y="44" width="90" height="14" rx="7" fill="#8b5cf6" fill-opacity="0.2"/>
+            <text x="111" y="54" fill="#c084fc" class="mono" font-size="7" font-weight="700" text-anchor="middle">🎯 96% AI ATS MATCH</text>
+            <rect x="220" y="22" width="54" height="24" rx="12" fill="#8b5cf6"/>
+            <text x="247" y="38" fill="#ffffff" class="sans" font-size="9" font-weight="800" text-anchor="middle">Apply 📄</text>
           </g>
 
           <!-- Floating Value Proposition Pill -->
-          <g transform="translate(20, 312)">
-            <rect width="244" height="28" rx="14" fill="#0284c7" filter="url(#glowCyan)"/>
-            <text x="122" y="19" fill="#ffffff" class="mono" font-size="9" font-weight="800" text-anchor="middle">⚡ 0% COMMISSION FOR STUDENTS</text>
+          <g transform="translate(10, 312)">
+            <rect width="264" height="28" rx="14" fill="#0284c7" filter="url(#glowCyan)"/>
+            <text x="132" y="19" fill="#ffffff" class="mono" font-size="8.5" font-weight="800" text-anchor="middle">⚡ 8 .NET 10 SERVICES • IN-COUNTRY SA CLOUD</text>
           </g>
         </g>
       </g>
@@ -240,46 +240,46 @@
 
     <!-- POINT & EXPLAIN FEATURE BLOCKS (Y: 590 to 1070) -->
     <g transform="translate(0, 595)">
-      <text x="10" y="16" fill="#38bdf8" class="mono" font-size="11" font-weight="800" letter-spacing="2">KEY ADVANTAGES FOR STUDENTS</text>
+      <text x="10" y="16" fill="#38bdf8" class="mono" font-size="11" font-weight="800" letter-spacing="2">OFFICIAL TRADEY BAY PLATFORM PILLARS</text>
 
-      <!-- Point 1: Zero Commission -->
+      <!-- Point 1: Classifieds & Live Digital Auctions -->
       <g transform="translate(0, 30)">
         <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
         <rect x="14" y="14" width="55" height="55" rx="10" fill="#0284c7" fill-opacity="0.2"/>
-        <text x="41" y="48" fill="#38bdf8" class="sans" font-size="24" text-anchor="middle">💸</text>
-        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">1. Zero Listing &amp; Selling Fees</text>
-        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Students keep 100% of every sale. Free to list textbooks,</text>
-        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">electronics, scientific calculators &amp; campus dorm goods.</text>
+        <text x="41" y="48" fill="#38bdf8" class="sans" font-size="24" text-anchor="middle">🏷️</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="14" font-weight="800">1. Classified Ads &amp; Live Real-Time Auctions</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="11">Free listings across Vehicles, Solar, Tech &amp; Dorm gear.</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="11">Sub-100ms SignalR live bidding with automated anti-snipe clock.</text>
       </g>
 
-      <!-- Point 2: Verified Student Safety -->
+      <!-- Point 2: Seller & Business Storefronts -->
       <g transform="translate(0, 125)">
         <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
-        <rect x="14" y="14" width="55" height="55" rx="10" fill="#10b981" fill-opacity="0.2"/>
-        <text x="41" y="48" fill="#34d399" class="sans" font-size="24" text-anchor="middle">🛡️</text>
-        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">2. Safe Campus-Only Trading</text>
-        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Verified student badges eliminate scam risks. Meet fellow</text>
-        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">classmates safely on campus grounds or residence halls.</text>
+        <rect x="14" y="14" width="55" height="55" rx="10" fill="#8b5cf6" fill-opacity="0.2"/>
+        <text x="41" y="48" fill="#a78bfa" class="sans" font-size="24" text-anchor="middle">🏪</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="14" font-weight="800">2. Branded Seller &amp; Business Storefronts</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="11">Dedicated digital showrooms for private sellers and CIPC businesses</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="11">with "More from this seller" carousels, ratings &amp; in-store search.</text>
       </g>
 
-      <!-- Point 3: Instant Chat & Offers -->
+      <!-- Point 3: Interactive Maps & Split View -->
       <g transform="translate(0, 220)">
         <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
-        <rect x="14" y="14" width="55" height="55" rx="10" fill="#8b5cf6" fill-opacity="0.2"/>
-        <text x="41" y="48" fill="#a78bfa" class="sans" font-size="24" text-anchor="middle">💬</text>
-        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">3. Built-In In-App Chat &amp; Offers</text>
-        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Direct instant messaging without sharing your private phone</text>
-        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">number. Make and counter offers in seconds.</text>
+        <rect x="14" y="14" width="55" height="55" rx="10" fill="#10b981" fill-opacity="0.2"/>
+        <text x="41" y="48" fill="#34d399" class="sans" font-size="24" text-anchor="middle">🗺️</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="14" font-weight="800">3. Interactive Split-View Geospatial Maps</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="11">Seamless switch between card grid and live Google Map with</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="11">clustered price pins and search-as-you-move bounding box discovery.</text>
       </g>
 
-      <!-- Point 4: Hyperlocal Campus Geo-Search -->
+      <!-- Point 4: Jobs & Native AI ATS Resume Builder -->
       <g transform="translate(0, 315)">
         <rect width="425" height="85" rx="14" fill="#0a1324" stroke="#0284c7" stroke-width="1"/>
         <rect x="14" y="14" width="55" height="55" rx="10" fill="#06b6d4" fill-opacity="0.2"/>
-        <text x="41" y="48" fill="#22d3ee" class="sans" font-size="24" text-anchor="middle">📍</text>
-        <text x="80" y="34" fill="#ffffff" class="sans" font-size="15" font-weight="800">4. Hyperlocal Campus Filter</text>
-        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="12">Find items listed within walking distance at Rosebank</text>
-        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="12">College, Braamfontein, and neighboring student hubs.</text>
+        <text x="41" y="48" fill="#22d3ee" class="sans" font-size="24" text-anchor="middle">💼</text>
+        <text x="80" y="34" fill="#ffffff" class="sans" font-size="14" font-weight="800">4. Jobs Network &amp; Native AI ATS Resume Builder</text>
+        <text x="80" y="52" fill="#94a3b8" class="sans" font-size="11">Built-in ATS resume creator with 4 templates, vector PDF export,</text>
+        <text x="80" y="68" fill="#94a3b8" class="sans" font-size="11">smart ATS match scoring, and direct 1-tap employer applications.</text>
       </g>
     </g>
 
@@ -287,8 +287,8 @@
     <g transform="translate(0, 1025)">
       <rect width="425" height="470" rx="20" fill="#061224" stroke="#38bdf8" stroke-width="2.5" filter="url(#glowCyan)"/>
 
-      <text x="212" y="35" fill="#38bdf8" class="mono" font-size="13" font-weight="800" letter-spacing="2" text-anchor="middle">GET THE TRADEY BAY APP</text>
-      <text x="212" y="56" fill="#ffffff" class="sans" font-size="18" font-weight="800" text-anchor="middle">Point Camera to Download Free</text>
+      <text x="212" y="35" fill="#38bdf8" class="mono" font-size="13" font-weight="800" letter-spacing="2" text-anchor="middle">GET TRADEY BAY TODAY (v2.0.2+29)</text>
+      <text x="212" y="56" fill="#ffffff" class="sans" font-size="17" font-weight="800" text-anchor="middle">Scan Camera to Install on Google Play</text>
 
       <!-- High-Contrast QR Code Surface -->
       <g transform="translate(102, 75)">
@@ -317,9 +317,9 @@
       </g>
 
       <!-- Social Proof Rating Pill -->
-      <g transform="translate(42, 368)">
-        <rect width="340" height="36" rx="18" fill="#0c1f38" stroke="#0284c7" stroke-width="1"/>
-        <text x="170" y="23" fill="#fbbf24" class="sans" font-size="12" font-weight="800" text-anchor="middle">★★★★★  <tspan fill="#ffffff">4.8 / 5.0</tspan>  <tspan fill="#94a3b8" font-weight="500">· Fast Campus Trades</tspan></text>
+      <g transform="translate(32, 368)">
+        <rect width="360" height="36" rx="18" fill="#0c1f38" stroke="#0284c7" stroke-width="1"/>
+        <text x="180" y="23" fill="#fbbf24" class="sans" font-size="11.5" font-weight="800" text-anchor="middle">★★★★★  <tspan fill="#ffffff">4.8 / 5.0</tspan>  <tspan fill="#38bdf8" font-weight="600">· 100% POPIA Compliant &amp; In-Country</tspan></text>
       </g>
 
       <!-- Corporate Web link -->

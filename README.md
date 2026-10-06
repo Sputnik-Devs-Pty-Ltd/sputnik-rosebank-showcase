@@ -6,18 +6,23 @@ Official high-resolution print assets, interactive exhibition web viewer, scalab
 
 ## 🏢 Dual Company Ecosystem & Showcase Touchpoints
 
-1. **Sputnik Tech Group (Consumer & Mobile Tech)**
-   * **Flagship Product:** **Tradey Bay App**
+1. **Sputnik Tech Group (Consumer & Mobile Tech Ecosystem)**
+   * **Flagship Product:** **Tradey Bay App (v2.0.2+29)**
    * *Status:* Live on Google Play Store (Android), Apple App Store (Coming Soon).
-   * *Target:* Students, campus traders, local buyers & sellers.
+   * *Platform Pillars:*
+     - **Multi-Vertical Marketplace:** 0% commission classifieds across Vehicles, Solar/Energy, Electronics, Dorm Gear & Student Essentials.
+     - **Real-Time Auctions:** SignalR live digital bidding with automatic anti-snipe 60-second countdown extensions.
+     - **Native AI ATS Resume Builder:** 4 ATS-optimized templates, instant PDF generation, and algorithmic candidate-vacancy matching.
+     - **CIPC Branded Storefronts & Split Maps:** Verified merchant profiles with split-view Google Maps and geo-radius discovery.
+     - **Sputnik Delivery Network (SDN):** Crowdsourced courier delivery fleet with real-time GPS tracking and OTP-gated escrow payment protection.
    * *Play Store:* [Tradey Bay on Google Play](https://play.google.com/store/apps/details?id=com.sputniktech.tradey_bay_mobile)
    * *Portal:* [sputniktechgroup.com](https://sputniktechgroup.com)
 
-2. **Sputnik Devs Studio (Enterprise & B2B SaaS)**
-   * **Student Residence Management System (SRMS):** End-to-end digital accommodation, room booking, maintenance tracking & student housing administration.
+2. **Sputnik Devs Studio (Enterprise Engineering & B2B SaaS)**
+   * **Student Residence Management System (SRMS):** End-to-end digital accommodation, room allocation, maintenance ticketing & student housing administration.
    * **The University Hub:** Sister platform for campus life, university societies, academic forums & student services.
-   * **Shopnik E-Commerce SaaS:** Multi-tier e-commerce engine with native South African payments (PayFast, Ozow, Yoco).
-   * **Sputnik Devs Academy:** Accredited 19-day & 3-month Work-Integrated Learning (WIL) learnerships for tech students.
+   * **Shopnik E-Commerce SaaS:** Multi-tier e-commerce engine with native South African payments (PayFast, Ozow, Yoco) and multi-theme customizers.
+   * **Sputnik Devs Academy:** Accredited 19-day & 3-month Work-Integrated Learning (WIL) learnerships for tech students (.NET 10, Cloud, AI Agents, Microservices).
    * *Portal:* [sputnikdevs.com](https://sputnikdevs.com) | [Apply for Learnerships](https://sputnikdevs.com/academy/apply)
 
 ---

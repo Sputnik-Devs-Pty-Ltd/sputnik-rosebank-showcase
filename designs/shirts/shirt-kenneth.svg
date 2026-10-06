@@ -189,7 +189,7 @@
         <!-- Header Tag -->
         <rect x="10" y="10" width="200" height="26" rx="6" fill="#0284c7"/>
         <text x="110" y="27" fill="#ffffff" class="font-mono" font-size="9" font-weight="900" letter-spacing="1" text-anchor="middle">
-          📱 SCAN TO GET TRADEY BAY
+          📱 SCAN FOR TRADEY BAY (v2.0.2)
         </text>
 
         <!-- Crisp Scannable QR Code Box -->
@@ -202,14 +202,14 @@
           Tradey<tspan fill="#a78bfa">Bay</tspan>
         </text>
         <text x="110" y="248" fill="#38bdf8" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">
-          CAMPUS CLASSIFIEDS &amp; MARKETPLACE
+          MULTI-VERTICAL SUPER APP
         </text>
         
         <text x="110" y="268" fill="#94a3b8" class="font-sans" font-size="8" text-anchor="middle">
-          0% Commission • Textbooks &amp; Tech
+          0% Classifieds • SignalR Auctions
         </text>
         <text x="110" y="280" fill="#94a3b8" class="font-sans" font-size="8" text-anchor="middle">
-          Instant In-App Chat • Verified Safe
+          AI ATS Resume Builder • Storefronts
         </text>
 
         <!-- Google Play Store Button -->
@@ -224,29 +224,26 @@
       <!-- Ecosystem Platforms Pill Grid -->
       <g transform="translate(0, 440)">
         <text x="110" y="0" fill="#64748b" class="font-mono" font-size="8" font-weight="800" letter-spacing="1" text-anchor="middle">
-          SPUTNIK DIGITAL PLATFORMS
+          OFFICIAL PLATFORM PILLARS
         </text>
 
         <g transform="translate(5, 12)">
           <rect width="65" height="18" rx="4" fill="#0f172a" stroke="#0284c7" stroke-width="0.8"/>
-          <text x="32" y="12" fill="#38bdf8" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">TRADEY BAY</text>
+          <text x="32" y="12" fill="#38bdf8" class="font-mono" font-size="7.5" font-weight="700" text-anchor="middle">CLASSIFIEDS</text>
 
-          <rect x="72" width="60" height="18" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
-          <text x="102" y="12" fill="#34d399" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">RES SAAS</text>
+          <rect x="72" width="60" height="18" rx="4" fill="#0f172a" stroke="#f59e0b" stroke-width="0.8"/>
+          <text x="102" y="12" fill="#fbbf24" class="font-mono" font-size="7.5" font-weight="700" text-anchor="middle">AUCTIONS</text>
 
-          <rect x="134" width="76" height="18" rx="4" fill="#0f172a" stroke="#8b5cf6" stroke-width="0.8"/>
-          <text x="172" y="12" fill="#c084fc" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">SHOPNIK</text>
+          <rect x="134" width="76" height="18" rx="4" fill="#0f172a" stroke="#06b6d4" stroke-width="0.8"/>
+          <text x="172" y="12" fill="#22d3ee" class="font-mono" font-size="7.5" font-weight="700" text-anchor="middle">AI ATS JOBS</text>
         </g>
 
         <g transform="translate(18, 36)">
-          <rect width="50" height="18" rx="4" fill="#0f172a" stroke="#0284c7" stroke-width="0.8"/>
-          <text x="25" y="12" fill="#38bdf8" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">AZURE</text>
+          <rect width="70" height="18" rx="4" fill="#0f172a" stroke="#8b5cf6" stroke-width="0.8"/>
+          <text x="53" y="12" fill="#c084fc" class="font-mono" font-size="7.5" font-weight="700" text-anchor="middle">STORES/MAP</text>
 
-          <rect x="56" width="65" height="18" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
-          <text x="88" y="12" fill="#34d399" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">POSTGRES</text>
-
-          <rect x="127" width="55" height="18" rx="4" fill="#0f172a" stroke="#f59e0b" stroke-width="0.8"/>
-          <text x="154" y="12" fill="#fbbf24" class="font-mono" font-size="8" font-weight="700" text-anchor="middle">AI AGENTS</text>
+          <rect x="92" width="90" height="18" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
+          <text x="137" y="12" fill="#34d399" class="font-mono" font-size="7.5" font-weight="700" text-anchor="middle">8 .NET SERVICES</text>
         </g>
       </g>
 
